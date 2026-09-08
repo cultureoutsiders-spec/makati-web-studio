@@ -1,8 +1,11 @@
 /* =============================================================
    Kangnam Beauty — theme.css
-   Direction: Korean semi-permanent makeup studio — soft, precise,
-   Seoul-clinic. Blush + warm white, plum-brown ink, muted rose.
-   Signature: a drag before/after slider + a treatment face-map.
+   Architecture: "Editorial Clinic" — centred, gallery-led, calm.
+   Fashion-house nav (logo centred, links split L/R), a centred
+   serif statement over one hairline-framed portrait, a horizontal
+   snap-scroll treatment gallery, a full-width face-map, an airy
+   single-column price list, one large rotating pull-quote.
+   Colours unchanged. No body weight below 400.
    ============================================================= */
 :root{
   --paper:      #faf6f4;
@@ -16,59 +19,119 @@
   --brand-ink:  #f3e9e6;
   --gold:       #b89a7e;
 
-  --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-body:    "Jost", system-ui, -apple-system, sans-serif;
-  --font-mono:    "Jost", ui-monospace, Menlo, monospace;
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body:    "Manrope", system-ui, -apple-system, sans-serif;
+  --font-mono:    "Manrope", ui-monospace, Menlo, monospace;
 
   --radius: 2px;
-  --container: 1120px;
+  --container: 1140px;
 }
 
-h1,h2,h3{ font-weight:500; letter-spacing:.005em; }
-h1,.display{ line-height:1.05; font-weight:400; }
-h2 em,.display em,.hero h1 em{ font-style:italic; color:var(--accent); }
-.lead{ font-size:var(--step-1); color:var(--ink-soft); font-weight:300; }
+body{ font-weight:400; }
+h1,h2,h3{ font-family:var(--font-display); font-weight:500; letter-spacing:.005em; }
+h1,.display{ line-height:1.05; font-weight:500; }
+h2 em,.display em,.hero h1 em,.statement em{ font-style:italic; color:var(--accent); }
+.lead{ font-size:var(--step-1); color:var(--ink-soft); font-weight:400; line-height:1.5; }
 .section--brand .lead{ color:#e0d0cc; }
-body{ font-weight:300; }
 
-/* ---- Brand wordmark ---- */
-.brand{ font-family:var(--font-display); font-weight:500; font-size:var(--step-2); letter-spacing:.06em; text-transform:uppercase; }
-.brand small{ display:block; font-family:var(--font-body); font-size:.32em; letter-spacing:.4em; color:var(--ink-soft); font-weight:400; margin-top:.2em; }
-.section--brand .brand small,.site-footer .brand small{ color:#b8a6a2; }
+/* =============================================================
+   Fashion-house centred nav
+   ============================================================= */
+.site-header{ background:color-mix(in srgb, var(--paper) 90%, transparent); }
+.masthead--center{ display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:1.5rem; padding-block:1.1rem; }
+.nav__groups{ display:contents; }
+.brand{ grid-column:2; justify-self:center; font-family:var(--font-display); font-weight:500; font-size:clamp(1.5rem,1.1rem+1.5vw,2rem); letter-spacing:.16em; text-transform:uppercase; color:var(--ink); text-align:center; line-height:1; text-decoration:none; }
+.brand small{ display:block; font-family:var(--font-body); font-size:.3em; letter-spacing:.42em; color:var(--ink-soft); font-weight:500; margin-top:.35em; }
+.nav__links{ display:flex; gap:1.6rem; align-items:center; list-style:none; margin:0; padding:0; }
+.nav__links--l{ grid-column:1; justify-content:flex-start; }
+.nav__links--r{ grid-column:3; justify-content:flex-end; }
+.nav__links a{ font-family:var(--font-body); font-weight:500; font-size:var(--step--1); letter-spacing:.16em; text-transform:uppercase; text-decoration:none; color:var(--ink-soft); white-space:nowrap; padding:.3rem 0; border-bottom:1px solid transparent; }
+.nav__links a:hover,.nav__links a[aria-current="page"]{ color:var(--ink); border-bottom-color:var(--accent); }
+.nav__links .btn{ border-bottom:0; }
+.nav__toggle{ display:none; grid-column:3; justify-self:end; width:44px; height:44px; border:1px solid var(--ink); background:transparent; cursor:pointer; align-items:center; justify-content:center; }
+.nav__toggle span,.nav__toggle span::before,.nav__toggle span::after{ content:""; display:block; width:20px; height:1px; background:var(--ink); position:relative; }
+.nav__toggle span::before{ position:absolute; top:-6px; } .nav__toggle span::after{ position:absolute; top:6px; }
 
-/* ---- Eyebrow ---- */
-.eyebrow{ color:var(--accent); letter-spacing:.34em; font-weight:400; }
-.eyebrow::before{ background:var(--gold); width:2.2rem; }
+@media (max-width:1040px){
+  .nav__toggle{ display:inline-flex; }
+  .nav__groups{
+    display:block; grid-column:1 / -1;
+    position:fixed; inset:64px 0 auto 0; z-index:60;
+    background:var(--paper); border-block:1px solid var(--line);
+    padding:.5rem 1.25rem 1.4rem;
+    transform:translateY(-140%); transition:transform .3s ease;
+  }
+  .nav[data-open="true"] .nav__groups{ transform:none; }
+  .nav__links{ flex-direction:column; align-items:stretch; gap:0; }
+  .nav__links li{ width:100%; text-align:center; }
+  .nav__links a{ display:block; width:100%; padding:.9rem 0; font-size:var(--step-0); border-bottom:1px solid var(--line); }
+  .nav__links .btn{ margin-top:.9rem; }
+}
 
-/* ---- Hero ---- */
-.hero{ color:#faf5f3; background:var(--brand); }
-.hero__bg{ opacity:.72; }
-.hero__bg::after{ background:linear-gradient(180deg, rgba(40,28,32,.35) 0%, rgba(40,28,32,.72) 100%); }
-.hero h1{ font-size:var(--step-5); }
-.hero .lead{ color:#ecdfdb; }
+/* =============================================================
+   Centred statement hero (no full-bleed photo)
+   ============================================================= */
+.opening{ padding-block:clamp(3rem,2rem+4vw,6rem) clamp(2.5rem,1.8rem+3vw,4.5rem); text-align:center; }
+.opening .eyebrow{ justify-content:center; color:var(--accent); letter-spacing:.34em; }
+.opening .eyebrow::before,.opening .eyebrow::after{ content:""; width:2.2rem; height:1px; background:var(--gold); display:inline-block; }
+.statement{ font-family:var(--font-display); font-weight:500; font-size:var(--step-3); line-height:1.12; max-width:20ch; margin:1rem auto 0; }
+.opening .lead{ max-width:46ch; margin:1.4rem auto 0; }
+.portrait{ max-width:min(560px, 92%); margin:clamp(2rem,1.4rem+3vw,3.5rem) auto 0; border:1px solid var(--gold); padding:10px; background:var(--paper); }
+.portrait .media{ aspect-ratio:4/5; border-radius:0; }
+.portrait figcaption{ font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); letter-spacing:.06em; margin-top:.7rem; }
 
-/* ---- Before / after slider (signature) ---- */
-.ba{ position:relative; overflow:hidden; border-radius:var(--radius); aspect-ratio:4/3; user-select:none; touch-action:none; }
+/* =============================================================
+   Horizontal snap-scroll treatment gallery
+   ============================================================= */
+.hgallery{ display:flex; gap:var(--space-md); overflow-x:auto; overscroll-behavior-x:contain; scroll-snap-type:x mandatory; padding:.5rem 0 1.4rem; -webkit-overflow-scrolling:touch; scrollbar-width:thin; }
+.hgallery::-webkit-scrollbar{ height:6px; } .hgallery::-webkit-scrollbar-thumb{ background:var(--line); }
+.hgallery__card{ flex:0 0 min(80vw, 380px); scroll-snap-align:center; }
+.hgallery__card h3{ font-size:var(--step-2); margin:.9rem 0 .2rem; }
+.hgallery__card .from{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.08em; text-transform:uppercase; color:var(--accent); }
+.hgallery__card p{ margin:.5rem 0 0; color:var(--ink-soft); font-size:var(--step-0); }
+.hgallery__hint{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); }
+
+/* ---- Before / after slider ---- */
+.ba{ position:relative; overflow:hidden; border-radius:var(--radius); aspect-ratio:4/5; user-select:none; touch-action:none; background:var(--paper-2); }
 .ba img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
 .ba__after{ clip-path:inset(0 0 0 var(--pos, 50%)); }
 .ba__handle{ position:absolute; top:0; bottom:0; left:var(--pos, 50%); width:2px; background:#fff; box-shadow:0 0 0 1px rgba(0,0,0,.15); }
-.ba__handle::after{ content:""; position:absolute; top:50%; left:50%; width:38px; height:38px; transform:translate(-50%,-50%); border:2px solid #fff; border-radius:50%; background:rgba(255,255,255,.15); backdrop-filter:blur(2px); }
-.ba__tag{ position:absolute; bottom:.7rem; font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.16em; text-transform:uppercase; color:#fff; background:rgba(0,0,0,.4); padding:.3em .7em; }
+.ba__handle::after{ content:""; position:absolute; top:50%; left:50%; width:38px; height:38px; transform:translate(-50%,-50%); border:2px solid #fff; border-radius:50%; background:rgba(255,255,255,.18); }
+.ba__tag{ position:absolute; bottom:.7rem; font-family:var(--font-mono); font-size:calc(var(--step--1) * .9); letter-spacing:.16em; text-transform:uppercase; color:#fff; background:rgba(0,0,0,.42); padding:.3em .7em; }
 .ba__tag--l{ left:.7rem; } .ba__tag--r{ right:.7rem; }
 
-/* ---- Face-map ---- */
-.facemap{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; }
-.facemap button{ appearance:none; border:0; background:var(--paper); color:var(--ink); cursor:pointer; padding:1.4rem 1rem; text-align:left; font:inherit; transition:background .2s ease; }
+/* =============================================================
+   Face-map (full width)
+   ============================================================= */
+.facemap{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+@media (max-width:620px){ .facemap{ grid-template-columns:repeat(2,1fr); } }
+.facemap button{ appearance:none; border:0; background:var(--paper); color:var(--ink); cursor:pointer; padding:1.5rem 1.2rem; text-align:left; font:inherit; transition:background .2s ease; }
 .facemap button:hover,.facemap button[aria-pressed="true"]{ background:var(--paper-2); }
 .facemap button b{ display:block; font-family:var(--font-display); font-size:var(--step-1); font-weight:500; }
 .facemap button span{ font-size:var(--step--1); color:var(--ink-soft); }
+.facemap__detail{ margin-top:var(--space-md); border-left:2px solid var(--accent); padding-left:1.4rem; }
+.facemap__detail h3{ margin:0 0 .3rem; }
+.facemap__detail p{ margin:0; color:var(--ink-soft); }
 
-/* ---- Price menu ---- */
-.pmenu{ border-top:1px solid var(--ink); }
-.pmenu__row{ display:grid; grid-template-columns:1fr auto; gap:.4rem 1.5rem; padding:1.1rem 0; border-bottom:1px solid var(--line); align-items:baseline; }
-.pmenu__row b{ font-family:var(--font-display); font-size:var(--step-1); font-weight:500; }
-.pmenu__row .amt{ font-family:var(--font-mono); font-size:var(--step-0); white-space:nowrap; }
-.pmenu__row p{ grid-column:1/-1; margin:.1rem 0 0; font-size:var(--step--1); color:var(--ink-soft); }
+/* =============================================================
+   Airy single-column price list
+   ============================================================= */
+.pmenu{ max-width:44rem; border-top:1px solid var(--ink); }
+.pmenu__row{ display:grid; grid-template-columns:1fr auto; gap:.4rem 1.5rem; padding:var(--space-sm) 0; border-bottom:1px solid var(--line); align-items:baseline; }
+.pmenu__row b{ font-family:var(--font-display); font-size:var(--step-2); font-weight:500; }
+.pmenu__row .amt{ font-family:var(--font-mono); font-size:var(--step-0); white-space:nowrap; color:var(--accent); }
+.pmenu__row p{ grid-column:1/-1; margin:.2rem 0 0; font-size:var(--step-0); color:var(--ink-soft); line-height:1.5; }
+
+/* =============================================================
+   Rotating pull-quote
+   ============================================================= */
+.pullquote{ position:relative; max-width:38ch; margin-inline:auto; text-align:center; min-height:9em; }
+.pullquote__item{ position:absolute; inset:0; opacity:0; transition:opacity .8s ease; }
+.pullquote__item[data-active="true"]{ opacity:1; position:relative; }
+.pullquote p{ font-family:var(--font-display); font-style:italic; font-size:var(--step-2); line-height:1.4; color:var(--brand-ink); }
+.pullquote cite{ display:block; margin-top:1rem; font-family:var(--font-mono); font-style:normal; font-size:var(--step--1); letter-spacing:.14em; text-transform:uppercase; color:#c9b3af; }
+.pullquote .stars{ color:var(--gold); letter-spacing:.2em; }
+@media (prefers-reduced-motion:reduce){ .pullquote__item{ transition:none; } }
 
 /* ---- Cards ---- */
 .card{ border-radius:var(--radius); }
@@ -76,16 +139,32 @@ body{ font-weight:300; }
 .section--brand .card{ background:transparent; border-color:#4a3a3e; }
 
 /* ---- Buttons ---- */
-.btn{ text-transform:uppercase; letter-spacing:.18em; font-weight:400; font-size:var(--step--1); }
+.btn{ text-transform:uppercase; letter-spacing:.18em; font-weight:500; font-size:var(--step--1); border-radius:var(--radius); }
 .btn:hover{ transform:translateY(-2px); }
 .btn--accent:hover{ background:#8a5c64; }
 
-/* ---- Reviews ---- */
+/* ---- Eyebrow ---- */
+.eyebrow{ color:var(--accent); letter-spacing:.3em; font-family:var(--font-mono); }
+.eyebrow::before{ background:var(--gold); }
+.section--brand .eyebrow{ color:#d8b9b4; }
+.section--brand .eyebrow::before{ background:#8a6f68; }
+
+/* ---- Reviews (inner pages) ---- */
 .review{ border-left-color:var(--gold); }
-.review p{ font-family:var(--font-display); font-style:italic; font-size:var(--step-2); font-weight:400; }
+.review p{ font-family:var(--font-display); font-style:italic; font-size:var(--step-1); }
+.review cite{ font-family:var(--font-mono); color:var(--ink-soft); }
 .stars{ color:var(--gold); }
 
-.stat__num{ font-family:var(--font-display); font-weight:400; }
+.stat__num{ font-family:var(--font-display); font-weight:500; }
+.section--brand .stat__label{ color:#c9b3af; }
 .chat-fab{ background:var(--accent); border-radius:var(--radius); }
-.site-footer{ --line:#4a3a3e; }
+.site-footer{ background:var(--brand); --line:#4a3a3e; }
+.site-footer .brand{ color:var(--brand-ink); }
 .foot-h{ font-family:var(--font-mono); letter-spacing:.2em; }
+
+/* ---- Form ---- */
+.field input,.field select,.field textarea{ border:1px solid var(--ink); border-radius:var(--radius); background:var(--paper); }
+.field label{ font-family:var(--font-mono); letter-spacing:.1em; text-transform:uppercase; font-size:var(--step--1); }
+
+/* ---- 404 ---- */
+.notfound{ text-align:center; padding-block:var(--space-2xl); }

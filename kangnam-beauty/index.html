@@ -12,7 +12,7 @@
 <meta property="og:type" content="business.business">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/base.css">
 <link rel="stylesheet" href="assets/theme.css">
 <script type="application/ld+json">
@@ -28,40 +28,44 @@
 <body>
 
 <header class="site-header">
-  <nav class="nav container" data-open="false" aria-label="Primary">
+  <nav class="masthead--center nav container" data-open="false" aria-label="Primary">
+    <div class="nav__groups" id="navlinks">
+      <ul class="nav__links nav__links--l">
+        <li><a href="treatments.html">Treatments</a></li>
+        <li><a href="prices.html">Prices</a></li>
+      </ul>
+      <ul class="nav__links nav__links--r">
+        <li><a href="studio.html">The Studio</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a class="btn btn--accent" href="book.html#book">Book a slot</a></li>
+      </ul>
+    </div>
     <a class="brand" href="index.html">Kangnam<small>Beauty Makati</small></a>
     <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
-    <ul class="nav__links" id="navlinks">
-      <li><a href="index.html" aria-current="page">Home</a></li>
-      <li><a href="treatments.html">Treatments</a></li>
-      <li><a href="prices.html">Price Menu</a></li>
-      <li><a href="studio.html">The Studio</a></li>
-      <li><a href="book.html">Book</a></li>
-      <li><a class="btn btn--accent" href="book.html#book">Book a slot</a></li>
-    </ul>
   </nav>
 </header>
 
 <main>
 
-  <section class="hero section">
-    <div class="hero__bg"><img src="assets/img/hero-treatment.jpg" alt="A semi-permanent makeup treatment in progress" fetchpriority="high"></div>
-    <div class="container stack">
-      <p class="eyebrow">Poblacion, Makati · by appointment</p>
-      <h1 class="display">Wake up with the brows,<br>lips and liner <em>already done</em></h1>
-      <p class="lead measure">Korean-method semi-permanent makeup — microblading and ombré brows,
-        lip blush, eyeliner — plus gentle pico-laser removal, lashes and skin. Soft, natural, and
-        made to suit your face, not a template.</p>
-      <div style="display:flex; gap:1rem; flex-wrap:wrap">
-        <a class="btn btn--accent btn--lg" href="book.html#book">Book a consultation</a>
-        <a class="btn btn--ghost btn--lg" href="prices.html">See the price menu</a>
-      </div>
+  <section class="opening container">
+    <p class="eyebrow">Poblacion, Makati · by appointment</p>
+    <p class="statement">Wake up with the brows, lips and liner <em>already done</em></p>
+    <p class="lead">Korean-method semi-permanent makeup — mapped to your face, not a template.
+      Microblading and ombré brows, lip blush, eyeliner, plus gentle pico-laser removal, lashes
+      and skin.</p>
+    <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; margin-top:1.6rem">
+      <a class="btn btn--accent btn--lg" href="book.html#book">Book a consultation</a>
+      <a class="btn btn--ghost btn--lg" href="prices.html">See the price menu</a>
     </div>
+    <figure class="portrait" data-parallax="0.05">
+      <div class="media"><img src="assets/img/portrait.jpg" alt="A softly finished brow and lip result" fetchpriority="high"></div>
+      <figcaption>Healed result — real client photos to be supplied by the studio</figcaption>
+    </figure>
   </section>
 
   <section class="section--tight section--brand">
     <div class="container">
-      <div class="stats">
+      <div class="stats reveal-group">
         <div class="stat"><span class="stat__num" data-count="4.9">0</span><span class="stat__label">Google · 86 reviews</span></div>
         <div class="stat"><span class="stat__num">2</span><span class="stat__label">visits per treatment (+ touch-up)</span></div>
         <div class="stat"><span class="stat__num">1–3y</span><span class="stat__label">how long results last</span></div>
@@ -71,74 +75,109 @@
   </section>
 
   <section class="section">
-    <div class="container split">
-      <div class="stack">
-        <p class="eyebrow">See the difference</p>
-        <h2>Natural, not <em>drawn on</em></h2>
-        <p class="lead">Drag the handle. Every stroke is mapped to your bone structure and your
-          natural hair, so it reads as your face on a good day, not makeup.</p>
-        <a class="btn btn--accent btn--lg" href="treatments.html">How each treatment works</a>
+    <div class="container">
+      <div class="center" style="max-width:44ch; margin-inline:auto">
+        <p class="eyebrow" style="justify-content:center">The treatments</p>
+        <h2>Natural, never <em>drawn on</em></h2>
+        <p class="lead">Drag any slider. Every result is mapped to your bone structure and your own
+          hair, so it reads as your face on a good day.</p>
       </div>
-      <div class="split__media">
-        <div class="ba" id="ba1">
-          <img class="ba__before" src="assets/img/portrait.jpg" alt="Before">
-          <img class="ba__after" src="assets/img/facial2.jpg" alt="After">
-          <span class="ba__tag ba__tag--l">Before</span>
-          <span class="ba__tag ba__tag--r">After</span>
-          <div class="ba__handle" aria-hidden="true"></div>
-          <input type="range" min="0" max="100" value="50" aria-label="Reveal before and after"
-                 style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize">
-        </div>
-        <p style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); margin-top:.6rem">Illustration only — real client before/after photos go here.</p>
+      <p class="hgallery__hint center" style="margin:1.4rem 0 .4rem">Scroll &rarr;</p>
+      <div class="hgallery reveal">
+        <article class="hgallery__card">
+          <div class="ba"><img class="ba__before" src="assets/img/portrait.jpg" alt="Brows before"><img class="ba__after" src="assets/img/pmu.jpg" alt="Brows after"><span class="ba__tag ba__tag--l">Before</span><span class="ba__tag ba__tag--r">After</span><div class="ba__handle" aria-hidden="true"></div><input type="range" min="0" max="100" value="50" aria-label="Reveal brows before and after" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize"></div>
+          <h3>Ombré &amp; microblade brows</h3>
+          <p class="from">from ₱8,000</p>
+          <p>Hair-stroke detail, soft powder shading, or a combination. Mapped and drawn with you
+            first.</p>
+        </article>
+        <article class="hgallery__card">
+          <div class="ba"><img class="ba__before" src="assets/img/facial.jpg" alt="Lips before"><img class="ba__after" src="assets/img/facial2.jpg" alt="Lips after"><span class="ba__tag ba__tag--l">Before</span><span class="ba__tag ba__tag--r">After</span><div class="ba__handle" aria-hidden="true"></div><input type="range" min="0" max="100" value="50" aria-label="Reveal lips before and after" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize"></div>
+          <h3>Lip blush</h3>
+          <p class="from">from ₱12,000</p>
+          <p>A wash of colour that brings back definition and evens tone — “your lips but better”.</p>
+        </article>
+        <article class="hgallery__card">
+          <div class="ba"><img class="ba__before" src="assets/img/stones.jpg" alt="Eyeliner before"><img class="ba__after" src="assets/img/pmu.jpg" alt="Eyeliner after"><span class="ba__tag ba__tag--l">Before</span><span class="ba__tag ba__tag--r">After</span><div class="ba__handle" aria-hidden="true"></div><input type="range" min="0" max="100" value="50" aria-label="Reveal eyeliner before and after" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize"></div>
+          <h3>Lash-line eyeliner</h3>
+          <p class="from">from ₱9,000</p>
+          <p>A fine enhancement or a soft wing. No smudging, no re-doing it in the car.</p>
+        </article>
+        <article class="hgallery__card">
+          <div class="ba"><img class="ba__before" src="assets/img/pmu.jpg" alt="Old PMU before"><img class="ba__after" src="assets/img/portrait.jpg" alt="After lightening"><span class="ba__tag ba__tag--l">Before</span><span class="ba__tag ba__tag--r">After</span><div class="ba__handle" aria-hidden="true"></div><input type="range" min="0" max="100" value="50" aria-label="Reveal removal before and after" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize"></div>
+          <h3>Pico-laser brow removal</h3>
+          <p class="from">from ₱2,500 / session</p>
+          <p>Old or mis-shaped PMU lightened gently over a few sessions.</p>
+        </article>
       </div>
+      <p class="center" style="margin-top:1.4rem"><a class="btn btn--ghost" href="treatments.html">Full treatment guide &rarr;</a>
+        &nbsp; <span style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft)">Prices indicative — confirmed at consultation</span></p>
     </div>
   </section>
 
   <section class="section section--paper2">
-    <div class="container stack">
-      <div><p class="eyebrow">The menu, in short</p><h2>What we do</h2></div>
-      <div class="grid grid--3">
-        <article class="card reveal"><h3>Brows</h3><p>Microblading for hair-stroke detail, ombré / powder shading for a soft-makeup finish, or a combination. Mapped and drawn with you before any pigment.</p></article>
-        <article class="card reveal"><h3>Lip blush</h3><p>A wash of colour that brings back definition and evens out tone — a "your lips but better" flush, not lipstick.</p></article>
-        <article class="card reveal"><h3>Eyeliner</h3><p>A fine lash-line enhancement or a soft wing. No more smudging, no more re-doing it in the car.</p></article>
-        <article class="card reveal"><h3>Brow removal</h3><p>Old or mis-shaped PMU lightened with pico laser — gentle, comfortable, over a few sessions.</p></article>
-        <article class="card reveal"><h3>Lashes</h3><p>Classic and volume lash extensions and lifts.</p></article>
-        <article class="card reveal"><h3>Skin</h3><p>Acne treatments and facials to keep the canvas in good shape.</p></article>
+    <div class="container">
+      <div class="center" style="max-width:40ch; margin-inline:auto">
+        <p class="eyebrow" style="justify-content:center">Find your treatment</p>
+        <h2>Where do you want to start?</h2>
       </div>
-      <p><a class="btn btn--ghost" href="treatments.html">Full treatment guide →</a></p>
+      <div class="facemap" role="group" aria-label="Choose an area" style="margin-top:1.6rem">
+        <button data-fm="brows" aria-pressed="true"><b>Brows</b><span>Shape, symmetry, sparse patches</span></button>
+        <button data-fm="lips"><b>Lips</b><span>Definition, uneven tone, pale edges</span></button>
+        <button data-fm="eyes"><b>Eyes</b><span>Lash line, a soft everyday wing</span></button>
+        <button data-fm="lashes"><b>Lashes</b><span>Extensions and lifts</span></button>
+        <button data-fm="skin"><b>Skin</b><span>Acne care and facials</span></button>
+        <button data-fm="removal"><b>Removal</b><span>Correcting old permanent makeup</span></button>
+      </div>
+      <div class="facemap__detail" id="fm-detail" aria-live="polite">
+        <h3 data-fm-title>Brows</h3>
+        <p data-fm-body>Microblading for hair-stroke detail, ombré / powder shading for a soft-makeup
+          finish, or a combination. A full mapping session comes first — nothing is pigmented until
+          you’re happy with the drawn shape.</p>
+      </div>
     </div>
   </section>
 
   <section class="section section--brand">
-    <div class="container split split--flip">
+    <div class="container split split--flip split--top">
       <div class="split__media"><div class="media media--4x3"><img src="assets/img/studio.jpg" alt="The studio interior"></div></div>
       <div class="stack">
         <p class="eyebrow">The studio</p>
         <h2>Private rooms, one artist per client</h2>
-        <p class="lead">We work by appointment out of a small studio at Antel Spa Residences in
-          Poblacion. Our PMU rooms are usually fully booked — plan ahead, and bring a reference or
-          two.</p>
+        <p class="lead">We work by appointment from a small studio at Antel Spa Residences in
+          Poblacion. PMU rooms book out — plan ahead, and bring a reference or two.</p>
         <a class="btn btn--accent btn--lg" href="studio.html">About the studio &amp; artists</a>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container stack">
-      <div><p class="eyebrow">In their words</p><h2>4.9 stars, 86 reviews</h2></div>
-      <div class="grid grid--3">
-        <!-- PLACEHOLDER: paste 3 real Google reviews before sending. -->
-        <blockquote class="review reveal"><div class="stars" aria-hidden="true">★★★★★</div><p>"I've had my brows done twice elsewhere and hated both. These finally look like me. The mapping session is worth it alone."</p><cite>— Google review · placeholder</cite></blockquote>
-        <blockquote class="review reveal"><div class="stars" aria-hidden="true">★★★★★</div><p>"Lip blush completely changed how I look without makeup. Healed soft and natural, exactly what we agreed on."</p><cite>— Google review · placeholder</cite></blockquote>
-        <blockquote class="review reveal"><div class="stars" aria-hidden="true">★★★★★</div><p>"Clean studio, unhurried, and they talk you through every step. Booked my touch-up before I even left."</p><cite>— Google review · placeholder</cite></blockquote>
+  <section class="section section--brand section--tight" style="border-top:1px solid #4a3a3e">
+    <div class="container">
+      <p class="eyebrow center" style="justify-content:center">In their words · 4.9 / 5 · 86 reviews</p>
+      <div class="pullquote" id="pullquote">
+        <div class="pullquote__item" data-active="true">
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <p>“I’ve had my brows done twice elsewhere and hated both. These finally look like me. The mapping session alone is worth it.”</p>
+          <cite>— Google review · placeholder</cite>
+        </div>
+        <div class="pullquote__item">
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <p>“Lip blush completely changed how I look without makeup. Healed soft and natural, exactly what we agreed on.”</p>
+          <cite>— Google review · placeholder</cite>
+        </div>
+        <div class="pullquote__item">
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <p>“Clean studio, unhurried, and they talk you through every step. Booked my touch-up before I left.”</p>
+          <cite>— Google review · placeholder</cite>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section section--brand center">
+  <section class="section center">
     <div class="container stack">
-      <h2 class="display">Book your consultation</h2>
-      <p class="lead" style="margin-inline:auto">Message us to check the next available PMU slot. Consultations are unhurried and honest about what will suit you.</p>
+      <h2 class="statement" style="margin-inline:auto">Book your consultation</h2>
+      <p class="lead" style="margin-inline:auto">Message us to check the next PMU slot. Consultations are unhurried and honest about what will suit you.</p>
       <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap">
         <a class="btn btn--accent btn--lg" href="book.html#book">Request a slot</a>
         <a class="btn btn--ghost btn--lg" href="tel:+639060493356">Call 0906 049 3356</a>
@@ -152,8 +191,8 @@
   <div class="container">
     <div class="foot-grid">
       <div>
-        <p class="brand" style="color:inherit; font-size:var(--step-2)">Kangnam<small>Beauty Makati</small></p>
-        <p style="opacity:.75; margin-top:1rem; max-width:34ch">Korean-method semi-permanent makeup in Poblacion, Makati. By appointment.</p>
+        <p class="brand" style="font-size:var(--step-1); text-align:left">Kangnam<small>Beauty Makati</small></p>
+        <p style="opacity:.8; margin-top:1rem; max-width:34ch">Korean-method semi-permanent makeup in Poblacion, Makati. By appointment.</p>
       </div>
       <div><p class="foot-h">Studio</p><p>S-1 Antel Spa Residences 1<br>G.S. Salamanca St.<br>Barangay Poblacion, Makati</p></div>
       <div><p class="foot-h">Book</p>
@@ -162,7 +201,7 @@
            <a href="https://m.me/kangnam.beauty.manila" rel="noopener">Message on Facebook</a><br>
            <a href="https://instagram.com/kangnam_makati" rel="noopener">@kangnam_makati</a></p></div>
     </div>
-    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Kangnam Beauty Makati. Photography is placeholder stock pending the client's own images.</div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Kangnam Beauty Makati. Photography is placeholder stock and before/after sliders are illustrative; prices are indicative pending the studio’s confirmation.</div>
     <div class="foot-note"><span>© <span data-year>2026</span> Kangnam Beauty Makati. Concept site.</span><span>Built by GCCofCI Digital</span></div>
   </div>
 </footer>
@@ -174,14 +213,66 @@
 
 <script src="assets/app.js"></script>
 <script>
-/* before/after slider */
-document.querySelectorAll('.ba').forEach(function(ba){
-  var r = ba.querySelector('input[type=range]');
-  if(!r) return;
-  var set = function(v){ ba.style.setProperty('--pos', v + '%'); };
-  set(r.value);
-  r.addEventListener('input', function(){ set(r.value); });
-});
+(function () {
+  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* before/after sliders — drag + one auto-demo when scrolled into view */
+  document.querySelectorAll(".ba").forEach(function (ba) {
+    var r = ba.querySelector('input[type=range]');
+    if (!r) return;
+    var set = function (v) { ba.style.setProperty("--pos", v + "%"); };
+    set(r.value);
+    r.addEventListener("input", function () { set(r.value); });
+    if (reduce || !("IntersectionObserver" in window)) return;
+    var demoed = false;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting || demoed) return;
+        demoed = true; io.unobserve(en.target);
+        var start = null;
+        var step = function (ts) {
+          if (!start) start = ts;
+          var p = Math.min((ts - start) / 1600, 1);
+          var eased = 0.5 - Math.cos(p * Math.PI * 2) * 0.5;       // 50 → ~85 → 50
+          set((50 + eased * 32).toFixed(1));
+          if (p < 1) requestAnimationFrame(step); else set(50);
+        };
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.5 });
+    io.observe(ba);
+  });
+
+  /* face-map */
+  var data = {
+    brows: { t: "Brows", b: "Microblading for hair-stroke detail, ombré / powder shading for a soft-makeup finish, or a combination. A full mapping session comes first — nothing is pigmented until you’re happy with the drawn shape." },
+    lips:  { t: "Lips", b: "Lip blush restores definition and evens out tone — a natural flush rather than lipstick. Colour is chosen to your undertone and settles softer than it heals." },
+    eyes:  { t: "Eyes", b: "A fine lash-line enhancement that makes lashes look denser, or a soft everyday wing. Precise, subtle, and it doesn’t move." },
+    lashes:{ t: "Lashes", b: "Classic and volume lash extensions, plus lash lifts for a low-maintenance curl. Booked separately from PMU." },
+    skin:  { t: "Skin", b: "Acne treatments and facials to keep the canvas in good shape before and between permanent-makeup appointments." },
+    removal:{ t: "Removal", b: "Old, dark or mis-shaped permanent makeup lightened with pico laser — gentle, comfortable, over a few spaced sessions." }
+  };
+  var btns = document.querySelectorAll(".facemap button");
+  var T = document.querySelector("[data-fm-title]"), B = document.querySelector("[data-fm-body]");
+  btns.forEach(function (b) {
+    b.addEventListener("click", function () {
+      btns.forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      var d = data[b.getAttribute("data-fm")];
+      if (d) { T.textContent = d.t; B.textContent = d.b; }
+    });
+  });
+
+  /* rotating pull-quote */
+  var items = [].slice.call(document.querySelectorAll("#pullquote .pullquote__item"));
+  if (items.length > 1 && !reduce) {
+    var i = 0;
+    setInterval(function () {
+      items[i].setAttribute("data-active", "false");
+      i = (i + 1) % items.length;
+      items[i].setAttribute("data-active", "true");
+    }, 6000);
+  }
+})();
 </script>
 </body>
 </html>
