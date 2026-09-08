@@ -3,75 +3,110 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Plant Shop — Little Gee Plants, Palanan Makati</title>
-<meta name="description" content="Houseplants, pots and soil at Little Gee Plants in Palanan, Makati — plus straightforward care advice for light, watering and repotting in a Metro Manila home.">
+<title>The Plant Shop — Little Gee Plants x Tiny Teapot</title>
+<meta name="description" content="Little Gee's plant shop in Palanan, Makati: hardy houseplants, pots and potting mix, with honest advice about light and water. Reserve a plant or ask us to pick one.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="The Plant Shop — Little Gee Plants x Tiny Teapot">
+<meta property="og:description" content="Hardy houseplants, pots and advice. Palanan, Makati.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Fredoka:wght@500;600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/base.css">
 <link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
 
 <header class="site-header">
-  <nav class="nav container" data-open="false" aria-label="Primary">
-    <a class="brand" href="index.html">Little Gee <b>&times;</b> Tiny Teapot</a>
+  <nav class="nav--split nav" data-open="false" aria-label="Primary">
+    <div class="nav__groups" id="navlinks">
+      <ul class="nav__links nav__links--plant">
+        <li><a href="plant-shop.html" aria-current="page">The Plant Shop</a></li>
+        <li><a href="visit-events.html">Visit &amp; Events</a></li>
+      </ul>
+      <ul class="nav__links nav__links--cafe">
+        <li><a href="cafe.html">The Cafe</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <a class="brand" href="index.html">Little&nbsp;Gee <b>&times;</b> Tiny&nbsp;Teapot</a>
     <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
-    <ul class="nav__links" id="navlinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="plant-shop.html" aria-current="page">The Plant Shop</a></li>
-      <li><a href="cafe.html">The Cafe</a></li>
-      <li><a href="visit-events.html">Visit &amp; Events</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a class="btn btn--accent" href="visit-events.html">Plan a visit</a></li>
-    </ul>
   </nav>
 </header>
 
 <main>
   <section class="section section--brand">
-    <div class="container stack">
-      <p class="eyebrow">Little Gee Plants</p>
-      <h1 class="display">Plants that survive<br>a real apartment</h1>
-      <p class="lead measure">We stock houseplants that hold up in Metro Manila condos and offices —
-        the light is what it is, the aircon is drying, and life is busy. Come in, tell us your
-        space, and we'll point you at something that'll live.</p>
+    <div class="container">
+      <span class="eyebrow">The Plant Shop</span>
+      <h1 style="color:#fff; max-width:20ch">Plants that put up with real life</h1>
+      <p class="lead" style="max-width:44ch">We stock what actually survives a Manila condo — bright
+        shade, aircon, and the odd missed watering. Tell us your light and we’ll point you right.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container stack">
-      <div><p class="eyebrow">Usually in stock</p><h2>What we carry</h2></div>
-      <div class="grid grid--3">
-        <div class="card reveal"><h3>Easy starters</h3><p>Pothos, ZZ, snake plant, aglaonema. Low light, low fuss, hard to kill.</p></div>
-        <div class="card reveal"><h3>Statement plants</h3><p>Monstera, birds of paradise, rubber plant, fiddle-leaf — for a bright corner and a bit of commitment.</p></div>
-        <div class="card reveal"><h3>For the brave</h3><p>Calatheas, ferns, alocasias. Beautiful, dramatic, and honest about needing attention.</p></div>
-        <div class="card reveal"><h3>Desk-sized</h3><p>Small succulents, peperomia, pilea — for a windowsill or an office desk.</p></div>
-        <div class="card reveal"><h3>Pots &amp; soil</h3><p>Nursery pots, ceramic and terracotta, potting mix, drainage and basic tools.</p></div>
-        <div class="card reveal"><h3>Gifting</h3><p>A potted plant with a card beats a bouquet that dies in a week. We'll wrap it.</p></div>
+      <p class="eyebrow">Plant of the week</p>
+      <div class="potw reveal reveal--rotate">
+        <img src="assets/img/plant-pot.jpg" alt="This week's featured plant">
+        <div>
+          <span class="tag">Beginner-friendly</span>
+          <h3>ZZ Plant</h3>
+          <p>Near-indestructible, glossy, and fine in low light. A great first plant or a gift.
+            <em>Rotates weekly — ask what’s featured now.</em></p>
+        </div>
       </div>
-      <p style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft)">Stock changes with what's healthy and available. Message us to check before a special trip.</p>
     </div>
   </section>
 
   <section class="section section--paper2">
     <div class="container stack">
-      <div><p class="eyebrow">Free with every plant</p><h2>A care card, in plain terms</h2></div>
-      <div class="grid grid--3">
-        <div class="care reveal"><h4>ZZ Plant</h4><dl><dt>Light</dt><dd>Low to bright indirect</dd><dt>Water</dt><dd>Every 2–3 weeks, less in the rainy season</dd><dt>Watch for</dt><dd>Yellow leaves = overwatered</dd></dl></div>
-        <div class="care reveal"><h4>Pothos</h4><dl><dt>Light</dt><dd>Anything but direct sun</dd><dt>Water</dt><dd>When the top inch is dry</dd><dt>Watch for</dt><dd>Leggy vines = needs more light</dd></dl></div>
-        <div class="care reveal"><h4>Snake Plant</h4><dl><dt>Light</dt><dd>Low to bright, tolerant</dd><dt>Water</dt><dd>Every 3–4 weeks, soak then dry</dd><dt>Watch for</dt><dd>Mushy base = too much water</dd></dl></div>
+      <div><p class="eyebrow">This week’s shelf</p><h2>What’s in</h2></div>
+      <div class="shelf reveal-group">
+        <article class="pot"><span class="tag">₱280</span><div class="media"><img src="assets/img/plant-pot.jpg" alt="Snake plant"></div><h3>Snake Plant</h3><span>Low light · water monthly</span></article>
+        <article class="pot"><span class="tag">₱350</span><div class="media"><img src="assets/img/plants-shelf.jpg" alt="Golden pothos"></div><h3>Golden Pothos</h3><span>Trailing · very easy</span></article>
+        <article class="pot"><span class="tag">₱450</span><div class="media"><img src="assets/img/plant-pot.jpg" alt="ZZ plant"></div><h3>ZZ Plant</h3><span>Forgiving · glossy</span></article>
+        <article class="pot"><span class="tag">₱520</span><div class="media"><img src="assets/img/plants-shelf.jpg" alt="Calathea"></div><h3>Calathea</h3><span>Bright shade · likes humidity</span></article>
+        <article class="pot"><span class="tag">₱390</span><div class="media"><img src="assets/img/plant-pot.jpg" alt="Peace lily"></div><h3>Peace Lily</h3><span>Tells you when it’s thirsty</span></article>
+        <article class="pot"><span class="tag">₱600</span><div class="media"><img src="assets/img/plants-shelf.jpg" alt="Bird's nest fern"></div><h3>Bird’s Nest Fern</h3><span>Humidity lover · bathroom-friendly</span></article>
+        <article class="pot"><span class="tag">₱180</span><div class="media"><img src="assets/img/plant-pot.jpg" alt="Terracotta pots"></div><h3>Terracotta pots</h3><span>4″ to 8″</span></article>
+        <article class="pot"><span class="tag">₱120</span><div class="media"><img src="assets/img/plants-shelf.jpg" alt="Potting mix"></div><h3>Potting mix</h3><span>Aroid &amp; all-purpose</span></article>
+      </div>
+      <p style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft)">Illustrative range and prices — stock changes weekly. This is a design proposal.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container stack">
+      <div><p class="eyebrow">Keeping them alive</p><h2>Quick care cards</h2></div>
+      <div class="grid grid--3 reveal-group">
+        <div class="care"><h4>Snake Plant</h4><dl><dt>Light</dt><dd>Low to bright</dd><dt>Water</dt><dd>Every 3–4 weeks</dd><dt>Watch for</dt><dd>Soggy soil = rot</dd></dl></div>
+        <div class="care"><h4>Pothos</h4><dl><dt>Light</dt><dd>Bright indirect</dd><dt>Water</dt><dd>When top 2″ dry</dd><dt>Watch for</dt><dd>Leggy = needs more light</dd></dl></div>
+        <div class="care"><h4>Calathea</h4><dl><dt>Light</dt><dd>Bright shade</dd><dt>Water</dt><dd>Keep lightly moist</dd><dt>Watch for</dt><dd>Crispy edges = dry air</dd></dl></div>
       </div>
     </div>
   </section>
 
-  <section class="section section--brand center">
-    <div class="container stack">
-      <h2>Not sure what'll work?</h2>
-      <p class="lead" style="margin-inline:auto">Send us a photo of your space and how much light it gets. We'll suggest three plants.</p>
-      <a class="btn btn--accent btn--lg" href="contact.html">Ask us</a>
+  <section class="section section--paper2">
+    <div class="container split split--top">
+      <div class="stack">
+        <p class="eyebrow">Reserve a plant</p>
+        <h2>Ask us to set one aside</h2>
+        <p class="lead">Send what you’re after (or your light situation) and we’ll hold something or
+          suggest options. Pick up in store.</p>
+        <p style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft)">Design proposal — the form needs a Web3Forms key and a destination inbox to send.</p>
+      </div>
+      <form class="form" data-contact data-web3key="REPLACE_WITH_WEB3FORMS_KEY" data-mailto="littlegeeplants@gmail.com">
+        <div class="field"><label for="n">Name</label><input id="n" name="name" required></div>
+        <div class="field"><label for="c">Mobile</label><input id="c" name="contact" required></div>
+        <div class="field"><label for="p">Plant / what you want</label><input id="p" name="plant" required></div>
+        <div class="field"><label for="l">Your light (window direction, aircon…)</label><input id="l" name="light"></div>
+        <div class="field"><label for="m">Notes</label><textarea id="m" name="notes"></textarea></div>
+        <input type="checkbox" name="botcheck" class="field--hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn--accent btn--lg" type="submit">Send reservation</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </section>
 </main>
@@ -79,19 +114,24 @@
 <footer class="site-footer">
   <div class="container">
     <div class="foot-grid">
-      <div><p class="brand" style="color:inherit">Little Gee <b>&times;</b> Tiny Teapot</p><p style="opacity:.78; margin-top:1rem; max-width:34ch">A plant shop and a bakery cafe under one roof in Palanan, Makati.</p></div>
-      <div><p class="foot-h">Find us</p><p>3734-D L&amp;M Building<br>Bautista cor. Boyle Sts.<br>Barangay Palanan, Makati 1235</p></div>
-      <div><p class="foot-h">Say hello</p><p><a href="tel:+639478690514">0947 869 0514</a><br><a href="mailto:littlegeeplants@gmail.com">littlegeeplants@gmail.com</a><br><a href="https://m.me/" rel="noopener">Message on Facebook</a></p></div>
+      <div><p class="brand">Little Gee <b style="color:var(--butter)">&times;</b> Tiny Teapot</p>
+        <p style="opacity:.85; margin-top:1rem; max-width:34ch">A plant shop and a bakery cafe under one roof in Palanan, Makati.</p></div>
+      <div><p class="foot-h">Visit</p><p>3734-D L&amp;M Building<br>Bautista cor. Boyle Sts.<br>Barangay Palanan, Makati 1235</p></div>
+      <div><p class="foot-h">Contact</p>
+        <p><a href="tel:+639478690514">0947 869 0514</a><br>
+           <a href="mailto:littlegeeplants@gmail.com">littlegeeplants@gmail.com</a><br>
+           <a href="https://www.facebook.com/littlegeeplants" rel="noopener">Message on Facebook</a></p></div>
     </div>
-    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Little Gee Plants / Tiny Teapot. Photography is placeholder stock pending the client's own images.</div>
-    <div class="foot-note"><span>© <span data-year>2026</span> Little Gee Plants × Tiny Teapot. Concept site.</span><span>Built by GCCofCI Digital</span></div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Little Gee Plants / Tiny Teapot. Plant range and prices are illustrative.</div>
+    <div class="foot-note"><span>© <span data-year>2026</span> Little Gee Plants x Tiny Teapot. Concept site.</span><span>Built by GCCofCI Digital</span></div>
   </div>
 </footer>
 
-<a class="chat-fab" href="https://m.me/" rel="noopener" aria-label="Message us on Facebook">
+<a class="chat-fab" href="https://www.facebook.com/littlegeeplants" rel="noopener" aria-label="Message us on Facebook">
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.4-2.6-2.8-5 2.8 5.5-5.9 2.7 2.8 4.9-2.8-5.5 5.9z"/></svg>
   Message us
 </a>
+
 <script src="assets/app.js"></script>
 </body>
 </html>

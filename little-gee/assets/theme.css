@@ -1,8 +1,11 @@
 /* =============================================================
    Little Gee Plants x Tiny Teapot — theme.css
-   Direction: a garden plant shop AND a bakery cafe under one roof.
-   Fresh green + bakery cream + butter yellow + terracotta pot.
-   Rounded, playful. Signature: split-identity hero + plant-of-the-week.
+   Architecture: "Two Shops, One Door" — the whole page is split
+   down the middle (Plants | Cafe). Two-tone nav with the wordmark
+   bridging, a split hero spine with the two halves parallaxing at
+   different speeds, a centre "the space" band where they meet,
+   a plant shelf grid with swinging price tags, a bakery-case menu.
+   Colours unchanged from the original site.
    ============================================================= */
 :root{
   --paper:      #f8f3e6;
@@ -12,84 +15,161 @@
   --line:       #ddd0af;
   --accent:     #c9694a;   /* terracotta pot */
   --accent-ink: #fbf6ea;
-  --brand:      #2f6b3f;   /* garden green block */
+  --brand:      #2f6b3f;   /* garden green */
   --brand-ink:  #f4efe0;
   --butter:     #e9b949;
 
-  --font-display: "Fredoka", system-ui, -apple-system, sans-serif;
+  --font-display: "Bricolage Grotesque", "Helvetica Neue", system-ui, sans-serif;
   --font-body:    "Nunito Sans", system-ui, -apple-system, sans-serif;
   --font-mono:    "Nunito Sans", ui-monospace, Menlo, monospace;
+  --font-mark:    "Fredoka", system-ui, sans-serif;
 
-  --radius: 18px;
-  --container: 1140px;
+  --radius: 14px;
+  --container: 1200px;
 }
 
-h1,h2,h3{ font-family:var(--font-display); font-weight:600; letter-spacing:-.01em; }
-h1,.display{ font-weight:700; line-height:1.05; }
-.lead{ font-size:var(--step-1); color:var(--ink-soft); }
+h1,h2,h3{ font-family:var(--font-display); font-weight:600; letter-spacing:-.02em; }
+h1,.display{ font-weight:700; line-height:1.04; }
+.lead{ font-size:var(--step-1); color:var(--ink-soft); line-height:1.5; }
+.section--brand{ background:var(--brand); }
 .section--brand .lead{ color:#dfe7cf; }
-
-/* ---- Brand wordmark ---- */
-.brand{ font-family:var(--font-display); font-weight:700; font-size:var(--step-1); letter-spacing:-.01em; display:inline-flex; align-items:center; gap:.5rem; }
-.brand::before{ content:"🌿"; font-size:1em; }
-.brand b{ color:var(--accent); font-weight:700; }
-
-/* ---- Eyebrow ---- */
-.eyebrow{ color:var(--brand); font-weight:700; letter-spacing:.16em; }
+.eyebrow{ color:var(--brand); font-family:var(--font-mark); font-weight:600; letter-spacing:.14em; }
 .eyebrow::before{ background:var(--butter); border-radius:3px; }
 .section--brand .eyebrow{ color:var(--butter); }
 
-/* ---- Split-identity hero (signature) ---- */
-.hero{ color:#fff; background:var(--brand); }
-.hero__split{ position:absolute; inset:0; z-index:-1; display:grid; grid-template-columns:1fr 1fr; }
-.hero__split > div{ position:relative; overflow:hidden; }
-.hero__split img{ width:100%; height:100%; object-fit:cover; }
-.hero__split > div::after{ content:""; position:absolute; inset:0; }
-.hero__split .l::after{ background:linear-gradient(120deg, rgba(30,55,35,.5), rgba(30,55,35,.75)); }
-.hero__split .r::after{ background:linear-gradient(240deg, rgba(60,40,20,.45), rgba(30,55,35,.78)); }
-.hero__split .badge{ position:absolute; top:1rem; z-index:2; font-family:var(--font-display); font-weight:700; letter-spacing:.14em; text-transform:uppercase; font-size:var(--step--1); background:rgba(255,255,255,.92); color:var(--ink); padding:.4em .9em; border-radius:999px; }
-.hero__split .l .badge{ left:1rem; } .hero__split .r .badge{ right:1rem; }
-@media (max-width:700px){ .hero__split{ grid-template-columns:1fr; grid-template-rows:1fr 1fr; } }
-.hero h1{ font-size:var(--step-5); }
-.hero .lead{ color:#eef2e5; }
-.hero .eyebrow{ color:#e9f3dd; }
-.hero .eyebrow::before{ background:var(--butter); }
+/* =============================================================
+   Two-tone split nav
+   ============================================================= */
+.site-header{ background:transparent; backdrop-filter:none; border:0; }
+.nav--split{ display:grid; grid-template-columns:1fr auto 1fr; align-items:stretch; gap:0; padding:0;
+  background:linear-gradient(90deg, var(--brand) 0 50%, var(--paper-2) 50% 100%); border-bottom:1px solid var(--line); }
+.nav__groups{ display:contents; }
+.brand{ grid-column:2; align-self:center; justify-self:center; font-family:var(--font-mark); font-weight:600; font-size:var(--step-1);
+  color:var(--ink); background:var(--paper); border:1px solid var(--line); border-radius:999px;
+  padding:.45em 1.1em; margin:.5rem; white-space:nowrap; text-decoration:none; display:inline-flex; align-items:center; gap:.4rem; }
+.brand::before{ content:"🌿"; }
+.brand b{ color:var(--accent); }
+.nav__links{ display:flex; align-items:center; gap:1.4rem; list-style:none; margin:0; padding:1rem 1.25rem; }
+.nav__links--plant{ grid-column:1; justify-content:flex-start; }
+.nav__links--cafe{ grid-column:3; justify-content:flex-end; }
+.nav__links a{ font-family:var(--font-body); font-weight:700; font-size:var(--step--1); text-decoration:none; padding:.3rem 0; border-bottom:2px solid transparent; white-space:nowrap; }
+.nav__links--plant a{ color:#dbe8cf; }
+.nav__links--plant a:hover,.nav__links--plant a[aria-current="page"]{ color:#fff; border-bottom-color:var(--butter); }
+.nav__links--cafe a{ color:var(--ink-soft); }
+.nav__links--cafe a:hover,.nav__links--cafe a[aria-current="page"]{ color:var(--ink); border-bottom-color:var(--accent); }
+.nav__toggle{ display:none; grid-column:3; justify-self:end; align-self:center; width:42px; height:42px; margin-right:.9rem;
+  border:1px solid var(--line); background:var(--paper); border-radius:12px; cursor:pointer; align-items:center; justify-content:center; }
+.nav__toggle span,.nav__toggle span::before,.nav__toggle span::after{ content:""; display:block; width:18px; height:2px; border-radius:2px; background:var(--ink); position:relative; }
+.nav__toggle span::before{ position:absolute; top:-6px; } .nav__toggle span::after{ position:absolute; top:6px; }
 
-/* ---- Rounded cards ---- */
-.card{ border-radius:var(--radius); background:#fff; border-color:transparent; box-shadow:0 10px 30px rgba(44,51,39,.07); }
-.section--brand .card{ background:rgba(255,255,255,.08); box-shadow:none; }
-.media{ border-radius:var(--radius); }
+@media (max-width:1040px){
+  .nav--split{ grid-template-columns:auto 1fr auto; background:var(--brand); }
+  .brand{ grid-column:1; justify-self:start; }
+  .nav__toggle{ display:inline-flex; }
+  .nav__groups{
+    display:block; grid-column:1 / -1;
+    position:fixed; inset:70px 12px auto 12px; z-index:60;
+    background:var(--paper); border:1px solid var(--line); border-radius:20px;
+    padding:.5rem 1.25rem 1.25rem; box-shadow:0 22px 44px -18px rgba(44,51,39,.35);
+    transform:translateY(-130%); transition:transform .28s ease; opacity:0;
+  }
+  .nav[data-open="true"] .nav__groups{ transform:none; opacity:1; }
+  .nav__links{ flex-direction:column; align-items:stretch; gap:0; padding:0; }
+  .nav__links li{ width:100%; }
+  .nav__links a{ display:block; width:100%; padding:.9rem 0; font-size:var(--step-0); border-bottom:1px solid var(--line); }
+  .nav__links--plant a,.nav__links--cafe a{ color:var(--ink); }
+  .nav__links--plant a:hover,.nav__links--cafe a:hover{ color:var(--brand); }
+}
 
-/* ---- Plant of the week (signature) ---- */
-.potw{ display:grid; grid-template-columns:auto 1fr; gap:1.5rem; align-items:center; background:#fff; border-radius:var(--radius); padding:1.6rem; box-shadow:0 12px 34px rgba(44,51,39,.08); }
-.potw img{ width:120px; height:150px; object-fit:cover; border-radius:14px; }
+/* =============================================================
+   Split spine — Plants | Cafe
+   ============================================================= */
+.duo{ display:grid; grid-template-columns:1fr 1fr; position:relative; isolation:isolate; }
+.duo::after{ content:""; position:absolute; top:0; bottom:0; left:50%; width:2px; transform:translateX(-50%);
+  background:repeating-linear-gradient(var(--line) 0 8px, transparent 8px 16px); z-index:2; }
+.duo__side{ padding:clamp(2rem,1.5rem + 3vw,4.5rem) clamp(1.5rem,1rem + 3vw,3.5rem); min-height:60vh; display:flex; flex-direction:column; justify-content:center; }
+.duo__side--plant{ background:var(--brand); color:var(--brand-ink); }
+.duo__side--cafe{ background:var(--paper-2); color:var(--ink); }
+.duo__side .badge{ display:inline-block; align-self:flex-start; font-family:var(--font-mark); font-weight:600; letter-spacing:.12em; text-transform:uppercase; font-size:var(--step--1);
+  padding:.4em 1em; border-radius:999px; margin-bottom:1rem; }
+.duo__side--plant .badge{ background:rgba(255,255,255,.14); color:#fff; }
+.duo__side--cafe .badge{ background:var(--accent); color:var(--accent-ink); }
+.duo__side h1,.duo__side h2{ font-size:var(--step-3); }
+.duo__side--plant h1,.duo__side--plant h2{ color:#fff; }
+.duo__side p{ max-width:34ch; }
+.duo__side--plant p{ color:#dfe7cf; }
+.duo__side .media{ margin-top:1.4rem; border-radius:var(--radius); aspect-ratio:4/3; }
+.duo__side .go{ margin-top:1.2rem; font-family:var(--font-display); font-weight:700; text-decoration:none; }
+.duo__side--plant .go{ color:var(--butter); }
+.duo__side--cafe .go{ color:var(--accent); }
+@media (max-width:760px){
+  .duo{ grid-template-columns:1fr; }
+  .duo::after{ left:0; right:0; top:50%; bottom:auto; width:auto; height:2px; transform:translateY(-50%);
+    background:repeating-linear-gradient(90deg, var(--line) 0 8px, transparent 8px 16px); }
+  .duo__side{ min-height:auto; }
+}
+
+/* ---- Centre "the space" band ---- */
+.merge{ background:var(--paper); text-align:center; }
+.merge .inner{ max-width:44rem; margin-inline:auto; }
+.merge .seam{ display:inline-block; font-family:var(--font-mark); font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); }
+
+/* =============================================================
+   Plant shelf grid + swinging tags
+   ============================================================= */
+.shelf{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:var(--space-md); }
+.pot{ position:relative; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:1rem 1rem 1.2rem; }
+.pot .media{ aspect-ratio:1/1; border-radius:10px; margin-bottom:.7rem; }
+.pot h3{ margin:0; font-size:var(--step-0); }
+.pot span{ font-size:var(--step--1); color:var(--ink-soft); }
+.pot .tag{ position:absolute; top:.6rem; right:.6rem; transform-origin:top right; transform:rotate(4deg);
+  font-family:var(--font-mark); font-weight:600; font-size:var(--step--1); background:var(--butter); color:var(--ink);
+  padding:.25em .7em; border-radius:18px; box-shadow:0 4px 10px -4px rgba(44,51,39,.3); transition:transform .25s ease; }
+.pot:hover .tag{ transform:rotate(-6deg) scale(1.05); }
+@media (prefers-reduced-motion:reduce){ .pot:hover .tag{ transform:rotate(4deg); } }
+
+/* ---- Plant of the week ---- */
+.potw{ display:grid; grid-template-columns:auto 1fr; gap:1.5rem; align-items:center; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:1.6rem; box-shadow:0 14px 34px -20px rgba(44,51,39,.3); }
+@media (max-width:560px){ .potw{ grid-template-columns:1fr; } }
+.potw img{ width:130px; height:160px; object-fit:cover; border-radius:12px; }
 .potw h3{ margin:0 0 .2rem; color:var(--brand); }
-.potw .tag{ display:inline-block; font-family:var(--font-mono); font-size:var(--step--1); font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); background:var(--paper-2); padding:.25em .7em; border-radius:999px; margin-bottom:.5rem; }
+.potw .tag{ display:inline-block; font-family:var(--font-mark); font-weight:600; font-size:var(--step--1); letter-spacing:.06em; text-transform:uppercase; color:var(--accent); background:var(--paper-2); padding:.25em .7em; border-radius:999px; margin-bottom:.5rem; }
 
-/* ---- Care card ---- */
+/* ---- Care cards ---- */
 .care{ border:2px dashed var(--line); border-radius:var(--radius); padding:1.4rem 1.6rem; background:var(--paper); }
 .care h4{ margin:0 0 .6rem; font-family:var(--font-display); font-weight:600; }
 .care dl{ display:grid; grid-template-columns:auto 1fr; gap:.4rem 1rem; margin:0; font-size:var(--step--1); }
 .care dt{ font-weight:700; color:var(--brand); }
 .care dd{ margin:0; color:var(--ink-soft); }
 
-/* ---- Menu list ---- */
-.dish{ display:flex; gap:1rem; align-items:baseline; padding:.85rem 0; border-bottom:1px solid var(--line); }
-.dish:last-child{ border-bottom:0; }
-.dish h4{ margin:0; font-family:var(--font-display); font-weight:600; font-size:var(--step-1); }
-.dish .dots{ flex:1; border-bottom:2px dotted var(--line); transform:translateY(-.3em); }
-.dish .p{ font-family:var(--font-mono); font-weight:700; white-space:nowrap; color:var(--accent); }
+/* =============================================================
+   Bakery-case menu
+   ============================================================= */
+.case{ background:#fff; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; }
+.case__row{ display:flex; align-items:baseline; gap:1rem; padding:1rem 1.4rem; border-bottom:1px solid var(--line); }
+.case__row:last-child{ border-bottom:0; }
+.case__row .n{ font-family:var(--font-display); font-weight:600; }
+.case__row .dots{ flex:1; border-bottom:2px dotted var(--line); transform:translateY(-.25em); }
+.case__row .p{ font-family:var(--font-mono); font-weight:700; color:var(--accent); white-space:nowrap; }
+.case__row small{ flex-basis:100%; color:var(--ink-soft); font-size:var(--step--1); }
 
-/* ---- Buttons ---- */
-.btn{ border-radius:999px; font-family:var(--font-display); font-weight:700; letter-spacing:.02em; }
+/* ---- Cards / buttons / misc ---- */
+.card{ border-radius:var(--radius); background:#fff; border-color:var(--line); box-shadow:0 10px 26px -18px rgba(44,51,39,.25); }
+.section--brand .card{ background:rgba(255,255,255,.08); box-shadow:none; border-color:rgba(255,255,255,.16); }
+.media{ border-radius:var(--radius); }
+.btn{ border-radius:999px; font-family:var(--font-display); font-weight:700; letter-spacing:.01em; }
 .btn:hover{ transform:translateY(-3px) rotate(-1deg); }
 .btn--accent:hover{ background:#b45c40; }
-
-.review{ background:#fff; border-left:0; border-radius:var(--radius); padding:1.4rem 1.6rem; box-shadow:0 10px 30px rgba(44,51,39,.07); }
+.review{ background:#fff; border-left:0; border-radius:var(--radius); padding:1.4rem 1.6rem; box-shadow:0 10px 26px -18px rgba(44,51,39,.25); }
 .review p{ font-family:var(--font-body); font-weight:600; }
-.review cite{ color:var(--brand); }
+.review cite{ color:var(--brand); font-family:var(--font-mono); }
 .stars{ color:var(--butter); }
 .stat__num{ font-family:var(--font-display); font-weight:700; color:var(--butter); }
+.section--brand .stat__label{ color:#dfe7cf; }
 .chat-fab{ background:var(--accent); }
-.site-footer{ --line:rgba(255,255,255,.16); }
-.foot-h{ font-family:var(--font-display); font-weight:700; letter-spacing:.06em; }
+.site-footer{ background:var(--brand); --line:rgba(255,255,255,.16); }
+.site-footer .brand{ background:transparent; border:0; color:var(--brand-ink); padding:0; margin:0; }
+.foot-h{ font-family:var(--font-mark); font-weight:600; letter-spacing:.08em; }
+.field input,.field select,.field textarea{ border:1px solid var(--line); border-radius:12px; background:#fff; }
+.field label{ font-family:var(--font-display); font-weight:700; }
+.notfound{ text-align:center; padding-block:var(--space-2xl); }

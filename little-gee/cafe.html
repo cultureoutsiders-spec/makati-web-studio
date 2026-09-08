@@ -3,91 +3,88 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Cafe — Tiny Teapot Bakery Cafe, Palanan Makati</title>
-<meta name="description" content="House-baked cakes and pastries, coffee and milk tea at Tiny Teapot Bakery Cafe, inside the Little Gee Plants space in Palanan, Makati.">
+<title>The Cafe — Little Gee Plants x Tiny Teapot</title>
+<meta name="description" content="Tiny Teapot's bakery cafe in Palanan, Makati: daily loaves and pastries, cakes by the slice, proper tea and single-origin coffee. Sit in among the plants.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="The Cafe — Little Gee Plants x Tiny Teapot">
+<meta property="og:description" content="Daily bakes, tea and coffee among the plants. Palanan, Makati.">
+<meta property="og:type" content="restaurant.menu">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Fredoka:wght@500;600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/base.css">
 <link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
 
 <header class="site-header">
-  <nav class="nav container" data-open="false" aria-label="Primary">
-    <a class="brand" href="index.html">Little Gee <b>&times;</b> Tiny Teapot</a>
+  <nav class="nav--split nav" data-open="false" aria-label="Primary">
+    <div class="nav__groups" id="navlinks">
+      <ul class="nav__links nav__links--plant">
+        <li><a href="plant-shop.html">The Plant Shop</a></li>
+        <li><a href="visit-events.html">Visit &amp; Events</a></li>
+      </ul>
+      <ul class="nav__links nav__links--cafe">
+        <li><a href="cafe.html" aria-current="page">The Cafe</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <a class="brand" href="index.html">Little&nbsp;Gee <b>&times;</b> Tiny&nbsp;Teapot</a>
     <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
-    <ul class="nav__links" id="navlinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="plant-shop.html">The Plant Shop</a></li>
-      <li><a href="cafe.html" aria-current="page">The Cafe</a></li>
-      <li><a href="visit-events.html">Visit &amp; Events</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a class="btn btn--accent" href="visit-events.html">Plan a visit</a></li>
-    </ul>
   </nav>
 </header>
 
 <main>
-  <section class="section section--brand">
-    <div class="container stack">
-      <p class="eyebrow">Tiny Teapot Bakery Cafe</p>
-      <h1 class="display">Coffee, cake,<br>and a lot of leaves</h1>
-      <p class="lead measure">Baked in-house, poured properly, served in a room full of plants.
-        Good for a slow morning, a work session, or splitting a whole cake with someone.</p>
+  <section class="section section--paper2">
+    <div class="container">
+      <span class="eyebrow">The Cafe</span>
+      <h1 style="max-width:20ch">Baked this morning, best today</h1>
+      <p class="lead" style="max-width:44ch">Tiny Teapot runs a small daily bake — loaves, pastries
+        and a couple of cakes — with proper leaf tea and single-origin coffee. Sit in among the
+        plants or take it away.</p>
     </div>
   </section>
 
   <section class="section">
-    <div class="container grid grid--2" style="align-items:start; --gap:3rem">
-      <div class="stack">
-        <h2>Bakes</h2>
-        <div>
-          <div class="dish"><h4>Slice of the day (cake)</h4><span class="dots"></span><span class="p">₱150</span></div>
-          <div class="dish"><h4>Whole cake (pre-order)</h4><span class="dots"></span><span class="p">from ₱950</span></div>
-          <div class="dish"><h4>Butter croissant</h4><span class="dots"></span><span class="p">₱110</span></div>
-          <div class="dish"><h4>Cookies &amp; brownies</h4><span class="dots"></span><span class="p">₱90</span></div>
-          <div class="dish"><h4>Cinnamon roll</h4><span class="dots"></span><span class="p">₱140</span></div>
-          <div class="dish"><h4>Savoury bake of the day</h4><span class="dots"></span><span class="p">₱160</span></div>
-        </div>
-      </div>
-      <div class="stack">
-        <h2>Drinks</h2>
-        <div>
-          <div class="dish"><h4>Brewed coffee</h4><span class="dots"></span><span class="p">₱110</span></div>
-          <div class="dish"><h4>Latte / cappuccino</h4><span class="dots"></span><span class="p">₱150</span></div>
-          <div class="dish"><h4>Iced signature</h4><span class="dots"></span><span class="p">₱170</span></div>
-          <div class="dish"><h4>Milk tea</h4><span class="dots"></span><span class="p">₱140</span></div>
-          <div class="dish"><h4>Hot tea (pot)</h4><span class="dots"></span><span class="p">₱130</span></div>
-          <div class="dish"><h4>Cake + coffee set</h4><span class="dots"></span><span class="p">₱240</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="container" style="margin-top:2rem">
-      <p style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft)">Illustrative menu for the concept site — the cafe's real menu and prices replace this. Whole cakes need a day or two of notice.</p>
-    </div>
-  </section>
-
-  <section class="section section--paper2">
-    <div class="container split split--flip">
-      <div class="split__media"><div class="media media--4x3"><img src="assets/img/bread.jpg" alt="Fresh bakes"></div></div>
-      <div class="stack">
-        <p class="eyebrow">Working from here?</p>
-        <h2>Quiet, green, plenty of outlets</h2>
-        <p class="lead">A calm alternative to the mall coffee chains. Wi-Fi, seats among the plants,
-          and a slice within arm's reach. Busiest late morning and after lunch.</p>
-        <a class="btn btn--accent btn--lg" href="visit-events.html">Hours &amp; directions</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--brand center">
     <div class="container stack">
-      <h2>Order a whole cake</h2>
-      <p class="lead" style="margin-inline:auto">Message us a day or two ahead for celebration cakes.</p>
-      <a class="btn btn--accent btn--lg" href="contact.html">Pre-order</a>
+      <div><p class="eyebrow">From the case</p><h2>The menu</h2></div>
+      <div class="grid grid--2" style="align-items:start">
+        <div class="case reveal">
+          <div class="case__row"><span class="n">Sourdough loaf</span><span class="dots"></span><span class="p">₱220</span></div>
+          <div class="case__row"><span class="n">Country white</span><span class="dots"></span><span class="p">₱200</span></div>
+          <div class="case__row"><span class="n">Banana bread (slice)</span><span class="dots"></span><span class="p">₱95</span></div>
+          <div class="case__row"><span class="n">Butter croissant</span><span class="dots"></span><span class="p">₱110</span></div>
+          <div class="case__row"><span class="n">Pain au chocolat</span><span class="dots"></span><span class="p">₱130</span></div>
+          <div class="case__row"><span class="n">Ube cheese pandesal (3)</span><span class="dots"></span><span class="p">₱120</span></div>
+          <div class="case__row"><span class="n">Cinnamon roll</span><span class="dots"></span><span class="p">₱140</span></div>
+          <div class="case__row"><span class="n">Carrot cake (slice)</span><span class="dots"></span><span class="p">₱160</span></div>
+          <div class="case__row"><span class="n">Basque cheesecake (slice)</span><span class="dots"></span><span class="p">₱180</span></div>
+        </div>
+        <div class="case reveal">
+          <div class="case__row"><span class="n">Pot of tea</span><span class="dots"></span><span class="p">₱150</span><small>house blend, jasmine, ceylon, earl grey</small></div>
+          <div class="case__row"><span class="n">Iced tea</span><span class="dots"></span><span class="p">₱120</span></div>
+          <div class="case__row"><span class="n">Espresso</span><span class="dots"></span><span class="p">₱110</span></div>
+          <div class="case__row"><span class="n">Flat white / latte</span><span class="dots"></span><span class="p">₱150</span></div>
+          <div class="case__row"><span class="n">Batch brew</span><span class="dots"></span><span class="p">₱130</span></div>
+          <div class="case__row"><span class="n">Hot chocolate</span><span class="dots"></span><span class="p">₱160</span></div>
+          <div class="case__row"><span class="n">Sparkling / still water</span><span class="dots"></span><span class="p">₱70</span></div>
+        </div>
+      </div>
+      <p style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft)">Illustrative menu and prices — the daily bake is posted on Facebook. This is a design proposal.</p>
+    </div>
+  </section>
+
+  <section class="section section--brand">
+    <div class="container split split--top">
+      <div class="stack">
+        <p class="eyebrow">Made to order</p>
+        <h2 style="color:#fff">Whole cakes &amp; bread orders</h2>
+        <p class="lead">Give us a couple of days for whole cakes, celebration bakes and bulk bread.
+          Message us to check what’s possible for your date.</p>
+        <a class="btn btn--accent btn--lg" href="contact.html">Enquire about an order</a>
+      </div>
+      <div class="split__media"><div class="media media--4x3"><img src="assets/img/bakes.jpg" alt="A tray of fresh bakes"></div></div>
     </div>
   </section>
 </main>
@@ -95,19 +92,24 @@
 <footer class="site-footer">
   <div class="container">
     <div class="foot-grid">
-      <div><p class="brand" style="color:inherit">Little Gee <b>&times;</b> Tiny Teapot</p><p style="opacity:.78; margin-top:1rem; max-width:34ch">A plant shop and a bakery cafe under one roof in Palanan, Makati.</p></div>
-      <div><p class="foot-h">Find us</p><p>3734-D L&amp;M Building<br>Bautista cor. Boyle Sts.<br>Barangay Palanan, Makati 1235</p></div>
-      <div><p class="foot-h">Say hello</p><p><a href="tel:+639478690514">0947 869 0514</a><br><a href="mailto:littlegeeplants@gmail.com">littlegeeplants@gmail.com</a><br><a href="https://m.me/" rel="noopener">Message on Facebook</a></p></div>
+      <div><p class="brand">Little Gee <b style="color:var(--butter)">&times;</b> Tiny Teapot</p>
+        <p style="opacity:.85; margin-top:1rem; max-width:34ch">A plant shop and a bakery cafe under one roof in Palanan, Makati.</p></div>
+      <div><p class="foot-h">Visit</p><p>3734-D L&amp;M Building<br>Bautista cor. Boyle Sts.<br>Barangay Palanan, Makati 1235</p></div>
+      <div><p class="foot-h">Contact</p>
+        <p><a href="tel:+639478690514">0947 869 0514</a><br>
+           <a href="mailto:littlegeeplants@gmail.com">littlegeeplants@gmail.com</a><br>
+           <a href="https://www.facebook.com/littlegeeplants" rel="noopener">Message on Facebook</a></p></div>
     </div>
-    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Little Gee Plants / Tiny Teapot. Photography is placeholder stock pending the client's own images.</div>
-    <div class="foot-note"><span>© <span data-year>2026</span> Little Gee Plants × Tiny Teapot. Concept site.</span><span>Built by GCCofCI Digital</span></div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Little Gee Plants / Tiny Teapot. Menu and prices are illustrative.</div>
+    <div class="foot-note"><span>© <span data-year>2026</span> Little Gee Plants x Tiny Teapot. Concept site.</span><span>Built by GCCofCI Digital</span></div>
   </div>
 </footer>
 
-<a class="chat-fab" href="https://m.me/" rel="noopener" aria-label="Message us on Facebook">
+<a class="chat-fab" href="https://www.facebook.com/littlegeeplants" rel="noopener" aria-label="Message us on Facebook">
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.4-2.6-2.8-5 2.8 5.5-5.9 2.7 2.8 4.9-2.8-5.5 5.9z"/></svg>
   Message us
 </a>
+
 <script src="assets/app.js"></script>
 </body>
 </html>
