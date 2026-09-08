@@ -1,0 +1,99 @@
+/* =============================================================
+   The Makati Haven — theme.css
+   Direction: "elevate your lifestyle" — calm, residential, editorial
+   serviced studio living in Legazpi Village. Warm white, garden green.
+   ============================================================= */
+:root{
+  --paper:      #f7f5ef;
+  --paper-2:    #ece8dd;
+  --ink:        #22261f;
+  --ink-soft:   #565b4e;
+  --line:       #d9d4c4;
+  --accent:     #3a5a40;   /* garden green — parks, plants, calm */
+  --accent-ink: #f5f3ea;
+  --brand:      #22261f;
+  --brand-ink:  #efeadd;
+
+  --font-display: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-body:    "Manrope", system-ui, -apple-system, sans-serif;
+  --font-mono:    "DM Mono", ui-monospace, Menlo, monospace;
+
+  --radius: 10px;
+  --container: 1120px;
+}
+
+h1,h2,h3{ font-weight:400; letter-spacing:-.01em; }
+h1,.display{ line-height:1; }
+h2 em,.display em,.hero h1 em{ font-style:italic; }
+.lead{ font-size:var(--step-1); color:var(--ink-soft); font-weight:400; }
+.section--brand .lead{ color:#cfcbbc; }
+
+/* ---- Brand wordmark ---- */
+.brand{ font-family:var(--font-display); font-weight:400; font-size:var(--step-2); letter-spacing:0; }
+.brand span{ color:var(--accent); font-style:italic; }
+.section--brand .brand span,.site-footer .brand span{ color:#9fb79f; }
+
+/* ---- Eyebrow ---- */
+.eyebrow{ color:var(--accent); letter-spacing:.22em; }
+.eyebrow::before{ background:var(--accent); width:1.6rem; }
+
+/* ---- Hero ---- */
+.hero{ color:#f6f3ea; background:var(--brand); }
+.hero__bg{ opacity:.82; }
+.hero__bg::after{ background:linear-gradient(180deg, rgba(20,22,16,.42) 0%, rgba(20,22,16,.78) 100%); }
+.hero h1{ font-size:var(--step-5); }
+.hero .lead{ color:#e8e3d5; }
+
+/* ---- Amenities directory board (signature) ---- */
+.board{ border-top:2px solid var(--ink); }
+.board__row{
+  display:flex; align-items:baseline; gap:1rem;
+  padding:1.05rem .2rem; border-bottom:1px solid var(--line);
+  font-family:var(--font-mono); font-size:var(--step--1);
+}
+.board__row .name{ letter-spacing:.06em; text-transform:uppercase; }
+.board__row .dots{ flex:1; border-bottom:1px dotted var(--ink-soft); transform:translateY(-.28em); opacity:.5; }
+.board__row .loc{ color:var(--ink-soft); white-space:nowrap; }
+.section--brand .board{ border-color:var(--brand-ink); }
+.section--brand .board__row{ border-color:#3a3f34; }
+.section--brand .board__row .loc{ color:#a7ab9c; }
+
+/* ---- Unit spec card (signature) ---- */
+.spec{ background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; }
+.spec .media{ border-radius:0; }
+.spec__grid{ padding:1.4rem 1.6rem 1.7rem; display:grid; gap:.1rem; }
+.spec__grid div{ display:flex; justify-content:space-between; gap:1rem; padding:.6rem 0; border-bottom:1px dashed var(--line); font-family:var(--font-mono); font-size:var(--step--1); }
+.spec__grid div:last-child{ border-bottom:0; }
+.spec__grid dt{ color:var(--ink-soft); letter-spacing:.06em; text-transform:uppercase; margin:0; }
+.spec__grid dd{ margin:0; font-weight:500; }
+
+/* ---- Stay toggle ---- */
+.stay-toggle{ display:inline-flex; border:1px solid currentColor; border-radius:999px; padding:4px; gap:4px; font-family:var(--font-mono); }
+.stay-toggle button{ appearance:none; border:0; background:transparent; color:inherit; cursor:pointer; font:inherit; font-size:var(--step--1); letter-spacing:.1em; text-transform:uppercase; padding:.6em 1.1em; border-radius:999px; transition:background .2s ease, color .2s ease; }
+.stay-toggle button[aria-pressed="true"]{ background:var(--accent); color:var(--accent-ink); }
+[data-stay="month"] .when-night{ display:none; }
+[data-stay="night"] .when-month{ display:none; }
+
+/* ---- Cards ---- */
+.card{ border-radius:var(--radius); }
+.section--brand{ --line:#3a3f34; }
+.section--brand .card{ background:transparent; border-color:#3a3f34; }
+
+/* ---- Buttons ---- */
+.btn{ border-radius:999px; letter-spacing:.02em; }
+.btn:hover{ transform:translateY(-2px); }
+
+/* ---- Reviews ---- */
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-display); font-size:var(--step-2); font-style:italic; line-height:1.25; }
+.stars{ color:var(--accent); }
+
+/* ---- Amenity mini-cards ---- */
+.amn{ text-align:left; }
+.amn .media{ border-radius:var(--radius); margin-bottom:.8rem; }
+.amn h3{ font-size:var(--step-1); margin:0 0 .2rem; }
+.amn p{ color:var(--ink-soft); font-size:var(--step--1); }
+
+.chat-fab{ background:var(--accent); border-radius:999px; }
+.site-footer{ --line:#3a3f34; }
+.foot-h{ font-family:var(--font-mono); }

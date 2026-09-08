@@ -1,0 +1,94 @@
+/* =============================================================
+   MPT Suites (Makati Prime Tower Suites) — theme.css
+   Direction: contemporary aparthotel, crisp. Ink + warm paper,
+   muted teal (pool / spa water). Small radius, hotel-precise.
+   ============================================================= */
+:root{
+  --paper:      #f2efe9;
+  --paper-2:    #e7e2d7;
+  --ink:        #17191c;
+  --ink-soft:   #4c4f54;
+  --line:       #d2ccbd;
+  --accent:     #2f6d68;   /* muted teal */
+  --accent-ink: #f3f0ea;
+  --brand:      #17191c;
+  --brand-ink:  #ebe6da;
+
+  --font-display: "Prata", Georgia, "Times New Roman", serif;
+  --font-body:    "Public Sans", system-ui, -apple-system, sans-serif;
+  --font-mono:    "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+  --radius: 4px;
+  --container: 1160px;
+}
+
+h1,h2,h3{ font-weight:400; letter-spacing:-.005em; }
+h1,.display{ line-height:1.04; }
+.lead{ font-size:var(--step-1); color:var(--ink-soft); }
+.section--brand .lead{ color:#cbc6ba; }
+
+/* ---- Brand wordmark ---- */
+.brand{ font-family:var(--font-display); font-weight:400; font-size:var(--step-1); letter-spacing:.01em; }
+.brand b{ font-weight:400; color:var(--accent); }
+.section--brand .brand b,.site-footer .brand b{ color:#7fb3ae; }
+
+/* ---- Eyebrow ---- */
+.eyebrow{ color:var(--accent); letter-spacing:.24em; }
+.eyebrow::before{ background:var(--accent); width:1.8rem; }
+
+/* ---- Hero ---- */
+.hero{ color:#f4f1eb; background:var(--brand); }
+.hero__bg{ opacity:.85; }
+.hero__bg::after{ background:linear-gradient(180deg, rgba(15,16,18,.4) 0%, rgba(15,16,18,.78) 100%); }
+.hero h1{ font-size:var(--step-5); }
+.hero .lead{ color:#e6e2d8; }
+
+/* ---- Locator (signature): one address, everything nearby ---- */
+.locator{ border-top:2px solid var(--ink); }
+.locator__row{ display:flex; align-items:baseline; gap:1rem; padding:1rem .1rem; border-bottom:1px solid var(--line); font-family:var(--font-mono); font-size:var(--step--1); }
+.locator__row .place{ letter-spacing:.04em; }
+.locator__row .fill{ flex:1; border-bottom:1px dotted var(--ink-soft); transform:translateY(-.28em); opacity:.5; }
+.locator__row .t{ color:var(--accent); white-space:nowrap; font-weight:600; }
+.section--brand .locator{ border-color:var(--brand-ink); }
+.section--brand .locator__row{ border-color:#33363b; }
+.section--brand .locator__row .t{ color:#7fb3ae; }
+
+/* ---- Facilities board ---- */
+.facil{ border-top:2px solid var(--ink); }
+.facil__row{ display:flex; align-items:baseline; gap:1rem; padding:1rem .1rem; border-bottom:1px solid var(--line); }
+.facil__row .n{ font-family:var(--font-display); font-size:var(--step-1); }
+.facil__row .d{ flex:1; }
+.facil__row .m{ font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); white-space:nowrap; }
+
+/* ---- Suite cards ---- */
+.suite{ background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; display:flex; flex-direction:column; }
+.suite .media{ border-radius:0; }
+.suite__body{ padding:1.3rem 1.5rem 1.6rem; display:flex; flex-direction:column; gap:.5rem; flex:1; }
+.suite__cap{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.12em; text-transform:uppercase; color:var(--accent); }
+.suite h3{ margin:0; font-size:var(--step-2); }
+.suite__price{ font-family:var(--font-mono); font-size:var(--step-1); margin-top:auto; }
+.suite__price small{ color:var(--ink-soft); font-size:var(--step--1); }
+
+/* ---- Table ---- */
+.table th,.table td{ border-color:var(--line); }
+.table thead th{ font-family:var(--font-mono); color:var(--ink); }
+.table td:first-child{ font-family:var(--font-display); font-size:var(--step-1); }
+.table td.price{ font-family:var(--font-mono); }
+
+/* ---- Buttons ---- */
+.btn{ border-radius:var(--radius); letter-spacing:.03em; text-transform:uppercase; font-size:var(--step--1); }
+.btn:hover{ transform:translateY(-2px); }
+
+/* ---- Cards / sections ---- */
+.card{ border-radius:var(--radius); }
+.section--brand{ --line:#33363b; }
+.section--brand .card{ background:transparent; border-color:#33363b; }
+
+/* ---- Reviews ---- */
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-display); font-size:var(--step-1); line-height:1.4; }
+.stars{ color:var(--accent); }
+
+.chat-fab{ background:var(--accent); border-radius:var(--radius); }
+.site-footer{ --line:#33363b; }
+.foot-h{ font-family:var(--font-mono); }

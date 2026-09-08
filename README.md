@@ -11,6 +11,8 @@ and hosted anywhere.
 | 851 Bike Park (motorcycle dealer) | `851-bike-park/` | https://cultureoutsiders-spec.github.io/makati-web-studio/851-bike-park/ |
 | COREX Fitness (boxing / Muay Thai / HYROX) | `corex-fitness/` | https://cultureoutsiders-spec.github.io/makati-web-studio/corex-fitness/ |
 | Artina Zobel Residences (budget hotel) | `artina-suites/` | https://cultureoutsiders-spec.github.io/makati-web-studio/artina-suites/ |
+| The Makati Haven (serviced studios) | `makati-haven/` | https://cultureoutsiders-spec.github.io/makati-web-studio/makati-haven/ |
+| MPT Suites (aparthotel) | `mpt-suites/` | https://cultureoutsiders-spec.github.io/makati-web-studio/mpt-suites/ |
 
 Studio landing page: repo root `index.html`.
 
