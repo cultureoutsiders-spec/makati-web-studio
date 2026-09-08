@@ -4,6 +4,11 @@ Five more Makati businesses with no real website of their own, verified 2026-09-
 (Business Profiles, organic results, Facebook). Same offer applies: PHP 25,000 one-time, no
 retainer (first 5 paying clients), then PHP 35,000.
 
+**STATUS: demo sites built + live for all five** (2026-09-08). Live URLs:
+`greenery-kitchen` · `kangnam-beauty` · `resabal-dental` · `ambient-resto` · `little-gee` at
+`https://cultureoutsiders-spec.github.io/makati-web-studio/<slug>/`. Outreach not sent yet —
+research dossiers in `research/batch-2.md`.
+
 "Web presence" was checked the same way as batch 1: if every organic result says *"Missing:
 website"* and the only links are Facebook / Instagram / a directory listing, it's a prospect.
 Confirm each yourself in 2 minutes before pitching (Google the name, look at the right-hand panel
