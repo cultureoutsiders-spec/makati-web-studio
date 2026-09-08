@@ -69,7 +69,7 @@ h1,.display{ font-weight:800; line-height:1.08; }
 /* =============================================================
    Colour hero band + action tiles
    ============================================================= */
-.hero--band{ background:var(--brand); color:#fff; padding-block:clamp(2.5rem,1.8rem+3vw,4.5rem) clamp(3rem,2rem+4vw,5rem); border-radius:0 0 32px 32px; }
+.hero--band{ background:var(--brand); color:#fff; padding-block:clamp(2.5rem,1.8rem + 3vw,4.5rem) clamp(3rem,2rem + 4vw,5rem); border-radius:0 0 32px 32px; }
 .hero--band .eyebrow{ color:#cfe6f6; }
 .hero--band .eyebrow::before{ background:var(--accent); }
 .hero--band h1{ font-size:var(--step-3); max-width:18ch; }

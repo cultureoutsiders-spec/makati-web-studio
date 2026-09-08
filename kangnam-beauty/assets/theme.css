@@ -40,7 +40,7 @@ h2 em,.display em,.hero h1 em,.statement em{ font-style:italic; color:var(--acce
 .site-header{ background:color-mix(in srgb, var(--paper) 90%, transparent); }
 .masthead--center{ display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:1.5rem; padding-block:1.1rem; }
 .nav__groups{ display:contents; }
-.brand{ grid-column:2; justify-self:center; font-family:var(--font-display); font-weight:500; font-size:clamp(1.5rem,1.1rem+1.5vw,2rem); letter-spacing:.16em; text-transform:uppercase; color:var(--ink); text-align:center; line-height:1; text-decoration:none; }
+.brand{ grid-column:2; justify-self:center; font-family:var(--font-display); font-weight:500; font-size:clamp(1.5rem,1.1rem + 1.5vw,2rem); letter-spacing:.16em; text-transform:uppercase; color:var(--ink); text-align:center; line-height:1; text-decoration:none; }
 .brand small{ display:block; font-family:var(--font-body); font-size:.3em; letter-spacing:.42em; color:var(--ink-soft); font-weight:500; margin-top:.35em; }
 .nav__links{ display:flex; gap:1.6rem; align-items:center; list-style:none; margin:0; padding:0; }
 .nav__links--l{ grid-column:1; justify-content:flex-start; }
@@ -71,12 +71,12 @@ h2 em,.display em,.hero h1 em,.statement em{ font-style:italic; color:var(--acce
 /* =============================================================
    Centred statement hero (no full-bleed photo)
    ============================================================= */
-.opening{ padding-block:clamp(3rem,2rem+4vw,6rem) clamp(2.5rem,1.8rem+3vw,4.5rem); text-align:center; }
+.opening{ padding-block:clamp(3rem,2rem + 4vw,6rem) clamp(2.5rem,1.8rem + 3vw,4.5rem); text-align:center; }
 .opening .eyebrow{ justify-content:center; color:var(--accent); letter-spacing:.34em; }
 .opening .eyebrow::before,.opening .eyebrow::after{ content:""; width:2.2rem; height:1px; background:var(--gold); display:inline-block; }
 .statement{ font-family:var(--font-display); font-weight:500; font-size:var(--step-3); line-height:1.12; max-width:20ch; margin:1rem auto 0; }
 .opening .lead{ max-width:46ch; margin:1.4rem auto 0; }
-.portrait{ max-width:min(560px, 92%); margin:clamp(2rem,1.4rem+3vw,3.5rem) auto 0; border:1px solid var(--gold); padding:10px; background:var(--paper); }
+.portrait{ max-width:min(560px, 92%); margin:clamp(2rem,1.4rem + 3vw,3.5rem) auto 0; border:1px solid var(--gold); padding:10px; background:var(--paper); }
 .portrait .media{ aspect-ratio:4/5; border-radius:0; }
 .portrait figcaption{ font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); letter-spacing:.06em; margin-top:.7rem; }
 

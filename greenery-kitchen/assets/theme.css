@@ -75,7 +75,7 @@ h2 em,.hero h1 em,.display em{ font-style:italic; font-weight:500; color:var(--a
 /* =============================================================
    Hero — the daily board (no photo)
    ============================================================= */
-.hero--board{ background:var(--paper); padding-block:clamp(2.5rem,1.8rem+3vw,4.5rem) clamp(3rem,2rem+4vw,5.5rem); }
+.hero--board{ background:var(--paper); padding-block:clamp(2.5rem,1.8rem + 3vw,4.5rem) clamp(3rem,2rem + 4vw,5.5rem); }
 .hero--board .eyebrow{ color:var(--leaf); letter-spacing:.2em; }
 .hero--board .eyebrow::before{ background:var(--leaf); }
 .hero--board h1{ font-size:var(--step-4); max-width:20ch; }
@@ -86,10 +86,10 @@ h2 em,.hero h1 em,.display em{ font-style:italic; font-weight:500; color:var(--a
 .board{
   background:var(--board-bg); color:#f1ece0;
   border:1px solid #3a4a34; border-radius:var(--radius);
-  padding:clamp(1.5rem,1.1rem+1.8vw,2.4rem) clamp(1.6rem,1.2rem+2vw,2.6rem);
+  padding:clamp(1.5rem,1.1rem + 1.8vw,2.4rem) clamp(1.6rem,1.2rem + 2vw,2.6rem);
   box-shadow:inset 0 0 70px rgba(0,0,0,.4), 0 20px 40px -24px rgba(36,48,31,.5);
 }
-.board__title{ font-family:var(--font-hand); font-weight:700; font-size:clamp(1.7rem,1.3rem+2vw,2.5rem); color:#f4d9b8; margin:0 0 .2rem; }
+.board__title{ font-family:var(--font-hand); font-weight:700; font-size:clamp(1.7rem,1.3rem + 2vw,2.5rem); color:#f4d9b8; margin:0 0 .2rem; }
 .board--hero .board__title{ overflow:hidden; white-space:nowrap; }
 @media (prefers-reduced-motion:no-preference){
   .board--hero .board__title{ animation:writein 1.15s .25s ease both; }
@@ -106,7 +106,7 @@ h2 em,.hero h1 em,.display em{ font-style:italic; font-weight:500; color:var(--a
 /* =============================================================
    Two-column read — sticky rail + content
    ============================================================= */
-.read{ display:grid; grid-template-columns:15rem 1fr; gap:clamp(2rem,1.2rem+4vw,5rem); align-items:start; }
+.read{ display:grid; grid-template-columns:15rem 1fr; gap:clamp(2rem,1.2rem + 4vw,5rem); align-items:start; }
 @media (max-width:860px){ .read{ grid-template-columns:1fr; gap:var(--space-lg); } }
 
 .rail{ position:sticky; top:5.5rem; align-self:start; }
@@ -126,7 +126,7 @@ h2 em,.hero h1 em,.display em{ font-style:italic; font-weight:500; color:var(--a
 .article h2 .kicker{ display:block; font-family:var(--font-hand); font-size:1.4rem; color:var(--accent); font-weight:700; transform:rotate(-1.5deg); margin-bottom:-.1rem; }
 
 /* ---- Printed menu spread ---- */
-.spread{ columns:2; column-gap:clamp(1.5rem,1rem+3vw,3.5rem); }
+.spread{ columns:2; column-gap:clamp(1.5rem,1rem + 3vw,3.5rem); }
 @media (max-width:640px){ .spread{ columns:1; } }
 .spread__sec{ break-inside:avoid; margin-bottom:1.6rem; }
 .spread__sec h3{ font-family:var(--font-hand); font-weight:700; font-size:1.7rem; color:var(--brand); margin:0 0 .4rem; border-bottom:2px solid var(--ink); padding-bottom:.2rem; }
