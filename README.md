@@ -13,11 +13,11 @@ and hosted anywhere.
 | Artina Zobel Residences (budget hotel) | `artina-suites/` | https://cultureoutsiders-spec.github.io/makati-web-studio/artina-suites/ |
 | The Makati Haven (serviced studios) | `makati-haven/` | https://cultureoutsiders-spec.github.io/makati-web-studio/makati-haven/ |
 | MPT Suites (aparthotel) | `mpt-suites/` | https://cultureoutsiders-spec.github.io/makati-web-studio/mpt-suites/ |
-| Greenery Kitchen (vegan restaurant) | `greenery-kitchen/` | https://cultureoutsiders-spec.github.io/makati-web-studio/greenery-kitchen/ |
-| Kangnam Beauty Makati (PMU studio) | `kangnam-beauty/` | https://cultureoutsiders-spec.github.io/makati-web-studio/kangnam-beauty/ |
-| Resabal Dental Clinic (family dentistry) | `resabal-dental/` | https://cultureoutsiders-spec.github.io/makati-web-studio/resabal-dental/ |
-| Ambient Bar &amp; Restaurant (bar + events) | `ambient-resto/` | https://cultureoutsiders-spec.github.io/makati-web-studio/ambient-resto/ |
-| Little Gee Plants × Tiny Teapot (plant shop + cafe) | `little-gee/` | https://cultureoutsiders-spec.github.io/makati-web-studio/little-gee/ |
+| Greenery Kitchen (vegan restaurant — "editorial broadsheet") | `greenery-kitchen/` | https://cultureoutsiders-spec.github.io/makati-web-studio/greenery-kitchen/ |
+| Kangnam Beauty Makati (PMU studio — "editorial clinic") | `kangnam-beauty/` | https://cultureoutsiders-spec.github.io/makati-web-studio/kangnam-beauty/ |
+| Resabal Dental Clinic (family dentistry — "wayfinding dashboard") | `resabal-dental/` | https://cultureoutsiders-spec.github.io/makati-web-studio/resabal-dental/ |
+| Ambient Bar &amp; Restaurant (bar + events — "gig-listings page") | `ambient-resto/` | https://cultureoutsiders-spec.github.io/makati-web-studio/ambient-resto/ |
+| Little Gee Plants × Tiny Teapot (plant shop + cafe — "two shops, one door" split) | `little-gee/` | https://cultureoutsiders-spec.github.io/makati-web-studio/little-gee/ |
 
 Studio landing page: repo root `index.html`.
 
