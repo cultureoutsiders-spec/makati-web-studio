@@ -6,18 +6,64 @@
 <title>Page not found — Greenery Kitchen</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Serif+Display:ital@0;1&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Serif+Display:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/base.css">
 <link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
-<main class="section" style="min-height:70vh; display:grid; place-items:center; text-align:center">
-  <div class="container stack">
-    <p class="eyebrow center">Error 404</p>
-    <h1 class="display">Off the <em>menu</em></h1>
-    <p class="lead" style="margin-inline:auto">That page isn't cooking today. Back to the kitchen.</p>
-    <p><a class="btn btn--accent btn--lg" href="index.html">Back to home</a></p>
-  </div>
+
+<header class="site-header">
+  <nav class="masthead nav container" data-open="false" aria-label="Primary">
+    <span class="masthead__date"><span data-today>Makati</span></span>
+    <a class="brand" href="index.html">Greenery Kitchen</a>
+    <button class="masthead__toggle nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    <ul class="masthead__links nav__links" id="navlinks">
+      <li><a href="index.html">Front</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="meal-plans.html">Meal Plans</a></li>
+      <li><a href="story.html">Since 2007</a></li>
+      <li><a href="visit.html">Order &amp; Visit</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="container notfound">
+    <p class="eyebrow" style="justify-content:center">404</p>
+    <h1 class="display">This page took the day off</h1>
+    <p class="lead" style="margin-inline:auto; max-width:44ch">The dish you were after isn’t on today’s board. Head back to the front page, or go straight to the menu.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:1.4rem">
+      <a class="btn btn--accent btn--lg" href="index.html">Back to the front</a>
+      <a class="btn btn--ghost btn--lg" href="menu.html">See the menu</a>
+    </div>
+    <div class="board">
+      <p class="board__title">Meanwhile, on the stove</p>
+      <div class="board__row"><span class="n">Vegan Sisig</span><span class="dots"></span><span class="p">₱215</span></div>
+      <div class="board__row"><span class="n">Kaldereta</span><span class="dots"></span><span class="p">₱230</span></div>
+      <div class="board__row"><span class="n">Pares / Mami</span><span class="dots"></span><span class="p">₱210</span></div>
+    </div>
+  </section>
 </main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Greenery Kitchen.</div>
+    <div class="foot-note"><span>© <span data-year>2026</span> Greenery Kitchen. Concept site.</span><span>Built by GCCofCI Digital</span></div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+(function () {
+  try {
+    var d = new Date();
+    var fmt = d.toLocaleDateString("en-PH", { weekday: "long", month: "long", day: "numeric" });
+    var dl = document.querySelector("[data-today]");
+    if (dl) dl.textContent = "Makati · " + fmt;
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>

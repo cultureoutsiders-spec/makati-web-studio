@@ -3,89 +3,125 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Meal Plans — Greenery Kitchen, Makati</title>
-<meta name="description" content="The Greenery Kitchen 5-Day Bento: vegan Filipino lunch and dinner for a week, ₱1,500, delivered. A rotating plant-based menu with no cooking and no planning.">
+<title>The 5-Day Bento Plan — Greenery Kitchen</title>
+<meta name="description" content="Greenery Kitchen's 5-Day Bento: vegan Filipino lunch and dinner for a working week, ₱150 a meal, ₱1,500 for five days, delivered free within Makati and nearby zones.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="The 5-Day Bento Plan — Greenery Kitchen">
+<meta property="og:description" content="A week of vegan Filipino meals, delivered. ₱1,500 for five days.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Serif+Display:ital@0;1&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Serif+Display:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/base.css">
 <link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
 
 <header class="site-header">
-  <nav class="nav container" data-open="false" aria-label="Primary">
+  <nav class="masthead nav container" data-open="false" aria-label="Primary">
+    <span class="masthead__date"><span data-today>Makati</span></span>
     <a class="brand" href="index.html">Greenery Kitchen</a>
-    <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
-    <ul class="nav__links" id="navlinks">
-      <li><a href="index.html">Home</a></li>
+    <button class="masthead__toggle nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    <ul class="masthead__links nav__links" id="navlinks">
+      <li><a href="index.html">Front</a></li>
       <li><a href="menu.html">Menu</a></li>
       <li><a href="meal-plans.html" aria-current="page">Meal Plans</a></li>
-      <li><a href="story.html">Our Story</a></li>
+      <li><a href="story.html">Since 2007</a></li>
       <li><a href="visit.html">Order &amp; Visit</a></li>
-      <li><a class="btn btn--accent" href="visit.html#order">Order now</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
-  <section class="section section--brand">
-    <div class="container split">
-      <div class="stack">
-        <p class="eyebrow">Meal plans</p>
-        <h1 class="display">A week of dinners,<br><em>already handled</em></h1>
-        <p class="lead measure">The 5-Day Bento gives you lunch and dinner for a working week —
-          plant-based, Filipino, portioned, delivered. You stop thinking about food and just eat.</p>
-        <a class="btn btn--accent btn--lg" href="visit.html#order">Start a plan</a>
-      </div>
-      <div class="split__media">
-        <div class="board">
-          <h3>5-day bento</h3>
-          <div class="board__row"><span>Lunch + dinner, Mon–Fri</span><span class="p">10 meals</span></div>
-          <div class="board__row"><span>Rotating menu</span><span class="p">no repeats</span></div>
-          <div class="board__row"><span>Delivered</span><span class="p">to your door</span></div>
-          <div class="board__row"><span>Price</span><span class="p">₱1,500 / week</span></div>
+  <section class="hero--board">
+    <div class="container">
+      <div class="split split--top">
+        <div class="stack">
+          <p class="eyebrow">No cooking · no thinking</p>
+          <h1 class="display">The 5-Day <em>Bento</em> Plan</h1>
+          <p class="lead">Lunch and dinner for a working week — <strong>₱150 a meal, ₱1,500 for
+            five days</strong>, delivered. The menu rotates, so you’re not eating the same thing
+            twice, and it’s all 100% plant-based.</p>
+          <p><a class="btn btn--accent btn--lg" href="#enquire">Reserve a week</a></p>
         </div>
-        <p class="hand" style="margin-top:1rem">that's ₱150 a meal, cooked, delivered, zero washing up</p>
+        <div class="board board--hero">
+          <p class="board__title">This week’s bento</p>
+          <p class="board__date">Lunch · Dinner</p>
+          <div class="board__row"><span class="n">Mon</span><span class="dots"></span><span class="p">Chopsuey · Shawarma Rice</span></div>
+          <div class="board__row"><span class="n">Tue</span><span class="dots"></span><span class="p">Nilaga · Sisig</span></div>
+          <div class="board__row"><span class="n">Wed</span><span class="dots"></span><span class="p">Picadillo · Pares</span></div>
+          <div class="board__row"><span class="n">Thu</span><span class="dots"></span><span class="p">Siomai · Korean BBQ</span></div>
+          <div class="board__row"><span class="n">Fri</span><span class="dots"></span><span class="p">Binagoongan · Longsilog</span></div>
+          <p class="board__foot">menu set weekly — allergies &amp; swaps, just tell us</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container stack">
-      <div><p class="eyebrow">How it runs</p><h2>Three steps, then it just arrives</h2></div>
-      <div class="grid grid--3">
-        <div class="card reveal"><h3>1 — Message us</h3><p>Tell us your delivery address, your start date, and any allergies. We confirm coverage and the cut-off time.</p></div>
-        <div class="card reveal"><h3>2 — Pay for the week</h3><p>₱1,500 covers Monday to Friday, lunch and dinner. Settle before the week starts.</p></div>
-        <div class="card reveal"><h3>3 — Eat</h3><p>Meals arrive on schedule. The menu rotates so you're not eating the same adobo twice.</p></div>
-      </div>
+      <div><p class="eyebrow">How it works</p><h2>Four steps, then a week of meals</h2></div>
+      <ol class="timeline reveal-group">
+        <li class="tl-item"><span class="yr">1 · Reserve</span>
+          <p>Message us by Friday for the following week. Tell us your address, start day, and any
+            allergies or dishes to skip.</p></li>
+        <li class="tl-item"><span class="yr">2 · We plan</span>
+          <p>We confirm the week’s rotation and the delivery window. Pay by GCash or bank transfer
+            to lock it in.</p></li>
+        <li class="tl-item"><span class="yr">3 · Delivered</span>
+          <p>Two meals a day arrive together, chilled, labelled, ready to reheat. Free within our
+            delivery zones for whole-week plans.</p></li>
+        <li class="tl-item"><span class="yr">4 · Repeat</span>
+          <p>Like it? Roll it over. Regulars just message “same again” and we take it from there.</p></li>
+      </ol>
     </div>
   </section>
 
   <section class="section section--paper2">
-    <div class="container split split--flip">
-      <div class="split__media"><div class="media media--4x3"><img src="assets/img/dish-rice.jpg" alt="A plant-based rice meal"></div></div>
-      <div class="stack">
-        <p class="eyebrow">Who it's for</p>
-        <h2>People who want to eat better without a project</h2>
-        <p class="lead">Office workers who keep ordering fast food at 8pm. New vegans who don't want
-          to cook every night. Anyone doing a reset. The plan removes the decision, not the comfort.</p>
-        <ul class="stack" style="list-style:none; padding:0; --gap:.5rem; font-family:var(--font-mono); font-size:var(--step--1)">
-          <li>— Pause or skip weeks with notice</li>
-          <li>— Tell us what you don't eat and we work around it</li>
-          <li>— Bigger household? Ask about doubling portions</li>
-        </ul>
+    <div class="container stack">
+      <div><p class="eyebrow">The numbers</p><h2>What it costs</h2></div>
+      <div class="grid grid--3 reveal-group">
+        <article class="card"><h3>Per meal</h3><p style="font-size:var(--step-2)">₱150</p><p>Single lunch or dinner, à la carte from the day’s list.</p></article>
+        <article class="card"><h3>5-Day Bento</h3><p style="font-size:var(--step-2)">₱1,500</p><p>Ten meals — lunch + dinner, Monday to Friday. Free delivery in-zone.</p></article>
+        <article class="card"><h3>Add a person</h3><p style="font-size:var(--step-2)">₱1,500</p><p>Same week, second set of meals to the same address.</p></article>
       </div>
+      <p class="hand">pricing from the kitchen’s public posts — confirm the current rate when you reserve</p>
     </div>
   </section>
 
-  <section class="section section--brand center">
+  <section class="section">
     <div class="container stack">
-      <h2>Try one week</h2>
-      <p class="lead" style="margin-inline:auto">Message us your address and a start date. We'll take it from there.</p>
-      <a class="btn btn--accent btn--lg" href="visit.html#order">Message us</a>
+      <div><p class="eyebrow">Where we deliver</p><h2>Free whole-week delivery in these zones</h2></div>
+      <div class="applinks">
+        <a>Makati</a><a>Mandaluyong</a><a>San Juan</a><a>BGC / McKinley</a><a>Pasay</a><a>Taft</a>
+      </div>
+      <p>Outside these? Message us — we can usually still work something out for a small fee.</p>
+    </div>
+  </section>
+
+  <section class="section section--brand" id="enquire">
+    <div class="container">
+      <div class="split split--top">
+        <div class="stack">
+          <p class="eyebrow">Reserve a week</p>
+          <h2 id="enquire-h">Tell us the basics</h2>
+          <p class="lead">Send this and we’ll reply on Messenger or by text to confirm the menu,
+            delivery window, and payment.</p>
+          <p><a class="btn btn--accent btn--lg" href="https://m.me/greenery.kitchen" rel="noopener">Or message us directly</a></p>
+        </div>
+        <form class="form" data-contact data-web3key="REPLACE_WITH_WEB3FORMS_KEY" data-mailto="REPLACE_WITH_EMAIL" aria-labelledby="enquire-h">
+          <div class="field"><label for="n">Name</label><input id="n" name="name" required></div>
+          <div class="field"><label for="c">Mobile number</label><input id="c" name="contact" required></div>
+          <div class="field"><label for="a">Delivery address / area</label><input id="a" name="address" required></div>
+          <div class="field"><label for="s">Start day</label>
+            <select id="s" name="start_day"><option>Next Monday</option><option>Following Monday</option><option>Other — I’ll say in notes</option></select></div>
+          <div class="field"><label for="m">Allergies, dishes to skip, headcount</label><textarea id="m" name="notes"></textarea></div>
+          <input type="checkbox" name="botcheck" class="field--hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn--accent btn--lg" type="submit">Send enquiry</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
     </div>
   </section>
 </main>
@@ -93,12 +129,19 @@
 <footer class="site-footer">
   <div class="container">
     <div class="foot-grid">
-      <div><p class="brand" style="color:inherit">Greenery Kitchen</p>
-        <p style="opacity:.75; margin-top:1rem; max-width:34ch">Plant-based Filipino comfort food in Makati since 2007. Dine in, delivery, weekly meal plans.</p></div>
-      <div><p class="foot-h">Find us</p><p>2078 E. Pascua St.<br>Barangay Kasilawan<br>Makati City</p><p style="margin-top:1rem">Mon–Sat · 11am–9pm</p></div>
-      <div><p class="foot-h">Order</p><p><a href="tel:+639171754574">0917 175 4574</a><br><a href="https://m.me/greenery.kitchen" rel="noopener">Message on Facebook</a><br><a href="https://instagram.com/greenery.kitchen" rel="noopener">@greenery.kitchen</a></p></div>
+      <div>
+        <p class="brand">Greenery Kitchen</p>
+        <p style="opacity:.8; margin-top:1rem; max-width:34ch">Plant-based Filipino comfort food in Makati since 2007. Dine in, delivery, whole-week meal plans.</p>
+      </div>
+      <div><p class="foot-h">Find us</p><p>2078 E. Pascua St.<br>Barangay Kasilawan<br>Makati City</p>
+        <p style="margin-top:1rem">Mon–Sat · 11am–9pm</p></div>
+      <div><p class="foot-h">Order</p>
+        <p><a href="tel:+639171754574">0917 175 4574</a><br>
+           <a href="tel:+639276069983">0927 606 9983</a><br>
+           <a href="https://m.me/greenery.kitchen" rel="noopener">Message on Facebook</a><br>
+           <a href="https://instagram.com/greenery.kitchen" rel="noopener">@greenery.kitchen</a></p></div>
     </div>
-    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Greenery Kitchen. Photography is placeholder stock pending the client's own images.</div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Greenery Kitchen. Pricing and menus are indicative, from public posts.</div>
     <div class="foot-note"><span>© <span data-year>2026</span> Greenery Kitchen. Concept site.</span><span>Built by GCCofCI Digital</span></div>
   </div>
 </footer>
@@ -107,6 +150,17 @@
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.4-2.6-2.8-5 2.8 5.5-5.9 2.7 2.8 4.9-2.8-5.5 5.9z"/></svg>
   Message us
 </a>
+
 <script src="assets/app.js"></script>
+<script>
+(function () {
+  try {
+    var d = new Date();
+    var fmt = d.toLocaleDateString("en-PH", { weekday: "long", month: "long", day: "numeric" });
+    var dl = document.querySelector("[data-today]");
+    if (dl) dl.textContent = "Makati · " + fmt;
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>

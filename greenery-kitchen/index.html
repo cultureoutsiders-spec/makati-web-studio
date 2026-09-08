@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Greenery Kitchen — plant-based Filipino comfort food, Makati</title>
-<meta name="description" content="100% vegan Filipino comfort food in Makati since 2007. Vegan sisig, lechon, adobo and caldereta, daily meal deliveries, and a 5-day bento meal plan. Dine in at Kasilawan or order for delivery.">
+<meta name="description" content="100% vegan Filipino comfort food in Makati since 2007. A daily à la carte kitchen, whole-week bento meal plans at ₱1,500, and delivery across Makati and nearby. Dine in at Kasilawan.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="Greenery Kitchen — plant-based Filipino comfort food, Makati">
-<meta property="og:description" content="Vegan versions of the Filipino dishes you grew up with. Dine in, delivery, and weekly meal plans.">
+<meta property="og:description" content="Vegan versions of the Filipino dishes you grew up with, cooked from scratch since 2007. Dine in, delivery, and a 5-day bento meal plan.">
 <meta property="og:type" content="restaurant.restaurant">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Serif+Display:ital@0;1&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Serif+Display:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/base.css">
 <link rel="stylesheet" href="assets/theme.css">
 <script type="application/ld+json">
@@ -32,117 +32,191 @@
 <body>
 
 <header class="site-header">
-  <nav class="nav container" data-open="false" aria-label="Primary">
+  <nav class="masthead nav container" data-open="false" aria-label="Primary">
+    <span class="masthead__date"><span data-today>Makati</span></span>
     <a class="brand" href="index.html">Greenery Kitchen</a>
-    <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
-    <ul class="nav__links" id="navlinks">
-      <li><a href="index.html" aria-current="page">Home</a></li>
+    <button class="masthead__toggle nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    <ul class="masthead__links nav__links" id="navlinks">
+      <li><a href="index.html" aria-current="page">Front</a></li>
       <li><a href="menu.html">Menu</a></li>
       <li><a href="meal-plans.html">Meal Plans</a></li>
-      <li><a href="story.html">Our Story</a></li>
+      <li><a href="story.html">Since 2007</a></li>
       <li><a href="visit.html">Order &amp; Visit</a></li>
-      <li><a class="btn btn--accent" href="visit.html#order">Order now</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
 
-  <section class="hero section">
-    <div class="hero__bg"><img src="assets/img/hero-bowl.jpg" alt="A colourful plant-based rice bowl" fetchpriority="high"></div>
-    <div class="container stack">
-      <p class="eyebrow">Vegan · Filipino · Makati since 2007</p>
-      <h1 class="display">The dishes you grew up with,<br><em>made entirely from plants</em></h1>
-      <p class="lead measure">Vegan sisig, lechon, adobo, caldereta. Cooked the way a Filipino home
-        kitchen does it, just without the meat. Dine in at Kasilawan, order for delivery, or take
-        a week's worth home with our bento meal plan.</p>
-      <div style="display:flex; gap:1rem; flex-wrap:wrap">
-        <a class="btn btn--accent btn--lg" href="visit.html#order">Order for delivery</a>
-        <a class="btn btn--ghost btn--lg" href="menu.html">See the menu</a>
+  <section class="hero--board">
+    <div class="container">
+      <div class="split split--top">
+        <div class="stack">
+          <p class="eyebrow">Vegan · Filipino · Makati since 2007</p>
+          <h1 class="display">The dishes you grew up with, <em>made entirely from plants</em></h1>
+          <p class="lead">Vegan sisig, lechon, kaldereta, pares. Cooked the way a Filipino home
+            kitchen does it — from scratch, by hand — just without the meat. Dine in at Kasilawan,
+            order for delivery, or take a whole week home with the bento plan.</p>
+          <div class="applinks">
+            <a href="visit.html#order">Order for delivery</a>
+            <a href="menu.html">See the full menu</a>
+            <a href="meal-plans.html">The 5-day plan</a>
+          </div>
+          <hr class="hero__masthead-rule">
+          <p class="hand">4.7★ on Google · 146 reviews · “best vegan I’ve had, full stop”</p>
+        </div>
+        <div class="board board--hero" aria-label="Today at Greenery Kitchen">
+          <p class="board__title" data-board-title>Today at Greenery</p>
+          <p class="board__date"><span data-board-date>Fresh daily</span> · à la carte</p>
+          <div class="board__row"><span class="n">Vegan Sisig</span><span class="dots"></span><span class="p">₱215</span></div>
+          <div class="board__row"><span class="n">Kaldereta</span><span class="dots"></span><span class="p">₱230</span></div>
+          <div class="board__row"><span class="n">Lechon Paksiw</span><span class="dots"></span><span class="p">₱225</span></div>
+          <div class="board__row"><span class="n">Pares / Mami</span><span class="dots"></span><span class="p">₱210</span></div>
+          <div class="board__row"><span class="n">Malunggay “Dilis”</span><span class="dots"></span><span class="p">₱180</span></div>
+          <p class="board__foot">prices move with the market — message us for today’s list</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section--tight section--brand">
     <div class="container">
-      <div class="stats">
+      <div class="stats reveal-group">
         <div class="stat"><span class="stat__num" data-count="18">0</span><span class="stat__label">years cooking plant-based</span></div>
         <div class="stat"><span class="stat__num" data-count="4.7">0</span><span class="stat__label">Google · 146 reviews</span></div>
         <div class="stat"><span class="stat__num">100%</span><span class="stat__label">vegan menu, no exceptions</span></div>
-        <div class="stat"><span class="stat__num">₱1,500</span><span class="stat__label">5-day bento meal plan</span></div>
+        <div class="stat"><span class="stat__num">₱1,500</span><span class="stat__label">whole-week bento plan</span></div>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="container stack">
-      <div><p class="eyebrow">Three ways to eat with us</p><h2>Come in, or we'll come to you</h2></div>
-      <div class="grid grid--3">
-        <article class="card reveal">
-          <div class="media media--4x3" style="margin-bottom:1rem"><img src="assets/img/dish-spread.jpg" alt="A spread of Filipino vegan dishes"></div>
-          <h3>Dine in</h3>
-          <p>A small, homey room on E. Pascua Street. Big portions, friendly prices, open 11am to 9pm Monday to Saturday.</p>
-        </article>
-        <article class="card reveal">
-          <div class="media media--4x3" style="margin-bottom:1rem"><img src="assets/img/table-share.jpg" alt="Preparing food"></div>
-          <h3>Delivery</h3>
-          <p>Order à la carte for the day on GrabFood, or message us your address and we'll tell you the coverage and cut-off.</p>
-        </article>
-        <article class="card reveal">
-          <div class="media media--4x3" style="margin-bottom:1rem"><img src="assets/img/mealplan.jpg" alt="Meal-plan bento boxes"></div>
-          <h3>Meal plans</h3>
-          <p>The 5-Day Bento: lunch and dinner for a week, ₱1,500, delivered. Rotating menu, no cooking, no thinking.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+    <div class="container read">
 
-  <section class="section section--brand">
-    <div class="container split">
-      <div class="stack">
-        <p class="eyebrow">On the stove this week</p>
-        <h2>Today's <em>kitchen</em></h2>
-        <p class="lead">The full menu is à la carte daily. Here's the kind of thing you'll find.
-          Message us to confirm what's cooking today.</p>
-        <a class="btn btn--accent btn--lg" href="menu.html">Full menu</a>
-      </div>
-      <div class="split__media">
-        <div class="board">
-          <h3>from our kitchen</h3>
-          <div class="board__row"><span>Vegan Sisig</span><span class="p">₱215</span></div>
-          <div class="board__row"><span>Kaldereta</span><span class="p">₱230</span></div>
-          <div class="board__row"><span>Lechon Paksiw</span><span class="p">₱225</span></div>
-          <div class="board__row"><span>Malunggay "Dilis"</span><span class="p">₱180</span></div>
-          <div class="board__row"><span>"Not Egg" Sandwich Spread</span><span class="p">₱215</span></div>
-          <div class="board__row"><span>Pancit</span><span class="p">₱200</span></div>
-        </div>
-        <p class="hand" style="margin-top:1rem">prices change with the market — ask us for today's list</p>
-      </div>
-    </div>
-  </section>
+      <nav class="rail" aria-label="On this page">
+        <p class="rail__h">On this page</p>
+        <ol>
+          <li><a href="#kitchen" class="is-current">The kitchen</a></li>
+          <li><a href="#week">This week</a></li>
+          <li><a href="#plan">Meal plan</a></li>
+          <li><a href="#delivery">Delivery</a></li>
+          <li><a href="#story">Since 2007</a></li>
+        </ol>
+      </nav>
 
-  <section class="section">
-    <div class="container split split--flip">
-      <div class="split__media"><div class="media media--4x3"><img src="assets/img/fresh.jpg" alt="Fresh vegetables on a board"></div></div>
-      <div class="stack">
-        <p class="eyebrow">Since 2007</p>
-        <h2>It started as home-cooked lunches for a meditation class</h2>
-        <p class="lead">Greenery Kitchen grew out of a small community cooking plant-based meals for
-          each other. Almost two decades later we're still cooking the same way — from scratch, by
-          hand, for people who want Filipino food without the meat.</p>
-        <a class="btn btn--ghost" href="story.html">Read our story →</a>
+      <div class="article">
+
+        <section id="kitchen">
+          <h2><span class="kicker">what this is</span>A home kitchen that went vegan and never looked back</h2>
+          <p class="lead">Greenery Kitchen started in 2007 as home-cooked lunches for a small
+            meditation community. Almost twenty years on it’s a proper little restaurant on
+            E. Pascua Street — same approach, bigger pans. Everything is 100% plant-based: no meat,
+            no fish, no shortcuts.</p>
+          <div class="applinks">
+            <a href="visit.html">Dine in · Kasilawan</a>
+            <a href="visit.html#order">Message an order</a>
+          </div>
+        </section>
+
+        <hr class="rule">
+
+        <section id="week">
+          <h2><span class="kicker">on the stove</span>This week’s rotation</h2>
+          <p>The daily list changes, but the week tends to look like this. Lunch (L) and dinner (D)
+            each have two mains. <a href="menu.html">Full à la carte menu &rarr;</a></p>
+          <div class="spread reveal-group">
+            <div class="spread__sec">
+              <h3>Monday</h3>
+              <div class="leader"><span class="n">Tofu Tempura / Chopsuey</span><span class="dots"></span><span class="p">L</span></div>
+              <div class="leader"><span class="n">Shawarma Rice</span><span class="dots"></span><span class="p">D</span></div>
+            </div>
+            <div class="spread__sec">
+              <h3>Tuesday</h3>
+              <div class="leader"><span class="n">Nilaga / Lechon Kawali</span><span class="dots"></span><span class="p">L</span></div>
+              <div class="leader"><span class="n">Sisig / Malunggay Dilis</span><span class="dots"></span><span class="p">D</span></div>
+            </div>
+            <div class="spread__sec">
+              <h3>Wednesday</h3>
+              <div class="leader"><span class="n">Picadillo / Shanghai</span><span class="dots"></span><span class="p">L</span></div>
+              <div class="leader"><span class="n">Pares / Calamares</span><span class="dots"></span><span class="p">D</span></div>
+            </div>
+            <div class="spread__sec">
+              <h3>Thursday</h3>
+              <div class="leader"><span class="n">Siomai / Korean Fried Rice</span><span class="dots"></span><span class="p">L</span></div>
+              <div class="leader"><span class="n">Korean BBQ / Sautéed Veggies</span><span class="dots"></span><span class="p">D</span></div>
+            </div>
+            <div class="spread__sec">
+              <h3>Friday</h3>
+              <div class="leader"><span class="n">Binagoongan / Fried Eggplant</span><span class="dots"></span><span class="p">L</span></div>
+              <div class="leader"><span class="n">Longsilog</span><span class="dots"></span><span class="p">D</span></div>
+            </div>
+            <div class="spread__sec">
+              <h3>September special</h3>
+              <div class="leader"><span class="n">Picadillo</span><span class="dots"></span><span class="p">all&nbsp;month</span>
+                <small>“a comforting Filipino classic, made plant-based”</small></div>
+            </div>
+          </div>
+          <p class="hand">rotation is indicative — confirm the day’s list with the kitchen</p>
+        </section>
+
+        <hr class="rule">
+
+        <section id="plan">
+          <h2><span class="kicker">no cooking, no thinking</span>The 5-day bento plan</h2>
+          <p>Lunch and dinner for a working week — <strong>₱150 a meal, ₱1,500 for five days</strong>,
+            delivered. The menu rotates so you’re not eating the same thing twice.</p>
+          <div class="board" style="margin-top:1rem">
+            <p class="board__title">This week’s bento</p>
+            <div class="board__row"><span class="n">Mon</span><span class="dots"></span><span class="p">Chopsuey · Shawarma Rice</span></div>
+            <div class="board__row"><span class="n">Tue</span><span class="dots"></span><span class="p">Nilaga · Sisig</span></div>
+            <div class="board__row"><span class="n">Wed</span><span class="dots"></span><span class="p">Picadillo · Pares</span></div>
+            <div class="board__row"><span class="n">Thu</span><span class="dots"></span><span class="p">Siomai · Korean BBQ</span></div>
+            <div class="board__row"><span class="n">Fri</span><span class="dots"></span><span class="p">Binagoongan · Longsilog</span></div>
+          </div>
+          <p style="margin-top:1rem"><a class="btn btn--accent" href="meal-plans.html">How the plan works</a></p>
+        </section>
+
+        <hr class="rule">
+
+        <section id="delivery">
+          <h2><span class="kicker">we’ll come to you</span>Delivery &amp; pick-up</h2>
+          <p>Free whole-week delivery for bento plans within these zones. À la carte orders go out
+            daily — message us your address for the cut-off and fee.</p>
+          <div class="applinks">
+            <a>Makati</a><a>Mandaluyong</a><a>San Juan</a><a>BGC / McKinley</a><a>Pasay</a><a>Taft</a>
+          </div>
+          <p style="margin-top:1rem"><a href="https://m.me/greenery.kitchen" rel="noopener">Message on Messenger &rarr;</a>
+            &nbsp;·&nbsp; <a href="tel:+639171754574">0917 175 4574</a></p>
+        </section>
+
+        <hr class="rule">
+
+        <section id="story">
+          <h2><span class="kicker">the short version</span>Eighteen years, same idea</h2>
+          <ol class="timeline">
+            <li class="tl-item"><span class="yr">2007</span>
+              <p>Home-cooked plant-based lunches for a meditation class in Makati.</p></li>
+            <li class="tl-item"><span class="yr">2010s</span>
+              <p>Word spreads. The “kitchen” becomes a small dine-in spot on E. Pascua Street.</p></li>
+            <li class="tl-item"><span class="yr">Today</span>
+              <p>4.7★ over 146 Google reviews, a daily à la carte menu, and the bento plan that
+                keeps regulars fed all week.</p></li>
+          </ol>
+          <p style="margin-top:1.2rem"><a class="btn btn--ghost" href="story.html">The longer story &rarr;</a></p>
+        </section>
+
       </div>
     </div>
   </section>
 
   <section class="section section--paper2">
     <div class="container stack">
-      <div><p class="eyebrow">From our diners</p><h2>4.7 stars, and a few "best vegan in the world"s</h2></div>
-      <div class="grid grid--3">
+      <div><p class="eyebrow">From our diners</p><h2>4.7 stars, and a few “best vegan in the world”s</h2></div>
+      <div class="grid grid--3 reveal-group">
         <!-- PLACEHOLDER: paste 3 real Google reviews before sending. -->
-        <blockquote class="review reveal"><div class="stars" aria-hidden="true">★★★★★</div><p>"Portions are massive, prices are friendly, and I couldn't tell it wasn't the real thing. The sisig especially."</p><cite>— Google review · placeholder</cite></blockquote>
-        <blockquote class="review reveal"><div class="stars" aria-hidden="true">★★★★★</div><p>"Been ordering the bento meal plan for months. Takes the whole 'what's for dinner' problem off my plate."</p><cite>— Google review · placeholder</cite></blockquote>
-        <blockquote class="review reveal"><div class="stars" aria-hidden="true">★★★★★</div><p>"Small place, huge heart. This is comfort food that happens to be vegan, not the other way round."</p><cite>— Google review · placeholder</cite></blockquote>
+        <blockquote class="review"><div class="stars" aria-hidden="true">★★★★★</div><p>“Portions are massive, prices are friendly, and I couldn’t tell it wasn’t the real thing. The sisig especially.”</p><cite>— Google review · placeholder</cite></blockquote>
+        <blockquote class="review"><div class="stars" aria-hidden="true">★★★★★</div><p>“Been ordering the bento plan for months. Takes the whole ‘what’s for dinner’ problem off my plate.”</p><cite>— Google review · placeholder</cite></blockquote>
+        <blockquote class="review"><div class="stars" aria-hidden="true">★★★★★</div><p>“Small place, huge heart. Comfort food that happens to be vegan, not the other way round.”</p><cite>— Google review · placeholder</cite></blockquote>
       </div>
     </div>
   </section>
@@ -164,8 +238,8 @@
   <div class="container">
     <div class="foot-grid">
       <div>
-        <p class="brand" style="color:inherit">Greenery Kitchen</p>
-        <p style="opacity:.75; margin-top:1rem; max-width:34ch">Plant-based Filipino comfort food in Makati since 2007. Dine in, delivery, weekly meal plans.</p>
+        <p class="brand">Greenery Kitchen</p>
+        <p style="opacity:.8; margin-top:1rem; max-width:34ch">Plant-based Filipino comfort food in Makati since 2007. Dine in, delivery, whole-week meal plans.</p>
       </div>
       <div><p class="foot-h">Find us</p><p>2078 E. Pascua St.<br>Barangay Kasilawan<br>Makati City</p>
         <p style="margin-top:1rem">Mon–Sat · 11am–9pm</p></div>
@@ -175,7 +249,7 @@
            <a href="https://m.me/greenery.kitchen" rel="noopener">Message on Facebook</a><br>
            <a href="https://instagram.com/greenery.kitchen" rel="noopener">@greenery.kitchen</a></p></div>
     </div>
-    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Greenery Kitchen. Photography is placeholder stock pending the client's own images.</div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Greenery Kitchen. Photography is placeholder stock pending the client’s own images; the weekly rotation and pricing shown are from the business’s public posts and should be confirmed.</div>
     <div class="foot-note"><span>© <span data-year>2026</span> Greenery Kitchen. Concept site.</span><span>Built by GCCofCI Digital</span></div>
   </div>
 </footer>
@@ -186,5 +260,34 @@
 </a>
 
 <script src="assets/app.js"></script>
+<script>
+(function () {
+  /* Dateline in the masthead + board */
+  try {
+    var d = new Date();
+    var fmt = d.toLocaleDateString("en-PH", { weekday: "long", month: "long", day: "numeric" });
+    var dl = document.querySelector("[data-today]");
+    if (dl) dl.textContent = "Makati · " + fmt;
+    var bd = document.querySelector("[data-board-date]");
+    if (bd) bd.textContent = fmt;
+  } catch (e) {}
+
+  /* Rail scroll-spy */
+  var links = [].slice.call(document.querySelectorAll(".rail a"));
+  var ids = links.map(function (a) { return a.getAttribute("href").slice(1); });
+  var secs = ids.map(function (id) { return document.getElementById(id); }).filter(Boolean);
+  if (secs.length && "IntersectionObserver" in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        links.forEach(function (a) { a.classList.remove("is-current"); });
+        var i = ids.indexOf(en.target.id);
+        if (i > -1 && links[i]) links[i].classList.add("is-current");
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    secs.forEach(function (s) { spy.observe(s); });
+  }
+})();
+</script>
 </body>
 </html>
