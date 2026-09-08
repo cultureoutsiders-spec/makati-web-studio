@@ -99,3 +99,28 @@ art-directed licensed-free stock as placeholders, at fixed filenames under each
 with CSS/JS (Ken-Burns heroes, scroll reveals, the before/after slider, the occasion picker, the
 what's-on marquee, animated counters) rather than video files. Per-site image manifests: see the
 list in each `assets/img/` folder.
+
+### 2026-09-08 — second pull attempt, with the operator's own logged-in Facebook
+
+Tried again from a browser signed in to Michael's Facebook account. Still not usable:
+
+- Facebook CDN image URLs are size-locked and cryptographically signed (`oh=`/`oe=`), so the
+  only versions a direct request returns are 80–160px thumbnails. Editing the size params
+  breaks the signature (`URL signature mismatch`).
+- The in-page JavaScript bridge redacts every `fbcdn.net` URL (`[BLOCKED: Cookie/query string
+  data]`) and base64 blob, so DOM/`fetch` extraction returns nothing.
+- The full-screen ("theatre") viewer renders images at only ~320px wide.
+- `get_page_text` on Facebook returns section labels only — the SPA content is not reachable.
+- Much of Greenery's and the others' recent Facebook imagery is promo graphics with baked-in
+  text (e.g. "WEEKLY MEAL PLAN", "PICADILLO"), not clean photography usable in a layout.
+
+**Conclusion:** the redesign proceeds on art-directed stock at fixed filenames. The client can
+drop real photos in with no code change. Real *text* content that was legible in screenshots
+has been folded into the copy — notably Greenery's published weekly rotation and pricing:
+
+> 100% vegan · PHP 150 per meal · PHP 1,500 / 5 days · free whole-week delivery to Makati,
+> Mandaluyong, San Juan, BGC/McKinley, Pasay, Taft.
+> Sample week — Mon: Tofu Tempura / Chopsuey · Shawarma Rice. Tue: Nilaga / Lechon Kawali ·
+> Sisig / Malunggay Dilis. Wed: Picadillo / Shanghai · Pares / Calamares. Thu: Siomai / Korean
+> Fried Rice · Korean BBQ / Sautéed Veggies. Fri: Binagoongan / Fried Eggplant · Longsilog.
+> September special: Picadillo — "a comforting Filipino classic, made plant-based."
