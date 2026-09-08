@@ -3,6 +3,9 @@
 A step-by-step reference. Work top to bottom. You can do Phase 0 once, then repeat
 Phase 1 → Phase 2 for one business at a time (you don't have to send all five at once).
 
+**Related docs:** `PRICING.md` (what to charge + market research) · `HANDOVER-AND-HOSTING.md`
+(what you vs. the client each need for hosting, and the client FAQ).
+
 - **Local folder:** `C:\Users\centr\Documents\Online-Business\Makati-Web-Studio`
 - **Code repo:** https://github.com/cultureoutsiders-spec/makati-web-studio
 - **Studio index (all five demos):** https://cultureoutsiders-spec.github.io/makati-web-studio/
