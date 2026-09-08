@@ -116,6 +116,63 @@ just upload the site folder through the host's file manager or FTP — but it's 
 
 ---
 
+## Selling a one-time "set it up for me" service (no retainer)
+
+The client took the code-only deal, then asks you to put it live. This is a **one-off launch
+fee**, not a retainer. Charge it separately, or bundle it into the intro price (see note below).
+
+### What "setup / launch" includes
+
+- Deploy the site to free hosting (Cloudflare Pages / Netlify / GitHub Pages)
+- Connect their domain, confirm HTTPS is working
+- Point the contact form at their inbox (Web3Forms key) and send a test
+- Add Google Analytics 4 or Cloudflare Analytics
+- Submit the sitemap to Google Search Console; link the site to their Google Business Profile
+- Set up `info@theirbrand.com` — forwarding, or a Zoho / Workspace mailbox — if they want it
+- Final QA on the live URL: every page, mobile, forms, links
+- Hand over every login + a one-page "where everything is"
+
+### What to charge (one-time, PHP)
+
+| Scope | Price |
+|---|---|
+| Just deploy + connect a domain they already own | ₱1,500–₱2,500 |
+| **Standard launch** (deploy, domain, form, analytics, Search Console, GBP link, QA, handover) | **₱3,500–₱5,000** |
+| Full launch **incl. registering the domain for them** + email setup (MX / Zoho / Workspace) | ₱5,000–₱7,500 |
+
+**Better option:** fold "standard launch" into the introductory price so you never actually sell
+"just the code". A non-technical owner handed a zip with nothing live is an unhappy client and a
+support headache. Make the ₱24,000 mean "built, live, and yours." Only quote a lower code-only
+number (~₱16,000–₱20,000) when the client genuinely has their own web person.
+
+### Is it hard?
+
+Not for these static sites, once you've done it once.
+
+- **Deploy:** Cloudflare Pages / Netlify — connect the repo (or drag-and-drop the folder), pick
+  the output folder, deploy. Live on a temporary URL in about a minute.
+- **Custom domain:** add it in the host's dashboard; it shows you one DNS record; paste that at
+  the domain registrar. Wait 5 minutes to a few hours for it to propagate. HTTPS turns itself on.
+- **Form:** create a Web3Forms key with the client's email, paste it into the form pages, push,
+  send a test message.
+- **Fiddly bits:** waiting on DNS, the odd confusing registrar panel, and email MX records if
+  they want `info@`. None of it is hard, it just needs care and patience.
+- **Time:** first client, give yourself a few hours plus some googling. After that, 30–60 minutes.
+
+### Can this be done for you / automated?
+
+- **Yes, for the deploy + config part:** connecting a repo, deploying, enabling Pages, wiring the
+  Web3Forms key into the files, and writing out the exact DNS record for a given domain can all
+  be handed off. (The five demo sites in this repo were deployed this way.)
+- **No, for the parts that need an account holder:** buying the domain (it's a purchase),
+  creating the Cloudflare / Netlify / registrar accounts, and typing passwords into dashboards.
+  Those stay with you.
+- **Practical split:** you spend ~10 minutes buying the domain and making the host account, then
+  the repo setup, deploy, DNS instructions, form wiring and live QA can be done for you or from a
+  click-by-click you follow once.
+
+---
+
 ## FAQ — what a client will probably ask
 
 **"Can I edit it myself?"**
