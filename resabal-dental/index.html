@@ -12,7 +12,7 @@
 <meta property="og:type" content="business.business">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@400;600;700;800&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/base.css">
 <link rel="stylesheet" href="assets/theme.css">
 <script type="application/ld+json">
@@ -34,109 +34,116 @@
     <ul class="nav__links" id="navlinks">
       <li><a href="index.html" aria-current="page">Home</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="first-visit.html">Your First Visit</a></li>
+      <li><a href="first-visit.html">First Visit</a></li>
       <li><a href="clinic.html">The Clinic</a></li>
-      <li><a href="book.html">Book</a></li>
-      <li><a class="btn btn--accent" href="book.html#book">Book an appointment</a></li>
+      <li><a class="btn btn--accent" href="book.html#book">Book</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
 
-  <section class="hero section">
-    <div class="hero__bg"><img src="assets/img/hero-chair.jpg" alt="A bright, friendly dental treatment room" fetchpriority="high"></div>
-    <div class="container stack">
+  <section class="hero--band">
+    <div class="container">
       <p class="eyebrow">Centuria Medical Makati · Poblacion</p>
-      <h1 class="display">A dental home<br>for the whole family</h1>
-      <p class="lead measure">We look after children and adults under one roof — gentle first
-        visits for the little ones, braces for the teenagers, cleanings and repairs for everyone
-        else. No lectures, no rush.</p>
-      <div style="display:flex; gap:1rem; flex-wrap:wrap">
-        <a class="btn btn--accent btn--lg" href="book.html#book">Book an appointment</a>
-        <a class="btn btn--ghost btn--lg" href="first-visit.html">What a first visit is like</a>
+      <h1>A dental home the whole family can share</h1>
+      <p class="lead">Gentle with children, thorough with adults. Pediatric dentistry,
+        orthodontics, and general &amp; esthetic care — one clinic, one set of records, one team
+        that knows you.</p>
+      <div class="tiles">
+        <a class="tile" href="book.html#book">
+          <span class="ic" aria-hidden="true">🦷</span>
+          <b>Book a check-up</b>
+          <span>Cleaning, exam, and a plan — for you or the whole household.</span>
+          <span class="go">Request a time &rarr;</span>
+        </a>
+        <a class="tile" href="first-visit.html">
+          <span class="ic" aria-hidden="true">📋</span>
+          <b>New-patient info</b>
+          <span>What to bring, what the first visit covers, and what it costs.</span>
+          <span class="go">Read first &rarr;</span>
+        </a>
+        <a class="tile" href="first-visit.html#kids">
+          <span class="ic" aria-hidden="true">🧸</span>
+          <b>Kids’ first visit</b>
+          <span>How we make a child’s first appointment calm — and even fun.</span>
+          <span class="go">For parents &rarr;</span>
+        </a>
       </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="max-width:44ch"><p class="eyebrow">Your first visit</p><h2>Four easy steps, no surprises</h2></div>
+      <div class="tracker reveal">
+        <svg class="tracker__line" viewBox="0 0 1000 4" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M8 2 L 992 2" data-draw></path>
+        </svg>
+        <div class="tstep"><span class="num">1</span><h3>Say hello</h3><p>Send the form or call. We’ll offer times and answer questions.</p></div>
+        <div class="tstep"><span class="num">2</span><h3>Quick forms</h3><p>A short health history — do it online or when you arrive.</p></div>
+        <div class="tstep"><span class="num">3</span><h3>Exam &amp; clean</h3><p>A full check, gentle cleaning, and photos if needed.</p></div>
+        <div class="tstep"><span class="num">4</span><h3>Your plan</h3><p>Clear options and costs. Nothing done that day you didn’t agree to.</p></div>
+      </div>
+      <p style="margin-top:1.4rem"><a class="btn btn--ghost" href="first-visit.html">Full first-visit guide &rarr;</a></p>
+    </div>
+  </section>
+
+  <section class="section section--paper2">
+    <div class="container stack">
+      <div style="max-width:44ch"><p class="eyebrow">What we do</p><h2>Care for every age in the family</h2></div>
+      <div class="svc-grid reveal-group">
+        <article class="svc"><span class="ic" aria-hidden="true">🧸</span><span class="tag">Pediatric</span><h3>Children’s dentistry</h3><p>First visits, gentle cleanings, sealants, fluoride, and cavity care in a child-friendly way.</p></article>
+        <article class="svc"><span class="ic" aria-hidden="true">😬</span><span class="tag">Orthodontics</span><h3>Braces &amp; aligners</h3><p>Assessment and treatment for children, teens and adults — metal braces or clear aligners.</p></article>
+        <article class="svc"><span class="ic" aria-hidden="true">🪥</span><span class="tag">General</span><h3>Check-ups &amp; cleaning</h3><p>Routine exams, scaling and polishing, fillings, extractions and gum care.</p></article>
+        <article class="svc"><span class="ic" aria-hidden="true">✨</span><span class="tag">Esthetic</span><h3>Cosmetic dentistry</h3><p>Whitening, veneers and bonding to tidy up chips, gaps and staining.</p></article>
+      </div>
+      <p><a class="btn btn--ghost" href="services.html">All services &amp; what they involve &rarr;</a></p>
     </div>
   </section>
 
   <section class="section--tight section--brand">
     <div class="container">
-      <div class="stats">
-        <div class="stat"><span class="stat__num">3</span><span class="stat__label">specialties, one clinic</span></div>
-        <div class="stat"><span class="stat__num">Kids</span><span class="stat__label">welcome from their first tooth</span></div>
-        <div class="stat"><span class="stat__num">Mall</span><span class="stat__label">inside Centuria Medical, easy parking</span></div>
-        <div class="stat"><span class="stat__num">By appt.</span><span class="stat__label">so there's no waiting-room wait</span></div>
+      <div class="stats reveal-group">
+        <div class="stat"><span class="stat__num" data-count="6">0</span><span class="stat__label">years caring for Makati families</span></div>
+        <div class="stat"><span class="stat__num" data-count="3">0</span><span class="stat__label">specialties under one roof</span></div>
+        <div class="stat"><span class="stat__num">1111</span><span class="stat__label">Centuria Medical Makati</span></div>
+        <div class="stat"><span class="stat__num">All</span><span class="stat__label">ages welcome, kids especially</span></div>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container stack">
-      <div><p class="eyebrow">What we do</p><h2>Three specialties, no need to shop around</h2></div>
-      <div class="grid grid--3">
-        <article class="svc reveal">
-          <div class="media media--4x3"><img src="assets/img/gentle.jpg" alt="Gentle care for children"></div>
-          <div class="svc__body">
-            <span class="svc__tag">Pediatric</span>
-            <h3>Children's dentistry</h3>
-            <p>First visits, cleanings, sealants, fillings and habit advice, at a pace a child can handle. We explain everything to them, not just to you.</p>
-            <a href="services.html#pediatric" class="pill" style="align-self:flex-start">More →</a>
-          </div>
-        </article>
-        <article class="svc reveal">
-          <div class="media media--4x3"><img src="assets/img/xray.jpg" alt="Orthodontic planning"></div>
-          <div class="svc__body">
-            <span class="svc__tag">Orthodontics</span>
-            <h3>Braces &amp; alignment</h3>
-            <p>Assessment, traditional braces and clear aligners for teens and adults, with a clear plan and timeline before anything goes on.</p>
-            <a href="services.html#ortho" class="pill" style="align-self:flex-start">More →</a>
-          </div>
-        </article>
-        <article class="svc reveal">
-          <div class="media media--4x3"><img src="assets/img/ppe.jpg" alt="General dental treatment"></div>
-          <div class="svc__body">
-            <span class="svc__tag">General &amp; esthetic</span>
-            <h3>Everyday &amp; cosmetic</h3>
-            <p>Cleanings, fillings, root canal, extractions, crowns, whitening and veneers — the full range of adult care.</p>
-            <a href="services.html#general" class="pill" style="align-self:flex-start">More →</a>
-          </div>
-        </article>
+      <div style="max-width:44ch"><p class="eyebrow">Common questions</p><h2>Good to know before you book</h2></div>
+      <div class="faq">
+        <details open><summary>Do you see very young children?</summary><p>Yes. We recommend a first visit by around age one, or when the first teeth come in. Early visits are short, friendly, and mostly about getting comfortable.</p></details>
+        <details><summary>Do you take HMO or insurance?</summary><p>Coverage varies by provider and plan. Tell us your HMO when you book and we’ll confirm what’s covered and what needs a letter of authorisation. <em>Accepted providers to be confirmed by the clinic.</em></p></details>
+        <details><summary>How much is a check-up and cleaning?</summary><p>An adult exam and cleaning is quoted before anything starts, and children’s visits are priced separately. <em>Current fees to be confirmed by the clinic.</em></p></details>
+        <details><summary>Is parking available?</summary><p>Centuria Medical Makati has paid parking on site, with lift access straight to the clinic floor.</p></details>
+        <details><summary>Can the whole family be seen the same day?</summary><p>Often, yes — tell us how many people and their ages when you book and we’ll block enough time.</p></details>
       </div>
     </div>
   </section>
 
   <section class="section section--paper2">
-    <div class="container split split--flip">
-      <div class="split__media"><div class="media media--4x3"><img src="assets/img/corridor.jpg" alt="The clinic"></div></div>
-      <div class="stack">
-        <p class="eyebrow">"Too shy to smile?"</p>
-        <h2>We hear that a lot. We can help.</h2>
-        <p class="lead">Whether it's a nervous six-year-old or an adult who's been putting off a
-          check-up for years, the approach is the same: no judgement, small steps, and an honest
-          explanation of what's going on and what it'll take to fix it.</p>
-        <a class="btn btn--accent btn--lg" href="first-visit.html">Your first visit, step by step</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
     <div class="container stack">
-      <div><p class="eyebrow">From families we've seen</p><h2>What parents tell us</h2></div>
-      <div class="grid grid--3">
-        <!-- PLACEHOLDER: paste real Google / Facebook reviews before sending. -->
-        <blockquote class="review reveal"><div class="stars" aria-hidden="true">★★★★★</div><p>"My daughter used to cry in the car park. Now she asks when we're going back. That's all I need to say."</p><cite>— Parent · placeholder</cite></blockquote>
-        <blockquote class="review reveal"><div class="stars" aria-hidden="true">★★★★★</div><p>"Got my braces here at 34. They laid out the whole plan and cost up front, no surprises along the way."</p><cite>— Patient · placeholder</cite></blockquote>
-        <blockquote class="review reveal"><div class="stars" aria-hidden="true">★★★★★</div><p>"Clean, calm, on time. They actually booked the follow-up before we left instead of 'call us'."</p><cite>— Patient · placeholder</cite></blockquote>
+      <div style="max-width:44ch"><p class="eyebrow">From families we see</p><h2>Kind words</h2></div>
+      <div class="grid grid--3 reveal-group">
+        <!-- PLACEHOLDER: paste real reviews once available (the clinic has a small online footprint so far). -->
+        <blockquote class="review"><div class="stars" aria-hidden="true">★★★★★</div><p>“My son actually asks when we’re going back to the dentist. That never happened before.”</p><cite>— Parent · placeholder</cite></blockquote>
+        <blockquote class="review"><div class="stars" aria-hidden="true">★★★★★</div><p>“Explained every option and the cost up front. No upselling, no surprises on the bill.”</p><cite>— Patient · placeholder</cite></blockquote>
+        <blockquote class="review"><div class="stars" aria-hidden="true">★★★★★</div><p>“We do the whole family in one afternoon. Easy to get to inside Centuria.”</p><cite>— Patient · placeholder</cite></blockquote>
       </div>
     </div>
   </section>
 
   <section class="section section--brand center">
     <div class="container stack">
-      <h2 class="display">Book the family in</h2>
-      <p class="lead" style="margin-inline:auto">Send us who's coming and when suits you. We'll confirm a time and tell you what to bring.</p>
+      <h2 class="display">Ready when you are</h2>
+      <p class="lead" style="margin-inline:auto">Send an appointment request and we’ll reply with times. Same-day slots are sometimes available.</p>
       <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap">
-        <a class="btn btn--accent btn--lg" href="book.html#book">Request an appointment</a>
+        <a class="btn btn--accent btn--lg" href="book.html#book">Book an appointment</a>
         <a class="btn btn--ghost btn--lg" href="tel:+63285674115">Call (02) 8567 4115</a>
       </div>
     </div>
@@ -144,28 +151,28 @@
 
 </main>
 
-<footer class="site-footer section--brand" style="padding-block:clamp(3rem,2rem+3vw,5rem)">
+<footer class="site-footer">
   <div class="container">
     <div class="foot-grid">
       <div>
-        <p class="brand" style="color:inherit">Resabal Dental</p>
-        <p style="opacity:.82; margin-top:1rem; max-width:34ch">Family and children's dentistry at Centuria Medical Makati, Poblacion.</p>
+        <p class="brand" style="color:#fff">Resabal Dental</p>
+        <p style="opacity:.85; margin-top:1rem; max-width:34ch">Family &amp; children’s dentistry at Centuria Medical Makati, Poblacion. By appointment.</p>
       </div>
-      <div><p class="foot-h">Clinic</p><p>Unit 1111, Centuria Medical Makati<br>Kalayaan cor. Salamanca St.<br>Barangay Poblacion, Makati<br>By appointment</p></div>
+      <div><p class="foot-h">Clinic</p><p>Unit 1111, Centuria Medical Makati<br>Kalayaan cor. Salamanca St.<br>Barangay Poblacion, Makati</p></div>
       <div><p class="foot-h">Book</p>
         <p><a href="tel:+63285674115">(02) 8567 4115</a><br>
            <a href="tel:+639178500404">0917 850 0404</a><br>
            <a href="mailto:resabaldental@gmail.com">resabaldental@gmail.com</a><br>
            <a href="https://instagram.com/resabaldental" rel="noopener">@resabaldental</a></p></div>
     </div>
-    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Resabal Dental Clinic. Photography is placeholder stock pending the client's own images.</div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Resabal Dental Clinic. Photography is placeholder stock; dentist names, fees and accepted HMOs are to be supplied by the clinic.</div>
     <div class="foot-note"><span>© <span data-year>2026</span> Resabal Dental Clinic. Concept site.</span><span>Built by GCCofCI Digital</span></div>
   </div>
 </footer>
 
-<a class="chat-fab" href="mailto:resabaldental@gmail.com" aria-label="Email the clinic">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7L4 7v11h16V7l-8 5z"/></svg>
-  Email us
+<a class="chat-fab" href="https://m.me/resabaldental" rel="noopener" aria-label="Message us on Facebook">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.4-2.6-2.8-5 2.8 5.5-5.9 2.7 2.8 4.9-2.8-5.5 5.9z"/></svg>
+  Message us
 </a>
 
 <script src="assets/app.js"></script>
