@@ -1,0 +1,86 @@
+/* =============================================================
+   Resabal Dental Clinic — theme.css
+   Direction: "your family's dental home" — friendly, reassuring,
+   clean. Soft sky blue + mint, warm coral accent, navy ink,
+   rounded corners. A calm "first visit" step timeline.
+   ============================================================= */
+:root{
+  --paper:      #f6fafc;
+  --paper-2:    #e6f2f4;
+  --ink:        #1f3350;
+  --ink-soft:   #4f647f;
+  --line:       #d3e6ea;
+  --accent:     #f2795b;   /* warm coral */
+  --accent-ink: #ffffff;
+  --brand:      #2f6fb0;   /* friendly blue block */
+  --brand-ink:  #eef7fb;
+  --mint:       #8fd4c4;
+
+  --font-display: "Quicksand", system-ui, -apple-system, sans-serif;
+  --font-body:    "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono:    "Inter", ui-monospace, Menlo, monospace;
+
+  --radius: 14px;
+  --container: 1120px;
+}
+
+h1,h2,h3{ font-family:var(--font-display); font-weight:600; letter-spacing:-.01em; }
+h1,.display{ font-weight:700; line-height:1.06; }
+.lead{ font-size:var(--step-1); color:var(--ink-soft); }
+.section--brand .lead{ color:#dcecf6; }
+
+/* ---- Brand wordmark ---- */
+.brand{ font-family:var(--font-display); font-weight:700; font-size:var(--step-1); letter-spacing:-.01em; display:inline-flex; align-items:center; gap:.5rem; }
+.brand::before{ content:""; width:1.1em; height:1.1em; background:var(--mint); border-radius:60% 60% 55% 55% / 70% 70% 45% 45%; box-shadow:inset 0 -3px 0 rgba(0,0,0,.06); }
+
+/* ---- Eyebrow ---- */
+.eyebrow{ color:var(--brand); font-weight:700; letter-spacing:.16em; }
+.eyebrow::before{ background:var(--accent); border-radius:2px; }
+.section--brand .eyebrow{ color:#fff; }
+
+/* ---- Hero ---- */
+.hero{ color:#fff; background:var(--brand); }
+.hero__bg{ opacity:.5; }
+.hero__bg::after{ background:linear-gradient(180deg, rgba(31,55,90,.55) 0%, rgba(31,55,90,.8) 100%); }
+.hero h1{ font-size:var(--step-5); }
+.hero .lead{ color:#e9f3fa; }
+.hero .eyebrow{ color:#dbeafe; }
+.hero .eyebrow::before{ background:#f2795b; }
+
+/* ---- Rounded cards ---- */
+.card{ border-radius:var(--radius); box-shadow:0 1px 2px rgba(31,55,90,.05), 0 10px 30px rgba(31,55,90,.06); border-color:transparent; background:#fff; }
+.section--brand .card{ background:rgba(255,255,255,.08); box-shadow:none; }
+.media{ border-radius:var(--radius); }
+
+/* ---- First-visit step timeline (signature) ---- */
+.steps{ display:grid; gap:1rem; counter-reset:step; }
+.step{ display:grid; grid-template-columns:auto 1fr; gap:1.2rem; align-items:start; background:#fff; border-radius:var(--radius); padding:1.4rem 1.6rem; box-shadow:0 8px 24px rgba(31,55,90,.06); }
+.step::before{ counter-increment:step; content:counter(step); display:grid; place-items:center; width:2.6rem; height:2.6rem; border-radius:50%; background:var(--paper-2); color:var(--brand); font-family:var(--font-display); font-weight:700; font-size:var(--step-1); }
+.step h3{ margin:0 0 .3rem; }
+.step p{ margin:0; color:var(--ink-soft); }
+.section--brand .step{ background:rgba(255,255,255,.1); box-shadow:none; }
+.section--brand .step::before{ background:rgba(255,255,255,.15); color:#fff; }
+.section--brand .step p{ color:#dcecf6; }
+
+/* ---- Service cards ---- */
+.svc{ background:#fff; border-radius:var(--radius); overflow:hidden; box-shadow:0 8px 24px rgba(31,55,90,.06); display:flex; flex-direction:column; }
+.svc__body{ padding:1.4rem 1.6rem 1.7rem; display:flex; flex-direction:column; gap:.5rem; flex:1; }
+.svc__tag{ align-self:flex-start; font-size:var(--step--1); font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--brand); background:var(--paper-2); padding:.3em .7em; border-radius:999px; }
+.svc h3{ margin:0; }
+
+/* ---- Buttons ---- */
+.btn{ border-radius:999px; font-weight:700; letter-spacing:.02em; }
+.btn:hover{ transform:translateY(-2px); }
+.btn--accent:hover{ background:#e56847; }
+
+/* ---- Review wall ---- */
+.review{ background:#fff; border-left:0; border-radius:var(--radius); padding:1.4rem 1.6rem; box-shadow:0 8px 24px rgba(31,55,90,.06); }
+.review p{ font-family:var(--font-body); font-weight:500; }
+.review cite{ color:var(--brand); }
+.stars{ color:var(--accent); }
+
+.stat__num{ font-family:var(--font-display); font-weight:700; color:var(--brand); }
+.section--brand .stat__num{ color:#fff; }
+.chat-fab{ background:var(--accent); }
+.site-footer{ --line:rgba(255,255,255,.16); }
+.foot-h{ font-family:var(--font-display); font-weight:700; letter-spacing:.06em; }

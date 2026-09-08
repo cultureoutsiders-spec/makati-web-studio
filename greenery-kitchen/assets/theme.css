@@ -1,0 +1,96 @@
+/* =============================================================
+   Greenery Kitchen — theme.css
+   Direction: "home kitchen since 2007" — warm, hand-made, Filipino
+   plant-based comfort food. Forest green, oat paper, clay accent,
+   a chalkboard daily-menu motif and handwritten notes.
+   ============================================================= */
+:root{
+  --paper:      #f4efe3;
+  --paper-2:    #eae2ce;
+  --ink:        #24301f;
+  --ink-soft:   #55604a;
+  --line:       #d7ccb0;
+  --accent:     #c26b3e;   /* clay / terracotta */
+  --accent-ink: #f6efe1;
+  --brand:      #1f3d2b;   /* forest green block */
+  --brand-ink:  #f1ece0;
+  --leaf:       #4e7a4e;
+
+  --font-display: "DM Serif Display", Georgia, serif;
+  --font-body:    "Karla", system-ui, -apple-system, sans-serif;
+  --font-mono:    "Karla", ui-monospace, Menlo, monospace;
+  --font-hand:    "Caveat", "Segoe Script", cursive;
+
+  --radius: 4px;
+  --container: 1140px;
+}
+
+h1,h2,h3{ font-weight:400; letter-spacing:-.005em; }
+h1,.display{ line-height:1.02; }
+h2 em,.hero h1 em,.display em{ font-style:italic; color:var(--accent); }
+.lead{ font-size:var(--step-1); color:var(--ink-soft); }
+.section--brand .lead{ color:#d8d1c0; }
+
+/* ---- Handwritten note ---- */
+.hand{ font-family:var(--font-hand); font-size:calc(var(--step-1) * 1.15); color:var(--accent); line-height:1; transform:rotate(-2deg); display:inline-block; }
+.section--brand .hand{ color:#e8b98f; }
+
+/* ---- Brand wordmark ---- */
+.brand{ font-family:var(--font-display); font-size:var(--step-2); letter-spacing:0; display:inline-flex; align-items:center; gap:.5rem; }
+.brand::before{ content:""; width:.7em; height:.7em; border-radius:50% 50% 50% 0; background:var(--leaf); transform:rotate(-45deg); }
+
+/* ---- Eyebrow ---- */
+.eyebrow{ color:var(--leaf); letter-spacing:.2em; }
+.eyebrow::before{ background:var(--leaf); }
+
+/* ---- Hero ---- */
+.hero{ color:#f6f1e5; background:var(--brand); }
+.hero__bg{ opacity:.9; animation:kb 24s ease-in-out infinite alternate; }
+@keyframes kb{ from{ transform:scale(1); } to{ transform:scale(1.08); } }
+@media (prefers-reduced-motion:reduce){ .hero__bg{ animation:none; } }
+.hero__bg::after{ background:linear-gradient(178deg, rgba(20,35,22,.72) 0%, rgba(20,35,22,.5) 30%, rgba(20,35,22,.85) 100%); }
+.hero h1{ font-size:var(--step-5); }
+.hero .lead{ color:#e9e2d2; }
+.hero .eyebrow{ color:#e6d6b3; }
+.hero .eyebrow::before{ background:#cdbf8f; }
+
+/* ---- Chalkboard daily-menu (signature) ---- */
+.board{
+  background:#22301f; color:#f1ece0; border:1px solid #3a4a34;
+  border-radius:var(--radius); padding:1.8rem 2rem;
+  box-shadow: inset 0 0 60px rgba(0,0,0,.35);
+}
+.board h3{ font-family:var(--font-hand); font-size:var(--step-2); color:#f4d9b8; margin:0 0 1rem; }
+.board__row{ display:flex; justify-content:space-between; gap:1.5rem; padding:.5rem 0; border-bottom:1px dashed rgba(255,255,255,.18); font-size:var(--step-0); }
+.board__row:last-child{ border-bottom:0; }
+.board__row .p{ font-family:var(--font-mono); white-space:nowrap; color:#e8b98f; }
+
+/* ---- Menu list ---- */
+.dish{ display:flex; gap:1rem; align-items:baseline; padding:1rem 0; border-bottom:1px solid var(--line); }
+.dish:last-child{ border-bottom:0; }
+.dish h4{ margin:0; font-family:var(--font-display); font-size:var(--step-1); font-weight:400; }
+.dish .dots{ flex:1; border-bottom:2px dotted var(--line); transform:translateY(-.3em); }
+.dish .p{ font-family:var(--font-mono); white-space:nowrap; }
+.dish p{ flex-basis:100%; margin:.2rem 0 0; color:var(--ink-soft); font-size:var(--step--1); }
+
+/* ---- Cards ---- */
+.card{ border-radius:var(--radius); }
+.section--brand{ --line:#3a4a34; }
+.section--brand .card{ background:transparent; border-color:#3a4a34; }
+
+/* ---- Buttons ---- */
+.btn{ letter-spacing:.03em; }
+.btn:hover{ transform:translateY(-2px); }
+.btn--accent:hover{ background:#ad5c33; }
+
+/* ---- Reviews ---- */
+.review{ border-left-color:var(--leaf); }
+.review p{ font-family:var(--font-display); font-style:italic; }
+.stars{ color:var(--accent); }
+
+/* ---- Stat ---- */
+.stat__num{ font-family:var(--font-display); }
+
+.chat-fab{ background:var(--accent); }
+.site-footer{ --line:#3a4a34; }
+.foot-h{ font-family:var(--font-mono); }

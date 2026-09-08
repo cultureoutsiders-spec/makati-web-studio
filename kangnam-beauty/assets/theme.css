@@ -1,0 +1,91 @@
+/* =============================================================
+   Kangnam Beauty — theme.css
+   Direction: Korean semi-permanent makeup studio — soft, precise,
+   Seoul-clinic. Blush + warm white, plum-brown ink, muted rose.
+   Signature: a drag before/after slider + a treatment face-map.
+   ============================================================= */
+:root{
+  --paper:      #faf6f4;
+  --paper-2:    #f2e6e2;
+  --ink:        #33262a;
+  --ink-soft:   #6b565c;
+  --line:       #e6d4ce;
+  --accent:     #9c6b73;   /* muted rose */
+  --accent-ink: #faf6f4;
+  --brand:      #33262a;   /* deep plum-brown */
+  --brand-ink:  #f3e9e6;
+  --gold:       #b89a7e;
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body:    "Jost", system-ui, -apple-system, sans-serif;
+  --font-mono:    "Jost", ui-monospace, Menlo, monospace;
+
+  --radius: 2px;
+  --container: 1120px;
+}
+
+h1,h2,h3{ font-weight:500; letter-spacing:.005em; }
+h1,.display{ line-height:1.05; font-weight:400; }
+h2 em,.display em,.hero h1 em{ font-style:italic; color:var(--accent); }
+.lead{ font-size:var(--step-1); color:var(--ink-soft); font-weight:300; }
+.section--brand .lead{ color:#e0d0cc; }
+body{ font-weight:300; }
+
+/* ---- Brand wordmark ---- */
+.brand{ font-family:var(--font-display); font-weight:500; font-size:var(--step-2); letter-spacing:.06em; text-transform:uppercase; }
+.brand small{ display:block; font-family:var(--font-body); font-size:.32em; letter-spacing:.4em; color:var(--ink-soft); font-weight:400; margin-top:.2em; }
+.section--brand .brand small,.site-footer .brand small{ color:#b8a6a2; }
+
+/* ---- Eyebrow ---- */
+.eyebrow{ color:var(--accent); letter-spacing:.34em; font-weight:400; }
+.eyebrow::before{ background:var(--gold); width:2.2rem; }
+
+/* ---- Hero ---- */
+.hero{ color:#faf5f3; background:var(--brand); }
+.hero__bg{ opacity:.72; }
+.hero__bg::after{ background:linear-gradient(180deg, rgba(40,28,32,.35) 0%, rgba(40,28,32,.72) 100%); }
+.hero h1{ font-size:var(--step-5); }
+.hero .lead{ color:#ecdfdb; }
+
+/* ---- Before / after slider (signature) ---- */
+.ba{ position:relative; overflow:hidden; border-radius:var(--radius); aspect-ratio:4/3; user-select:none; touch-action:none; }
+.ba img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.ba__after{ clip-path:inset(0 0 0 var(--pos, 50%)); }
+.ba__handle{ position:absolute; top:0; bottom:0; left:var(--pos, 50%); width:2px; background:#fff; box-shadow:0 0 0 1px rgba(0,0,0,.15); }
+.ba__handle::after{ content:""; position:absolute; top:50%; left:50%; width:38px; height:38px; transform:translate(-50%,-50%); border:2px solid #fff; border-radius:50%; background:rgba(255,255,255,.15); backdrop-filter:blur(2px); }
+.ba__tag{ position:absolute; bottom:.7rem; font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.16em; text-transform:uppercase; color:#fff; background:rgba(0,0,0,.4); padding:.3em .7em; }
+.ba__tag--l{ left:.7rem; } .ba__tag--r{ right:.7rem; }
+
+/* ---- Face-map ---- */
+.facemap{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; }
+.facemap button{ appearance:none; border:0; background:var(--paper); color:var(--ink); cursor:pointer; padding:1.4rem 1rem; text-align:left; font:inherit; transition:background .2s ease; }
+.facemap button:hover,.facemap button[aria-pressed="true"]{ background:var(--paper-2); }
+.facemap button b{ display:block; font-family:var(--font-display); font-size:var(--step-1); font-weight:500; }
+.facemap button span{ font-size:var(--step--1); color:var(--ink-soft); }
+
+/* ---- Price menu ---- */
+.pmenu{ border-top:1px solid var(--ink); }
+.pmenu__row{ display:grid; grid-template-columns:1fr auto; gap:.4rem 1.5rem; padding:1.1rem 0; border-bottom:1px solid var(--line); align-items:baseline; }
+.pmenu__row b{ font-family:var(--font-display); font-size:var(--step-1); font-weight:500; }
+.pmenu__row .amt{ font-family:var(--font-mono); font-size:var(--step-0); white-space:nowrap; }
+.pmenu__row p{ grid-column:1/-1; margin:.1rem 0 0; font-size:var(--step--1); color:var(--ink-soft); }
+
+/* ---- Cards ---- */
+.card{ border-radius:var(--radius); }
+.section--brand{ --line:#4a3a3e; }
+.section--brand .card{ background:transparent; border-color:#4a3a3e; }
+
+/* ---- Buttons ---- */
+.btn{ text-transform:uppercase; letter-spacing:.18em; font-weight:400; font-size:var(--step--1); }
+.btn:hover{ transform:translateY(-2px); }
+.btn--accent:hover{ background:#8a5c64; }
+
+/* ---- Reviews ---- */
+.review{ border-left-color:var(--gold); }
+.review p{ font-family:var(--font-display); font-style:italic; font-size:var(--step-2); font-weight:400; }
+.stars{ color:var(--gold); }
+
+.stat__num{ font-family:var(--font-display); font-weight:400; }
+.chat-fab{ background:var(--accent); border-radius:var(--radius); }
+.site-footer{ --line:#4a3a3e; }
+.foot-h{ font-family:var(--font-mono); letter-spacing:.2em; }

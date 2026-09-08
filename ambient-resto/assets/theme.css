@@ -1,0 +1,104 @@
+/* =============================================================
+   Ambient Bar & Restaurant — theme.css
+   Direction: warm neighbourhood bar + private-events venue.
+   Near-black, walnut, brass/amber, candle glow. Poster type.
+   Signature: an "occasion picker" and a what's-on strip.
+   ============================================================= */
+:root{
+  --paper:      #16110d;
+  --paper-2:    #1f1712;
+  --ink:        #f0e6d8;
+  --ink-soft:   #b7a58f;
+  --line:       #3a2e22;
+  --accent:     #d29a3e;   /* brass / amber */
+  --accent-ink: #17110b;
+  --brand:      #0f0b08;   /* deepest block */
+  --brand-ink:  #f0e6d8;
+  --wine:       #7a2f2a;
+
+  --font-display: "Oswald", "Arial Narrow", system-ui, sans-serif;
+  --font-body:    "Barlow", system-ui, -apple-system, sans-serif;
+  --font-mono:    "Barlow", ui-monospace, Menlo, monospace;
+  --font-serif:   "DM Serif Display", Georgia, serif;
+
+  --radius: 0px;
+  --container: 1180px;
+}
+
+body{ background:var(--paper); color:var(--ink); }
+h1,h2,h3{ font-family:var(--font-display); font-weight:500; text-transform:uppercase; letter-spacing:.02em; }
+h1,.display{ font-weight:600; line-height:.98; letter-spacing:.01em; }
+h2 em,.display em,.hero h1 em{ font-family:var(--font-serif); font-style:italic; text-transform:none; color:var(--accent); font-weight:400; }
+.lead{ font-size:var(--step-1); color:var(--ink-soft); }
+.section--brand .lead{ color:#c9b89f; }
+a{ color:var(--accent); }
+
+/* ---- Brand wordmark ---- */
+.brand{ font-family:var(--font-display); font-weight:600; text-transform:uppercase; letter-spacing:.14em; font-size:var(--step-1); color:var(--ink); }
+.brand b{ color:var(--accent); font-weight:600; }
+
+/* ---- Header on dark ---- */
+.site-header{ background:color-mix(in srgb, var(--paper) 82%, transparent); }
+.site-header[data-scrolled="true"]{ border-bottom-color:var(--line); }
+.nav__links a{ color:var(--ink-soft); }
+.nav__links a:hover,.nav__links a[aria-current="page"]{ color:var(--ink); }
+.nav__toggle{ background:var(--paper-2); border-color:var(--line); }
+.nav__toggle span,.nav__toggle span::before,.nav__toggle span::after{ background:var(--ink); }
+@media (max-width:860px){ .nav__links{ background:var(--paper); border-color:var(--line); } .nav__links a{ border-color:var(--line); } }
+
+/* ---- Eyebrow ---- */
+.eyebrow{ color:var(--accent); letter-spacing:.3em; }
+.eyebrow::before{ background:var(--accent); }
+
+/* ---- Hero ---- */
+.hero{ color:#f4ead9; }
+.hero__bg{ opacity:.55; animation:glow 18s ease-in-out infinite alternate; }
+@keyframes glow{ from{ transform:scale(1.02); filter:brightness(.9); } to{ transform:scale(1.1); filter:brightness(1.05); } }
+@media (prefers-reduced-motion:reduce){ .hero__bg{ animation:none; } }
+.hero__bg::after{ background:radial-gradient(120% 90% at 30% 20%, rgba(20,14,9,.35), rgba(10,7,5,.9)); }
+.hero h1{ font-size:var(--step-5); }
+
+/* ---- What's-on strip (signature, marquee) ---- */
+.whatson{ background:var(--wine); color:#f4ead9; overflow:hidden; border-block:1px solid #52201d; }
+.whatson__track{ display:flex; gap:3rem; white-space:nowrap; padding:.9rem 0; font-family:var(--font-display); text-transform:uppercase; letter-spacing:.16em; font-size:var(--step--1); animation:marq 26s linear infinite; }
+.whatson__track span::before{ content:"◆"; color:var(--accent); margin-right:1rem; }
+@keyframes marq{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+@media (prefers-reduced-motion:reduce){ .whatson__track{ animation:none; flex-wrap:wrap; white-space:normal; } }
+
+/* ---- Occasion picker (signature) ---- */
+.occasions{ display:flex; flex-wrap:wrap; gap:.6rem; }
+.occasions button{ appearance:none; border:1px solid var(--line); background:var(--paper-2); color:var(--ink-soft); cursor:pointer; font:600 var(--step--1)/1 var(--font-display); text-transform:uppercase; letter-spacing:.14em; padding:.8em 1.3em; transition:all .2s ease; }
+.occasions button[aria-pressed="true"]{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+.pkg{ border:1px solid var(--line); background:var(--paper-2); padding:1.8rem 2rem; margin-top:1.4rem; }
+.pkg h3{ margin:0 0 .3rem; color:var(--accent); }
+.pkg ul{ list-style:none; padding:0; margin:1rem 0 0; }
+.pkg li{ padding:.5rem 0; border-bottom:1px dashed var(--line); font-size:var(--step--1); }
+.pkg li:last-child{ border-bottom:0; }
+
+/* ---- Cards / menu ---- */
+.card{ background:var(--paper-2); border-color:var(--line); }
+.section--brand .card{ background:rgba(255,255,255,.03); }
+.dish{ display:flex; gap:1rem; align-items:baseline; padding:.9rem 0; border-bottom:1px solid var(--line); }
+.dish:last-child{ border-bottom:0; }
+.dish h4{ margin:0; font-family:var(--font-serif); font-weight:400; text-transform:none; font-size:var(--step-1); }
+.dish .dots{ flex:1; border-bottom:1px dotted var(--line); transform:translateY(-.3em); }
+.dish .p{ font-family:var(--font-mono); color:var(--accent); white-space:nowrap; }
+
+/* ---- Gallery ---- */
+.gallery img{ filter:saturate(.9) brightness(.92); }
+.gallery button:hover img{ filter:none; transform:scale(1.05); }
+
+/* ---- Buttons ---- */
+.btn{ text-transform:uppercase; letter-spacing:.14em; font-family:var(--font-display); font-weight:600; }
+.btn{ --_bg:var(--accent); --_fg:var(--accent-ink); }
+.btn--ghost{ --_bg:transparent; --_fg:var(--ink); border-color:var(--ink-soft); }
+.btn:hover{ transform:translateY(-2px); }
+
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-serif); font-style:italic; text-transform:none; }
+.stars{ color:var(--accent); }
+.stat__num{ font-family:var(--font-display); font-weight:600; color:var(--accent); }
+.chat-fab{ background:var(--accent); color:var(--accent-ink); }
+.site-footer{ background:var(--brand); --line:#3a2e22; }
+.foot-h{ font-family:var(--font-display); letter-spacing:.2em; }
+.demo-flag{ border-color:#4a3a2a; }

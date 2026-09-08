@@ -3,3 +3,5 @@ Thumbs.db
 *.log
 node_modules/
 _imgtest/
+_t3/
+_t*/
