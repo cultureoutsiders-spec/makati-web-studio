@@ -160,10 +160,12 @@ h1,.display{ font-weight:700; line-height:1.04; }
 .btn{ border-radius:999px; font-family:var(--font-display); font-weight:700; letter-spacing:.01em; }
 .btn:hover{ transform:translateY(-3px) rotate(-1deg); }
 .btn--accent:hover{ background:#b45c40; }
-.review{ background:#fff; border-left:0; border-radius:var(--radius); padding:1.4rem 1.6rem; box-shadow:0 10px 26px -18px rgba(44,51,39,.25); }
-.review p{ font-family:var(--font-body); font-weight:600; }
+.review{ background:#fff; color:var(--ink); border-left:0; border-radius:var(--radius); padding:1.4rem 1.6rem; box-shadow:0 10px 26px -18px rgba(44,51,39,.25); }
+.review p{ font-family:var(--font-body); font-weight:600; color:var(--ink); }
 .review cite{ color:var(--brand); font-family:var(--font-mono); }
-.stars{ color:var(--butter); }
+.section--brand .review,.section--brand .review p{ color:var(--ink); }
+.section--brand .review cite{ color:var(--brand); }
+.stars{ color:#c98a1f; }
 .stat__num{ font-family:var(--font-display); font-weight:700; color:var(--butter); }
 .section--brand .stat__label{ color:#dfe7cf; }
 .chat-fab{ background:var(--accent); }
