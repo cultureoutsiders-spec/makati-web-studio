@@ -1,8 +1,11 @@
 /* =============================================================
    Ambient Bar & Restaurant — theme.css
-   Direction: warm neighbourhood bar + private-events venue.
-   Near-black, walnut, brass/amber, candle glow. Poster type.
-   Signature: an "occasion picker" and a what's-on strip.
+   Architecture: "The Listings Page" — a gig-poster broadsheet.
+   Stripped nav (wordmark + Reserve; everything else in a drop
+   panel). A date-led "What's on this week" line-up as the hero,
+   with a sticky Reserve / Enquire card. Letterpress menu sheet,
+   printed-rider event packages, contact-sheet gallery, brass rules.
+   Colours unchanged; Oswald replaced by Archivo.
    ============================================================= */
 :root{
   --paper:      #16110d;
@@ -12,93 +15,146 @@
   --line:       #3a2e22;
   --accent:     #d29a3e;   /* brass / amber */
   --accent-ink: #17110b;
-  --brand:      #0f0b08;   /* deepest block */
+  --brand:      #0f0b08;
   --brand-ink:  #f0e6d8;
   --wine:       #7a2f2a;
 
-  --font-display: "Oswald", "Arial Narrow", system-ui, sans-serif;
+  --font-display: "Archivo", "Helvetica Neue", system-ui, sans-serif;
   --font-body:    "Barlow", system-ui, -apple-system, sans-serif;
   --font-mono:    "Barlow", ui-monospace, Menlo, monospace;
   --font-serif:   "DM Serif Display", Georgia, serif;
 
   --radius: 0px;
-  --container: 1180px;
+  --container: 1200px;
 }
 
 body{ background:var(--paper); color:var(--ink); }
-h1,h2,h3{ font-family:var(--font-display); font-weight:500; text-transform:uppercase; letter-spacing:.02em; }
-h1,.display{ font-weight:600; line-height:.98; letter-spacing:.01em; }
-h2 em,.display em,.hero h1 em{ font-family:var(--font-serif); font-style:italic; text-transform:none; color:var(--accent); font-weight:400; }
-.lead{ font-size:var(--step-1); color:var(--ink-soft); }
+h1,h2,h3{ font-family:var(--font-display); font-weight:700; letter-spacing:-.01em; }
+h1,.display{ font-weight:800; line-height:1.02; }
+h2 em,.display em,.hero h1 em{ font-family:var(--font-serif); font-style:italic; text-transform:none; color:var(--accent); font-weight:400; letter-spacing:0; }
+.lead{ font-size:var(--step-1); color:var(--ink-soft); line-height:1.5; }
 .section--brand .lead{ color:#c9b89f; }
 a{ color:var(--accent); }
+.rule{ border-color:var(--line); }
+.rule--brass{ border:0; border-top:2px solid var(--accent); margin:0; }
 
-/* ---- Brand wordmark ---- */
-.brand{ font-family:var(--font-display); font-weight:600; text-transform:uppercase; letter-spacing:.14em; font-size:var(--step-1); color:var(--ink); }
-.brand b{ color:var(--accent); font-weight:600; }
-
-/* ---- Header on dark ---- */
-.site-header{ background:color-mix(in srgb, var(--paper) 82%, transparent); }
+/* =============================================================
+   Stripped nav
+   ============================================================= */
+.site-header{ background:color-mix(in srgb, var(--paper) 88%, transparent); border-bottom:1px solid transparent; }
 .site-header[data-scrolled="true"]{ border-bottom-color:var(--line); }
-.nav__links a{ color:var(--ink-soft); }
-.nav__links a:hover,.nav__links a[aria-current="page"]{ color:var(--ink); }
-.nav__toggle{ background:var(--paper-2); border-color:var(--line); }
-.nav__toggle span,.nav__toggle span::before,.nav__toggle span::after{ background:var(--ink); }
-@media (max-width:860px){ .nav__links{ background:var(--paper); border-color:var(--line); } .nav__links a{ border-color:var(--line); } }
+.nav--min{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding-block:1rem; }
+.brand{ font-family:var(--font-display); font-weight:800; text-transform:uppercase; letter-spacing:.16em; font-size:var(--step-1); color:var(--ink); text-decoration:none; }
+.brand b{ color:var(--accent); }
+.nav__end{ display:flex; align-items:center; gap:.8rem; }
+.nav__end .btn{ padding:.65em 1.2em; }
+.nav__toggle{ display:inline-flex; width:44px; height:44px; border:1px solid var(--line); background:var(--paper-2); cursor:pointer; align-items:center; justify-content:center; }
+.nav__toggle span,.nav__toggle span::before,.nav__toggle span::after{ content:""; display:block; width:20px; height:2px; background:var(--ink); position:relative; }
+.nav__toggle span::before{ position:absolute; top:-6px; } .nav__toggle span::after{ position:absolute; top:6px; }
+.nav[data-open="true"] .nav__toggle span{ background:transparent; }
+.nav[data-open="true"] .nav__toggle span::before{ transform:translateY(6px) rotate(45deg); }
+.nav[data-open="true"] .nav__toggle span::after{ transform:translateY(-6px) rotate(-45deg); }
+.nav__links{
+  position:fixed; inset:66px 0 auto 0; z-index:60;
+  display:flex; flex-direction:column; gap:0; list-style:none; margin:0;
+  background:var(--brand); border-block:1px solid var(--line);
+  padding:.5rem clamp(1.25rem,5vw,4rem) 1.5rem;
+  transform:translateY(-130%); transition:transform .3s ease;
+}
+.nav[data-open="true"] .nav__links{ transform:none; }
+.nav__links a{ display:block; font-family:var(--font-display); font-weight:700; text-transform:uppercase; letter-spacing:.06em; font-size:var(--step-1); text-decoration:none; color:var(--ink-soft); padding:1rem 0; border-bottom:1px solid var(--line); }
+.nav__links a:hover,.nav__links a[aria-current="page"]{ color:var(--accent); }
 
-/* ---- Eyebrow ---- */
-.eyebrow{ color:var(--accent); letter-spacing:.3em; }
-.eyebrow::before{ background:var(--accent); }
-
-/* ---- Hero ---- */
-.hero{ color:#f4ead9; }
-.hero__bg{ opacity:.55; animation:glow 18s ease-in-out infinite alternate; }
-@keyframes glow{ from{ transform:scale(1.02); filter:brightness(.9); } to{ transform:scale(1.1); filter:brightness(1.05); } }
-@media (prefers-reduced-motion:reduce){ .hero__bg{ animation:none; } }
-.hero__bg::after{ background:radial-gradient(120% 90% at 30% 20%, rgba(20,14,9,.35), rgba(10,7,5,.9)); }
-.hero h1{ font-size:var(--step-5); }
-
-/* ---- What's-on strip (signature, marquee) ---- */
+/* =============================================================
+   What's-on marquee
+   ============================================================= */
 .whatson{ background:var(--wine); color:#f4ead9; overflow:hidden; border-block:1px solid #52201d; }
-.whatson__track{ display:flex; gap:3rem; white-space:nowrap; padding:.9rem 0; font-family:var(--font-display); text-transform:uppercase; letter-spacing:.16em; font-size:var(--step--1); animation:marq 26s linear infinite; }
+.whatson__track{ display:flex; gap:3rem; white-space:nowrap; padding:.9rem 0; font-family:var(--font-display); font-weight:700; text-transform:uppercase; letter-spacing:.16em; font-size:var(--step--1); animation:marq 28s linear infinite; }
 .whatson__track span::before{ content:"◆"; color:var(--accent); margin-right:1rem; }
 @keyframes marq{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
 @media (prefers-reduced-motion:reduce){ .whatson__track{ animation:none; flex-wrap:wrap; white-space:normal; } }
 
-/* ---- Occasion picker (signature) ---- */
-.occasions{ display:flex; flex-wrap:wrap; gap:.6rem; }
-.occasions button{ appearance:none; border:1px solid var(--line); background:var(--paper-2); color:var(--ink-soft); cursor:pointer; font:600 var(--step--1)/1 var(--font-display); text-transform:uppercase; letter-spacing:.14em; padding:.8em 1.3em; transition:all .2s ease; }
+/* =============================================================
+   Listing hero — gig line-up + sticky reserve card
+   ============================================================= */
+.listing{ display:grid; grid-template-columns:1fr 340px; gap:clamp(1.5rem,1rem+3vw,3.5rem); align-items:start; }
+@media (max-width:900px){ .listing{ grid-template-columns:1fr; } }
+.listing__head .eyebrow{ color:var(--accent); }
+.listing__head h1{ font-size:var(--step-4); }
+.listing__date{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); }
+
+.week{ margin-top:var(--space-md); border-top:2px solid var(--accent); }
+.gig{ display:grid; grid-template-columns:5.5rem 1fr auto; gap:1rem; align-items:baseline; padding:1.1rem .6rem; border-bottom:1px solid var(--line); transition:background .15s ease, padding-left .15s ease; }
+.gig:hover{ background:var(--paper-2); padding-left:1.1rem; }
+.gig__day{ font-family:var(--font-display); font-weight:800; text-transform:uppercase; letter-spacing:.04em; color:var(--accent); font-size:var(--step-0); }
+.gig__act{ font-family:var(--font-serif); font-style:italic; font-size:var(--step-1); }
+.gig__act small{ display:block; font-family:var(--font-body); font-style:normal; font-size:var(--step--1); color:var(--ink-soft); letter-spacing:0; }
+.gig__time{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); white-space:nowrap; }
+
+.reserve-card{ position:sticky; top:5.5rem; background:var(--paper-2); border:1px solid var(--line); padding:1.6rem; transition:box-shadow .3s ease, border-color .3s ease; }
+.reserve-card.is-lit{ border-color:var(--accent); box-shadow:0 0 0 1px var(--accent), 0 18px 50px -20px rgba(210,154,62,.5); }
+.reserve-card h2{ font-size:var(--step-1); margin:0 0 .3rem; }
+.reserve-card p{ color:var(--ink-soft); font-size:var(--step--1); }
+.reserve-card .btn{ width:100%; justify-content:center; margin-top:.6rem; }
+.reserve-card hr{ border:0; border-top:1px solid var(--line); margin:1.1rem 0; }
+.reserve-card .ln{ display:flex; justify-content:space-between; gap:1rem; font-size:var(--step--1); padding:.25rem 0; }
+.reserve-card .ln span:first-child{ color:var(--ink-soft); }
+
+/* =============================================================
+   Letterpress menu sheet
+   ============================================================= */
+.sheet{ background:var(--paper-2); border-block:2px solid var(--accent); padding:clamp(1.6rem,1.2rem+2vw,2.8rem); }
+.sheet__cols{ columns:2; column-gap:clamp(1.5rem,1rem+3vw,4rem); }
+@media (max-width:640px){ .sheet__cols{ columns:1; } }
+.sheet__sec{ break-inside:avoid; margin-bottom:1.6rem; }
+.sheet__sec h3{ font-family:var(--font-display); font-weight:800; text-transform:uppercase; letter-spacing:.1em; font-size:var(--step-0); color:var(--accent); border-bottom:1px solid var(--line); padding-bottom:.3rem; margin:0 0 .5rem; }
+.leader{ display:flex; align-items:baseline; gap:.6rem; padding:.45rem 0; }
+.leader .n{ font-family:var(--font-serif); font-style:italic; font-size:var(--step-0); }
+.leader .dots{ flex:1; border-bottom:1px dotted var(--line); transform:translateY(-.25em); }
+.leader .p{ font-family:var(--font-mono); font-weight:600; white-space:nowrap; color:var(--accent); }
+
+/* =============================================================
+   Occasion picker + printed rider
+   ============================================================= */
+.occasions{ display:flex; flex-wrap:wrap; gap:.5rem; }
+.occasions button{ appearance:none; border:1px solid var(--line); background:var(--paper-2); color:var(--ink-soft); cursor:pointer; font:700 var(--step--1)/1 var(--font-display); text-transform:uppercase; letter-spacing:.1em; padding:.8em 1.2em; transition:all .2s ease; }
 .occasions button[aria-pressed="true"]{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
-.pkg{ border:1px solid var(--line); background:var(--paper-2); padding:1.8rem 2rem; margin-top:1.4rem; }
-.pkg h3{ margin:0 0 .3rem; color:var(--accent); }
-.pkg ul{ list-style:none; padding:0; margin:1rem 0 0; }
-.pkg li{ padding:.5rem 0; border-bottom:1px dashed var(--line); font-size:var(--step--1); }
-.pkg li:last-child{ border-bottom:0; }
+.rider{ border:1px solid var(--accent); background:var(--paper-2); padding:1.8rem 2rem; margin-top:1.4rem; }
+.rider h3{ margin:0 0 .3rem; color:var(--accent); font-family:var(--font-serif); font-style:italic; font-weight:400; text-transform:none; }
+.rider ul{ list-style:none; padding:0; margin:1rem 0 0; }
+.rider li{ padding:.5rem 0; border-bottom:1px dashed var(--line); font-size:var(--step--1); }
+.rider li::before{ content:"— "; color:var(--accent); }
+.rider li:last-child{ border-bottom:0; }
 
-/* ---- Cards / menu ---- */
-.card{ background:var(--paper-2); border-color:var(--line); }
+/* =============================================================
+   Contact-sheet gallery strip
+   ============================================================= */
+.contact-sheet{ display:grid; grid-template-columns:repeat(6,1fr); gap:2px; background:var(--line); border:1px solid var(--line); }
+@media (max-width:720px){ .contact-sheet{ grid-template-columns:repeat(3,1fr); } }
+.contact-sheet button{ padding:0; border:0; background:none; cursor:zoom-in; overflow:hidden; }
+.contact-sheet img{ aspect-ratio:1/1; object-fit:cover; width:100%; filter:saturate(.85) brightness(.85); transition:filter .3s ease, transform .3s ease; }
+.contact-sheet button:hover img{ filter:none; transform:scale(1.06); }
+
+/* ---- Cards / reviews / misc ---- */
+.card{ background:var(--paper-2); border-color:var(--line); border-radius:0; }
+.section--brand{ background:var(--brand); --line:#3a2e22; }
 .section--brand .card{ background:rgba(255,255,255,.03); }
-.dish{ display:flex; gap:1rem; align-items:baseline; padding:.9rem 0; border-bottom:1px solid var(--line); }
-.dish:last-child{ border-bottom:0; }
-.dish h4{ margin:0; font-family:var(--font-serif); font-weight:400; text-transform:none; font-size:var(--step-1); }
-.dish .dots{ flex:1; border-bottom:1px dotted var(--line); transform:translateY(-.3em); }
-.dish .p{ font-family:var(--font-mono); color:var(--accent); white-space:nowrap; }
-
-/* ---- Gallery ---- */
-.gallery img{ filter:saturate(.9) brightness(.92); }
-.gallery button:hover img{ filter:none; transform:scale(1.05); }
-
-/* ---- Buttons ---- */
-.btn{ text-transform:uppercase; letter-spacing:.14em; font-family:var(--font-display); font-weight:600; }
+.eyebrow{ color:var(--accent); font-family:var(--font-mono); letter-spacing:.28em; }
+.eyebrow::before{ background:var(--accent); }
+.btn{ text-transform:uppercase; letter-spacing:.12em; font-family:var(--font-display); font-weight:700; border-radius:0; }
 .btn{ --_bg:var(--accent); --_fg:var(--accent-ink); }
 .btn--ghost{ --_bg:transparent; --_fg:var(--ink); border-color:var(--ink-soft); }
 .btn:hover{ transform:translateY(-2px); }
-
 .review{ border-left-color:var(--accent); }
 .review p{ font-family:var(--font-serif); font-style:italic; text-transform:none; }
+.review cite{ font-family:var(--font-mono); color:var(--ink-soft); }
 .stars{ color:var(--accent); }
-.stat__num{ font-family:var(--font-display); font-weight:600; color:var(--accent); }
+.stat__num{ font-family:var(--font-display); font-weight:800; color:var(--accent); }
+.stat__label{ color:var(--ink-soft); }
 .chat-fab{ background:var(--accent); color:var(--accent-ink); }
 .site-footer{ background:var(--brand); --line:#3a2e22; }
-.foot-h{ font-family:var(--font-display); letter-spacing:.2em; }
+.foot-h{ font-family:var(--font-display); font-weight:700; letter-spacing:.14em; }
 .demo-flag{ border-color:#4a3a2a; }
+.field input,.field select,.field textarea{ background:var(--paper-2); border-color:var(--line); color:var(--ink); border-radius:0; }
+.field label{ font-family:var(--font-display); font-weight:700; text-transform:uppercase; letter-spacing:.06em; font-size:var(--step--1); }
+.notfound{ text-align:center; padding-block:var(--space-2xl); }

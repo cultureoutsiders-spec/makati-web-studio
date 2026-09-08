@@ -6,18 +6,50 @@
 <title>Page not found — Ambient Bar &amp; Restaurant</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Barlow:wght@400;500;600&family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/base.css">
 <link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
-<main class="section" style="min-height:70vh; display:grid; place-items:center; text-align:center">
-  <div class="container stack">
-    <p class="eyebrow center">Error 404</p>
-    <h1 class="display">Last <em>call</em> on that page</h1>
-    <p class="lead" style="margin-inline:auto">It's not here. Head back to the bar.</p>
-    <p><a class="btn btn--accent btn--lg" href="index.html">Back to home</a></p>
-  </div>
+
+<header class="site-header">
+  <nav class="nav--min nav container" data-open="false" aria-label="Primary">
+    <a class="brand" href="index.html">Ambient<b>.</b></a>
+    <div class="nav__end">
+      <a class="btn btn--accent" href="reservations.html#book">Reserve</a>
+      <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    </div>
+    <ul class="nav__links" id="navlinks">
+      <li><a href="index.html">What's on</a></li>
+      <li><a href="food-drinks.html">Food &amp; Drinks</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="reservations.html">Reservations</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="container notfound">
+    <p class="eyebrow" style="justify-content:center">404</p>
+    <h1 class="display">Not on tonight’s bill</h1>
+    <p class="lead" style="margin-inline:auto; max-width:44ch">That page isn’t here. Back to what’s on, or straight to a reservation.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:1.4rem">
+      <a class="btn btn--accent btn--lg" href="index.html">What’s on</a>
+      <a class="btn btn--ghost btn--lg" href="reservations.html#book">Reserve a table</a>
+    </div>
+  </section>
 </main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Ambient Bar &amp; Restaurant.</div>
+    <div class="foot-note"><span>© <span data-year>2026</span> Ambient Bar &amp; Restaurant. Concept site.</span><span>Built by GCCofCI Digital</span></div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
 </body>
 </html>

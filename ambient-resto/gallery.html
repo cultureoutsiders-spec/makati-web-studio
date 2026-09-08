@@ -3,79 +3,79 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gallery — Ambient Bar &amp; Restaurant, Palanan Makati</title>
-<meta name="description" content="A look inside Ambient Bar &amp; Restaurant, Palanan, Makati — the room, the food, live nights and events.">
+<title>Gallery — Ambient Bar &amp; Restaurant</title>
+<meta name="description" content="A look around Ambient Bar &amp; Restaurant in Palanan, Makati — the room, the food, event nights and the bar.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Gallery — Ambient Bar &amp; Restaurant">
+<meta property="og:description" content="The room, the food, the nights. Palanan, Makati.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Barlow:wght@400;500;600&family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/base.css">
 <link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
 
 <header class="site-header">
-  <nav class="nav container" data-open="false" aria-label="Primary">
+  <nav class="nav--min nav container" data-open="false" aria-label="Primary">
     <a class="brand" href="index.html">Ambient<b>.</b></a>
-    <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    <div class="nav__end">
+      <a class="btn btn--accent" href="reservations.html#book">Reserve</a>
+      <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    </div>
     <ul class="nav__links" id="navlinks">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html">What's on</a></li>
       <li><a href="food-drinks.html">Food &amp; Drinks</a></li>
       <li><a href="events.html">Events</a></li>
       <li><a href="gallery.html" aria-current="page">Gallery</a></li>
       <li><a href="reservations.html">Reservations</a></li>
-      <li><a class="btn btn--accent" href="reservations.html#book">Reserve</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
-  <section class="section section--brand">
-    <div class="container stack">
-      <p class="eyebrow">Gallery</p>
-      <h1 class="display">A look <em>inside</em></h1>
-      <p class="lead measure">The room, the food, and a few nights that got out of hand in the best
-        way. Tap any photo. These are placeholders until the real Ambient photos go in.</p>
-    </div>
-  </section>
-
   <section class="section">
     <div class="container">
-      <div class="gallery">
-        <button aria-label="Enlarge photo"><img src="assets/img/hero-candlelit.jpg" alt="Candlelit table"></button>
-        <button aria-label="Enlarge photo"><img src="assets/img/interior-event.jpg" alt="The dining room"></button>
-        <button aria-label="Enlarge photo"><img src="assets/img/event-crowd.jpg" alt="Guests at an event"></button>
-        <button aria-label="Enlarge photo"><img src="assets/img/cocktail.jpg" alt="A cocktail"></button>
-        <button aria-label="Enlarge photo"><img src="assets/img/platter.jpg" alt="A sharing platter"></button>
-        <button aria-label="Enlarge photo"><img src="assets/img/celebrate.jpg" alt="Celebrating"></button>
-        <button aria-label="Enlarge photo"><img src="assets/img/small-plates.jpg" alt="Small plates"></button>
+      <p class="eyebrow">Gallery</p>
+      <h1>The <em>room</em>, the nights</h1>
+      <p class="lead" style="max-width:52ch">A contact sheet. Tap any frame to enlarge.
+        <span style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft)">Placeholder stock — the venue’s own photos drop in here.</span></p>
+
+      <div class="contact-sheet gallery" style="margin-top:1.4rem">
+        <button><img src="assets/img/hero-candlelit.jpg" alt="Candlelit table" data-full="assets/img/hero-candlelit.jpg"></button>
+        <button><img src="assets/img/interior-event.jpg" alt="The dining room" data-full="assets/img/interior-event.jpg"></button>
+        <button><img src="assets/img/event-crowd.jpg" alt="A night in progress" data-full="assets/img/event-crowd.jpg"></button>
+        <button><img src="assets/img/platter.jpg" alt="Sharing platter" data-full="assets/img/platter.jpg"></button>
+        <button><img src="assets/img/cocktail.jpg" alt="House cocktail" data-full="assets/img/cocktail.jpg"></button>
+        <button><img src="assets/img/celebrate.jpg" alt="A celebration" data-full="assets/img/celebrate.jpg"></button>
+        <button><img src="assets/img/small-plates.jpg" alt="Small plates" data-full="assets/img/small-plates.jpg"></button>
+        <button><img src="assets/img/interior-event.jpg" alt="Function set-up" data-full="assets/img/interior-event.jpg"></button>
+        <button><img src="assets/img/event-crowd.jpg" alt="Live set" data-full="assets/img/event-crowd.jpg"></button>
+        <button><img src="assets/img/hero-candlelit.jpg" alt="Bar corner" data-full="assets/img/hero-candlelit.jpg"></button>
+        <button><img src="assets/img/platter.jpg" alt="Pulutan board" data-full="assets/img/platter.jpg"></button>
+        <button><img src="assets/img/cocktail.jpg" alt="Lambanog flight" data-full="assets/img/cocktail.jpg"></button>
       </div>
+      <p style="margin-top:1.4rem"><a class="btn btn--accent btn--lg" href="reservations.html#book">Reserve a table</a></p>
     </div>
   </section>
-
-  <section class="section section--brand center">
-    <div class="container stack">
-      <h2>Come make some of your own</h2>
-      <p class="lead" style="margin-inline:auto">Reserve a table, or book the room.</p>
-      <a class="btn btn--accent btn--lg" href="reservations.html#book">Reserve now</a>
-    </div>
-  </section>
+  <div class="lightbox" data-open="false" aria-hidden="true"><button class="lightbox__close" aria-label="Close">&times;</button><img alt=""></div>
 </main>
-
-<div class="lightbox" data-open="false" aria-modal="true" role="dialog" aria-label="Enlarged photo">
-  <button class="lightbox__close" aria-label="Close">&times;</button>
-  <img src="" alt="">
-</div>
 
 <footer class="site-footer">
   <div class="container">
     <div class="foot-grid">
-      <div><p class="brand" style="color:inherit">Ambient<b>.</b></p><p style="opacity:.75; margin-top:1rem; max-width:34ch">A neighbourhood bar and restaurant with a function space, on Bautista Street, Palanan, Makati.</p></div>
+      <div><p class="brand">Ambient<b>.</b></p>
+        <p style="opacity:.8; margin-top:1rem; max-width:34ch">A neighbourhood bar and restaurant with a function space, on Bautista Street, Palanan, Makati.</p></div>
       <div><p class="foot-h">Find us</p><p>3663 Bautista Street<br>Barangay Palanan<br>Makati City</p></div>
-      <div><p class="foot-h">Book</p><p><a href="tel:+639171656915">0917 165 6915</a><br><a href="tel:+63282418233">(02) 8241 8233</a><br><a href="mailto:ambientrestobar@gmail.com">ambientrestobar@gmail.com</a></p></div>
+      <div><p class="foot-h">Book</p>
+        <p><a href="tel:+639171656915">0917 165 6915</a><br>
+           <a href="tel:+63282418233">(02) 8241 8233</a><br>
+           <a href="mailto:ambientrestobar@gmail.com">ambientrestobar@gmail.com</a><br>
+           <a href="https://m.me/ambient.makati" rel="noopener">Message on Facebook</a></p></div>
     </div>
-    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Ambient Bar &amp; Restaurant. Photography is placeholder stock pending the client's own images.</div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Ambient Bar &amp; Restaurant. All photography is placeholder stock.</div>
     <div class="foot-note"><span>© <span data-year>2026</span> Ambient Bar &amp; Restaurant. Concept site.</span><span>Built by GCCofCI Digital</span></div>
   </div>
 </footer>
@@ -84,6 +84,7 @@
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.4-2.6-2.8-5 2.8 5.5-5.9 2.7 2.8 4.9-2.8-5.5 5.9z"/></svg>
   Message us
 </a>
+
 <script src="assets/app.js"></script>
 </body>
 </html>

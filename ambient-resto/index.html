@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ambient Bar &amp; Restaurant — Palanan, Makati</title>
-<meta name="description" content="A warm neighbourhood bar and restaurant on Bautista Street, Palanan, Makati. Chill nights, live music and salsa, and a function space for birthdays, barkada parties and corporate events.">
+<meta name="description" content="A neighbourhood bar and restaurant on Bautista Street, Palanan, Makati. Filipino plates and bar food, a proper drinks list, live acoustic sets and salsa, and a function space for birthdays, barkada nights and corporate events.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="Ambient Bar & Restaurant — Palanan, Makati">
-<meta property="og:description" content="Neighbourhood bar and restaurant with a function space for your celebrations. Bautista St, Palanan.">
+<meta property="og:description" content="Bar, kitchen and function space on Bautista Street, Palanan. What's on this week, plus events.">
 <meta property="og:type" content="restaurant.restaurant">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Barlow:wght@400;500;600&family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/base.css">
 <link rel="stylesheet" href="assets/theme.css">
 <script type="application/ld+json">
@@ -29,16 +29,18 @@
 <body>
 
 <header class="site-header">
-  <nav class="nav container" data-open="false" aria-label="Primary">
+  <nav class="nav--min nav container" data-open="false" aria-label="Primary">
     <a class="brand" href="index.html">Ambient<b>.</b></a>
-    <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    <div class="nav__end">
+      <a class="btn btn--accent" href="reservations.html#book">Reserve</a>
+      <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    </div>
     <ul class="nav__links" id="navlinks">
-      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="index.html" aria-current="page">What's on</a></li>
       <li><a href="food-drinks.html">Food &amp; Drinks</a></li>
       <li><a href="events.html">Events</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="reservations.html">Reservations</a></li>
-      <li><a class="btn btn--accent" href="reservations.html#book">Reserve</a></li>
     </ul>
   </nav>
 </header>
@@ -52,90 +54,139 @@
 
 <main>
 
-  <section class="hero section">
-    <div class="hero__bg"><img src="assets/img/hero-candlelit.jpg" alt="A warm, candlelit table at the restaurant" fetchpriority="high"></div>
-    <div class="container stack">
-      <p class="eyebrow">Neighbourhood bar &amp; restaurant · Palanan, Makati</p>
-      <h1 class="display">Somewhere to <em>unwind</em> —<br>and somewhere to <em>celebrate</em></h1>
-      <p class="lead measure">A warm room on Bautista Street with good food, cold drinks, live music
-        and salsa on the calendar. Come for a Friday, or take the function space for your birthday,
-        barkada or team.</p>
-      <div style="display:flex; gap:1rem; flex-wrap:wrap">
-        <a class="btn btn--accent btn--lg" href="reservations.html#book">Reserve a table</a>
-        <a class="btn btn--ghost btn--lg" href="events.html">Book an event</a>
+  <section class="section">
+    <div class="container listing">
+      <div class="listing__main">
+        <div class="listing__head">
+          <p class="eyebrow">Neighbourhood bar &amp; restaurant · Palanan</p>
+          <h1>What’s on <em>this week</em></h1>
+          <p class="listing__date">Bautista Street · kitchen till late · no cover, no minimum spend</p>
+        </div>
+        <div class="week reveal-group">
+          <div class="gig"><span class="gig__day">Wed</span><span class="gig__act">Acoustic duo<small>easy listening, requests welcome</small></span><span class="gig__time">8:00 PM</span></div>
+          <div class="gig"><span class="gig__day">Thu</span><span class="gig__act">Open-mic night<small>sign up at the bar from 7</small></span><span class="gig__time">8:30 PM</span></div>
+          <div class="gig"><span class="gig__day">Fri</span><span class="gig__act">House band<small>OPM &amp; classics, two sets</small></span><span class="gig__time">9:00 PM</span></div>
+          <div class="gig"><span class="gig__day">Sat</span><span class="gig__act">Salsa night<small>social dancing, beginners fine</small></span><span class="gig__time">9:00 PM</span></div>
+          <div class="gig"><span class="gig__day">Sun</span><span class="gig__act">Sunday sessions<small>slow afternoon, vinyl &amp; comfort food</small></span><span class="gig__time">4:00 PM</span></div>
+        </div>
+        <p class="hand" style="margin-top:1rem; color:var(--ink-soft); font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.06em">Sample line-up — this week’s acts are posted on Facebook.</p>
       </div>
+
+      <aside class="reserve-card" id="reserve">
+        <h2>Reserve or enquire</h2>
+        <p>Grab a table for the weekend, or send an event and headcount for a quote.</p>
+        <a class="btn btn--accent" href="reservations.html#book">Reserve a table</a>
+        <a class="btn btn--ghost" href="events.html">Book an event</a>
+        <hr>
+        <div class="ln"><span>Tonight</span><span>Open till late</span></div>
+        <div class="ln"><span>Call</span><span><a href="tel:+639171656915">0917 165 6915</a></span></div>
+        <div class="ln"><span>Find us</span><span>3663 Bautista St</span></div>
+      </aside>
     </div>
   </section>
 
   <section class="section--tight section--brand">
     <div class="container">
-      <div class="stats">
+      <div class="stats reveal-group">
         <div class="stat"><span class="stat__num">1</span><span class="stat__label">function room, your run of the place</span></div>
-        <div class="stat"><span class="stat__num">Live</span><span class="stat__label">music &amp; salsa nights</span></div>
-        <div class="stat"><span class="stat__num">Late</span><span class="stat__label">open till the night winds down</span></div>
-        <div class="stat"><span class="stat__num">Palanan</span><span class="stat__label">easy from the CBD, its own parking street</span></div>
+        <div class="stat"><span class="stat__num">Live</span><span class="stat__label">music &amp; salsa most nights</span></div>
+        <div class="stat"><span class="stat__num">Late</span><span class="stat__label">kitchen open till the night winds down</span></div>
+        <div class="stat"><span class="stat__num">Palanan</span><span class="stat__label">easy from the CBD, parking on the street</span></div>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="container split">
-      <div class="stack">
-        <p class="eyebrow">Hosting something?</p>
-        <h2>Pick the <em>occasion</em></h2>
-        <p class="lead">Tap what you're planning and we'll show you a starting package. Everything's
-          adjustable once we talk — headcount, food, drinks, program.</p>
-        <div class="occasions" role="group" aria-label="Choose an occasion">
-          <button data-occ="birthday" aria-pressed="true">Birthday</button>
-          <button data-occ="barkada">Barkada</button>
-          <button data-occ="corporate">Corporate</button>
-          <button data-occ="debut">Debut / milestone</button>
+    <div class="container">
+      <p class="eyebrow">The kitchen &amp; bar</p>
+      <h2>Built for <em>sharing</em></h2>
+      <p class="lead" style="max-width:52ch">Filipino plates and bar food made to pass around, with a
+        drinks list that goes past the usual. Here’s the shape of it — full sheet on the next page.</p>
+      <div class="sheet" style="margin-top:1.4rem">
+        <div class="sheet__cols">
+          <div class="sheet__sec"><h3>To start</h3>
+            <div class="leader"><span class="n">Sizzling sisig</span><span class="dots"></span><span class="p">₱260</span></div>
+            <div class="leader"><span class="n">Crispy pata bites</span><span class="dots"></span><span class="p">₱290</span></div>
+            <div class="leader"><span class="n">Calamares</span><span class="dots"></span><span class="p">₱240</span></div>
+            <div class="leader"><span class="n">Nachos, the works</span><span class="dots"></span><span class="p">₱280</span></div>
+          </div>
+          <div class="sheet__sec"><h3>Mains &amp; platters</h3>
+            <div class="leader"><span class="n">Bagnet &amp; bagoong rice</span><span class="dots"></span><span class="p">₱320</span></div>
+            <div class="leader"><span class="n">Grilled liempo platter</span><span class="dots"></span><span class="p">₱420</span></div>
+            <div class="leader"><span class="n">Pancit bilao (good for 4)</span><span class="dots"></span><span class="p">₱520</span></div>
+          </div>
+          <div class="sheet__sec"><h3>Bar</h3>
+            <div class="leader"><span class="n">Local beer bucket (5)</span><span class="dots"></span><span class="p">₱550</span></div>
+            <div class="leader"><span class="n">House cocktails</span><span class="dots"></span><span class="p">₱240</span></div>
+            <div class="leader"><span class="n">Lambanog flights</span><span class="dots"></span><span class="p">₱280</span></div>
+          </div>
         </div>
-        <div class="pkg" id="pkg">
-          <h3 data-pkg-title>Birthday</h3>
-          <p data-pkg-desc>The room, your playlist or our house band, and a set menu that keeps the table full.</p>
-          <ul data-pkg-list>
-            <li>Reserved function area, up to ~40 guests</li>
-            <li>Set menu + free-flow soft drinks, add beer/cocktails per consumption</li>
-            <li>Cake table, sound system, your Spotify or our live act</li>
-            <li>3-hour block, extendable</li>
-          </ul>
-        </div>
-        <p><a class="btn btn--accent btn--lg" href="events.html">Full events page</a></p>
       </div>
-      <div class="split__media"><div class="media media--3x4"><img src="assets/img/event-crowd.jpg" alt="Guests at an event under string lights"></div></div>
+      <p style="margin-top:1.2rem"><a class="btn btn--ghost" href="food-drinks.html">Full food &amp; drinks sheet</a>
+        &nbsp; <span style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft)">Illustrative menu &amp; prices.</span></p>
     </div>
   </section>
 
-  <section class="section section--paper2">
-    <div class="container split split--flip">
-      <div class="split__media"><div class="media media--4x3"><img src="assets/img/interior-event.jpg" alt="The dining room"></div></div>
-      <div class="stack">
-        <p class="eyebrow">On a normal night</p>
-        <h2>Just a good room to be in</h2>
-        <p class="lead">Filipino plates and bar food built for sharing, a proper drinks list, and a
-          calendar of live acoustic sets and salsa. No dress code, no minimum spend to sit down.</p>
-        <a class="btn btn--accent btn--lg" href="food-drinks.html">See food &amp; drinks</a>
+  <hr class="rule--brass">
+
+  <section class="section section--brand">
+    <div class="container">
+      <p class="eyebrow">Hosting something?</p>
+      <h2>Pick the <em>occasion</em></h2>
+      <p class="lead" style="max-width:50ch">Tap what you’re planning for a starting package. Everything’s
+        adjustable once we talk — headcount, food, drinks, program.</p>
+      <div class="occasions" role="group" aria-label="Choose an occasion" style="margin-top:1.2rem">
+        <button data-occ="birthday" aria-pressed="true">Birthday</button>
+        <button data-occ="barkada">Barkada</button>
+        <button data-occ="corporate">Corporate</button>
+        <button data-occ="debut">Debut / milestone</button>
       </div>
+      <div class="rider" id="pkg">
+        <h3 data-pkg-title>Birthday</h3>
+        <p data-pkg-desc>The room, your playlist or our house band, and a set menu that keeps the table full.</p>
+        <ul data-pkg-list>
+          <li>Reserved function area, up to ~40 guests</li>
+          <li>Set menu + free-flow soft drinks, add beer/cocktails per consumption</li>
+          <li>Cake table, sound system, your Spotify or our live act</li>
+          <li>3-hour block, extendable</li>
+        </ul>
+      </div>
+      <p style="margin-top:1.4rem"><a class="btn btn--accent btn--lg" href="events.html">Full events page</a></p>
     </div>
   </section>
 
   <section class="section">
-    <div class="container stack">
-      <div><p class="eyebrow">What people say</p><h2>Always a good time</h2></div>
-      <div class="grid grid--3">
-        <!-- PLACEHOLDER: paste real Google / Facebook reviews before sending. -->
-        <blockquote class="review reveal"><div class="stars" aria-hidden="true">★★★★★</div><p>"Booked the room for my mum's 60th. They handled the food, the sound, the flow. We just showed up and enjoyed it."</p><cite>— Guest · placeholder</cite></blockquote>
-        <blockquote class="review reveal"><div class="stars" aria-hidden="true">★★★★★</div><p>"The salsa nights are the real deal. Friendly crowd, live band, and the kitchen stays open."</p><cite>— Regular · placeholder</cite></blockquote>
-        <blockquote class="review reveal"><div class="stars" aria-hidden="true">★★★★★</div><p>"Our team's go-to for after-work Fridays. Big tables, no fuss, good sisig."</p><cite>— Guest · placeholder</cite></blockquote>
+    <div class="container">
+      <p class="eyebrow">The room</p>
+      <h2>A look around</h2>
+      <div class="contact-sheet gallery" style="margin-top:1.2rem">
+        <button><img src="assets/img/hero-candlelit.jpg" alt="Candlelit table" data-full="assets/img/hero-candlelit.jpg"></button>
+        <button><img src="assets/img/interior-event.jpg" alt="The dining room" data-full="assets/img/interior-event.jpg"></button>
+        <button><img src="assets/img/event-crowd.jpg" alt="A night in progress" data-full="assets/img/event-crowd.jpg"></button>
+        <button><img src="assets/img/platter.jpg" alt="A sharing platter" data-full="assets/img/platter.jpg"></button>
+        <button><img src="assets/img/cocktail.jpg" alt="House cocktail" data-full="assets/img/cocktail.jpg"></button>
+        <button><img src="assets/img/celebrate.jpg" alt="A celebration" data-full="assets/img/celebrate.jpg"></button>
+      </div>
+      <p style="margin-top:1rem"><a href="gallery.html">See the full gallery &rarr;</a></p>
+    </div>    <div class="lightbox" data-open="false" aria-hidden="true"><button class="lightbox__close" aria-label="Close">&times;</button><img alt=""></div>
+  </section>
+
+  <section class="section section--brand section--tight">
+    <div class="container">
+      <p class="eyebrow">What people say</p>
+      <div class="grid grid--3 reveal-group" style="margin-top:1rem">
+        <!-- PLACEHOLDER: paste real Google / Facebook reviews. -->
+        <blockquote class="review"><div class="stars" aria-hidden="true">★★★★★</div><p>“Booked the room for my mum’s 60th. They handled the food, the sound, the flow. We just showed up.”</p><cite>— Guest · placeholder</cite></blockquote>
+        <blockquote class="review"><div class="stars" aria-hidden="true">★★★★★</div><p>“Salsa nights are the real deal. Friendly crowd, live band, kitchen stays open.”</p><cite>— Regular · placeholder</cite></blockquote>
+        <blockquote class="review"><div class="stars" aria-hidden="true">★★★★★</div><p>“Our team’s go-to for after-work Fridays. Big tables, no fuss, good sisig.”</p><cite>— Guest · placeholder</cite></blockquote>
       </div>
     </div>
   </section>
 
-  <section class="section section--brand center">
+  <section class="section center">
     <div class="container stack">
       <h2 class="display">See you at Ambient</h2>
-      <p class="lead" style="margin-inline:auto">Reserve a table for the weekend, or send us your event and headcount.</p>
+      <p class="lead" style="margin-inline:auto">Reserve for the weekend, or send your event and headcount.</p>
       <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap">
         <a class="btn btn--accent btn--lg" href="reservations.html#book">Reserve a table</a>
         <a class="btn btn--ghost btn--lg" href="tel:+639171656915">Call 0917 165 6915</a>
@@ -149,8 +200,8 @@
   <div class="container">
     <div class="foot-grid">
       <div>
-        <p class="brand" style="color:inherit">Ambient<b>.</b></p>
-        <p style="opacity:.75; margin-top:1rem; max-width:34ch">A neighbourhood bar and restaurant with a function space, on Bautista Street, Palanan, Makati.</p>
+        <p class="brand">Ambient<b>.</b></p>
+        <p style="opacity:.8; margin-top:1rem; max-width:34ch">A neighbourhood bar and restaurant with a function space, on Bautista Street, Palanan, Makati.</p>
       </div>
       <div><p class="foot-h">Find us</p><p>3663 Bautista Street<br>Barangay Palanan<br>Makati City</p></div>
       <div><p class="foot-h">Book</p>
@@ -159,7 +210,7 @@
            <a href="mailto:ambientrestobar@gmail.com">ambientrestobar@gmail.com</a><br>
            <a href="https://m.me/ambient.makati" rel="noopener">Message on Facebook</a></p></div>
     </div>
-    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Ambient Bar &amp; Restaurant. Photography is placeholder stock pending the client's own images.</div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Ambient Bar &amp; Restaurant. Photography is placeholder stock; the line-up, menu and prices shown are illustrative.</div>
     <div class="foot-note"><span>© <span data-year>2026</span> Ambient Bar &amp; Restaurant. Concept site.</span><span>Built by GCCofCI Digital</span></div>
   </div>
 </footer>
@@ -171,20 +222,32 @@
 
 <script src="assets/app.js"></script>
 <script>
-(function(){
-  var data={
-    birthday:{t:"Birthday",d:"The room, your playlist or our house band, and a set menu that keeps the table full.",l:["Reserved function area, up to ~40 guests","Set menu + free-flow soft drinks, add beer/cocktails per consumption","Cake table, sound system, your Spotify or our live act","3-hour block, extendable"]},
-    barkada:{t:"Barkada",d:"Loud, long, and easy on the wallet. Built for a group that just wants to hang.",l:["Big reserved tables, 8 to 25 heads","Sharing platters + bucket deals","Videoke or live music, your call","Split the bill however you like"]},
-    corporate:{t:"Corporate",d:"After-work drinks, a team celebration, or a small townhall with a projector.",l:["Semi-private or full-room hire","Plated or buffet set menu with invoicing / OR","Projector, mic and sound for programs","Reserved parking arrangements on request"]},
-    debut:{t:"Debut / milestone",d:"A bigger night — 18th, wedding after-party, anniversary. Full run of the place.",l:["Exclusive use of the venue","Custom menu and drinks package","Stage and full sound + lights","Coordination with your host / band / stylist"]}
+(function () {
+  /* occasion picker */
+  var data = {
+    birthday:{ t:"Birthday", d:"The room, your playlist or our house band, and a set menu that keeps the table full.", l:["Reserved function area, up to ~40 guests","Set menu + free-flow soft drinks, add beer/cocktails per consumption","Cake table, sound system, your Spotify or our live act","3-hour block, extendable"] },
+    barkada:{ t:"Barkada", d:"Loud, long, and easy on the wallet. Built for a group that just wants to hang.", l:["Big reserved tables, 8 to 25 heads","Sharing platters + bucket deals","Videoke or live music, your call","Split the bill however you like"] },
+    corporate:{ t:"Corporate", d:"After-work drinks, a team celebration, or a small townhall with a projector.", l:["Semi-private or full-room hire","Plated or buffet set menu with invoicing / OR","Projector, mic and sound for programs","Reserved parking arrangements on request"] },
+    debut:{ t:"Debut / milestone", d:"A bigger night — 18th, wedding after-party, anniversary. Full run of the place.", l:["Exclusive use of the venue","Custom menu and drinks package","Stage and full sound + lights","Coordination with your host / band / stylist"] }
   };
-  var btns=document.querySelectorAll('.occasions button'),
-      T=document.querySelector('[data-pkg-title]'), D=document.querySelector('[data-pkg-desc]'), L=document.querySelector('[data-pkg-list]');
-  btns.forEach(function(b){ b.addEventListener('click',function(){
-    btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
-    var o=data[b.getAttribute('data-occ')];
-    T.textContent=o.t; D.textContent=o.d; L.innerHTML=o.l.map(function(i){return '<li>'+i+'</li>';}).join('');
-  });});
+  var btns = document.querySelectorAll('.occasions button'),
+      T = document.querySelector('[data-pkg-title]'), D = document.querySelector('[data-pkg-desc]'), L = document.querySelector('[data-pkg-list]');
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      btns.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      var o = data[b.getAttribute('data-occ')];
+      T.textContent = o.t; D.textContent = o.d;
+      L.innerHTML = o.l.map(function (i) { return '<li>' + i + '</li>'; }).join('');
+    });
+  });
+
+  /* light the reserve card while the line-up is in view */
+  var week = document.querySelector('.week'), card = document.getElementById('reserve');
+  if (week && card && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) {
+      es.forEach(function (e) { card.classList.toggle('is-lit', e.isIntersecting); });
+    }, { threshold: 0.15 }).observe(week);
+  }
 })();
 </script>
 </body>

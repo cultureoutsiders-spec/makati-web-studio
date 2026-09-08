@@ -3,87 +3,67 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Reservations — Ambient Bar &amp; Restaurant, Palanan Makati</title>
-<meta name="description" content="Reserve a table or enquire about an event at Ambient Bar &amp; Restaurant, 3663 Bautista Street, Palanan, Makati. Call 0917 165 6915 / (02) 8241 8233 or email ambientrestobar@gmail.com.">
+<title>Reservations — Ambient Bar &amp; Restaurant</title>
+<meta name="description" content="Reserve a table at Ambient Bar &amp; Restaurant, 3663 Bautista Street, Barangay Palanan, Makati. Weekend bookings recommended; walk-ins welcome when there's room.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Reservations — Ambient Bar &amp; Restaurant">
+<meta property="og:description" content="Reserve a table. Bautista Street, Palanan, Makati.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Barlow:wght@400;500;600&family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/base.css">
 <link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
 
 <header class="site-header">
-  <nav class="nav container" data-open="false" aria-label="Primary">
+  <nav class="nav--min nav container" data-open="false" aria-label="Primary">
     <a class="brand" href="index.html">Ambient<b>.</b></a>
-    <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    <div class="nav__end">
+      <a class="btn btn--accent" href="reservations.html#book">Reserve</a>
+      <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    </div>
     <ul class="nav__links" id="navlinks">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html">What's on</a></li>
       <li><a href="food-drinks.html">Food &amp; Drinks</a></li>
       <li><a href="events.html">Events</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="reservations.html" aria-current="page">Reservations</a></li>
-      <li><a class="btn btn--accent" href="#book">Reserve</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
-  <section class="section section--brand">
-    <div class="container stack">
-      <p class="eyebrow">Reservations</p>
-      <h1 class="display">Hold us a <em>table</em></h1>
-      <p class="lead measure">Weekend tables and anything over 6 people are best reserved. Events go
-        through the same form — just pick "event enquiry" and give us the headcount.</p>
-    </div>
-  </section>
-
-  <section id="book" class="section">
-    <div class="container split">
+  <section class="section" id="book">
+    <div class="container split split--top">
       <div class="stack">
-        <div><p class="eyebrow">Reach us</p><h2>Ambient Bar &amp; Restaurant</h2></div>
-        <div class="card">
-          <p style="font-family:var(--font-mono); font-size:var(--step--1); line-height:1.9">
-            3663 Bautista Street, Barangay Palanan<br>Makati City<br><br>
-            <a href="tel:+639171656915">0917 165 6915</a> · <a href="tel:+63282418233">(02) 8241 8233</a><br>
-            <a href="mailto:ambientrestobar@gmail.com">ambientrestobar@gmail.com</a><br>
-            <a href="https://m.me/ambient.makati" rel="noopener">Facebook Messenger</a>
-          </p>
-        </div>
-        <div style="display:flex; gap:1rem; flex-wrap:wrap">
-          <a class="btn btn--accent" href="tel:+639171656915">Call to reserve</a>
-          <a class="btn btn--ghost" href="https://m.me/ambient.makati" rel="noopener">Message us</a>
+        <p class="eyebrow">Reservations</p>
+        <h1>Book a <em>table</em></h1>
+        <p class="lead">Weekends fill up — a reservation is the safe bet Thursday to Saturday.
+          Walk-ins are welcome whenever there’s room.</p>
+        <p class="lead">Prefer to message?<br>
+          <a href="tel:+639171656915">0917 165 6915</a> · <a href="tel:+63282418233">(02) 8241 8233</a><br>
+          <a href="https://m.me/ambient.makati" rel="noopener">Messenger</a></p>
+        <div class="media media--4x3" style="margin-top:1rem">
+          <iframe title="Map to Ambient Bar &amp; Restaurant, 3663 Bautista Street, Palanan, Makati"
+            src="https://www.google.com/maps?q=3663%20Bautista%20Street%20Barangay%20Palanan%20Makati&output=embed"
+            width="100%" height="100%" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
-
-      <form class="form card" data-contact data-web3key="REPLACE_WITH_WEB3FORMS_KEY" data-mailto="ambientrestobar@gmail.com">
-        <input type="hidden" name="subject" value="Reservation / event enquiry — Ambient website">
-        <input type="checkbox" name="botcheck" class="field--hp" tabindex="-1" autocomplete="off">
-        <div class="field"><label for="r-name">Name</label><input id="r-name" name="name" required></div>
-        <div class="field"><label for="r-contact">Mobile</label><input id="r-contact" name="contact" required></div>
-        <div class="field"><label for="r-type">This is a</label>
-          <select id="r-type" name="type"><option>Table reservation</option><option>Group booking (6+)</option><option>Event enquiry (function room)</option></select>
-        </div>
-        <div class="grid grid--2" style="--gap:1rem">
-          <div class="field"><label for="r-date">Date</label><input id="r-date" name="date" type="date"></div>
-          <div class="field"><label for="r-pax">Headcount</label><input id="r-pax" name="pax" type="number" min="1" value="4"></div>
-        </div>
-        <div class="field"><label for="r-time">Preferred time</label><input id="r-time" name="time" placeholder="e.g. 7:30pm"></div>
-        <div class="field"><label for="r-msg">Occasion / requests</label><textarea id="r-msg" name="message" placeholder="Birthday, salsa night, cake, sound for a program…"></textarea></div>
-        <button class="btn btn--accent btn--lg" type="submit">Send reservation</button>
-        <p class="form-status" role="status"></p>
+      <form class="form" data-contact data-web3key="REPLACE_WITH_WEB3FORMS_KEY" data-mailto="ambientrestobar@gmail.com">
+        <div class="field"><label for="n">Name</label><input id="n" name="name" required></div>
+        <div class="field"><label for="c">Mobile</label><input id="c" name="contact" required></div>
+        <div class="field"><label for="d">Date</label><input id="d" type="date" name="date" required></div>
+        <div class="field"><label for="t">Time</label><input id="t" type="time" name="time" required></div>
+        <div class="field"><label for="p">Party size</label><input id="p" type="number" min="1" name="party" required></div>
+        <div class="field"><label for="m">Requests (occasion, seating, high chair…)</label><textarea id="m" name="notes"></textarea></div>
+        <input type="checkbox" name="botcheck" class="field--hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn--accent btn--lg" type="submit">Request reservation</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <p style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft)">Design proposal — needs a Web3Forms key and destination inbox to send.</p>
       </form>
-    </div>
-  </section>
-
-  <section class="section--tight">
-    <div class="container">
-      <div class="media media--16x9" style="border:1px solid var(--line)">
-        <iframe title="Map to Ambient Bar & Restaurant, Bautista Street, Palanan, Makati" loading="lazy" style="width:100%;height:100%;border:0"
-          src="https://www.google.com/maps?q=3663%20Bautista%20Street%2C%20Palanan%2C%20Makati&output=embed"></iframe>
-      </div>
     </div>
   </section>
 </main>
@@ -91,11 +71,16 @@
 <footer class="site-footer">
   <div class="container">
     <div class="foot-grid">
-      <div><p class="brand" style="color:inherit">Ambient<b>.</b></p><p style="opacity:.75; margin-top:1rem; max-width:34ch">A neighbourhood bar and restaurant with a function space, on Bautista Street, Palanan, Makati.</p></div>
+      <div><p class="brand">Ambient<b>.</b></p>
+        <p style="opacity:.8; margin-top:1rem; max-width:34ch">A neighbourhood bar and restaurant with a function space, on Bautista Street, Palanan, Makati.</p></div>
       <div><p class="foot-h">Find us</p><p>3663 Bautista Street<br>Barangay Palanan<br>Makati City</p></div>
-      <div><p class="foot-h">Book</p><p><a href="tel:+639171656915">0917 165 6915</a><br><a href="tel:+63282418233">(02) 8241 8233</a><br><a href="mailto:ambientrestobar@gmail.com">ambientrestobar@gmail.com</a></p></div>
+      <div><p class="foot-h">Book</p>
+        <p><a href="tel:+639171656915">0917 165 6915</a><br>
+           <a href="tel:+63282418233">(02) 8241 8233</a><br>
+           <a href="mailto:ambientrestobar@gmail.com">ambientrestobar@gmail.com</a><br>
+           <a href="https://m.me/ambient.makati" rel="noopener">Message on Facebook</a></p></div>
     </div>
-    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Ambient Bar &amp; Restaurant. Photography is placeholder stock pending the client's own images.</div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Ambient Bar &amp; Restaurant.</div>
     <div class="foot-note"><span>© <span data-year>2026</span> Ambient Bar &amp; Restaurant. Concept site.</span><span>Built by GCCofCI Digital</span></div>
   </div>
 </footer>
@@ -104,6 +89,7 @@
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.4-2.6-2.8-5 2.8 5.5-5.9 2.7 2.8 4.9-2.8-5.5 5.9z"/></svg>
   Message us
 </a>
+
 <script src="assets/app.js"></script>
 </body>
 </html>
