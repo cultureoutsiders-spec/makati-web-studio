@@ -40,9 +40,11 @@ h2 em,.display em,.hero h1 em{ font-style:italic; }
 /* ---- Hero ---- */
 .hero{ color:#f6f3ea; background:var(--brand); }
 .hero__bg{ opacity:.82; }
-.hero__bg::after{ background:linear-gradient(180deg, rgba(20,22,16,.42) 0%, rgba(20,22,16,.78) 100%); }
+.hero__bg::after{ background:linear-gradient(175deg, rgba(20,22,16,.62) 0%, rgba(20,22,16,.55) 32%, rgba(20,22,16,.82) 100%); }
 .hero h1{ font-size:var(--step-5); }
 .hero .lead{ color:#e8e3d5; }
+.hero .eyebrow{ color:#c9d6c9; }
+.hero .eyebrow::before{ background:#8fae8f; }
 
 /* ---- Amenities directory board (signature) ---- */
 .board{ border-top:2px solid var(--ink); }
