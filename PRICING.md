@@ -42,14 +42,16 @@ selling your availability and peace of mind, not covering real costs.
 
 ## Recommended prices
 
-Four numbers, as you asked: an introductory pair and a competitive pair.
+**DECIDED (2026-09):** introductory price is **₱25,000 flat, one-time, no monthly retainer**,
+held for the **first 5 paying clients**. After the 5th sale it goes to **₱35,000**. The table
+below keeps the "with retainer" variants for reference only — they are not the offer being made.
 
 | # | Model | One-time | Monthly | Client's first-year total | Use it |
 |---|---|---|---|---|---|
-| 1 | **Introductory — no retainer** | **₱24,000** (flex ₱18,000–₱28,000) | — | ₱24,000 | Your cold first sales, now. Lead with this. |
-| 2 | **Introductory — with retainer** | **₱12,000** setup | **₱1,800/mo** (12-mo minimum, then monthly) | ~₱33,600 | Client wants the smallest upfront and doesn't want to self-manage. |
-| 3 | **Competitive — no retainer** | **₱40,000** (₱35k for 851 / COREX, ₱45k for the 3 accommodation sites) | — | ₱40,000 | After you've delivered 2–3 sites and have testimonials. This is fair market value. |
-| 4 | **Competitive — with retainer** | **₱25,000–₱30,000** (or ₱8,000 setup) | **₱2,500–₱3,500/mo** | ~₱55,000–₱72,000 | Client who wants fully hands-off. Steadier income for you. |
+| 1 | **Introductory — no retainer (THIS IS THE OFFER)** | **₱25,000 flat** | — | ₱25,000 | First 5 paying clients. What every outreach email quotes. |
+| 2 | Introductory — with retainer (not offered) | ₱12,000 setup | ₱1,800/mo | ~₱33,600 | Reference only — a client who asks for hands-off. |
+| 3 | **Standard — no retainer** | **₱35,000 flat** | — | ₱35,000 | From the 6th client onward. |
+| 4 | Standard — with retainer (not offered) | ₱25,000–₱30,000 (or ₱8,000 setup) | ₱2,500–₱3,500/mo | ~₱55,000–₱72,000 | Reference only. |
 
 ### What every one-time price includes (so there's no "gotcha")
 
@@ -106,17 +108,18 @@ subscription-averse and respond well to ownership. The argument:
 
 ---
 
-## Per-business suggested quote
+## Per-business quote (first batch — all sent/queued at the intro rate)
 
-| Business | Intro (no retainer) | Market (no retainer) | Notes |
-|---|---|---|---|
-| 851 Bike Park | ₱24,000 | ₱35,000 | Budget operator; lead on lost walk-in / enquiry business. |
-| COREX Fitness | ₱24,000 | ₱35,000 | Charges ₱300/session; keep it lean. ROI = more trial sign-ups. |
-| Artina Zobel Residences | ₱24,000 | ₱45,000 | Strong OTA-commission ROI story. They already own `artinasuites.com`. |
-| The Makati Haven | ₱24,000 | ₱45,000 | Amenity-forward, higher nightly rates; can carry the higher number. |
-| MPT Suites | ₱24,000 | ₱45,000 | Owns `makatiprimetowersuites.com`; pitch = one identity + direct channel. |
+| Business | Quoted | Notes |
+|---|---|---|
+| 851 Bike Park | ₱25,000 | Budget operator; lead on lost walk-in / enquiry business. |
+| COREX Fitness | ₱25,000 | Charges ₱300/session; keep it lean. ROI = more trial sign-ups. DM, not email. |
+| Artina Zobel Residences | ₱25,000 | Strong OTA-commission ROI story. Owns `artinasuites.com`. |
+| The Makati Haven | ₱25,000 | Amenity-forward, higher nightly rates. |
+| MPT Suites | ₱25,000 | Old domain `makatiprimetowersuites.com` is dead (NXDOMAIN); pitch = one identity + direct channel. Contact: mptsuitesmancorp@gmail.com. |
 
-Add the monthly plan (₱1,800 intro / ₱2,500–3,500 market) as an option on any of them.
+Flat ₱25,000 for all of them (introductory). From the 6th paying client onward, ₱35,000. No
+monthly retainer offered.
 
 ---
 
@@ -136,12 +139,8 @@ Add the monthly plan (₱1,800 intro / ₱2,500–3,500 market) as an option on 
 
 ---
 
-## Reconciling with the email drafts
+## Status
 
-The five drafts in `emails/` currently say **one-off ₱30,000–₱50,000 + ₱3,000–₱5,000/mo**.
-This doc recommends **₱24,000 intro (no retainer)** rising to **₱40,000 at market**, with the
-monthly at **₱1,800 intro / ₱2,500–₱3,500 market** and offered as optional.
-
-The drafts were deliberately not edited. Before sending, either:
-- lower the numbers in each `emails/*.md` to match this doc, or
-- keep the drafts and just say your real figure on the call.
+Settled: **₱25,000 flat, one-time, no monthly**, for the **first 5 paying clients**; **₱35,000**
+after that. The five `emails/*.md` drafts and the Gmail drafts are updated to this. Signature is
+**Michael Omana · GCCofCI Digital · gccofci.digital@gmail.com · +639455495153**.

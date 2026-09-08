@@ -167,22 +167,17 @@ no reply. One polite follow-up is fine; after that, leave it.
 
 ## Phase 3 — when someone replies
 
-### Pricing — current drafts vs. recommended
+### Pricing (settled)
 
-Full breakdown and the market research behind it: **`PRICING.md`**.
+- **₱25,000 flat, one-time, no monthly retainer** — for the **first 5 paying clients**.
+- **₱35,000 flat** from the 6th paying client onward.
+- Price includes the build, responsive design, form setup, domain connection, 12 months hosting,
+  2 revision rounds, and a handover call. Then the client owns it outright.
+- Payment: 50% to start, 50% when it's live and they're happy.
 
-| | One-time | Monthly |
-|---|---|---|
-| What the email drafts currently say | ₱30,000–₱50,000 | ₱3,000–₱5,000/mo |
-| **Recommended — introductory (no retainer, lead with this)** | **₱24,000** | none |
-| Recommended — introductory (with retainer) | ₱12,000 setup | ₱1,800/mo |
-| Recommended — competitive / market rate (no retainer) | **₱40,000** (₱35k for 851 & COREX, ₱45k for the 3 accommodation sites) | none |
-| Recommended — competitive / market rate (with retainer) | ₱25,000–₱30,000 | ₱2,500–₱3,500/mo |
-
-Every one-time price bundles: the build, responsive design, form setup, domain connection,
-**12 months hosting**, **2 revision rounds**, and a handover call. Then the client owns it.
-The email drafts were **not** edited — set your real figure from `PRICING.md`, then either lower
-the numbers in each `emails/*.md` or just quote your figure on the call.
+The five `emails/*.md` drafts and the Gmail drafts already quote this. Full rationale and market
+research: **`PRICING.md`**. If a client asks you to host and maintain it long-term, price that
+separately — see `HANDOVER-AND-HOSTING.md`.
 
 ### If they're interested
 
