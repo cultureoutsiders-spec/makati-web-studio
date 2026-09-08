@@ -1,0 +1,97 @@
+/* =============================================================
+   Artina Zobel Residences — theme.css
+   Direction: "Poblacion after midnight, softened."
+   Midnight petrol brand, warm plaster paper, muted brass accent.
+   Night-first, hospitable-second.
+   ============================================================= */
+:root{
+  --paper:      #efe9df;
+  --paper-2:    #e5ddce;
+  --ink:        #1c2230;
+  --ink-soft:   #4a4f5c;
+  --line:       #d6ccb9;
+  --accent:     #b98b3d;   /* muted brass — keys, rooftop lights */
+  --accent-ink: #14121d;
+  --brand:      #141b2b;   /* midnight petrol */
+  --brand-ink:  #ece5d8;
+
+  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-body:    "Figtree", system-ui, -apple-system, sans-serif;
+  --font-mono:    "Space Mono", ui-monospace, Menlo, monospace;
+
+  --radius: 8px;
+  --container: 1140px;
+}
+
+h1,h2,h3{ font-weight:500; letter-spacing:-.012em; }
+h1,.display{ font-weight:400; }
+h2 em,.display em{ font-style:italic; font-weight:400; color:var(--accent); }
+.lead{ font-family:var(--font-display); font-weight:400; font-size:var(--step-1); font-style:italic; color:var(--ink-soft); }
+.section--brand .lead{ color:#d8d0c1; }
+
+/* ---- Brand wordmark ---- */
+.brand{ font-family:var(--font-display); font-weight:500; letter-spacing:.01em; }
+.brand small{ display:block; font-family:var(--font-mono); font-size:.42em; letter-spacing:.28em; text-transform:uppercase; color:var(--ink-soft); margin-top:.1em; }
+.section--brand .brand small,.site-footer .brand small{ color:#9a94a6; }
+
+/* ---- Eyebrow ---- */
+.eyebrow{ color:var(--accent); letter-spacing:.24em; }
+.eyebrow::before{ background:var(--accent); width:1.8rem; }
+
+/* ---- Hero ---- */
+.hero{ color:#f3ede1; background:var(--brand); }
+.hero__bg{ opacity:.9; }
+.hero__bg::after{ background:linear-gradient(180deg, rgba(15,19,32,.45) 0%, rgba(15,19,32,.82) 100%); }
+.hero h1{ font-size:var(--step-5); line-height:1; }
+.hero .lead{ color:#e7dfd0; }
+
+/* ---- By-the-night / by-the-month toggle (signature) ---- */
+.stay-toggle{ display:inline-flex; border:1px solid currentColor; border-radius:999px; padding:4px; gap:4px; font-family:var(--font-mono); }
+.stay-toggle button{
+  appearance:none; border:0; background:transparent; color:inherit; cursor:pointer;
+  font:inherit; font-size:var(--step--1); letter-spacing:.12em; text-transform:uppercase;
+  padding:.6em 1.15em; border-radius:999px; transition:background .2s ease, color .2s ease;
+}
+.stay-toggle button[aria-pressed="true"]{ background:var(--accent); color:var(--accent-ink); }
+[data-stay="month"] .when-night{ display:none; }
+[data-stay="night"] .when-month{ display:none; }
+
+/* ---- Room key-tag cards (signature) ---- */
+.keytag{
+  background:var(--paper); border:1px solid var(--line); border-radius:var(--radius);
+  overflow:hidden; display:flex; flex-direction:column;
+}
+.keytag .media{ border-radius:0; }
+.keytag__body{ padding:1.4rem 1.5rem 1.6rem; display:flex; flex-direction:column; gap:.5rem; flex:1; }
+.keytag__fob{ display:inline-flex; align-items:center; gap:.6rem; font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft); }
+.keytag__fob::before{ content:""; width:12px; height:12px; border:2px solid var(--accent); border-radius:50%; }
+.keytag h3{ margin:0; font-size:var(--step-2); }
+.keytag__price{ font-family:var(--font-mono); font-size:var(--step-1); }
+.keytag__price small{ color:var(--ink-soft); font-size:var(--step--1); }
+
+/* ---- Inclusions list ---- */
+.incl{ columns:2; column-gap:2.5rem; list-style:none; padding:0; margin:0; font-family:var(--font-mono); font-size:var(--step--1); }
+.incl li{ padding:.5rem 0; border-bottom:1px dotted var(--line); break-inside:avoid; }
+@media (max-width:560px){ .incl{ columns:1; } }
+
+/* ---- Buttons ---- */
+.btn{ border-radius:999px; letter-spacing:.04em; }
+.btn:hover{ transform:translateY(-2px); }
+
+/* ---- Cards ---- */
+.card{ border-radius:var(--radius); }
+.section--brand{ --line:#2c3446; }
+.section--brand .card{ background:transparent; border-color:#2c3446; }
+
+/* ---- Reviews ---- */
+.review{ border-left-color:var(--accent); }
+.review p{ font-style:italic; }
+.stars{ color:var(--accent); }
+
+/* ---- Location list ---- */
+.walklist{ list-style:none; padding:0; margin:0; }
+.walklist li{ display:flex; justify-content:space-between; gap:1rem; padding:.8rem 0; border-bottom:1px solid var(--line); font-family:var(--font-mono); font-size:var(--step--1); }
+.walklist li span:last-child{ color:var(--ink-soft); white-space:nowrap; }
+
+.chat-fab{ background:var(--brand); border:1px solid var(--accent); }
+.site-footer{ --line:#2c3446; }

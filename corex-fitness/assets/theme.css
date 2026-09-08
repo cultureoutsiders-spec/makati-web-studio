@@ -1,0 +1,101 @@
+/* =============================================================
+   COREX Fitness — theme.css
+   Direction: "the round card / the clock" — combat sports + HYROX.
+   Bright paper, black slabs, one corner-red. Oversized condensed caps.
+   ============================================================= */
+:root{
+  --paper:      #f4f3f0;
+  --paper-2:    #e9e7e2;
+  --ink:        #121212;
+  --ink-soft:   #4b4b4b;
+  --line:       #d5d3cc;
+  --accent:     #ff3b1d;   /* corner red */
+  --accent-ink: #ffffff;
+  --brand:      #121212;
+  --brand-ink:  #f4f3f0;
+
+  --font-display: "Anton", "Arial Narrow", system-ui, sans-serif;
+  --font-body:    "Barlow", system-ui, sans-serif;
+  --font-mono:    "Azeret Mono", ui-monospace, Menlo, monospace;
+
+  --radius: 0px;
+  --container: 1200px;
+}
+
+h1,h2,h3,.display{ text-transform:uppercase; letter-spacing:.005em; font-weight:400; }
+h1,.display{ line-height:.9; }
+h2{ line-height:.95; }
+.lead{ font-weight:500; }
+
+/* ---- Brand wordmark ---- */
+.brand{ font-family:var(--font-display); text-transform:uppercase; letter-spacing:.03em; font-size:var(--step-2); }
+.brand mark{ background:var(--accent); color:#fff; padding:0 .18em; }
+
+/* ---- Eyebrow as round marker ---- */
+.eyebrow{ color:var(--ink); font-family:var(--font-mono); letter-spacing:.24em; }
+.eyebrow::before{ content:""; width:1.6rem; height:3px; background:var(--accent); }
+
+/* ---- Round-timer block (signature) ---- */
+.round{
+  border:3px solid var(--ink);
+  padding:1.4rem 1.6rem;
+  display:flex; align-items:baseline; justify-content:space-between; gap:1.5rem;
+  font-family:var(--font-mono);
+}
+.round__label{ font-size:var(--step--1); letter-spacing:.24em; text-transform:uppercase; }
+.round__time{ font-family:var(--font-display); font-size:var(--step-3); line-height:1; color:var(--accent); }
+.round--solid{ background:var(--ink); color:var(--brand-ink); border-color:var(--ink); }
+
+/* ---- Hero ---- */
+.hero{ color:#f6f4f0; background:var(--ink); }
+.hero__bg{ opacity:.55; }
+.hero__bg::after{ background:linear-gradient(180deg, rgba(10,10,10,.35) 0%, rgba(10,10,10,.75) 100%); }
+.hero h1{ font-size:clamp(3.2rem, 2rem + 8vw, 8rem); }
+.hero .eyebrow{ color:#fff; }
+.hero .lead{ color:#e7e4dd; }
+
+/* ---- Discipline cards — fight-card blocks ---- */
+.disc{ border:3px solid var(--ink); background:var(--paper); display:flex; flex-direction:column; }
+.disc .media{ border-radius:0; border-bottom:3px solid var(--ink); }
+.disc__body{ padding:1.1rem 1.3rem 1.5rem; display:flex; flex-direction:column; gap:.5rem; flex:1; }
+.disc__meta{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.16em; text-transform:uppercase; color:var(--accent); }
+.disc h3{ margin:0; font-size:var(--step-2); }
+
+/* ---- Fight-card table (schedule) ---- */
+.table thead th{ font-family:var(--font-mono); color:var(--ink); letter-spacing:.14em; }
+.table th,.table td{ border-color:var(--ink); }
+.table-wrap{ border:3px solid var(--ink); }
+.table td:first-child{ font-family:var(--font-display); text-transform:uppercase; font-size:var(--step-1); }
+.table td.time{ font-family:var(--font-mono); font-weight:600; }
+
+/* ---- Buttons — blunt ---- */
+.btn{ text-transform:uppercase; letter-spacing:.08em; font-weight:600; border-width:3px; }
+.btn:hover{ transform:translateY(-3px); }
+.btn--accent:hover{ background:#e42f12; }
+
+/* ---- Price rows ---- */
+.pricelist{ border:3px solid var(--ink); }
+.pricelist .prow{ display:flex; justify-content:space-between; align-items:baseline; gap:1.5rem; padding:1.1rem 1.4rem; border-bottom:1px solid var(--line); }
+.pricelist .prow:last-child{ border-bottom:0; }
+.pricelist .prow b{ font-family:var(--font-display); text-transform:uppercase; font-weight:400; font-size:var(--step-1); }
+.pricelist .prow .amt{ font-family:var(--font-mono); font-weight:600; font-size:var(--step-1); white-space:nowrap; }
+.pricelist .prow .amt small{ display:block; text-align:right; font-weight:400; font-size:var(--step--1); color:var(--ink-soft); }
+
+/* ---- Section brand tweaks ---- */
+.section--brand{ --line:#333; }
+.section--brand .eyebrow{ color:#fff; }
+.section--brand .round{ border-color:var(--brand-ink); }
+
+/* ---- Stats ---- */
+.stat__num{ font-family:var(--font-display); font-weight:400; }
+
+/* ---- Reviews ---- */
+.review{ border-left-width:4px; }
+.review p{ font-family:var(--font-body); font-weight:600; text-transform:none; }
+
+/* ---- Coach cards ---- */
+.coach .media{ border:3px solid var(--ink); border-radius:0; }
+.coach h3{ font-size:var(--step-2); margin:.7rem 0 .2rem; }
+.coach .disc__meta{ display:block; }
+
+.chat-fab{ border-radius:0; border:2px solid var(--accent); }

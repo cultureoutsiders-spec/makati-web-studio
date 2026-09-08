@@ -1,0 +1,99 @@
+/* =============================================================
+   851 Bike Park — theme.css
+   Direction: "the service counter" — parts-department precision.
+   Oatmeal shop paper, oxblood accent, one hazard-yellow signal.
+   ============================================================= */
+:root{
+  --paper:      #e8e5df;
+  --paper-2:    #ded9cf;
+  --ink:        #1a1917;
+  --ink-soft:   #56534c;
+  --line:       #c6c1b4;
+  --accent:     #7a2e2e;   /* oxblood — heritage, not fire-engine */
+  --accent-ink: #f3ede2;
+  --brand:      #1a1917;
+  --brand-ink:  #e8e5df;
+  --signal:     #e4b32c;   /* hazard yellow — used ONCE */
+
+  --font-display: "Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --font-body:    "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono:    "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+  --radius: 0px;
+  --container: 1200px;
+}
+
+h1,h2,h3{ letter-spacing:-.015em; }
+h1,.display{ text-transform:uppercase; }
+
+/* ---- Brand wordmark ---- */
+.brand{ gap:.5rem; }
+.brand__num{
+  font-family:var(--font-mono); font-weight:600;
+  background:var(--ink); color:var(--paper);
+  padding:.12em .38em; letter-spacing:.02em; font-size:.9em;
+}
+.brand__word{ font-family:var(--font-display); text-transform:uppercase; letter-spacing:.02em; }
+
+/* ---- Eyebrow as catalogue section marker ---- */
+.eyebrow{ color:var(--ink-soft); letter-spacing:.18em; }
+.eyebrow::before{ content:"§"; width:auto; height:auto; background:none; font-family:var(--font-mono); color:var(--accent); }
+
+/* ---- Spec plate (signature) ---- */
+.plate{
+  border:1px solid var(--ink);
+  background:var(--paper);
+  padding:1.4rem 1.5rem;
+  position:relative;
+  font-family:var(--font-mono);
+}
+.plate::before,.plate::after{
+  content:""; position:absolute; width:6px; height:6px; border-radius:50%;
+  background:var(--ink);
+}
+.plate::before{ top:7px; left:7px; box-shadow: calc(100% + -20px) 0 0 var(--ink); }
+.plate::after{ bottom:7px; left:7px; box-shadow: calc(100% + -20px) 0 0 var(--ink); }
+.plate__row{ display:flex; justify-content:space-between; gap:1.5rem; padding:.55rem 0; border-bottom:1px dashed var(--line); font-size:var(--step--1); }
+.plate__row:last-child{ border-bottom:0; }
+.plate__row dt{ letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); margin:0; }
+.plate__row dd{ margin:0; font-weight:600; text-align:right; }
+
+/* ---- Hazard divider — the one loud thing ---- */
+.hazard{
+  height:12px; border:0; margin:0;
+  background:repeating-linear-gradient(45deg, var(--signal) 0 14px, var(--ink) 14px 28px);
+}
+
+/* ---- Hero ---- */
+.hero{ color:#f4efe6; }
+.hero__bg::after{ background:linear-gradient(105deg, rgba(20,20,18,.86) 0%, rgba(20,20,18,.5) 55%, rgba(20,20,18,.2) 100%); }
+.hero h1{ font-size:var(--step-5); }
+.hero .lead{ color:#e7e0d3; }
+
+/* ---- Catalogue cards ---- */
+.cat-card{ border:1px solid var(--ink); background:var(--paper); padding:0; display:flex; flex-direction:column; }
+.cat-card .media{ border-radius:0; border-bottom:1px solid var(--ink); }
+.cat-card__body{ padding:1.25rem 1.35rem 1.5rem; flex:1; display:flex; flex-direction:column; gap:.6rem; }
+.cat-card__tag{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.12em; text-transform:uppercase; color:var(--accent); }
+.cat-card h3{ margin:0; }
+
+/* ---- Section brand tweaks ---- */
+.section--brand{ --line:#3a3833; }
+.section--brand .plate{ border-color:var(--brand-ink); background:transparent; color:var(--brand-ink); }
+.section--brand .plate::before,.section--brand .plate::after{ background:var(--brand-ink); }
+.section--brand .plate__row{ border-color:#3a3833; }
+.section--brand .plate__row dt{ color:#a9a49a; }
+
+/* ---- Buttons: hard, mechanical ---- */
+.btn{ text-transform:uppercase; letter-spacing:.06em; }
+.btn:hover{ transform:translate(-2px,-2px); box-shadow:4px 4px 0 var(--ink); }
+.btn--accent:hover{ box-shadow:4px 4px 0 var(--ink); }
+
+/* ---- Footer ---- */
+.site-footer{ --line:#3a3833; }
+.brandmark-lg{ font-family:var(--font-display); text-transform:uppercase; font-size:var(--step-3); letter-spacing:-.01em; line-height:.9; }
+
+/* ---- Misc ---- */
+.stat__num{ font-family:var(--font-mono); font-weight:600; }
+.review p{ font-family:var(--font-display); text-transform:none; }
+.chat-fab{ border-radius:0; }
