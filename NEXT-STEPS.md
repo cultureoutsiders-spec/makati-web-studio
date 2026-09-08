@@ -164,13 +164,30 @@ no reply. One polite follow-up is fine; after that, leave it.
 
 ## Phase 3 — when someone replies
 
+### Pricing — current drafts vs. recommended
+
+Full breakdown and the market research behind it: **`PRICING.md`**.
+
+| | One-time | Monthly |
+|---|---|---|
+| What the email drafts currently say | ₱30,000–₱50,000 | ₱3,000–₱5,000/mo |
+| **Recommended — introductory (no retainer, lead with this)** | **₱24,000** | none |
+| Recommended — introductory (with retainer) | ₱12,000 setup | ₱1,800/mo |
+| Recommended — competitive / market rate (no retainer) | **₱40,000** (₱35k for 851 & COREX, ₱45k for the 3 accommodation sites) | none |
+| Recommended — competitive / market rate (with retainer) | ₱25,000–₱30,000 | ₱2,500–₱3,500/mo |
+
+Every one-time price bundles: the build, responsive design, form setup, domain connection,
+**12 months hosting**, **2 revision rounds**, and a handover call. Then the client owns it.
+The email drafts were **not** edited — set your real figure from `PRICING.md`, then either lower
+the numbers in each `emails/*.md` or just quote your figure on the call.
+
 ### If they're interested
 
 - [ ] Offer the 15-minute call, or just answer their questions by message.
 - [ ] Walk them through the live demo screen-by-screen.
-- [ ] Confirm the deal: one-time **₱30,000–50,000** (pick your number in that range and state it),
-  plus the optional **₱3,000–5,000/month** care plan (hosting + unlimited small edits + backups +
-  a monthly refresh). Care plan is month-to-month, cancel anytime.
+- [ ] Confirm the deal: state one one-time figure (see the table above / `PRICING.md`), and
+  mention the care plan as **optional** (hosting + unlimited small edits + backups + a monthly
+  refresh), month-to-month, cancel anytime.
 - [ ] Ask for: their real photos, their real Google/other reviews, confirmation of phone numbers
   and opening hours, and whether they have a domain or want you to register one.
 - [ ] Send an invoice for the one-time fee (50% to start is normal; balance on handover).
