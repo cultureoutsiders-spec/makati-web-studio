@@ -1,0 +1,107 @@
+/* =============================================================
+   Dan's Bike Shop — theme.css
+   Direction: "the build sheet + service board." A road & MTB shop
+   with a workshop. Steel/concrete grey, British-racing-green as
+   the workhorse accent, and a hi-vis lume-green used on maybe
+   three things (the book CTA, one divider). The hero is a bike
+   diagram whose parts link to sections; service is a mechanic's
+   job board. Engineered display type, torque-spec mono.
+   ============================================================= */
+:root{
+  --paper:      #e3e5e4;
+  --paper-2:    #d6d9d7;
+  --ink:        #181a19;
+  --ink-soft:   #545a56;
+  --line:       #c2c7c4;
+  --accent:     #1f3d34;   /* british racing green */
+  --accent-ink: #eef2f0;
+  --hv:         #b9d400;   /* hi-vis lume */
+  --brand:      #1f3d34;
+  --brand-ink:  #eef2f0;
+
+  --font-display: "Chakra Petch", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body:    "Red Hat Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "Red Hat Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  --radius: 2px;
+  --container: 1160px;
+}
+
+body{ background:var(--paper); color:var(--ink); }
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:700; letter-spacing:.005em; line-height:1.04; text-transform:uppercase; }
+.lead{ color:var(--ink-soft); font-size:var(--step-1); line-height:1.5; font-family:var(--font-body); }
+a{ color:var(--accent); }
+.eyebrow{ color:var(--accent); font-family:var(--font-mono); letter-spacing:.16em; font-weight:500; font-size:var(--step--1); }
+.eyebrow::before{ background:currentColor; }
+.section--brand{ background:var(--brand); color:var(--brand-ink); }
+.section--brand .lead{ color:#b8c6bf; }
+.section--brand .eyebrow{ color:var(--hv); }
+.rule{ border-color:var(--line); }
+.section--paper2{ background:var(--paper-2); }
+
+.brand{ font-family:var(--font-display); font-weight:700; text-transform:uppercase; letter-spacing:.03em; font-size:var(--step-1); color:var(--ink); }
+.brand b{ color:var(--accent); }
+.nav__links a{ font-family:var(--font-mono); font-weight:500; letter-spacing:.05em; text-transform:uppercase; font-size:var(--step--1); }
+.nav__links a[aria-current="page"]::after{ background:var(--accent); }
+.btn{ font-family:var(--font-display); font-weight:700; text-transform:uppercase; letter-spacing:.06em; border-radius:var(--radius); }
+.btn{ --_bg:var(--ink); --_fg:var(--paper); }
+.btn--accent{ --_bg:var(--hv); --_fg:var(--ink); }
+.btn--ghost{ --_bg:transparent; --_fg:currentColor; border-color:currentColor; }
+.nav__links a.btn{ color:var(--_fg); }
+.section--brand .btn--ghost{ --_fg:var(--brand-ink); }
+.card{ background:#eef0ef; border-color:var(--line); border-radius:var(--radius); }
+
+/* =============================================================
+   Build sheet diagram — signature
+   ============================================================= */
+.buildsheet{ max-width:640px; }
+.buildsheet svg{ width:100%; height:auto; display:block; }
+.buildsheet .frame-l{ fill:none; stroke:var(--accent); stroke-width:6; }
+.buildsheet .wheel{ fill:none; stroke:var(--ink); stroke-width:4; }
+.buildsheet .callout circle{ fill:var(--paper); stroke:var(--ink); stroke-width:2; }
+.buildsheet .callout line{ stroke:var(--ink); stroke-width:1.5; stroke-dasharray:3 3; }
+.buildsheet .callout text{ font-family:var(--font-mono); font-size:13px; fill:var(--ink); letter-spacing:.04em; }
+.buildsheet a:hover .callout circle, .buildsheet a:focus .callout circle{ fill:var(--hv); }
+
+/* =============================================================
+   Service job board
+   ============================================================= */
+.jobs{ border-top:3px solid var(--accent); }
+.job{ display:grid; grid-template-columns:1.3fr 2fr auto auto; gap:1rem 1.4rem; align-items:baseline; padding:1.1rem .6rem; border-bottom:1px solid var(--line); }
+.job__name{ font-family:var(--font-display); font-weight:700; text-transform:uppercase; font-size:var(--step-0); }
+.job__inc{ font-family:var(--font-body); font-size:var(--step--1); color:var(--ink-soft); }
+.job__turn{ font-family:var(--font-mono); font-size:var(--step--1); white-space:nowrap; }
+.job__price{ font-family:var(--font-mono); font-weight:500; color:var(--accent); white-space:nowrap; }
+@media (max-width:760px){ .job{ grid-template-columns:1fr auto; } .job__inc{ grid-column:1 / -1; } }
+
+/* brand wall */
+.brandwall{ display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); }
+.brandwall span{ background:#eef0ef; padding:1.2rem 1rem; text-align:center; font-family:var(--font-display); font-weight:700; text-transform:uppercase; letter-spacing:.06em; font-size:var(--step-0); }
+
+/* fit steps */
+.fit-steps{ display:grid; gap:0; border:1px solid var(--line); background:#eef0ef; counter-reset:f; }
+.fit-step{ display:grid; grid-template-columns:auto 1fr; gap:1.1rem; padding:1.2rem 1.3rem; border-bottom:1px solid var(--line); }
+.fit-step:last-child{ border-bottom:0; }
+.fit-step::before{ counter-increment:f; content:counter(f,decimal-leading-zero); font-family:var(--font-mono); color:var(--accent); font-size:var(--step-1); }
+.fit-step h3{ font-size:var(--step-0); margin:.1rem 0 .2rem; }
+.fit-step p{ margin:0; font-size:var(--step--1); color:var(--ink-soft); }
+
+.spec-list{ list-style:none; margin:0; padding:0; display:grid; gap:.5rem; }
+.spec-list li{ display:flex; gap:.7rem; font-family:var(--font-body); font-size:var(--step-0); }
+.spec-list li::before{ content:"\2013"; color:var(--accent); font-weight:700; }
+
+/* misc */
+.pill{ border-color:var(--ink); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.05em; }
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-body); font-weight:500; font-style:normal; }
+.review cite{ font-family:var(--font-mono); }
+.stars{ color:var(--accent); }
+.stat__num{ font-family:var(--font-display); font-weight:700; color:var(--accent); }
+.section--brand .stat__num{ color:var(--hv); }
+.chat-fab{ background:var(--accent); color:var(--accent-ink); }
+.site-footer{ background:var(--brand); }
+.foot-h{ font-family:var(--font-mono); letter-spacing:.14em; }
+.field label{ font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.05em; font-size:var(--step--1); }
+.field input,.field select,.field textarea{ border-radius:var(--radius); background:#eef0ef; }
+.demo-flag{ border-color:rgba(255,255,255,.28); }
+.notfound{ text-align:center; padding-block:var(--space-2xl); }

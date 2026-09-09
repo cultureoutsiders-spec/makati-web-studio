@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book the workshop — Dan's Bike Shop</title>
+<meta name="description" content="Book a workshop slot or ask about a part at Dan's Bike Shop, Chino Roces, Makati. Tell us the bike and the job — we'll confirm turnaround and price first.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Red+Hat+Mono:wght@400;500&family=Red+Hat+Text:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" data-open="false" aria-label="Primary">
+    <a class="brand" href="index.html">Dan's <b>Bike Shop</b></a>
+    <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    <ul class="nav__links" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="service.html">Service</a></li>
+      <li><a href="bikes.html">Bikes</a></li>
+      <li><a href="bike-fit.html">Bike fit</a></li>
+      <li><a class="btn btn--accent" href="book.html#book" aria-current="page">Book the workshop</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="section section--tight">
+    <div class="container">
+      <p class="eyebrow">Book the workshop</p>
+      <h1>Tell us the bike &amp; the job</h1>
+      <p class="lead measure">This reaches the shop. We'll reply with a drop-off slot, a
+        turnaround and a quote before we start. No deposit to book.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight" style="padding-top:0">
+    <div class="container">
+      <div class="split split--top">
+        <form class="form card" id="book" data-contact data-web3key="REPLACE_WITH_WEB3FORMS_KEY" data-mailto="REPLACE_WITH_EMAIL">
+          <div class="field field--hp"><label>Leave this empty<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="n">Name</label><input id="n" name="name" required></div>
+            <div class="field"><label for="p">Mobile number</label><input id="p" name="phone" inputmode="tel" required></div>
+          </div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="b">Bike (make &amp; model)</label><input id="b" name="bike" placeholder="e.g. Trek Domane AL 3, 2022"></div>
+            <div class="field"><label for="t">What's needed</label>
+              <select id="t" name="job_type">
+                <option>Safety check</option>
+                <option>Tune-up</option>
+                <option>Standard service</option>
+                <option>Full strip &amp; rebuild</option>
+                <option>Wheel build / truing</option>
+                <option>Bike fit</option>
+                <option>Parts enquiry</option>
+                <option>Not sure &mdash; advise me</option>
+              </select></div>
+          </div>
+          <div class="field"><label for="d">Preferred drop-off date</label><input id="d" name="date" type="date"></div>
+          <div class="field"><label for="m">Details</label><textarea id="m" name="notes" placeholder="Symptoms, noises, what it's for, a part number you're chasing…"></textarea></div>
+          <button class="btn btn--accent btn--lg" type="submit">Send request</button>
+          <p class="form-status" role="status"></p>
+          <p style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); margin:0">
+            Or call <a href="tel:+63285534919">(02) 8553 4919</a> /
+            <a href="https://www.facebook.com/DansBikeShopPH/" rel="noopener">message on Facebook</a>.</p>
+        </form>
+
+        <div class="stack">
+          <div class="card">
+            <span class="eyebrow" style="margin-top:0">The shop</span>
+            <p>W13-A La Fuerza Plaza Compound<br>2241 Don Chino Roces Avenue, Makati</p>
+            <hr class="rule">
+            <span class="eyebrow">Workshop turnaround</span>
+            <p style="font-family:var(--font-mono); font-size:var(--step--1)">Check &mdash; while you wait<br>Tune-up &mdash; same day<br>Service &mdash; 1&ndash;2 days<br>Rebuild &mdash; 3&ndash;5 days</p>
+            <hr class="rule">
+            <span class="eyebrow">Getting here</span>
+            <p style="color:var(--ink-soft)">La Fuerza Plaza compound off Chino Roces near the [landmark] end. Parking inside.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <p class="brand">Dan's <b>Bike Shop</b></p>
+        <p style="opacity:.85; margin-top:1rem; max-width:36ch">Road &amp; MTB sales, service and parts. La Fuerza Plaza, Chino Roces, Makati.</p>
+      </div>
+      <div><p class="foot-h">Shop</p><p>W13-A La Fuerza Plaza Compound<br>2241 Don Chino Roces Avenue<br>Makati City</p></div>
+      <div><p class="foot-h">Workshop</p><p><a href="tel:+63285534919">(02) 8553 4919</a><br><a href="https://www.facebook.com/DansBikeShopPH/" rel="noopener">Message on Facebook</a></p></div>
+    </div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital &mdash; not the official website of Dan's Bike Shop. The form needs a free Web3Forms key (2 minutes) before it delivers to an inbox; until then it opens the visitor's email app.</div>
+    <div class="foot-note"><span>&copy; <span data-year>2026</span> Dan's Bike Shop. Concept site.</span><span>Built by GCCofCI Digital</span></div>
+  </div>
+</footer>
+
+<a class="chat-fab" href="https://www.facebook.com/DansBikeShopPH/" rel="noopener" aria-label="Message us on Facebook">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.4-2.6-2.8-5 2.8 5.5-5.9 2.7 2.8 4.9-2.8-5.5 5.9z"/></svg>
+  Message us
+</a>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

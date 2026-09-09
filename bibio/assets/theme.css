@@ -1,0 +1,102 @@
+/* =============================================================
+   Bibio — theme.css
+   Direction: "the list." A natural / low-intervention wine bar.
+   Undyed-paper ground, a sediment-oxblood accent (not terracotta),
+   a skin-contact amber second. The spine of the site is a living
+   by-the-glass list where each wine is a hand-annotated label with
+   a scrawled tasting note and a "left tonight" count. Hand-feel
+   display, a warm book serif for notes, a mono for the vintages.
+   ============================================================= */
+:root{
+  --paper:      #efe7d6;
+  --paper-2:    #e5dbc3;
+  --ink:        #2a2320;
+  --ink-soft:   #6c6053;
+  --line:       #d4c8ab;
+  --accent:     #5b2b3a;   /* sediment oxblood */
+  --accent-ink: #ffffff;
+  --orange:     #c98a3f;   /* skin-contact amber */
+  --brand:      #2a2320;
+  --brand-ink:  #efe7d6;
+
+  --font-display: "Shantell Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body:    "Literata", Georgia, "Times New Roman", serif;
+  --font-mono:    "Spline Sans Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  --radius: 3px;
+  --container: 960px;
+}
+
+body{ background:var(--paper); color:var(--ink); }
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:700; letter-spacing:-.01em; line-height:1.08; }
+.lead{ color:var(--ink-soft); font-size:var(--step-1); line-height:1.6; font-family:var(--font-body); }
+a{ color:var(--accent); }
+.eyebrow{ color:var(--accent); font-family:var(--font-mono); letter-spacing:.16em; font-weight:500; }
+.eyebrow::before{ background:currentColor; }
+.section--brand{ background:var(--brand); color:var(--brand-ink); }
+.section--brand .lead{ color:#c8bda6; }
+.section--brand .eyebrow{ color:var(--orange); }
+.rule{ border-color:var(--line); }
+.section--paper2{ background:var(--paper-2); }
+
+.brand{ font-family:var(--font-display); font-weight:700; letter-spacing:-.02em; font-size:var(--step-1); color:var(--ink); }
+.brand b{ color:var(--orange); }
+.nav__links a{ font-family:var(--font-mono); font-weight:500; letter-spacing:.06em; text-transform:uppercase; font-size:var(--step--1); }
+.nav__links a[aria-current="page"]::after{ background:var(--accent); }
+.btn{ font-family:var(--font-display); font-weight:700; letter-spacing:.01em; border-radius:999px; }
+.btn{ --_bg:var(--accent); --_fg:#fff; }
+.btn--accent{ --_bg:var(--accent); --_fg:#fff; }
+.btn--ghost{ --_bg:transparent; --_fg:currentColor; border-color:currentColor; }
+.nav__links a.btn{ color:var(--_fg); }
+.section--brand .btn--ghost{ --_fg:var(--brand-ink); }
+.card{ background:#f7f0e1; border-color:var(--line); border-radius:var(--radius); }
+
+/* wine-ring stain, used sparingly */
+.wine-ring{ width:120px; height:120px; border-radius:50%;
+  background:radial-gradient(circle, transparent 44%, rgba(91,43,58,.18) 46%, rgba(91,43,58,.24) 52%, transparent 55%);
+  transform:rotate(12deg); }
+
+/* =============================================================
+   Pour — the annotated label. Signature.
+   ============================================================= */
+.list{ display:grid; gap:1.2rem; }
+.pour{ background:#f7f0e1; border:1px solid var(--line); border-radius:var(--radius);
+  padding:1.3rem 1.4rem 1.4rem; position:relative;
+  clip-path:polygon(0 0, 100% 1%, 99.4% 100%, .6% 99%); }
+.pour__top{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; }
+.pour__name{ font-family:var(--font-display); font-weight:700; font-size:var(--step-1); }
+.pour__price{ font-family:var(--font-mono); color:var(--accent); white-space:nowrap; }
+.pour__meta{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.03em; color:var(--ink-soft); margin-top:.35rem; text-transform:uppercase; }
+.pour__note{ font-family:var(--font-display); font-weight:500; color:var(--ink); margin-top:.6rem; font-size:var(--step-0); }
+.pour__left{ display:inline-block; margin-top:.7rem; font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.06em;
+  background:var(--orange); color:#2a2320; padding:.15em .55em; border-radius:2px; }
+.pour__left--out{ background:transparent; color:var(--ink-soft); border:1px solid var(--line); }
+
+.list-cat{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.2em; text-transform:uppercase; color:var(--accent);
+  border-bottom:1px solid var(--line); padding-bottom:.5rem; margin:2rem 0 1rem; }
+
+/* menu rows */
+.dish{ display:grid; grid-template-columns:1fr auto; gap:.3rem 1.4rem; align-items:baseline; padding:.9rem 0; border-bottom:1px solid var(--line); }
+.dish .n{ font-family:var(--font-display); font-weight:700; }
+.dish .pr{ font-family:var(--font-mono); color:var(--accent); white-space:nowrap; }
+.dish .d{ grid-column:1 / -1; font-family:var(--font-body); font-size:var(--step--1); color:var(--ink-soft); }
+
+.spec-list{ list-style:none; margin:0; padding:0; display:grid; gap:.6rem; }
+.spec-list li{ display:flex; gap:.7rem; font-family:var(--font-body); font-size:var(--step-0); }
+.spec-list li::before{ content:"\2767"; color:var(--orange); }
+
+/* misc */
+.pill{ border-color:var(--line); font-family:var(--font-mono); }
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-display); font-weight:500; font-style:normal; }
+.review cite{ font-family:var(--font-mono); }
+.stars{ color:var(--orange); }
+.stat__num{ font-family:var(--font-display); font-weight:700; color:var(--accent); }
+.section--brand .stat__num{ color:var(--orange); }
+.chat-fab{ background:var(--accent); color:#fff; }
+.site-footer{ background:var(--brand); }
+.foot-h{ font-family:var(--font-mono); letter-spacing:.14em; }
+.field label{ font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.06em; font-size:var(--step--1); }
+.field input,.field select,.field textarea{ border-radius:var(--radius); background:#f7f0e1; font-family:var(--font-body); }
+.demo-flag{ border-color:rgba(255,255,255,.28); }
+.notfound{ text-align:center; padding-block:var(--space-2xl); }
