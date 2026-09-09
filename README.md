@@ -30,7 +30,7 @@ and hosted anywhere.
 | Fortune Bakeshop (neighbourhood bakeshop since 1974 — "the bread board" receipt) | `fortune-bakeshop/` | https://cultureoutsiders-spec.github.io/makati-web-studio/fortune-bakeshop/ |
 | Blue Door 304 (hidden speakeasy bar — "the door" you knock to enter) | `blue-door-304/` | https://cultureoutsiders-spec.github.io/makati-web-studio/blue-door-304/ |
 | MSM Wells Photo (analog film lab — "the contact sheet" of film frames) | `msm-wells-photo/` | https://cultureoutsiders-spec.github.io/makati-web-studio/msm-wells-photo/ |
-| One World Butchers (butcher / deli / charcuterie — "the counter board" cut-chart) | `one-world-butchers/` | https://cultureoutsiders-spec.github.io/makati-web-studio/one-world-butchers/ |
+| Spindle Hole Records (new & used vinyl / turntables — "the crate" divider-tab browser) | `spindle-hole/` | https://cultureoutsiders-spec.github.io/makati-web-studio/spindle-hole/ |
 | Gray Matter Showroom (archive / grail fashion — "the archive index" object-label grid) | `gray-matter/` | https://cultureoutsiders-spec.github.io/makati-web-studio/gray-matter/ |
 | Kombat Sports Kalayaan (martial-arts academy — "the round timer" + fight card) | `kombat-sports/` | https://cultureoutsiders-spec.github.io/makati-web-studio/kombat-sports/ |
 | Bibio (natural wine bar — "the list" of hand-annotated wine labels) | `bibio/` | https://cultureoutsiders-spec.github.io/makati-web-studio/bibio/ |

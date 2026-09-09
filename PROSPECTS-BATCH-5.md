@@ -7,6 +7,13 @@ going live on their domain.
 
 **STATUS (updated 2026-09-11): demo sites BUILT + live** at `https://cultureoutsiders-spec.github.io/makati-web-studio/<slug>/`.
 
+**CORRECTION (2026-09-11): One World Butchers is DISQUALIFIED — permanently closed.** It rebranded
+to "Butchers Manila", then the IG bio `@butchersmnl` went to "BUTCHERS MANILA IS PERMANENTLY
+CLOSED. Join us at @butcherssteaksandgrill - Cliffhouse, Tagaytay." The `0917 823 6631` number is
+a stale line still on old directory listings, which is why Michael could not reach them. Its site
+folder + DM draft were scrapped and **Spindle Hole Records** swapped in (see section 3 below).
+Late catch of the same vetting failure as Sanbry / Mekeni's / Insular / Cuerva.
+
 Batch 6 holds the other five: `PROSPECTS-BATCH-6.md`.
 
 ## How the check was done
@@ -62,19 +69,24 @@ in the last year or two. The five below are clean; the alternates need a fresh 2
 - **Template:** services + spec table + a "how a roll moves through the lab" flow + drop-off
   form (adapts the Easyshare "order desk" pattern to a warmer, analog register).
 
-### 3. One World Butchers — butcher, deli & charcuterie
-- **Where:** 8491 Kalayaan Avenue corner Matilde Street, Barangay Poblacion, Makati
-- **Presence:** Facebook `/oneworldbutchers` + FoodPanda for delivery. **No own website.**
-  A butchery + deli + BBQ restaurant in one, known for a wide range of house-made artisanal
-  sausages.
-- **Contact:** 0917 823 6631 · Facebook Messenger. Open Sun & Tue–Wed 11am–10pm, Thu–Sat
-  11am–12am.
-- **Pitch angle:** a butcher lives on its counter list — cuts, sausages, what's in today, what to
-  pre-order for a party. None of that fits a Facebook feed. A site with the daily case, the
-  sausage range, whole-animal / bulk pre-orders and a "book the pit" enquiry does the selling the
-  feed can't. The butcher-paper / cut-chart / chalk-price aesthetic is strong and unused.
-- **Template:** product board + spec/price tables + bulk-order enquiry form (F&B retail — related
-  to Fortune's "bread board" receipt idea but a very different trade and look).
+### 3. Spindle Hole Records — new & used vinyl and turntables  *(swapped in for One World Butchers, 2026-09-11)*
+- **Where:** Unit 14 Penthouse, Creekside Mall, Amorsolo St., Legazpi Village, Makati (Mon–Thu
+  1–8pm, Fri–Sun 2–7pm)
+- **Presence:** Facebook `/spindlerecords` + Instagram + directory listings (vinylworld.org,
+  spot.ph, Bandwagon, Billboard PH, LifestyleAsia record-store guides). `spindlerecords.com` is a
+  parked for-sale lander, not theirs. **No own website.** Also trades as "Spindle Community Store"
+  (vinyl, turntables, plus collectibles).
+- **Contact:** +63 917 317 8642 · Facebook Messenger. No public email → DM / call-first.
+- **Pitch angle:** stock turns over every week and lives in scattered Facebook posts; a digger
+  after one pressing has no way to lodge the request; a first-time buyer can't see what decks are
+  carried or that setup help exists. A site with a browsable crate index, a just-landed board, an
+  honest used-bin grading key, a turntables + servicing page, and a want-list form does the
+  selling the feed can't.
+- **Template:** re-skin of the old One World Butchers "counter board" folder — the tappable
+  primal cut-chart becomes a wall of cardboard genre-divider **tabs**, the "in today" chalk list
+  becomes a dark "now spinning" / just-landed board, the pre-order form becomes a want-list.
+  Fonts Archivo Black / Archivo / DM Mono; palette liner-sleeve off-white + near-black vinyl +
+  OBI-strip red. Slug `spindle-hole/`.
 
 ### 4. Gray Matter Showroom — curated archive / grail fashion showroom
 - **Where:** 5141 Zamora St., Barangay Poblacion, Makati (1pm–8pm, **by appointment**)
@@ -113,15 +125,16 @@ in the last year or two. The five below are clean; the alternates need a fresh 2
 | Worldwatch Service Center | watch repair & servicing, Makati | FB `worldwatchservices` | FB-only; watchmaker's-bench brief is strong but confirm it's operating |
 | Johannes Watch Repair Center | watch repair, Makati | FB page | same as above |
 | Akle | picture framing, cor. Kamagong St., San Antonio | — | Recurs in frame-shop lists; no contact or FB found — needs a Maps/FB check |
-| Spindle Hole Community | new & used vinyl + turntables, Creekside Mall, Legazpi Village | IG | verify no site (most Manila record stores have one) |
+| ~~Spindle Hole Community~~ | new & used vinyl + turntables, Creekside Mall, Legazpi Village | FB `spindlerecords` | **PROMOTED to the five (section 3)** 2026-09-11, replacing One World Butchers. No own site confirmed. |
 | Hollywood Barbers PH | barbershop, Matilde St., Poblacion | IG `@hollywoodbarbersph` | verify no site; barber brief already attempted (Sanbry, batch 3) |
 
 ---
 
 ## How to work this list
 
-- **Email-first:** none of the five publish an email. All are **DM / call-first** (like COREX and
-  most of batches 3–4). Grab an email off each Facebook "About" tab first if there is one.
-- **Build order that reuses work:** Easyshare "order desk" → MSM Wells; Fortune "product board" →
-  One World Butchers; COREX schedule pattern → KSK; Yan yan soo filter grid → Gray Matter;
-  Ambient "what's on" (moodier) → Blue Door 304.
+- **Email-first:** of the five, only KSK publishes an email (`sales@kombatsportskalayaan.com`,
+  found 2026-09-11 — its draft was converted DM→email). The other four are **DM / call-first**
+  (like COREX and most of batches 3–4).
+- **Build order that reuses work:** Easyshare "order desk" → MSM Wells; old One World Butchers
+  "counter board" folder re-skinned → Spindle Hole Records; COREX schedule pattern → KSK; Yan yan
+  soo filter grid → Gray Matter; Ambient "what's on" (moodier) → Blue Door 304.

@@ -1,0 +1,140 @@
+/* =============================================================
+   Spindle Hole Records — theme.css
+   Direction: "the crate." A shop you flip through. The structural
+   device is the cardboard genre-divider tab that stands up in a
+   record bin: section headers are tabs, the browse page is a wall
+   of them. Liner-sleeve off-white, near-black vinyl, an OBI-strip
+   red accent, kraft-cardboard tabs, and a dark "now spinning"
+   band. Poster-weight display, plain body, mono for catalogue
+   numbers.
+   ============================================================= */
+:root{
+  --paper:      #f2ede3;
+  --paper-2:    #e7dfd0;
+  --ink:        #1a1714;
+  --ink-soft:   #5c554c;
+  --line:       #cdc2ac;
+  --accent:     #d1341f;   /* OBI-strip red */
+  --accent-ink: #ffffff;
+  --kraft:      #c8a86a;   /* divider-tab cardboard */
+  --kraft-ink:  #2a2114;
+  --board:      #171310;
+  --board-ink:  #efe7d5;
+  --brand:      #171310;
+  --brand-ink:  #efe7d5;
+
+  --font-display: "Archivo Black", "Arial Black", system-ui, sans-serif;
+  --font-body:    "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "DM Mono", ui-monospace, "SFMono-Regular", "Consolas", monospace;
+
+  --radius: 2px;
+  --container: 1120px;
+}
+
+body{ background:var(--paper); color:var(--ink); }
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:400; letter-spacing:-.01em; line-height:1; text-transform:uppercase; }
+h1{ font-size:var(--step-5); letter-spacing:-.02em; }
+.lead{ color:var(--ink-soft); font-size:var(--step-1); line-height:1.55; font-family:var(--font-body); }
+a{ color:var(--accent); }
+.eyebrow{ color:var(--accent); font-family:var(--font-mono); font-weight:500; letter-spacing:.22em; font-size:var(--step--1); text-transform:uppercase; }
+.eyebrow::before{ background:currentColor; }
+.section--brand{ background:var(--brand); color:var(--brand-ink); }
+.section--brand .lead{ color:#c9bfa8; }
+.section--brand .eyebrow{ color:#e6a94b; }
+.rule{ border-color:var(--line); }
+.section--paper2{ background:var(--paper-2); }
+
+/* dark "now spinning" band */
+.section--board{ background:var(--board); color:var(--board-ink);
+  background-image:radial-gradient(rgba(255,255,255,.035) 1px, transparent 1.4px); background-size:8px 8px; }
+.section--board .eyebrow{ color:#e6a94b; }
+.section--board .lead{ color:#c9bfa8; }
+
+.brand{ font-family:var(--font-display); font-weight:400; letter-spacing:-.01em; text-transform:uppercase; font-size:var(--step-1); color:var(--ink); line-height:1; }
+.brand b{ color:var(--accent); font-weight:400; }
+.nav__links a{ font-family:var(--font-mono); font-weight:500; letter-spacing:.1em; text-transform:uppercase; font-size:var(--step--1); }
+.nav__links a[aria-current="page"]::after{ background:var(--accent); }
+.btn{ font-family:var(--font-mono); font-weight:500; letter-spacing:.1em; text-transform:uppercase; border-radius:var(--radius); font-size:var(--step--1); padding:.85em 1.5em; }
+.btn{ --_bg:var(--ink); --_fg:var(--paper); }
+.btn--accent{ --_bg:var(--accent); --_fg:#fff; }
+.btn--ghost{ --_bg:transparent; --_fg:currentColor; border-color:currentColor; }
+.nav__links a.btn{ color:var(--_fg); }
+.section--brand .btn--ghost,.section--board .btn--ghost{ --_fg:var(--board-ink); }
+.card{ background:#fbf7ee; border-color:var(--line); border-radius:var(--radius); }
+
+/* =============================================================
+   The crate — signature. Cardboard divider tabs in a bin.
+   ============================================================= */
+.crate{ display:flex; flex-wrap:wrap; gap:.5rem .5rem; align-content:flex-start;
+  background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius);
+  padding:clamp(1rem, 0.8rem + 1vw, 1.6rem); }
+.tab{ position:relative; display:block; text-decoration:none;
+  background:var(--kraft); color:var(--kraft-ink);
+  font-family:var(--font-display); text-transform:uppercase; letter-spacing:.01em;
+  font-size:var(--step-0); line-height:1; padding:.9rem 1.1rem .8rem;
+  border:1px solid rgba(0,0,0,.25); border-bottom-width:3px;
+  border-radius:6px 6px 2px 2px;
+  transition:transform .12s ease, background .12s ease, color .12s ease; }
+.tab::before{ content:""; position:absolute; left:.7rem; right:.7rem; top:.4rem; height:2px;
+  background:rgba(0,0,0,.18); }
+.tab .tab__n{ display:block; font-family:var(--font-mono); font-weight:500; font-size:var(--step--2);
+  letter-spacing:.14em; opacity:.7; margin-top:.35rem; }
+.tab:hover, .tab:focus-visible{ transform:translateY(-4px); background:var(--accent); color:#fff; outline:none; }
+.tab:hover::before, .tab:focus-visible::before{ background:rgba(255,255,255,.4); }
+.crate--wall .tab{ flex:1 1 12rem; }
+
+/* "Now spinning" strip */
+.nowspin{ font-family:var(--font-mono); font-weight:500; letter-spacing:.14em; text-transform:uppercase;
+  font-size:var(--step--1); color:#e6a94b; display:flex; gap:.9rem; align-items:center; flex-wrap:wrap; }
+.nowspin b{ color:#fff; font-weight:500; }
+.nowspin .sep{ color:rgba(255,255,255,.3); }
+
+/* =============================================================
+   Just-landed board (dark)
+   ============================================================= */
+.spinlist{ border:2px solid rgba(255,255,255,.16); border-radius:var(--radius);
+  padding:clamp(1.2rem, 1rem + 1.4vw, 2rem); }
+.spin-row{ display:flex; align-items:baseline; gap:.6rem; padding:.6rem 0; border-bottom:1px dashed rgba(255,255,255,.16); }
+.spin-row:last-child{ border-bottom:0; }
+.spin-row .n{ font-family:var(--font-body); font-weight:600; font-size:var(--step-0); }
+.spin-row .n i{ font-style:normal; color:#c9bfa8; font-weight:400; }
+.spin-row .dots{ flex:1; border-bottom:1px dotted rgba(255,255,255,.3); transform:translateY(-.3em); }
+.spin-row .p{ font-family:var(--font-mono); font-weight:500; color:#e6a94b; white-space:nowrap; font-size:var(--step--1); }
+.board-note{ font-family:var(--font-mono); color:#c9bfa8; font-size:var(--step--1); }
+
+/* =============================================================
+   Crate listings (browse page) — restyle of the cut list
+   ============================================================= */
+.crategroup{ border-top:3px solid var(--accent); padding-top:1rem; margin-top:2.4rem; }
+.crategroup h2{ font-size:var(--step-2); }
+.recrow{ display:grid; grid-template-columns:1fr auto; gap:.3rem 1.5rem; align-items:baseline; padding:.8rem 0; border-bottom:1px solid var(--line); }
+.recrow .name{ font-family:var(--font-body); font-weight:600; font-size:var(--step-0); }
+.recrow .name i{ font-style:normal; color:var(--ink-soft); font-weight:400; }
+.recrow .price{ font-family:var(--font-mono); font-weight:500; color:var(--accent); white-space:nowrap; font-size:var(--step--1); }
+.recrow .desc{ grid-column:1 / -1; font-size:var(--step--1); color:var(--ink-soft); max-width:60ch; }
+.recrow .desc .cat{ font-family:var(--font-mono); letter-spacing:.08em; color:var(--ink); }
+
+.spec-list{ list-style:none; margin:0; padding:0; display:grid; gap:.5rem; }
+.spec-list li{ display:flex; gap:.7rem; font-size:var(--step-0); }
+.spec-list li::before{ content:"\25B8"; color:var(--accent); font-weight:700; }
+
+/* grading key */
+.grade{ display:grid; grid-template-columns:auto 1fr; gap:.4rem 1rem; font-size:var(--step--1); }
+.grade dt{ font-family:var(--font-mono); font-weight:500; letter-spacing:.06em; color:var(--accent); }
+.grade dd{ margin:0; color:var(--ink-soft); }
+
+/* misc */
+.pill{ border-color:var(--line); font-family:var(--font-mono); font-weight:500; letter-spacing:.06em; text-transform:uppercase; font-size:var(--step--2); }
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-body); font-weight:500; font-style:normal; }
+.review cite{ font-family:var(--font-mono); }
+.stars{ color:var(--accent); }
+.stat__num{ font-family:var(--font-display); font-weight:400; color:var(--accent); }
+.section--brand .stat__num,.section--board .stat__num{ color:#e6a94b; }
+.chat-fab{ background:var(--accent); color:#fff; }
+.site-footer{ background:var(--brand); }
+.foot-h{ font-family:var(--font-mono); font-weight:500; letter-spacing:.16em; text-transform:uppercase; }
+.field label{ font-family:var(--font-mono); font-weight:500; text-transform:uppercase; letter-spacing:.08em; font-size:var(--step--1); }
+.field input,.field select,.field textarea{ border-radius:var(--radius); background:#fbf7ee; }
+.demo-flag{ border-color:rgba(255,255,255,.28); }
+.notfound{ text-align:center; padding-block:var(--space-2xl); }

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find it for me — Spindle Hole Records</title>
+<meta name="description" content="Tell Spindle Hole Records the record you are after, the pressing and the condition floor. We check every crate that comes in and message you when it lands. Also books turntable servicing and the listening room.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" data-open="false" aria-label="Primary">
+    <a class="brand" href="index.html">Spindle Hole <b>Records</b></a>
+    <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    <ul class="nav__links" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="the-crates.html">The crates</a></li>
+      <li><a href="turntables.html">Turntables</a></li>
+      <li><a href="the-listening-room.html">Listening room</a></li>
+      <li><a class="btn btn--accent" href="find-it.html#find" aria-current="page">Find it</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="section section--tight">
+    <div class="container">
+      <p class="eyebrow">Find it for me</p>
+      <h1>The want-list</h1>
+      <p class="lead measure">Give us the record you are chasing and how picky you are about the
+        pressing and the condition. We go through every collection and crate that comes in, and
+        message you when something matches. The same form books turntable servicing and the
+        listening room. This reaches the shop.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight" style="padding-top:0">
+    <div class="container">
+      <div class="split split--top">
+        <form class="form card" id="find" data-contact data-web3key="REPLACE_WITH_WEB3FORMS_KEY" data-mailto="REPLACE_WITH_EMAIL">
+          <div class="field field--hp"><label>Leave this empty<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="n">Your name</label><input id="n" name="name" required></div>
+            <div class="field"><label for="p">Mobile number</label><input id="p" name="phone" inputmode="tel" required></div>
+          </div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="t">What is this about</label>
+              <select id="t" name="request_type">
+                <option>Want-list &mdash; a record I am looking for</option>
+                <option>Hold a record I saw on Facebook</option>
+                <option>Turntable servicing</option>
+                <option>Hold the listening room</option>
+              </select></div>
+            <div class="field"><label for="c">Condition floor</label>
+              <select id="c" name="condition_floor"><option>Any playable copy</option><option>VG or better</option><option>VG+ or better</option><option>Near Mint only</option><option>Sealed / new only</option></select></div>
+          </div>
+          <div class="field"><label for="i">The record, or the job</label><textarea id="i" name="details" placeholder="e.g. Sade &mdash; Promise, original UK or German press, gatefold intact &mdash; budget up to PHP 2,500. Or: belt replacement on a Technics SL-1200, speed is drifting."></textarea></div>
+          <div class="field"><label for="w">When it lands</label>
+            <select id="w" name="notify"><option>Message me and hold it 3 days</option><option>Message me, no need to hold</option><option>Only if it is under my budget</option></select></div>
+          <button class="btn btn--accent btn--lg" type="submit">Send it in</button>
+          <p class="form-status" role="status"></p>
+          <p style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); margin:0">
+            Or call <a href="tel:+639173178642">0917 317 8642</a> /
+            <a href="https://www.facebook.com/spindlerecords" rel="noopener">message on Facebook</a>.
+            We reply to every want-list, even if we have nothing yet.</p>
+        </form>
+
+        <div class="stack">
+          <div class="card">
+            <span class="eyebrow" style="margin-top:0">The shop</span>
+            <p>Unit 14 Penthouse, Creekside Mall<br>Amorsolo Street, Legazpi Village, Makati</p>
+            <hr class="rule">
+            <span class="eyebrow">Hours</span>
+            <p>Mon&ndash;Thu &middot; 1pm&ndash;8pm<br>Fri&ndash;Sun &middot; 2pm&ndash;7pm</p>
+            <hr class="rule">
+            <span class="eyebrow">Good to know</span>
+            <p style="font-family:var(--font-mono)">Want-list is free &middot; no deposit to hold in-store finds &middot; servicing quoted after a look &middot; the listening room is free for single records</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <p class="brand">Spindle Hole <b>Records</b></p>
+        <p style="opacity:.85; margin-top:1rem; max-width:36ch">New and used vinyl, turntables and a listening room. Creekside Mall, Legazpi Village, Makati.</p>
+      </div>
+      <div><p class="foot-h">Shop</p><p>Unit 14 Penthouse<br>Creekside Mall, Amorsolo St.<br>Legazpi Village, Makati</p></div>
+      <div><p class="foot-h">Get in touch</p><p><a href="tel:+639173178642">0917 317 8642</a><br><a href="https://www.facebook.com/spindlerecords" rel="noopener">Message on Facebook</a></p></div>
+    </div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital &mdash; not the official website of Spindle Hole Records. The form needs a free Web3Forms key (2 minutes) before it delivers to an inbox; until then it opens the visitor's email app.</div>
+    <div class="foot-note"><span>&copy; <span data-year>2026</span> Spindle Hole Records. Concept site.</span><span>Built by GCCofCI Digital</span></div>
+  </div>
+</footer>
+
+<a class="chat-fab" href="https://www.facebook.com/spindlerecords" rel="noopener" aria-label="Message us on Facebook">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.4-2.6-2.8-5 2.8 5.5-5.9 2.7 2.8 4.9-2.8-5.5 5.9z"/></svg>
+  Message us
+</a>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
