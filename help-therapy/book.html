@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book an Assessment — HELP Therapy Center</title>
+<meta name="description" content="Request a first assessment at HELP Therapy Center. Tell us your child's age, the area you're concerned about, and your preferred location and times.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Book an Assessment — HELP Therapy Center">
+<meta property="og:description" content="Request a first assessment for your child.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" data-open="false" aria-label="Primary">
+    <a class="brand" href="index.html">HELP Therapy</a>
+    <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    <ul class="nav__links" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="first-visit.html">First Visit</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a class="btn btn--accent" href="book.html#book" aria-current="page">Book an assessment</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="section" id="book">
+    <div class="container split split--top">
+      <div class="stack">
+        <p class="eyebrow">Book an assessment</p>
+        <h1>Tell us a bit about your child</h1>
+        <p class="lead">Send this and the centre will reply with assessment slots at your preferred
+          location. For anything urgent, call or message.</p>
+        <p class="lead"><a href="mailto:helptherapy@gmail.com">helptherapy@gmail.com</a><br>
+          <a href="tel:+639178965195">0917 896 5195</a> — call, Viber, WhatsApp or SMS</p>
+        <p style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft)">This is a design proposal — the form needs a Web3Forms key before it can send; until then it opens your email app to helptherapy@gmail.com.</p>
+      </div>
+      <form class="form" data-contact data-web3key="REPLACE_WITH_WEB3FORMS_KEY" data-mailto="helptherapy@gmail.com">
+        <div class="field"><label for="pn">Your name</label><input id="pn" name="parent_name" required></div>
+        <div class="field"><label for="c">Mobile / email</label><input id="c" name="contact" required></div>
+        <div class="field"><label for="ca">Child's age</label><input id="ca" name="child_age" required></div>
+        <div class="field"><label for="s">Area you're concerned about</label>
+          <select id="s" name="service">
+            <option>Speech &amp; language</option><option>Occupational therapy</option>
+            <option>Physical therapy</option><option>SPED tutorial</option>
+            <option>Not sure — need advice</option>
+          </select></div>
+        <div class="field"><label for="l">Preferred location</label>
+          <select id="l" name="location"><option>Centuria Medical Makati (Poblacion)</option><option>Santiago Village</option><option>Either</option></select></div>
+        <div class="field"><label for="d">Preferred days / times</label><input id="d" name="preferred"></div>
+        <div class="field"><label for="h">HMO / insurance (if any)</label><input id="h" name="hmo"></div>
+        <div class="field"><label for="m">What you're noticing</label><textarea id="m" name="notes"></textarea></div>
+        <input type="checkbox" name="botcheck" class="field--hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn--accent btn--lg" type="submit">Request assessment</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div><p class="brand">HELP Therapy</p><p style="opacity:.85; margin-top:1rem; max-width:34ch">Speech, occupational, physical therapy and SPED tutorial for children. Makati, by appointment.</p></div>
+      <div><p class="foot-h">Locations</p><p>Unit 2515, Centuria Medical Makati<br>Gen. Luna cor. Salamanca St., Poblacion<br><br>1655 Peñafrancia St., Santiago Village</p></div>
+      <div><p class="foot-h">Book</p><p><a href="mailto:helptherapy@gmail.com">helptherapy@gmail.com</a><br><a href="tel:+639178965195">0917 896 5195 (Viber / SMS)</a><br><a href="https://www.facebook.com/HELPTherapyCenter" rel="noopener">Message on Facebook</a></p></div>
+    </div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of HELP Therapy Center.</div>
+    <div class="foot-note"><span>© <span data-year>2026</span> HELP Therapy Center. Concept site.</span><span>Built by GCCofCI Digital</span></div>
+  </div>
+</footer>
+
+<a class="chat-fab" href="https://www.facebook.com/HELPTherapyCenter" rel="noopener" aria-label="Message us on Facebook">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.4-2.6-2.8-5 2.8 5.5-5.9 2.7 2.8 4.9-2.8-5.5 5.9z"/></svg>
+  Message us
+</a>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

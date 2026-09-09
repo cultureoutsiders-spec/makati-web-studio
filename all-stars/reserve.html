@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reserve for a Game — All Stars Cafe and Sports Bar</title>
+<meta name="description" content="Reserve a table for the match at All Stars Cafe and Sports Bar, San Antonio Village, Makati. Tell us the game, the date and your headcount; we'll set you a screen.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Reserve for a Game — All Stars Cafe and Sports Bar">
+<meta property="og:description" content="Book a table for the match. San Antonio Village, Makati.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" data-open="false" aria-label="Primary">
+    <a class="brand" href="index.html">All Stars<b>.</b></a>
+    <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    <ul class="nav__links" id="navlinks">
+      <li><a href="index.html">Tonight</a></li>
+      <li><a href="whats-on.html">What's on</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a class="btn btn--accent" href="reserve.html#book" aria-current="page">Reserve for a game</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="section" id="book">
+    <div class="container split split--top">
+      <div class="stack">
+        <p class="eyebrow">Reserve for a game</p>
+        <h1>Book a table for the match</h1>
+        <p class="lead">Tell us the game and your headcount. We'll confirm the table, and for the
+          big ones we'll set a screen with sound on your match.</p>
+        <p class="lead">Faster to message?<br>
+          <a href="tel:+639151982386">0915 198 2386</a> ·
+          <a href="https://www.facebook.com/allstarscafeandsportsbar" rel="noopener">Messenger</a></p>
+        <p style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft)">This is a design proposal — the form needs a Web3Forms key before it can send; until then it opens your email app to allstarscafeandsportsbar@gmail.com.</p>
+      </div>
+      <form class="form" data-contact data-web3key="REPLACE_WITH_WEB3FORMS_KEY" data-mailto="allstarscafeandsportsbar@gmail.com">
+        <div class="field"><label for="n">Name</label><input id="n" name="name" required></div>
+        <div class="field"><label for="c">Mobile</label><input id="c" name="contact" required></div>
+        <div class="field"><label for="g">Which game</label><input id="g" name="game" placeholder="e.g. Ginebra vs TNT, Fri" required></div>
+        <div class="field"><label for="d">Date</label><input id="d" type="date" name="date" required></div>
+        <div class="field"><label for="t">Arrival time</label><input id="t" type="time" name="time" required></div>
+        <div class="field"><label for="p">Headcount</label><input id="p" type="number" min="1" name="party" required></div>
+        <div class="field"><label for="s">Screen with sound for our group?</label>
+          <select id="s" name="screen"><option>Not needed</option><option>Yes, if available</option><option>Yes — this is the whole reason we're coming</option></select></div>
+        <div class="field"><label for="m">Anything else</label><textarea id="m" name="notes"></textarea></div>
+        <input type="checkbox" name="botcheck" class="field--hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn--accent btn--lg" type="submit">Request reservation</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div><p class="brand">All Stars<b>.</b></p><p style="opacity:.85; margin-top:1rem; max-width:34ch">Cafe and sports bar in San Antonio Village, Makati. Every game on the big screens. Open late.</p></div>
+      <div><p class="foot-h">Find us</p><p>San Antonio Village<br>Makati City</p></div>
+      <div><p class="foot-h">Reserve</p><p><a href="tel:+639151982386">0915 198 2386</a><br><a href="mailto:allstarscafeandsportsbar@gmail.com">allstarscafeandsportsbar@gmail.com</a><br><a href="https://www.facebook.com/allstarscafeandsportsbar" rel="noopener">Message on Facebook</a><br><a href="https://instagram.com/allstars_sportsbar_and_cafe" rel="noopener">@allstars_sportsbar_and_cafe</a></p></div>
+    </div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of All Stars Cafe and Sports Bar.</div>
+    <div class="foot-note"><span>© <span data-year>2026</span> All Stars Cafe and Sports Bar. Concept site.</span><span>Built by GCCofCI Digital</span></div>
+  </div>
+</footer>
+
+<a class="chat-fab" href="https://www.facebook.com/allstarscafeandsportsbar" rel="noopener" aria-label="Message us on Facebook">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.4-2.6-2.8-5 2.8 5.5-5.9 2.7 2.8 4.9-2.8-5.5 5.9z"/></svg>
+  Message us
+</a>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

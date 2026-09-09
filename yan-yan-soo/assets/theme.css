@@ -1,0 +1,138 @@
+/* =============================================================
+   Yan yan soo flowers & gift delivery — theme.css
+   Direction: "the flower table" — a filterable shop grid. Browse
+   arrangements by occasion and price, then start an order. Deep
+   foliage green + fuchsia bloom + blush + warm white + a gold
+   hairline. Literary serif for arrangement names, clean sans body,
+   mono price tags shaped like kraft gift tags.
+   ============================================================= */
+:root{
+  --paper:      #fbf7f4;
+  --paper-2:    #f3e7e0;
+  --ink:        #22302a;
+  --ink-soft:   #5b6a61;
+  --line:       #e4d7cd;
+  --accent:     #d6296a;   /* fuchsia bloom */
+  --accent-ink: #ffffff;
+  --brand:      #17281f;   /* deep foliage */
+  --brand-ink:  #f4ede6;
+  --gold:       #b98d5a;
+
+  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-body:    "Figtree", system-ui, -apple-system, sans-serif;
+  --font-mono:    "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+  --radius: 4px;
+  --container: 1200px;
+}
+
+h1,h2,h3{ font-family:var(--font-display); font-weight:500; letter-spacing:-.01em; }
+h1,.display{ font-weight:500; line-height:1.02; }
+h2 em,.display em,.hero h1 em{ font-style:italic; color:var(--accent); }
+.lead{ font-size:var(--step-1); color:var(--ink-soft); line-height:1.5; }
+.section--brand{ background:var(--brand); }
+.section--brand .lead{ color:#d7ccc0; }
+.eyebrow{ color:var(--accent); font-family:var(--font-mono); letter-spacing:.24em; }
+.eyebrow::before{ background:var(--gold); }
+.section--brand .eyebrow{ color:#e6a9c1; }
+
+/* ---- Brand wordmark ---- */
+.brand{ font-family:var(--font-display); font-weight:500; font-size:var(--step-1); letter-spacing:0; color:var(--ink); text-transform:lowercase; }
+.brand b{ color:var(--accent); font-weight:500; }
+.nav__links a{ font-family:var(--font-body); }
+.nav__links a[aria-current="page"]::after{ background:var(--accent); }
+
+/* =============================================================
+   Hero — wordmark over the arrangement
+   ============================================================= */
+.hero--shop{ position:relative; isolation:isolate; color:#fff; min-height:clamp(24rem,60vh,40rem); display:flex; align-items:flex-end; }
+.hero--shop .hero__bg::after{ background:linear-gradient(180deg, rgba(23,40,31,.15) 0%, rgba(23,40,31,.35) 45%, rgba(23,40,31,.82) 100%); }
+.hero--shop .container{ padding-block:clamp(2.5rem,2rem + 3vw,4rem); }
+.hero--shop h1{ font-size:clamp(2.8rem, 1.6rem + 6vw, 6rem); color:#fff; max-width:14ch; }
+.hero--shop h1 em{ color:#ffb8d6; }
+.hero--shop .lead{ color:#f0e7de; max-width:46ch; }
+.hero__meta{ display:flex; flex-wrap:wrap; gap:.5rem 1.5rem; margin-top:1.2rem; font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.08em; color:#e6d9cd; }
+.hero__meta span::before{ content:"❀ "; color:#ffb8d6; }
+
+/* =============================================================
+   Shop filter bar
+   ============================================================= */
+.shopfilter{ position:sticky; top:64px; z-index:20; background:color-mix(in srgb, var(--paper) 94%, transparent); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); padding-block:.8rem; }
+.shopfilter__row{ display:flex; flex-wrap:wrap; align-items:center; gap:.5rem 1.4rem; }
+.shopfilter__label{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft); }
+.chips{ display:flex; flex-wrap:wrap; gap:.4rem; }
+.chip{ appearance:none; border:1px solid var(--line); background:var(--paper); color:var(--ink-soft); cursor:pointer;
+  font:600 var(--step--1)/1 var(--font-body); letter-spacing:.02em; padding:.55em 1em; border-radius:999px; transition:all .15s ease; }
+.chip:hover{ border-color:var(--accent); color:var(--ink); }
+.chip[aria-pressed="true"]{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+
+/* =============================================================
+   Bouquet grid
+   ============================================================= */
+.bouquets{ display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:var(--space-md); }
+.bloom{ position:relative; background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; display:flex; flex-direction:column;
+  opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease; transition-delay:calc(var(--i, 0) * 55ms); }
+.bloom.is-in{ opacity:1; transform:none; }
+.bloom[hidden]{ display:none; }
+@media (prefers-reduced-motion:reduce){ .bloom{ opacity:1; transform:none; transition:none; } }
+.bloom .media{ aspect-ratio:4/5; border-radius:0; }
+.bloom__body{ padding:1rem 1.1rem 1.2rem; display:flex; flex-direction:column; gap:.35rem; flex:1; }
+.bloom__occ{ font-family:var(--font-mono); font-size:calc(var(--step--1) * .92); letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); }
+.bloom h3{ font-size:var(--step-1); font-style:italic; margin:0; }
+.bloom p{ margin:0; color:var(--ink-soft); font-size:var(--step--1); }
+.bloom .go{ margin-top:auto; font-family:var(--font-body); font-weight:700; font-size:var(--step--1); color:var(--accent); text-decoration:none; padding-top:.5rem; }
+
+/* ---- Kraft price tag ---- */
+.tag{ position:absolute; top:.8rem; right:.8rem; z-index:2; font-family:var(--font-mono); font-weight:600; font-size:var(--step--1);
+  background:#efe3d0; color:var(--brand); padding:.3em .6em .3em 1.4em; border:1px solid #dcc9ac;
+  box-shadow:0 4px 12px -6px rgba(23,40,31,.4); transform:rotate(3deg); transition:transform .2s ease; }
+.tag::before{ content:""; position:absolute; left:.5em; top:50%; width:7px; height:7px; margin-top:-3.5px; border-radius:50%; background:var(--paper); border:1px solid #cbb794; }
+.bloom:hover .tag{ transform:rotate(-4deg) scale(1.05); }
+@media (prefers-reduced-motion:reduce){ .bloom:hover .tag{ transform:rotate(3deg); } }
+
+.empty-note{ grid-column:1/-1; text-align:center; color:var(--ink-soft); font-style:italic; font-family:var(--font-display); padding:2rem 0; }
+
+/* =============================================================
+   Order panel
+   ============================================================= */
+.orderpanel{ background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius); padding:clamp(1.6rem,1.2rem + 2vw,2.6rem); }
+.orderpanel .form{ max-width:34rem; }
+
+/* ---- Delivery zone chips ---- */
+.zones{ display:flex; flex-wrap:wrap; gap:.5rem; }
+.zones span{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.06em; border:1px solid var(--line); background:var(--paper); padding:.4em .9em; border-radius:999px; }
+
+/* ---- Occasion cards ---- */
+.occ-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:var(--space-md); }
+.occ{ background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:1.5rem 1.6rem; }
+.occ h3{ font-size:var(--step-1); font-style:italic; margin:0 0 .3rem; }
+.occ p{ margin:0; color:var(--ink-soft); }
+
+/* ---- Buttons / misc ---- */
+.btn{ border-radius:999px; font-family:var(--font-body); font-weight:700; letter-spacing:.02em; }
+.btn--accent:hover{ background:#bf1f5c; }
+.card{ border-radius:var(--radius); }
+.review{ border-left-color:var(--gold); }
+.review p{ font-family:var(--font-display); font-style:italic; }
+.review cite{ font-family:var(--font-mono); }
+.stars{ color:var(--accent); }
+.stat__num{ font-family:var(--font-display); font-weight:500; color:var(--accent); }
+.section--brand .stat__num{ color:#ffb8d6; }
+.chat-fab{ background:var(--accent); }
+.site-footer{ background:var(--brand); --line:rgba(255,255,255,.14); }
+.site-footer .brand{ color:var(--brand-ink); }
+.foot-h{ font-family:var(--font-mono); letter-spacing:.16em; }
+.field input,.field select,.field textarea{ border:1px solid var(--line); border-radius:var(--radius); background:var(--paper); }
+.field label{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.08em; text-transform:uppercase; }
+
+/* ---- 404 ---- */
+.notfound{ text-align:center; padding-block:var(--space-2xl); }
+
+@media (max-width:1040px){ .shopfilter{ top:60px; } }
+
+/* fix: nav CTA button colour (base .nav__links a override was winning) */
+.nav__links a.btn{ color:var(--_fg); }
+
+/* fix: hero eyebrow contrast over photo */
+.hero--shop .eyebrow{ color:#ffd9e6; }
+.hero--shop .eyebrow::before{ background:#ffd9e6; }

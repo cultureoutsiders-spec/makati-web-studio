@@ -1,0 +1,121 @@
+/* =============================================================
+   Koffle — theme.css
+   Direction: a storybook / picture-book cafe. A hidden little
+   coffee-and-waffle nook in Palanan with a cottage, plants-and-
+   wood, rainy-afternoon feel. Wordmark as a hand-painted wooden
+   sign that sways on load, rising steam over the hero, the menu as
+   hand-lettered kraft cards, and a "find the door" wayfinding block.
+   Warm cream + cocoa + forest green + soft sky + a terracotta-red.
+   ============================================================= */
+:root{
+  --paper:      #f7efe0;
+  --paper-2:    #eee2cd;
+  --ink:        #3a2f24;
+  --ink-soft:   #6b5c4a;
+  --line:       #e1d2b8;
+  --accent:     #3f6b3f;   /* forest green */
+  --accent-ink: #f7efe0;
+  --brand:      #2c4a30;   /* deep forest */
+  --brand-ink:  #f2ead9;
+  --sky:        #8fb8cf;
+  --berry:      #b5533c;
+
+  --font-display: "DynaPuff", "Baloo 2", system-ui, sans-serif;
+  --font-body:    "Nunito", system-ui, -apple-system, sans-serif;
+  --font-mono:    "Nunito", ui-monospace, Menlo, monospace;
+  --font-hand:    "Gochi Hand", "Segoe Script", cursive;
+
+  --radius: 16px;
+  --container: 1120px;
+}
+
+h1,h2,h3{ font-family:var(--font-display); font-weight:600; letter-spacing:0; }
+h1,.display{ font-weight:600; line-height:1.06; }
+.lead{ font-size:var(--step-1); color:var(--ink-soft); line-height:1.55; }
+.section--brand{ background:var(--brand); }
+.section--brand .lead{ color:#d7e0cd; }
+.eyebrow{ color:var(--accent); font-family:var(--font-hand); letter-spacing:.02em; text-transform:none; font-size:calc(var(--step-0) * 1.15); }
+.eyebrow::before{ background:var(--berry); border-radius:3px; }
+.section--brand .eyebrow{ color:#bfe0b6; }
+.hand{ font-family:var(--font-hand); font-size:calc(var(--step-1) * 1.05); color:var(--berry); line-height:1.15; transform:rotate(-2deg); display:inline-block; }
+
+/* ---- Brand wordmark: painted wooden sign ---- */
+.brand{ font-family:var(--font-display); font-weight:600; font-size:var(--step-1); color:var(--brand-ink);
+  background:var(--brand); border:2px solid #1f3623; border-radius:12px; padding:.25em .75em .3em;
+  box-shadow:0 4px 0 #1f3623, 0 8px 16px -8px rgba(44,74,48,.5); display:inline-block; transform-origin:top center; }
+.site-header .brand{ animation:sway 1.1s .2s ease-out both; }
+@keyframes sway{ 0%{ transform:rotate(-4deg); } 40%{ transform:rotate(3deg); } 70%{ transform:rotate(-1.5deg); } 100%{ transform:rotate(0); } }
+@media (prefers-reduced-motion:reduce){ .site-header .brand{ animation:none; } }
+.nav__links a{ font-family:var(--font-body); font-weight:700; }
+.nav__links a[aria-current="page"]::after{ background:var(--berry); }
+.btn{ border-radius:999px; font-family:var(--font-display); font-weight:600; letter-spacing:.01em; }
+.btn:hover{ transform:translateY(-3px) rotate(-1deg); }
+.btn--accent:hover{ background:#345a34; }
+.card{ border-radius:var(--radius); background:var(--paper); border-color:var(--line); }
+
+/* =============================================================
+   Hero — the sign, and steam
+   ============================================================= */
+.hero--sign{ position:relative; isolation:isolate; color:#fff; min-height:clamp(24rem,64vh,40rem); display:flex; align-items:flex-end; }
+.hero--sign .hero__bg::after{ background:linear-gradient(180deg, rgba(44,74,48,.2) 0%, rgba(44,74,48,.4) 40%, rgba(28,46,32,.82) 100%); }
+.hero--sign .container{ padding-block:clamp(2.5rem,2rem + 3vw,4rem); }
+.hero--sign h1{ font-size:clamp(2.8rem, 1.6rem + 6vw, 5.5rem); color:#fff; max-width:16ch; }
+.hero--sign .lead{ color:#eee3d1; max-width:44ch; }
+.hero__hours{ margin-top:1rem; font-family:var(--font-hand); font-size:calc(var(--step-1) * 1.1); color:#ffd9a0; transform:rotate(-1.5deg); display:inline-block; }
+.steam{ position:absolute; left:8%; top:14%; z-index:1; width:60px; height:120px; pointer-events:none; opacity:.5; }
+.steam span{ position:absolute; bottom:0; width:10px; height:60px; border-radius:999px;
+  background:linear-gradient(180deg, transparent, rgba(255,255,255,.7)); filter:blur(4px);
+  animation:rise 4.5s ease-in infinite; }
+.steam span:nth-child(2){ left:22px; animation-delay:1.4s; height:80px; }
+.steam span:nth-child(3){ left:40px; animation-delay:2.8s; height:50px; }
+@keyframes rise{ 0%{ transform:translateY(20px) scaleX(1); opacity:0; } 30%{ opacity:.8; } 100%{ transform:translateY(-90px) scaleX(1.8); opacity:0; } }
+@media (prefers-reduced-motion:reduce){ .steam{ display:none; } }
+
+/* leaf divider */
+.leafrule{ border:0; text-align:center; margin:0; overflow:visible; }
+.leafrule::before{ content:"🌿"; font-size:1.4rem; opacity:.7; }
+
+/* =============================================================
+   Recipe-card menu
+   ============================================================= */
+.recipes{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:var(--space-md); }
+.recipe{ position:relative; background:#f3e6cd; border:1px solid #ddc9a5; border-radius:10px; padding:1.4rem 1.5rem 1.6rem;
+  box-shadow:0 10px 24px -14px rgba(58,47,36,.4); }
+.recipe::before{ content:""; position:absolute; left:1.3rem; right:1.3rem; top:2.9rem; border-top:1px dashed #cbb488; }
+.recipe h3{ font-family:var(--font-hand); font-weight:400; font-size:calc(var(--step-1) * 1.15); color:var(--brand); margin:0 0 1rem; }
+.recipe__row{ display:flex; align-items:baseline; gap:.6rem; padding:.4rem 0; }
+.recipe__row .n{ font-family:var(--font-body); font-weight:700; color:var(--ink); }
+.recipe__row .dots{ flex:1; border-bottom:2px dotted #cbb488; transform:translateY(-.25em); }
+.recipe__row .p{ font-family:var(--font-mono); font-weight:800; white-space:nowrap; color:var(--berry); }
+.recipe small{ display:block; margin-top:.6rem; color:var(--ink-soft); font-size:var(--step--1); }
+
+/* =============================================================
+   Find the door
+   ============================================================= */
+.findthedoor{ background:var(--paper-2); border:2px dashed var(--line); border-radius:var(--radius); padding:clamp(1.6rem,1.2rem + 2vw,2.6rem); }
+.findthedoor .clue{ font-family:var(--font-hand); font-size:calc(var(--step-1) * 1.05); color:var(--berry); display:block; margin:.6rem 0; transform:rotate(-1deg); }
+.findthedoor .media{ margin-top:1rem; border-radius:12px; }
+
+/* gallery tweak */
+.gallery img{ filter:saturate(.95) contrast(1.02); }
+
+.review{ background:var(--paper); border-left:0; border-radius:var(--radius); padding:1.4rem 1.6rem; box-shadow:0 10px 24px -16px rgba(58,47,36,.35); }
+.review p{ font-family:var(--font-body); font-weight:700; }
+.review cite{ color:var(--accent); font-family:var(--font-hand); font-style:normal; letter-spacing:0; text-transform:none; }
+.stars{ color:var(--berry); }
+.stat__num{ font-family:var(--font-display); font-weight:600; color:var(--berry); }
+.section--brand .stat__num{ color:#ffd9a0; }
+.section--brand .stat__label{ color:#d7e0cd; }
+.chat-fab{ background:var(--berry); border-radius:999px; }
+.site-footer{ background:var(--brand); --line:rgba(255,255,255,.16); }
+.site-footer .brand{ box-shadow:0 4px 0 #12210f; }
+.foot-h{ font-family:var(--font-hand); letter-spacing:0; text-transform:none; font-size:calc(var(--step-0) * 1.05); opacity:.9; }
+.field input,.field select,.field textarea{ border:1.5px solid var(--line); border-radius:12px; background:var(--paper); }
+.field label{ font-family:var(--font-body); font-weight:700; }
+.notfound{ text-align:center; padding-block:var(--space-2xl); }
+
+/* fix: nav CTA button colour (base .nav__links a override was winning) */
+.nav__links a.btn{ color:var(--_fg); }
+
+/* dial the storybook headline down a touch */
+.hero--sign h1{ font-size:clamp(2.6rem, 1.5rem + 5vw, 4.6rem); }

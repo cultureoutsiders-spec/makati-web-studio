@@ -1,0 +1,140 @@
+/* =============================================================
+   All Stars Cafe and Sports Bar — theme.css
+   Direction: a fixtures scoreboard. Floodlit stadium-at-night —
+   deep navy-black, a signal-amber accent, red for LIVE, a hint of
+   pitch green. Condensed LED-style display type. The hero is a
+   "tonight's games" board; the week is a fixtures list where rows
+   light up like selecting a channel.
+   ============================================================= */
+:root{
+  --paper:      #0e1420;
+  --paper-2:    #161f2e;
+  --ink:        #eef2f7;
+  --ink-soft:   #9fb0c3;
+  --line:       #2a3546;
+  --accent:     #ffd21f;   /* floodlight amber */
+  --accent-ink: #0e1420;
+  --brand:      #0a0f18;
+  --brand-ink:  #eef2f7;
+  --live:       #ff3b30;
+  --turf:       #2f8f4e;
+
+  --font-display: "Rajdhani", "Arial Narrow", system-ui, sans-serif;
+  --font-body:    "Barlow Semi Condensed", system-ui, -apple-system, sans-serif;
+  --font-mono:    "Space Mono", ui-monospace, Menlo, monospace;
+
+  --radius: 4px;
+  --container: 1200px;
+}
+
+body{ background:var(--paper); color:var(--ink); }
+h1,h2,h3{ font-family:var(--font-display); font-weight:700; text-transform:uppercase; letter-spacing:.02em; line-height:1; }
+h1,.display{ font-weight:700; }
+.lead{ font-size:var(--step-1); color:var(--ink-soft); line-height:1.45; }
+.section--brand{ background:var(--brand); }
+.section--brand .lead{ color:#b6c4d4; }
+a{ color:var(--accent); }
+.rule{ border-color:var(--line); }
+.eyebrow{ color:var(--accent); font-family:var(--font-mono); letter-spacing:.24em; }
+.eyebrow::before{ background:var(--accent); }
+.section--brand .eyebrow{ color:var(--accent); }
+
+/* LED dot texture for panels */
+.dots-bg{ background-image:radial-gradient(rgba(255,255,255,.05) 1px, transparent 1.4px); background-size:9px 9px; }
+
+.brand{ font-family:var(--font-display); font-weight:700; text-transform:uppercase; letter-spacing:.1em; font-size:var(--step-1); color:var(--ink); }
+.brand b{ color:var(--accent); }
+.nav__links a{ font-family:var(--font-display); font-weight:600; text-transform:uppercase; letter-spacing:.06em; font-size:var(--step-0); }
+.nav__links a[aria-current="page"]::after{ background:var(--accent); }
+.nav__toggle{ background:var(--paper-2); border-color:var(--line); }
+.nav__toggle span,.nav__toggle span::before,.nav__toggle span::after{ background:var(--ink); }
+@media (max-width:1040px){ .nav__links{ background:var(--brand); border-color:var(--line); } .nav__links a{ border-color:var(--line); color:var(--ink); } }
+.btn{ text-transform:uppercase; letter-spacing:.1em; font-family:var(--font-display); font-weight:700; border-radius:var(--radius); }
+.btn{ --_bg:var(--accent); --_fg:var(--accent-ink); }
+.btn--ghost{ --_bg:transparent; --_fg:var(--ink); border-color:var(--ink-soft); }
+.btn:hover{ transform:translateY(-2px); }
+.card{ background:var(--paper-2); border-color:var(--line); border-radius:var(--radius); }
+
+/* =============================================================
+   Scoreboard hero
+   ============================================================= */
+.hero--board{ position:relative; isolation:isolate; padding-block:clamp(2.5rem,2rem + 3vw,4.5rem); }
+.hero--board .hero__bg{ opacity:.28; }
+.hero--board .hero__bg::after{ background:linear-gradient(180deg, rgba(10,15,24,.7), rgba(10,15,24,.92)); }
+.hero--board h1{ font-size:clamp(2.6rem, 1.6rem + 5vw, 5rem); }
+.hero--board .lead{ max-width:44ch; margin-top:.6rem; }
+
+.board{ margin-top:1.6rem; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-2); overflow:hidden; }
+.board__head{ display:flex; justify-content:space-between; align-items:center; padding:.7rem 1.1rem; background:var(--brand); border-bottom:1px solid var(--line); }
+.board__head b{ font-family:var(--font-display); font-weight:700; text-transform:uppercase; letter-spacing:.16em; font-size:var(--step-0); }
+.board__head span{ font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); }
+.game{ display:grid; grid-template-columns:auto 1fr auto; gap:1rem; align-items:center; padding:1rem 1.1rem; border-bottom:1px solid var(--line); }
+.game:last-child{ border-bottom:0; }
+.game__lg{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.1em; color:var(--ink-soft); width:5.5rem; }
+.game__vs{ font-family:var(--font-display); font-weight:700; text-transform:uppercase; font-size:var(--step-1); letter-spacing:.02em; }
+.game__vs em{ color:var(--ink-soft); font-style:normal; font-weight:600; padding:0 .5rem; }
+.game__meta{ display:flex; align-items:center; gap:.7rem; font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); white-space:nowrap; }
+.game--live .game__vs{ color:var(--accent); }
+.dot-live{ width:.6rem; height:.6rem; border-radius:50%; background:var(--live); box-shadow:0 0 0 0 rgba(255,59,48,.6); animation:blip 1.6s ease-out infinite; }
+@keyframes blip{ 0%{ box-shadow:0 0 0 0 rgba(255,59,48,.6); } 70%{ box-shadow:0 0 0 8px rgba(255,59,48,0); } 100%{ box-shadow:0 0 0 0 rgba(255,59,48,0); } }
+@media (prefers-reduced-motion:reduce){ .dot-live{ animation:none; } }
+.badge-live{ font-family:var(--font-display); font-weight:700; font-size:var(--step--1); letter-spacing:.1em; color:var(--live); }
+
+/* =============================================================
+   Fixtures list
+   ============================================================= */
+.fixtures{ border-top:2px solid var(--accent); }
+.fx{ display:grid; grid-template-columns:4.5rem 1fr 1fr auto; gap:1rem; align-items:baseline; padding:1rem .8rem; border-bottom:1px solid var(--line); transition:background .15s ease, box-shadow .15s ease, padding-left .15s ease; }
+.fx:hover{ background:var(--paper-2); box-shadow:inset 3px 0 0 var(--accent); padding-left:1.2rem; }
+.fx__day{ font-family:var(--font-display); font-weight:700; text-transform:uppercase; color:var(--accent); }
+.fx__lg{ font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); }
+.fx__match{ font-family:var(--font-display); font-weight:600; text-transform:uppercase; letter-spacing:.02em; font-size:var(--step-0); }
+.fx__time{ font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); white-space:nowrap; }
+@media (max-width:640px){ .fx{ grid-template-columns:3.5rem 1fr; } .fx__lg,.fx__time{ display:none; } }
+
+/* =============================================================
+   Game-day menu
+   ============================================================= */
+.gameday{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:var(--space-md); }
+.gd{ background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius); padding:1.4rem 1.5rem; }
+.gd h3{ font-size:var(--step-1); color:var(--accent); margin:0 0 .6rem; }
+.gd__row{ display:flex; align-items:baseline; gap:.6rem; padding:.4rem 0; border-bottom:1px solid var(--line); }
+.gd__row:last-child{ border-bottom:0; }
+.gd__row .n{ font-family:var(--font-body); font-weight:600; }
+.gd__row .dots{ flex:1; border-bottom:1px dotted var(--line); transform:translateY(-.3em); }
+.gd__row .p{ font-family:var(--font-mono); white-space:nowrap; color:var(--ink); }
+
+/* screens strip */
+.screens{ display:flex; flex-wrap:wrap; gap:.6rem; }
+.screens span{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.06em; border:1px solid var(--line); background:var(--paper-2); padding:.4em .9em; border-radius:var(--radius); }
+.screens span::before{ content:"▣ "; color:var(--turf); }
+
+/* gallery / reviews / misc */
+.gallery img{ filter:saturate(.85) brightness(.82) contrast(1.05); }
+.gallery button:hover img{ filter:none; }
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-body); font-weight:600; }
+.review cite{ font-family:var(--font-mono); color:var(--ink-soft); }
+.stars{ color:var(--accent); }
+.stat__num{ font-family:var(--font-display); font-weight:700; color:var(--accent); }
+.stat__label{ color:var(--ink-soft); }
+.chat-fab{ background:var(--accent); color:var(--accent-ink); }
+.site-footer{ background:var(--brand); --line:#2a3546; }
+.foot-h{ font-family:var(--font-display); font-weight:700; letter-spacing:.14em; }
+.field input,.field select,.field textarea{ background:var(--paper-2); border-color:var(--line); color:var(--ink); border-radius:var(--radius); }
+.field label{ font-family:var(--font-display); font-weight:600; text-transform:uppercase; letter-spacing:.06em; font-size:var(--step--1); }
+.demo-flag{ border-color:#33425a; }
+.notfound{ text-align:center; padding-block:var(--space-2xl); }
+
+/* fix: nav CTA button colour (base .nav__links a override was winning) */
+.nav__links a.btn{ color:var(--_fg); }
+
+/* fix: scoreboard meta column clipping */
+.game{ grid-template-columns:auto minmax(0,1fr) auto; }
+.game__meta{ font-size:calc(var(--step--1) * .95); }
+@media (max-width:620px){ .game{ grid-template-columns:auto 1fr; } .game__meta{ grid-column:1 / -1; margin-top:.3rem; } }
+
+/* scoreboard: let the meta column breathe */
+.board{ overflow:visible; }
+.game__meta{ min-width:0; }
+.game__vs{ min-width:0; overflow:hidden; text-overflow:ellipsis; }

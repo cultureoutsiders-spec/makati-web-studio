@@ -1,0 +1,127 @@
+/* =============================================================
+   PhysioSpace Poblacion — theme.css
+   Direction: a calm, "breathing" single column. Soft hero, generous
+   air, thin seams between sections. Three pillars (manual therapy /
+   movement / sound healing) where hovering one quiets the others,
+   and a vertical session-flow. Bone + deep teal + warm clay + gold.
+   High-contrast literary serif, airy humanist body.
+   ============================================================= */
+:root{
+  --paper:      #f6f3ec;
+  --paper-2:    #ece7db;
+  --ink:        #2a3330;
+  --ink-soft:   #5c6763;
+  --line:       #ddd6c6;
+  --accent:     #b1683f;   /* warm clay */
+  --accent-ink: #f6f3ec;
+  --brand:      #1f3b38;   /* deep teal */
+  --brand-ink:  #eef3ef;
+  --gold:       #c9a45c;
+
+  --font-display: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-body:    "Mulish", system-ui, -apple-system, sans-serif;
+  --font-mono:    "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+  --radius: 2px;
+  --container: 1080px;
+}
+
+h1,h2,h3{ font-family:var(--font-display); font-weight:400; letter-spacing:.005em; }
+h1,.display{ line-height:1.04; }
+h2 em,.display em,.hero h1 em{ font-style:italic; color:var(--accent); }
+.lead{ font-size:var(--step-1); color:var(--ink-soft); line-height:1.6; font-weight:400; }
+body{ font-weight:400; }
+.section--brand{ background:var(--brand); }
+.section--brand .lead{ color:#c8d5d0; }
+.eyebrow{ color:var(--accent); font-family:var(--font-mono); letter-spacing:.28em; }
+.eyebrow::before{ background:var(--gold); }
+.section--brand .eyebrow{ color:#d9b784; }
+
+/* longer, calmer reveal */
+.reveal,.reveal-group > *{ transition-duration:1.1s; }
+
+.brand{ font-family:var(--font-display); font-weight:400; font-size:var(--step-2); letter-spacing:.01em; color:var(--ink); }
+.brand small{ font-family:var(--font-mono); font-size:.34em; letter-spacing:.34em; text-transform:uppercase; color:var(--ink-soft); display:block; margin-top:.15em; }
+.nav__links a[aria-current="page"]::after{ background:var(--accent); }
+.btn{ border-radius:var(--radius); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.16em; font-size:var(--step--1); font-weight:400; }
+.btn--accent:hover{ background:#9c5a35; }
+
+/* =============================================================
+   Hero — one breath
+   ============================================================= */
+.hero--breath{ position:relative; isolation:isolate; min-height:clamp(26rem,72vh,44rem); display:grid; place-items:center; text-align:center; color:#fff; }
+.hero--breath .hero__bg::after{ background:linear-gradient(180deg, rgba(31,59,56,.42), rgba(31,59,56,.6)); }
+.hero--breath .container{ max-width:44rem; }
+.hero--breath h1{ font-size:clamp(2.6rem, 1.6rem + 5vw, 5rem); color:#fff; }
+.hero--breath h1 em{ color:#e9c79a; }
+.hero--breath .lead{ color:#eae3d6; margin-top:1rem; }
+.hero--breath .btn{ margin-top:1.8rem; }
+.hero--breath .btn--ghost{ border-color:rgba(255,255,255,.5); color:#fff; }
+
+/* thin seam between sections */
+.seam{ border:0; height:1px; background:var(--line); max-width:6rem; margin:0 auto; }
+
+/* =============================================================
+   Three pillars
+   ============================================================= */
+.pillars{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+@media (max-width:780px){ .pillars{ grid-template-columns:1fr; } }
+.pillar{ position:relative; overflow:hidden; background:var(--paper); padding:clamp(1.8rem,1.4rem + 2vw,3rem); transition:background .4s ease, opacity .4s ease; }
+.pillars:hover .pillar{ opacity:.5; }
+.pillars .pillar:hover{ opacity:1; background:var(--paper-2); }
+@media (prefers-reduced-motion:reduce), (hover:none){ .pillars:hover .pillar{ opacity:1; } }
+.pillar .n{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.14em; color:var(--gold); }
+.pillar h3{ font-size:var(--step-2); margin:.4rem 0 .5rem; }
+.pillar p{ margin:0; color:var(--ink-soft); }
+.pillar--sound::before{ content:""; position:absolute; right:-3rem; bottom:-3rem; width:11rem; height:11rem; border-radius:50%;
+  background:radial-gradient(circle, transparent 38%, color-mix(in srgb, var(--accent) 24%, transparent) 40%, transparent 42%, color-mix(in srgb,var(--accent) 18%,transparent) 55%, transparent 57%, color-mix(in srgb,var(--accent) 12%,transparent) 72%, transparent 74%);
+  animation:ripple 6s ease-in-out infinite; }
+@keyframes ripple{ 0%,100%{ transform:scale(.9); opacity:.6; } 50%{ transform:scale(1.15); opacity:1; } }
+@media (prefers-reduced-motion:reduce){ .pillar--sound::before{ animation:none; } }
+
+/* =============================================================
+   Session flow
+   ============================================================= */
+.flow{ display:grid; gap:0; border-left:1px solid var(--line); margin-left:.5rem; }
+.flow__step{ position:relative; padding:1.6rem 0 1.6rem 2rem; }
+.flow__step::before{ content:""; position:absolute; left:-4.5px; top:2.1rem; width:8px; height:8px; border-radius:50%; background:var(--accent); }
+.flow__step .n{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.14em; color:var(--gold); }
+.flow__step h3{ font-size:var(--step-1); margin:.2rem 0 .3rem; }
+.flow__step p{ margin:0; color:var(--ink-soft); }
+
+/* practitioners */
+.people{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:var(--space-lg); }
+.who .media{ aspect-ratio:3/4; border-radius:var(--radius); }
+.who h3{ font-size:var(--step-1); margin:.8rem 0 .2rem; }
+.who p{ margin:0; color:var(--ink-soft); font-size:var(--step--1); }
+
+/* pricing rows */
+.priceline{ display:grid; grid-template-columns:1fr auto; gap:.4rem 1.5rem; padding:1rem 0; border-bottom:1px solid var(--line); align-items:baseline; }
+.priceline b{ font-family:var(--font-display); font-weight:400; font-size:var(--step-1); }
+.priceline .amt{ font-family:var(--font-mono); font-size:var(--step-0); color:var(--accent); white-space:nowrap; }
+.priceline p{ grid-column:1/-1; margin:.2rem 0 0; color:var(--ink-soft); font-size:var(--step--1); }
+
+.card{ border-radius:var(--radius); background:var(--paper); }
+.section--brand .card{ background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.16); }
+.review{ border-left-color:var(--gold); }
+.review p{ font-family:var(--font-display); font-style:italic; font-size:var(--step-2); }
+.review cite{ font-family:var(--font-mono); }
+.stars{ color:var(--gold); }
+.stat__num{ font-family:var(--font-display); font-weight:400; }
+.section--brand .stat__num{ color:#fff; }
+.section--brand .stat__label{ color:#c8d5d0; }
+.chat-fab{ background:var(--accent); border-radius:var(--radius); }
+.site-footer{ background:var(--brand); --line:rgba(255,255,255,.16); }
+.site-footer .brand{ color:#fff; }
+.site-footer .brand small{ color:#a9bdb8; }
+.foot-h{ font-family:var(--font-mono); letter-spacing:.2em; }
+.field input,.field select,.field textarea{ border:1px solid var(--ink-soft); border-radius:var(--radius); background:var(--paper); }
+.field label{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.1em; text-transform:uppercase; }
+.notfound{ text-align:center; padding-block:var(--space-2xl); }
+
+/* fix: nav CTA button colour (base .nav__links a override was winning) */
+.nav__links a.btn{ color:var(--_fg); }
+
+/* fix: hero eyebrow contrast over photo */
+.hero--breath .eyebrow{ color:#e9c79a; }
+.hero--breath .eyebrow::before{ background:#e9c79a; }

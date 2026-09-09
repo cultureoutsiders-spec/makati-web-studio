@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pre-order for pickup — Koffle</title>
+<meta name="description" content="Send Koffle your order ahead of time and we'll have it ready at the door. Zobel Roxas St, Palanan, Makati. We confirm on Facebook or by email.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Pre-order for pickup — Koffle">
+<meta property="og:description" content="Order ahead and grab it at the door.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@500;600;700&family=Gochi+Hand&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" data-open="false" aria-label="Primary">
+    <a class="brand" href="index.html">Koffle</a>
+    <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    <ul class="nav__links" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="the-space.html">The Space</a></li>
+      <li><a href="visit.html">Visit</a></li>
+      <li><a class="btn btn--accent" href="order.html#order" aria-current="page">Pre-order</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="section" id="order">
+    <div class="container split split--top">
+      <div class="stack">
+        <p class="eyebrow">Pre-order</p>
+        <h1>Order ahead, skip the wait</h1>
+        <p class="lead">Send this at least 20 minutes before pickup. We'll reply to confirm the
+          total and a ready time, then have it bagged at the door.</p>
+        <p class="lead">Faster to message?<br>
+          <a href="https://www.facebook.com/koffle" rel="noopener">Messenger</a> ·
+          <a href="mailto:kofflecafeph@gmail.com">kofflecafeph@gmail.com</a></p>
+        <p style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft)">This is a design proposal — the form needs a Web3Forms key before it can send; until then it opens your email app to kofflecafeph@gmail.com.</p>
+      </div>
+      <form class="form" data-contact data-web3key="REPLACE_WITH_WEB3FORMS_KEY" data-mailto="kofflecafeph@gmail.com">
+        <div class="field"><label for="n">Name</label><input id="n" name="name" required></div>
+        <div class="field"><label for="c">Mobile</label><input id="c" name="contact" required></div>
+        <div class="field"><label for="t">Pickup time</label><input id="t" type="time" name="pickup" required></div>
+        <div class="field"><label for="o">Your order</label><textarea id="o" name="order" placeholder="e.g. 1 Spanish latte (oat), 1 mushroom koffle, 1 cookie" required></textarea></div>
+        <div class="field"><label for="p">Payment on pickup</label>
+          <select id="p" name="payment"><option>Cash</option><option>GCash</option><option>Card</option></select></div>
+        <input type="checkbox" name="botcheck" class="field--hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn--accent btn--lg" type="submit">Send pre-order</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div><p class="brand">Koffle</p><p style="opacity:.85; margin-top:1rem; max-width:34ch">A hidden coffee-and-waffle nook on Zobel Roxas St, Palanan, Makati. Open 7 am – 9 pm, every day.</p></div>
+      <div><p class="foot-h">Find us</p><p>5861 Zobel Roxas St.<br>Barangay Palanan<br>Makati City</p></div>
+      <div><p class="foot-h">Say hello</p><p><a href="mailto:kofflecafeph@gmail.com">kofflecafeph@gmail.com</a><br><a href="https://www.facebook.com/koffle" rel="noopener">Message on Facebook</a><br><a href="https://www.tiktok.com/@koffle.cafe" rel="noopener">@koffle.cafe on TikTok</a></p></div>
+    </div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Koffle.</div>
+    <div class="foot-note"><span>© <span data-year>2026</span> Koffle. Concept site.</span><span>Built by GCCofCI Digital</span></div>
+  </div>
+</footer>
+
+<a class="chat-fab" href="https://www.facebook.com/koffle" rel="noopener" aria-label="Message us on Facebook">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.4-2.6-2.8-5 2.8 5.5-5.9 2.7 2.8 4.9-2.8-5.5 5.9z"/></svg>
+  Message us
+</a>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
