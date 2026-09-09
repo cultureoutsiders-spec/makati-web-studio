@@ -2,7 +2,7 @@
 
 **Channel:** Email · **To:** allstarscafeandsportsbar@gmail.com
 **Live demo:** https://cultureoutsiders-spec.github.io/makati-web-studio/all-stars/
-**Status:** NOT SENT — batch 3, review then send
+**Status:** NOT SENT — staged as a Gmail draft in gccofci.digital@gmail.com 2026-09-10; Michael reviews + sends
 
 **Offer:** PHP 25,000 one-time, introductory rate for the first 5 paying clients, then PHP 35,000.
 No monthly retainer. Price includes putting it live on their domain. Site is theirs to keep.
