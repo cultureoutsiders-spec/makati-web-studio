@@ -49,17 +49,11 @@ Gourmet Corner PH (`gourmetcornerph.com`).
 - **Template:** service menu + spec/turnaround tables + a photo-quote form. Closest to Easyshare's
   "order desk" pattern, in a heritage-workshop register (leather, brass, worn tools).
 
-### 2. Quicker than Quick — shoe & bag repair, key duplication, locksmith, custom leather
-- **Where:** Makati (mall-level kiosk-style shop; confirm exact address off the FB page).
-- **Presence:** Facebook (`/quickerthanquickph`). `quickerthanquick.com` resolves but is a parked
-  "lander", **not a real site**. **No working website.**
-- **Contact:** Facebook Messenger. Grab an email/number off the FB About tab.
-- **Pitch angle:** four trades under one counter (shoe/bag repair, key cutting, locksmithing,
-  bespoke small leather goods) and no single page that lays them out. A site with a tabbed
-  "what we do" board, a while-you-wait vs. leave-it list, and a quote form turns a confusing
-  kiosk into a booked job.
-- **Template:** four-service tabbed board (like SHALA's colour-chip tabs) + a drop-off / quote
-  form.
+### 2. Quicker than Quick — REMOVED (2026-09-11)
+Built as a site, then dropped: the email Michael found (`quickerthanquickph@gmail.com`) bounced
+with `550 5.1.1 NoSuchUser`, and there is no other reliable contact. The `quicker-than-quick/`
+site folder, its `emails/*.md` draft, its Gmail draft, and its studio-landing / README entries
+were all removed. Batch 7 is now 4 sites.
 
 ### 3. Jackson Tailors — bespoke tailoring
 - **Where:** Makati (confirm street address off FB).
@@ -115,9 +109,9 @@ Gourmet Corner PH (`gourmetcornerph.com`).
 
 - **Email-first:** none of the five publish an email. All are **DM / call-first**. Grab an email
   off each Facebook About tab first if there is one.
-- **Build order that reuses work:** Easyshare "order desk" → Shoe Care; SHALA colour-chip tabs →
-  Quicker than Quick; MOOI "treatment index" → Jackson Tailors; COREX schedule → Studio Matisse
-  and Another Barbershop.
+- **Build order that reuses work:** Easyshare "order desk" → Shoe Care; MOOI "treatment index" →
+  Jackson Tailors; COREX schedule → Studio Matisse and Another Barbershop. (Quicker than Quick
+  removed — see section 2.)
 - **Re-verify before pitching** (the One World Butchers lesson): confirm each is currently
   operating in Makati and still has no site at the moment you send. Jackson Tailors is the
   shakiest on operating status.
