@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a consult — Dream Hair Makati</title>
+<meta name="description" content="Book a colour consultation at Dream Hair Makati. Tell us your hair's history and what you're after; we reply with a price, a timeline and an honest read.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500;700;800&family=Gantari:ital,wght@0,400;0,500;0,600;1,400&family=Fira+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" data-open="false" aria-label="Primary">
+    <a class="brand" href="index.html">Dream <mark>Hair</mark></a>
+    <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    <ul class="nav__links" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="colour.html">Colour</a></li>
+      <li><a href="the-shade-wall.html">Shade wall</a></li>
+      <li><a href="how-it-works.html">How it works</a></li>
+      <li><a class="btn btn--accent" href="consult.html#consult" aria-current="page">Book a consult</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="section section--tight">
+    <div class="container">
+      <p class="eyebrow">Book a consult</p>
+      <h1>Tell us where your hair is starting from</h1>
+      <p class="lead measure">The more you tell us, the more useful the reply. We come back with a
+        realistic target, a price, a timeline, and whether it is one visit or two. This reaches
+        the salon.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight" style="padding-top:0">
+    <div class="container">
+      <div class="split split--top">
+        <form class="form card" id="consult" data-contact data-web3key="REPLACE_WITH_WEB3FORMS_KEY" data-mailto="dreamhairph16@gmail.com">
+          <div class="field field--hp"><label>Leave this empty<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="n">Your name</label><input id="n" name="name" required></div>
+            <div class="field"><label for="p">Mobile number</label><input id="p" name="phone" inputmode="tel" required></div>
+          </div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="w">What you're after</label>
+              <select id="w" name="want">
+                <option>Balayage</option>
+                <option>Ombré</option>
+                <option>Full head highlights</option>
+                <option>Single-process colour</option>
+                <option>Grey coverage</option>
+                <option>Fashion colour</option>
+                <option>Colour correction</option>
+                <option>Not sure &mdash; help me decide</option>
+              </select></div>
+            <div class="field"><label for="l">Hair length</label>
+              <select id="l" name="length"><option>Short (above shoulder)</option><option>Medium (to collarbone)</option><option>Long (past collarbone)</option><option>Very long</option></select></div>
+          </div>
+          <div class="field"><label for="h">Colour history</label><textarea id="h" name="history" placeholder="Natural colour, when it was last coloured and with what, any box dye ever, henna, previous lightening, current condition. This is the most useful part."></textarea></div>
+          <div class="field"><label for="i">Reference &amp; anything else</label><textarea id="i" name="notes" placeholder="Describe the look, or say you'll bring photos. Preferred days, budget range, whether you can do a two-visit plan."></textarea></div>
+          <button class="btn btn--accent btn--lg" type="submit">Send consultation request</button>
+          <p class="form-status" role="status"></p>
+          <p style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); margin:0">
+            Or email <a href="mailto:dreamhairph16@gmail.com">dreamhairph16@gmail.com</a> / <a href="https://www.facebook.com/dreamhairmakati" rel="noopener">message on Facebook</a> with photos.</p>
+        </form>
+
+        <div class="stack">
+          <div class="card">
+            <span class="eyebrow" style="margin-top:0">The salon</span>
+            <p>303 JP Rizal Street<br>Barangay Tejeros, Makati<br>(GF, CMC Building)</p>
+            <hr class="rule">
+            <span class="eyebrow">Hours</span>
+            <p>Every day &middot; 10am&ndash;9pm</p>
+            <hr class="rule">
+            <span class="eyebrow">Good to know</span>
+            <p style="font-family:var(--font-mono)">Patch test 48h before a new colour type &middot; consult is free &middot; fashion colour books a long slot &middot; formula kept on file</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div><p class="brand" style="color:var(--brand-ink)">Dream <mark>Hair</mark></p><p style="opacity:.85; margin-top:1rem; max-width:34ch">A hair-colour salon on JP Rizal Street, Tejeros, Makati.</p></div>
+      <div><p class="foot-h">Salon</p><p>303 JP Rizal Street<br>Barangay Tejeros, Makati</p></div>
+      <div><p class="foot-h">Reach us</p><p><a href="mailto:dreamhairph16@gmail.com">dreamhairph16@gmail.com</a><br><a href="https://www.facebook.com/dreamhairmakati" rel="noopener">Facebook</a></p></div>
+    </div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital &mdash; not the official website of Dream Hair Makati. The form needs a free Web3Forms key (2 minutes) before it delivers to an inbox; until then it opens the visitor's email app to dreamhairph16@gmail.com.</div>
+    <div class="foot-note"><span>&copy; <span data-year>2026</span> Dream Hair Makati. Concept site.</span><span>Built by GCCofCI Digital</span></div>
+  </div>
+</footer>
+
+<a class="chat-fab" href="https://www.facebook.com/dreamhairmakati" rel="noopener" aria-label="Message us on Facebook">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.4-2.6-2.8-5 2.8 5.5-5.9 2.7 2.8 4.9-2.8-5.5 5.9z"/></svg>
+  Message us
+</a>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

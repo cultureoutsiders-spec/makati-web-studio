@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reserve a cake — Pâtisserie BEBE Rouge</title>
+<meta name="description" content="Reserve a whole cake at Pâtisserie BEBE Rouge, Makati: pick a cake and size, tell us the pickup day, and we confirm with the deposit details.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Be+Vietnam+Pro:wght@400;500;600&family=Kode+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" data-open="false" aria-label="Primary">
+    <a class="brand" href="index.html">BEBE <mark>Rouge</mark></a>
+    <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    <ul class="nav__links" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cakes.html">Whole cakes</a></li>
+      <li><a href="the-case.html">The case</a></li>
+      <li><a href="our-story.html">Our story</a></li>
+      <li><a class="btn btn--accent" href="reserve.html#reserve" aria-current="page">Reserve a cake</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="section section--tight">
+    <div class="container">
+      <p class="eyebrow">Reserve a cake</p>
+      <h1>Tell us the cake and the day</h1>
+      <p class="lead measure">Send this and we reply to confirm the cake, the price and the
+        deposit. Whole cakes need 1 to 2 days; custom designs need 4 to 7. This reaches the shop.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight" style="padding-top:0">
+    <div class="container">
+      <div class="split split--top">
+        <form class="form card" id="reserve" data-contact data-web3key="REPLACE_WITH_WEB3FORMS_KEY" data-mailto="beberougenhtc@gmail.com">
+          <div class="field field--hp"><label>Leave this empty<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="n">Your name</label><input id="n" name="name" required></div>
+            <div class="field"><label for="p">Mobile number</label><input id="p" name="phone" inputmode="tel" required></div>
+          </div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="c">Cake</label>
+              <select id="c" name="cake">
+                <option>Strawberry shortcake</option>
+                <option>Matcha &amp; azuki</option>
+                <option>Opéra</option>
+                <option>Hokkaido roll</option>
+                <option>Chocolate gâteau</option>
+                <option>Fruit tart, large</option>
+                <option>Seasonal cake</option>
+                <option>Custom design</option>
+              </select></div>
+            <div class="field"><label for="s">Size</label>
+              <select id="s" name="size"><option>6 inch</option><option>8 inch</option><option>10 inch</option><option>Rectangle / roll</option><option>Not sure &mdash; advise me</option></select></div>
+          </div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="d">Pickup day</label><input id="d" name="pickup" type="date" required></div>
+            <div class="field"><label for="tm">Pickup time</label><input id="tm" name="time" placeholder="e.g. around 4pm"></div>
+          </div>
+          <div class="field"><label for="i">Message on the cake, or anything else</label><textarea id="i" name="notes" placeholder="Greeting to pipe, allergies, a reference photo for a custom design, how many people it needs to serve."></textarea></div>
+          <button class="btn btn--accent btn--lg" type="submit">Send reservation request</button>
+          <p class="form-status" role="status"></p>
+          <p style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); margin:0">
+            Or email <a href="mailto:beberougenhtc@gmail.com">beberougenhtc@gmail.com</a> / call <a href="tel:+639178519636">0917 851 9636</a>. A 50% deposit confirms the reservation.</p>
+        </form>
+
+        <div class="stack">
+          <div class="card">
+            <span class="eyebrow" style="margin-top:0">The shop</span>
+            <p>7602 Sacred Heart Street cor. Metropolitan Avenue<br>Barangay San Antonio, Makati</p>
+            <hr class="rule">
+            <span class="eyebrow">Hours</span>
+            <p>Every day &middot; 8am&ndash;7pm</p>
+            <hr class="rule">
+            <span class="eyebrow">Lead times</span>
+            <p style="font-family:var(--font-mono)">Roll / shortcake 1 day &middot; most cakes 2 days &middot; custom 4&ndash;7 days &middot; seasonal by reservation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div><p class="brand" style="color:var(--brand-ink)">BEBE <mark>Rouge</mark></p><p style="opacity:.85; margin-top:1rem; max-width:36ch">A French-Japanese patisserie on Sacred Heart Street, San Antonio, Makati.</p></div>
+      <div><p class="foot-h">Shop</p><p>7602 Sacred Heart Street<br>cor. Metropolitan Avenue<br>San Antonio, Makati</p></div>
+      <div><p class="foot-h">Reach us</p><p><a href="mailto:beberougenhtc@gmail.com">beberougenhtc@gmail.com</a><br><a href="tel:+639178519636">0917 851 9636</a></p></div>
+    </div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital &mdash; not the official website of Pâtisserie BEBE Rouge. The form needs a free Web3Forms key (2 minutes) before it delivers to an inbox; until then it opens the visitor's email app to beberougenhtc@gmail.com.</div>
+    <div class="foot-note"><span>&copy; <span data-year>2026</span> Pâtisserie BEBE Rouge. Concept site.</span><span>Built by GCCofCI Digital</span></div>
+  </div>
+</footer>
+
+<a class="chat-fab" href="https://www.facebook.com/PatisserieBebeRouge" rel="noopener" aria-label="Message us on Facebook">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.4-2.6-2.8-5 2.8 5.5-5.9 2.7 2.8 4.9-2.8-5.5 5.9z"/></svg>
+  Message us
+</a>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

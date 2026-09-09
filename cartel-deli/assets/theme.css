@@ -1,0 +1,92 @@
+/* =============================================================
+   Cartel Deli — theme.css
+   Direction: "the three menus." A Spanish cafe-deli-bar in
+   Salcedo Village (Pablo Bistro group). The signature is a
+   tabbed board that switches the three menus: cafe, deli
+   counter, wine. Bone white, a rioja red, an olive second
+   colour, charcoal. Warm slab-serif display, a plain body,
+   mono for prices and the wine list.
+   ============================================================= */
+:root{
+  --paper:      #f3efe5;
+  --paper-2:    #e7e0cf;
+  --ink:        #23211d;
+  --ink-soft:   #5a564b;
+  --line:       #cdc3aa;
+  --accent:     #8f2f2c;   /* rioja */
+  --accent-ink: #ffffff;
+  --olive:      #5b6038;
+  --brand:      #1e1c17;
+  --brand-ink:  #eee7d6;
+
+  --font-display: "Besley", Georgia, "Times New Roman", serif;
+  --font-body:    "Epilogue", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "Fira Code", ui-monospace, "Consolas", monospace;
+
+  --radius: 4px;
+  --container: 1080px;
+}
+
+body{ background:var(--paper); color:var(--ink); }
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:600; letter-spacing:0; line-height:1.1; }
+.lead{ color:var(--ink-soft); }
+a{ color:var(--accent); }
+.eyebrow{ color:var(--olive); font-family:var(--font-mono); letter-spacing:.16em; }
+.eyebrow::before{ background:currentColor; }
+.section--brand{ background:var(--brand); color:var(--brand-ink); }
+.section--brand .lead{ color:#d6cdbb; opacity:1; }
+.section--brand .eyebrow{ color:#a7ad6f; }
+.section--paper2{ background:var(--paper-2); }
+.rule{ border-color:var(--line); }
+
+.brand{ font-family:var(--font-display); font-weight:700; color:var(--ink); letter-spacing:.01em; }
+.brand mark{ background:var(--accent); color:#fff; }
+.nav__links a{ letter-spacing:.03em; }
+.nav__links a[aria-current="page"]::after{ background:var(--accent); }
+.btn{ border-radius:var(--radius); font-family:var(--font-body); font-weight:600; letter-spacing:.02em; }
+.btn--accent{ --_bg:var(--accent); --_fg:#fff; }
+.nav__links a.btn{ color:var(--_fg); }
+.section--brand .btn--ghost{ --_fg:var(--brand-ink); }
+.card{ background:#fbf7ec; border-color:var(--line); border-radius:var(--radius); }
+.chat-fab{ background:var(--accent); color:#fff; }
+.site-footer{ background:var(--brand); }
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-display); font-weight:500; }
+.stars{ color:var(--accent); }
+.stat__num{ font-family:var(--font-display); color:var(--accent); }
+.pill{ border-color:var(--line); font-family:var(--font-mono); }
+.table td.price{ color:var(--accent); font-family:var(--font-mono); }
+.field input,.field select,.field textarea{ background:#fbf7ec; border-radius:var(--radius); }
+
+/* =============================================================
+   The three menus — signature
+   ============================================================= */
+.menus{ border:2px solid var(--ink); border-radius:var(--radius); overflow:hidden; background:#fbf7ec; }
+.menus__tabs{ display:flex; border-bottom:2px solid var(--ink); }
+.menus__tab{ flex:1; appearance:none; border:0; cursor:pointer; background:var(--paper-2); color:var(--ink);
+  font-family:var(--font-display); font-weight:700; font-size:var(--step-1); padding:.9rem .6rem; border-right:1px solid var(--line); }
+.menus__tab:last-child{ border-right:0; }
+.menus__tab[aria-selected="true"]{ background:var(--accent); color:#fff; }
+.menus__tab:focus-visible{ outline:3px solid var(--ink); outline-offset:-3px; }
+.menus__panel{ padding:clamp(1.2rem,1rem + 1.4vw,2rem); }
+.menus__panel[hidden]{ display:none; }
+.menus__panel h3{ font-size:var(--step-1); color:var(--olive); margin-bottom:.4rem; }
+
+.mrow{ display:grid; grid-template-columns:1fr auto; gap:.15rem 1rem; align-items:baseline; padding:.7rem 0; border-bottom:1px solid var(--line); }
+.mrow:last-child{ border-bottom:0; }
+.mrow .n{ font-family:var(--font-display); font-weight:600; font-size:var(--step-0); }
+.mrow .n i{ font-style:italic; font-weight:400; color:var(--ink-soft); }
+.mrow .p{ font-family:var(--font-mono); color:var(--accent); white-space:nowrap; }
+.mrow .d{ grid-column:1/-1; font-size:var(--step--1); color:var(--ink-soft); max-width:60ch; }
+
+/* wine list rows */
+.wl{ border-top:2px solid var(--olive); padding-top:1rem; margin-top:2.4rem; }
+.wl h2{ font-size:var(--step-2); }
+.wrow{ display:grid; grid-template-columns:1fr auto auto; gap:.1rem 1rem; align-items:baseline; padding:.6rem 0; border-bottom:1px solid var(--line); font-size:var(--step--1); }
+.wrow:last-child{ border-bottom:0; }
+.wrow .w{ font-family:var(--font-display); font-weight:600; font-size:var(--step-0); }
+.wrow .reg{ font-family:var(--font-mono); color:var(--ink-soft); white-space:nowrap; }
+.wrow .p{ font-family:var(--font-mono); color:var(--accent); white-space:nowrap; }
+@media (max-width:560px){ .wrow{ grid-template-columns:1fr auto; } .wrow .reg{ grid-column:1/-1; } }
+
+@media (prefers-reduced-motion: reduce){ .btn:hover{ transform:none; } }

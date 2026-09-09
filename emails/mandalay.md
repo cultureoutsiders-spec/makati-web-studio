@@ -1,12 +1,15 @@
 # Outreach — Mandalay Whisky & Cigars
 
-**Channel:** Call / in-person (no public email or social confirmed) · **To:** tel 0917 625 8818 · through The Belle & Dragon, OPL Building, 100 Don Carlos Palanca, Legazpi Village
+**Channel:** Email · **To:** home@thebelleanddragon.com  (The Belle & Dragon's inbox — same F&B group; also tel 0917 625 8818)
 **Live demo:** https://cultureoutsiders-spec.github.io/makati-web-studio/mandalay/
-**Status:** NOT SENT — batch 9. Script staged as a Gmail draft (`[DM SCRIPT …]`) in gccofci.digital@gmail.com; Michael calls or drops in, or DMs The Belle & Dragon.
+**Status:** NOT SENT — batch 9, review then send. Michael found the email on The Belle & Dragon's
+Facebook 2026-09-11; the DM/call script was converted to an email. Staged as a Gmail draft in
+gccofci.digital@gmail.com. Address is a group inbox, so the email is addressed to "the owner"
+and mentions Mandalay specifically. **Demo URL is not live yet — the mandalay site still needs
+building.**
 
-> Note: Mandalay is a hidden room entered through The Belle & Dragon (a British pub in the same
-> building), and both are part of the same F&B group. It has no website. Confirm the right person
-> to pitch, and whether the group backing changes the approach.
+> Note: Mandalay is a hidden room entered through The Belle & Dragon, and both are the same
+> group. Decide whether the group backing changes the approach before sending.
 
 **Offer:** PHP 25,000 one-time, introductory rate for the first 5 paying clients, then PHP 35,000.
 No monthly retainer. Client owns the code; price includes putting it live on their domain.
@@ -16,34 +19,42 @@ puts it live as part of the build, no extra charge.
 
 ---
 
-## Script (say on a call, or send as two messages)
+## Subject
+Built a website for Mandalay: the humidor list, the pours, and a private-room request form
 
-**Message 1**
+## Body
 
-Hi, quick one. Mandalay is a hidden room, and part of the appeal is that you have to know about
-it. But the people who would come for the cigars and the whisky cannot see the humidor list, the
-pours, or how a private booking works. A quiet one-page site gives them just enough without
-giving the room away.
+Hi,
 
-**Message 2**
+Good day. I'd like to reach whoever runs Mandalay.
 
-So I built you a website. It's live: https://cultureoutsiders-spec.github.io/makati-web-studio/mandalay/
+Mandalay is a hidden room, and part of the appeal is that you have to know about it. But the
+people who would come for the cigars and the whisky cannot see the humidor list, the pours, or
+how a private booking works. A quiet one-page site gives them just enough without giving the room
+away.
 
-Five pages, dark and low-key. There is a humidor list, a whisky and bourbon pour list, a page on
-the room and the house rules for walk-ins, membership and private bookings, an events page, and a
-table and private-room request form that comes to you. The cigars, pours and prices shown are
-placeholders you would swap for the real ones. The way in through The Belle & Dragon stays part
-of the story.
+So I built the site. Five pages, live now:
+https://cultureoutsiders-spec.github.io/makati-web-studio/mandalay/
 
-Price is PHP 25,000, one time. That covers the build and putting it live on your own domain, and
-it's yours to keep. Introductory rate while I build my portfolio here; it goes to PHP 35,000 for
-later clients. No monthly fee.
+It is dark and low-key. There is a humidor list, a whisky and bourbon pour list, a page on the
+room and the house rules for walk-ins, membership and private bookings, an events page, and a
+table and private-room request form that comes to this inbox. The cigars, pours and prices shown
+are placeholders you would swap for the real ones. The way in through The Belle & Dragon stays
+part of the story.
 
-The only running costs on top of that are a domain name, about PHP 1,000 a year and registered in
-your name, and hosting, which is free for a site built like this since it's just static files. I
-set both up as part of the job.
+Price is PHP 25,000, one time. That covers the build and putting it live on your domain, and it's
+yours to keep. This is an introductory rate while I build my portfolio here; it goes to PHP
+35,000 for later clients. No monthly fee.
 
-Have a look and tell me what you'd change. Can explain in 15 minutes, call or text
+On top of that, the only running costs are a domain name, about PHP 1,000 a year and registered
+in your name, and hosting, which is free for a site built like this because it is a set of plain
+files on a free service. A paid host is roughly PHP 300 to 500 a month if you would prefer one,
+but it is not needed. I register the domain, point it, and put the site live as part of the
+build, at no extra charge.
+
+Have a look and tell me what's wrong or missing. Happy to explain it in 15 minutes, call or text
 +639455495153.
 
-Michael Omana, GCCofCI Digital
+Michael Omana
+GCCofCI Digital
+gccofci.digital@gmail.com | +639455495153

@@ -42,6 +42,10 @@ and hosted anywhere.
 | Another Barbershop (neighbourhood barbershop + shelf — "the chair card") | `another-barbershop/` | https://cultureoutsiders-spec.github.io/makati-web-studio/another-barbershop/ |
 | Slick Barbers Co. (standing-appointment barbershop — "the standing slot" punch strip) | `slick-barbers/` | https://cultureoutsiders-spec.github.io/makati-web-studio/slick-barbers/ |
 | Salon A (Korean cut & styling — "the consult sheet") | `salon-a/` | https://cultureoutsiders-spec.github.io/makati-web-studio/salon-a/ |
+| Shū Reflexology (Xiamen-style foot reflexology — "the pressure map" SVG foot diagram) | `shu-reflexology/` | https://cultureoutsiders-spec.github.io/makati-web-studio/shu-reflexology/ |
+| Dream Hair Makati (balayage & fashion colour — "the colour swatch" cards) | `dream-hair/` | https://cultureoutsiders-spec.github.io/makati-web-studio/dream-hair/ |
+| Pâtisserie BEBE Rouge (French-Japanese patisserie — "the cake case" label grid) | `bebe-rouge/` | https://cultureoutsiders-spec.github.io/makati-web-studio/bebe-rouge/ |
+| Cartel Deli (Spanish café-deli-bar — "the three menus" tab board) | `cartel-deli/` | https://cultureoutsiders-spec.github.io/makati-web-studio/cartel-deli/ |
 
 Studio landing page: repo root `index.html`.
 

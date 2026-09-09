@@ -1,0 +1,88 @@
+/* =============================================================
+   Shū Reflexology — theme.css
+   Direction: "the pressure map." Xiamen-style Chinese foot
+   reflexology + full body, open 1pm to 1am on Jupiter St. The
+   signature is an inline-SVG foot reflex-point map: labelled
+   zones (head, spine, organs) each linking to that part of the
+   treatment menu. Rice-paper warm, stone-ground jade, an amber
+   accent. Old-style serif display, a calm humanist body.
+   ============================================================= */
+:root{
+  --paper:      #f4f0e7;
+  --paper-2:    #e9e2d2;
+  --ink:        #23211c;
+  --ink-soft:   #5b564a;
+  --line:       #cec5ad;
+  --accent:     #46654e;   /* jade */
+  --accent-ink: #ffffff;
+  --amber:      #b07f3c;
+  --brand:      #1c211c;
+  --brand-ink:  #eee8d8;
+
+  --font-display: "EB Garamond", Georgia, "Times New Roman", serif;
+  --font-body:    "Readex Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "Sono", ui-monospace, "Consolas", monospace;
+
+  --radius: 4px;
+  --container: 1080px;
+}
+
+body{ background:var(--paper); color:var(--ink); }
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:600; letter-spacing:0; line-height:1.1; }
+.lead{ color:var(--ink-soft); }
+a{ color:var(--accent); }
+.eyebrow{ color:var(--amber); font-family:var(--font-mono); letter-spacing:.2em; }
+.eyebrow::before{ background:currentColor; }
+.section--brand{ background:var(--brand); color:var(--brand-ink); }
+.section--brand .lead{ color:#d6cfbd; opacity:1; }
+.section--brand .eyebrow{ color:#d0a45f; }
+.section--paper2{ background:var(--paper-2); }
+.rule{ border-color:var(--line); }
+
+.brand{ font-family:var(--font-display); font-weight:700; color:var(--ink); letter-spacing:.01em; }
+.brand mark{ background:var(--accent); color:#fff; }
+.nav__links a{ letter-spacing:.03em; }
+.nav__links a[aria-current="page"]::after{ background:var(--accent); }
+.btn{ border-radius:var(--radius); font-family:var(--font-body); font-weight:600; letter-spacing:.02em; }
+.btn--accent{ --_bg:var(--accent); --_fg:#fff; }
+.nav__links a.btn{ color:var(--_fg); }
+.section--brand .btn--ghost{ --_fg:var(--brand-ink); }
+.card{ background:#fbf8ef; border-color:var(--line); border-radius:var(--radius); }
+.chat-fab{ background:var(--accent); color:#fff; }
+.site-footer{ background:var(--brand); }
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-display); font-size:var(--step-1); }
+.stars{ color:var(--amber); }
+.stat__num{ font-family:var(--font-display); color:var(--accent); }
+.pill{ border-color:var(--line); font-family:var(--font-mono); }
+.table td.price{ color:var(--accent); font-family:var(--font-mono); }
+.field input,.field select,.field textarea{ background:#fbf8ef; border-radius:var(--radius); }
+
+/* =============================================================
+   The pressure map — signature
+   ============================================================= */
+.footmap{ max-width:360px; margin-inline:auto; }
+.footmap svg{ width:100%; height:auto; display:block; }
+.footmap .sole{ fill:#efe7d3; stroke:var(--ink); stroke-width:2; }
+.footmap .zone{ fill:var(--accent); fill-opacity:.14; stroke:var(--accent); stroke-width:1.4; cursor:pointer; transition:fill-opacity .15s ease; }
+.footmap a:hover .zone, .footmap a:focus-visible .zone{ fill-opacity:.42; outline:none; }
+.footmap .zlabel{ font-family:var(--font-mono); font-size:11px; fill:var(--ink); letter-spacing:.02em; pointer-events:none; }
+.footmap a:focus-visible .zlabel{ font-weight:700; }
+.footmap__cap{ font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); text-align:center; margin-top:.8rem; letter-spacing:.04em; }
+
+/* treatment rows */
+.trt{ border-top:2px solid var(--accent); padding-top:1rem; margin-top:2.4rem; }
+.trt h2{ font-size:var(--step-2); }
+.trow{ display:grid; grid-template-columns:1fr auto auto; gap:.2rem 1.2rem; align-items:baseline; padding:.85rem 0; border-bottom:1px solid var(--line); }
+.trow:last-child{ border-bottom:0; }
+.trow .n{ font-family:var(--font-display); font-weight:600; font-size:var(--step-1); }
+.trow .dur{ font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); white-space:nowrap; }
+.trow .p{ font-family:var(--font-mono); color:var(--accent); white-space:nowrap; }
+.trow .d{ grid-column:1/-1; font-size:var(--step--1); color:var(--ink-soft); max-width:60ch; }
+@media (max-width:560px){ .trow{ grid-template-columns:1fr auto; } .trow .dur{ grid-column:1/-1; } }
+
+.step-list{ counter-reset:s; list-style:none; margin:0; padding:0; display:grid; gap:1rem; }
+.step-list li{ counter-increment:s; display:grid; grid-template-columns:2rem 1fr; gap:1rem; align-items:start; }
+.step-list li::before{ content:counter(s); font-family:var(--font-display); font-weight:700; color:var(--accent); font-size:var(--step-1); line-height:1; }
+
+@media (prefers-reduced-motion: reduce){ .btn:hover{ transform:none; } }
