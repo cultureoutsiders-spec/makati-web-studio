@@ -1,8 +1,9 @@
 # Outreach — Another Barbershop
 
-**Channel:** Facebook DM / call (no public email) · **To:** facebook.com/anotherbarbershop.poblacion · tel 0917 123 5880
+**Channel:** Email · **To:** anotherbarbershop.poblacion@gmail.com  (also facebook.com/anotherbarbershop.poblacion · tel 0917 123 5880)
 **Live demo:** https://cultureoutsiders-spec.github.io/makati-web-studio/another-barbershop/
-**Status:** NOT SENT — batch 7. Script staged as a Gmail draft (`[DM SCRIPT …]`) in gccofci.digital@gmail.com; Michael pastes into Messenger or calls.
+**Status:** NOT SENT — batch 7, review then send. Michael found the email 2026-09-11; the DM
+script was converted to an email. Staged as a Gmail draft in gccofci.digital@gmail.com.
 
 **Offer:** PHP 25,000 one-time, introductory rate for the first 5 paying clients, then PHP 35,000.
 No monthly retainer. Client owns the code; price includes putting it live on their domain.
@@ -12,32 +13,40 @@ puts it live as part of the build, no extra charge.
 
 ---
 
-## DM script (send as two messages)
+## Subject
+Built a website for Another Barbershop: your prices, barbers, and a book-a-chair form to your inbox
 
-**Message 1**
+## Body
 
-Hi, quick one. Someone deciding where to get a cut in Poblacion wants the price list, who the
-barbers are, the hours, and lately a way to book online. Right now that is spread across your
-posts, so they book somewhere with a proper page instead.
+Hi,
 
-**Message 2**
+Good day. I'd like to reach the owner.
 
-So I built you a website. It's live: https://cultureoutsiders-spec.github.io/makati-web-studio/another-barbershop/
+Someone deciding where to get a cut in Poblacion wants the price list, who the barbers are, the
+hours, and lately a way to book online. Right now that is spread across your posts, so they book
+somewhere with a proper page instead.
 
-Five pages. The homepage is a chair card, the tally card you keep for a regular, with the usual
-and when they are next due. There is a full price list, a barber roster you can ask for by name,
-a page for the retail shelf, and a book-a-chair form that comes to you. The barbers, services and
-prices shown are placeholders you would fill in.
+So I built the site. Five pages, live now:
+https://cultureoutsiders-spec.github.io/makati-web-studio/another-barbershop/
 
-Price is PHP 25,000, one time. That covers the build and putting it live on your own domain, and
-it's yours to keep. Introductory rate while I build my portfolio here; it goes to PHP 35,000 for
-later clients. No monthly fee.
+The homepage is a chair card, the tally card you keep for a regular, with the usual and when they
+are next due. There is a full price list, a barber roster you can ask for by name, a page for the
+retail shelf, and a book-a-chair form that comes to this inbox. The barbers, services and prices
+shown are placeholders you would fill in.
 
-The only running costs on top of that are a domain name, about PHP 1,000 a year and registered in
-your name, and hosting, which is free for a site built like this since it's just static files. I
-set both up as part of the job.
+Price is PHP 25,000, one time. That covers the build and putting it live on your domain, and it's
+yours to keep. This is an introductory rate while I build my portfolio here; it goes to PHP
+35,000 for later clients. No monthly fee.
 
-Have a look and tell me what you'd change. Can explain in 15 minutes, call or text
+On top of that, the only running costs are a domain name, about PHP 1,000 a year and registered
+in your name, and hosting, which is free for a site built like this because it is a set of plain
+files on a free service. A paid host is roughly PHP 300 to 500 a month if you would prefer one,
+but it is not needed. I register the domain, point it, and put the site live as part of the
+build, at no extra charge.
+
+Have a look and tell me what's wrong or missing. Happy to explain it in 15 minutes, call or text
 +639455495153.
 
-Michael Omana, GCCofCI Digital
+Michael Omana
+GCCofCI Digital
+gccofci.digital@gmail.com | +639455495153
