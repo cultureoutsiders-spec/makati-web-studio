@@ -1,0 +1,117 @@
+/* =============================================================
+   Kombat Sports Kalayaan — theme.css
+   Direction: "the round timer + fight card." A multi-discipline
+   martial-arts academy with a fight team. Concrete grey, a fight
+   red, a corner-yellow second accent. The hero is a round timer;
+   the weekly schedule is a bout card (main event / undercard);
+   coaches get a tale-of-the-tape. Tall athletic display type,
+   taped-and-chalked grit.
+   ============================================================= */
+:root{
+  --paper:      #d7d4cc;
+  --paper-2:    #cbc7bc;
+  --ink:        #161514;
+  --ink-soft:   #55504a;
+  --line:       #b9b4a8;
+  --accent:     #c02626;   /* fight red */
+  --accent-ink: #ffffff;
+  --corner:     #e8b100;   /* corner yellow */
+  --brand:      #161514;
+  --brand-ink:  #ece8de;
+
+  --font-display: "Teko", "Arial Narrow", system-ui, sans-serif;
+  --font-body:    "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "Overpass Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  --radius: 2px;
+  --container: 1160px;
+}
+
+body{ background:var(--paper); color:var(--ink); }
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:700; letter-spacing:.01em; line-height:.9; text-transform:uppercase; }
+h1{ font-size:clamp(3rem, 2rem + 6vw, 6.5rem); }
+.lead{ color:var(--ink-soft); font-size:var(--step-1); line-height:1.5; font-family:var(--font-body); }
+a{ color:var(--accent); }
+.eyebrow{ color:var(--accent); font-family:var(--font-mono); letter-spacing:.2em; font-weight:600; font-size:var(--step--1); }
+.eyebrow::before{ background:currentColor; }
+.section--brand{ background:var(--brand); color:var(--brand-ink); }
+.section--brand .lead{ color:#b6b0a6; }
+.section--brand .eyebrow{ color:var(--corner); }
+.rule{ border-color:var(--line); }
+.section--paper2{ background:var(--paper-2); }
+
+.brand{ font-family:var(--font-display); font-weight:700; text-transform:uppercase; letter-spacing:.04em; font-size:var(--step-2); color:var(--ink); line-height:1; }
+.brand b{ color:var(--accent); }
+.nav__links a{ font-family:var(--font-display); font-weight:600; text-transform:uppercase; letter-spacing:.05em; font-size:var(--step-1); }
+.nav__links a[aria-current="page"]::after{ background:var(--accent); }
+.nav__toggle{ background:var(--paper-2); border-color:var(--line); }
+.nav__toggle span,.nav__toggle span::before,.nav__toggle span::after{ background:var(--ink); }
+@media (max-width:1040px){ .nav__links{ background:var(--brand); border-color:var(--line); } .nav__links a{ border-color:var(--line); color:var(--brand-ink); } }
+.btn{ font-family:var(--font-display); font-weight:700; text-transform:uppercase; letter-spacing:.08em; border-radius:var(--radius); font-size:var(--step-1); padding:.5em 1.3em; }
+.btn{ --_bg:var(--ink); --_fg:var(--paper); }
+.btn--accent{ --_bg:var(--accent); --_fg:#fff; }
+.btn--ghost{ --_bg:transparent; --_fg:currentColor; border-color:currentColor; }
+.nav__links a.btn{ color:var(--_fg); }
+.section--brand .btn--ghost{ --_fg:var(--brand-ink); }
+.card{ background:#e6e2d8; border-color:var(--line); border-radius:var(--radius); }
+
+/* =============================================================
+   Round timer — signature
+   ============================================================= */
+.timer{ background:var(--brand); color:var(--brand-ink); border-radius:var(--radius); padding:clamp(1.4rem,1rem + 2vw,2.4rem); text-align:center; }
+.timer__round{ font-family:var(--font-mono); font-weight:600; letter-spacing:.24em; color:var(--corner); font-size:var(--step-0); }
+.timer__clock{ font-family:var(--font-display); font-weight:700; font-size:clamp(4rem,3rem + 9vw,9rem); line-height:.8; letter-spacing:.02em; margin:.2rem 0; }
+.timer__state{ display:inline-flex; gap:.4rem; font-family:var(--font-display); font-weight:700; text-transform:uppercase; letter-spacing:.1em; font-size:var(--step-1); }
+.timer__state b{ color:var(--accent); } .timer__state span{ opacity:.4; }
+.timer__bar{ height:8px; background:rgba(255,255,255,.14); border-radius:999px; margin-top:1rem; overflow:hidden; }
+.timer__bar i{ display:block; height:100%; width:62%; background:var(--corner); }
+
+/* =============================================================
+   Fight card (weekly schedule)
+   ============================================================= */
+.fightcard{ border-top:3px solid var(--accent); }
+.bout{ display:grid; grid-template-columns:6rem 1fr 1fr auto; gap:1rem; align-items:baseline; padding:1rem .6rem; border-bottom:1px solid var(--line); }
+.bout__tag{ font-family:var(--font-mono); font-weight:600; font-size:calc(var(--step--1) * .9); letter-spacing:.1em; text-transform:uppercase; color:var(--accent); }
+.bout__tag--main{ color:var(--ink); background:var(--corner); padding:.1em .4em; }
+.bout__class{ font-family:var(--font-display); font-weight:600; text-transform:uppercase; font-size:var(--step-1); letter-spacing:.02em; }
+.bout__coach{ font-family:var(--font-body); color:var(--ink-soft); font-size:var(--step--1); }
+.bout__time{ font-family:var(--font-mono); font-size:var(--step--1); white-space:nowrap; }
+@media (max-width:680px){ .bout{ grid-template-columns:auto 1fr; } .bout__coach,.bout__time{ grid-column:1 / -1; } }
+
+/* tale of the tape */
+.tape{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:var(--gap); }
+.fighter{ background:#e6e2d8; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; }
+.fighter .media{ border-radius:0; }
+.fighter__b{ padding:1.1rem 1.2rem; }
+.fighter__b h3{ font-size:var(--step-2); }
+.tape-row{ display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:calc(var(--step--1) * .92); padding:.35rem 0; border-bottom:1px dashed var(--line); }
+.tape-row:last-child{ border-bottom:0; }
+.tape-row span:first-child{ color:var(--ink-soft); text-transform:uppercase; letter-spacing:.06em; }
+
+/* disciplines */
+.discs{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:0; border:1px solid var(--line); background:#e6e2d8; }
+.disc{ padding:1.4rem 1.3rem; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+.disc:last-child{ border-right:0; }
+.disc span{ font-family:var(--font-mono); font-size:calc(var(--step--1) * .9); color:var(--accent); letter-spacing:.08em; }
+.disc h3{ font-size:var(--step-1); margin:.2rem 0 .3rem; }
+.disc p{ font-size:var(--step--1); color:var(--ink-soft); margin:0; }
+
+.spec-list{ list-style:none; margin:0; padding:0; display:grid; gap:.5rem; }
+.spec-list li{ display:flex; gap:.7rem; font-size:var(--step-0); font-family:var(--font-body); }
+.spec-list li::before{ content:"\25B8"; color:var(--accent); }
+
+/* misc */
+.pill{ border-color:var(--ink); font-family:var(--font-display); font-weight:600; text-transform:uppercase; letter-spacing:.04em; font-size:var(--step-0); }
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-body); font-weight:500; font-style:normal; }
+.review cite{ font-family:var(--font-mono); }
+.stars{ color:var(--corner); }
+.stat__num{ font-family:var(--font-display); font-weight:700; color:var(--accent); }
+.section--brand .stat__num{ color:var(--corner); }
+.chat-fab{ background:var(--accent); color:#fff; }
+.site-footer{ background:var(--brand); }
+.foot-h{ font-family:var(--font-display); font-weight:600; letter-spacing:.1em; font-size:var(--step-0); }
+.field label{ font-family:var(--font-display); font-weight:600; text-transform:uppercase; letter-spacing:.05em; font-size:var(--step-0); }
+.field input,.field select,.field textarea{ border-radius:var(--radius); background:#e6e2d8; }
+.demo-flag{ border-color:rgba(255,255,255,.28); }
+.notfound{ text-align:center; padding-block:var(--space-2xl); }

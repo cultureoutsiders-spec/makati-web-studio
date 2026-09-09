@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Request a visit — Gray Matter Showroom</title>
+<meta name="description" content="Book an appointment at Gray Matter Showroom, Zamora Street, Poblacion. Tell us the sizes, eras and designers you're after and we'll pull a rack.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Martian+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" data-open="false" aria-label="Primary">
+    <a class="brand" href="index.html">GRAY&#8202;MATTER</a>
+    <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    <ul class="nav__links" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="archive.html">Archive</a></li>
+      <li><a href="the-process.html">The process</a></li>
+      <li><a href="selling.html">Selling</a></li>
+      <li><a class="btn btn--accent" href="visit.html#visit" aria-current="page">Request a visit</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="section section--tight">
+    <div class="container">
+      <p class="eyebrow">Request a visit</p>
+      <h1>Book an hour in the room</h1>
+      <p class="lead measure">Appointments run 1&ndash;8pm daily. Tell us what you're chasing and
+        we'll have a rack pulled when you arrive. This reaches the showroom.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight" style="padding-top:0">
+    <div class="container">
+      <div class="split split--top">
+        <form class="form card" id="visit" data-contact data-web3key="REPLACE_WITH_WEB3FORMS_KEY" data-mailto="REPLACE_WITH_EMAIL">
+          <div class="field field--hp"><label>Leave this empty<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="n">Name</label><input id="n" name="name" required></div>
+            <div class="field"><label for="c">IG handle or mobile</label><input id="c" name="contact" required></div>
+          </div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="d">Preferred day</label><input id="d" name="date" type="date"></div>
+            <div class="field"><label for="t">Preferred time</label>
+              <select id="t" name="time"><option>1&ndash;3pm</option><option>3&ndash;5pm</option><option>5&ndash;7pm</option><option>7&ndash;8pm</option></select></div>
+          </div>
+          <div class="field"><label for="s">Your sizes</label><input id="s" name="sizes" placeholder="e.g. tops M / P2P ~53, waist 32, EU43"></div>
+          <div class="field"><label for="w">What you're after</label><textarea id="w" name="wants" placeholder="Designers, eras, categories, a specific grail — or 'surprise me'"></textarea></div>
+          <button class="btn btn--accent btn--lg" type="submit">Request appointment</button>
+          <p class="form-status" role="status"></p>
+          <p style="font-family:var(--font-mono); font-size:calc(var(--step--1) * .86); color:var(--ink-soft); margin:0">
+            Or DM <a href="https://www.instagram.com/graymmatterr_" rel="noopener">@graymmatterr_</a>. We confirm slots the same day.</p>
+        </form>
+
+        <div class="stack">
+          <div class="card">
+            <span class="eyebrow" style="margin-top:0">The room</span>
+            <p>5141 Zamora Street<br>Barangay Poblacion, Makati</p>
+            <hr class="rule">
+            <span class="eyebrow">Hours</span>
+            <p>Daily &middot; 1pm&ndash;8pm<br>By appointment only &mdash; no walk-ins</p>
+            <hr class="rule">
+            <span class="eyebrow">Payment</span>
+            <p>Card, bank transfer, GCash. Holds 48 hrs with a deposit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <p class="brand">GRAY&#8202;MATTER</p>
+        <p style="opacity:.85; margin-top:1rem; max-width:34ch">Appointment-only archive &amp; grail fashion. 5141 Zamora St., Poblacion, Makati.</p>
+      </div>
+      <div><p class="foot-h">Hours</p><p>Daily &middot; 1pm&ndash;8pm<br>By appointment only</p></div>
+      <div><p class="foot-h">Reach us</p><p><a href="https://www.instagram.com/graymmatterr_" rel="noopener">@graymmatterr_</a><br>DM to book</p></div>
+    </div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital &mdash; not the official website of Gray Matter Showroom. The form needs a free Web3Forms key (2 minutes) before it delivers to an inbox; until then it opens the visitor's email app.</div>
+    <div class="foot-note"><span>&copy; <span data-year>2026</span> Gray Matter Showroom. Concept site.</span><span>Built by GCCofCI Digital</span></div>
+  </div>
+</footer>
+
+<a class="chat-fab" href="https://www.instagram.com/graymmatterr_" rel="noopener" aria-label="Message us on Instagram">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 3.3A6.5 6.5 0 1 0 18.5 12 6.5 6.5 0 0 0 12 5.5zm0 10.7A4.2 4.2 0 1 1 16.2 12 4.2 4.2 0 0 1 12 16.2zm6.8-11a1.5 1.5 0 1 0 1.5 1.5 1.5 1.5 0 0 0-1.5-1.5z"/></svg>
+  Message us
+</a>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
