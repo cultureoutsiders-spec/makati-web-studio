@@ -1,0 +1,112 @@
+/* =============================================================
+   Blue Door 304 — theme.css
+   Direction: "the door." A third-floor speakeasy you have to find
+   and knock to enter. Near-black midnight, a worn-brass accent and
+   one deep cobalt "door blue". The hero IS the door: you knock to
+   go in. Everything else is dim, quiet and cinematic — high-contrast
+   Didone headlines over a lot of black.
+   ============================================================= */
+:root{
+  --paper:      #0d1220;
+  --paper-2:    #141b2c;
+  --ink:        #e9e4d8;
+  --ink-soft:   #8f8a7d;
+  --line:       #2a3346;
+  --accent:     #b18e58;   /* worn brass */
+  --accent-ink: #0d1220;
+  --door:       #1f4374;   /* cobalt door blue */
+  --brand:      #090d17;
+  --brand-ink:  #e9e4d8;
+
+  --font-display: "Bodoni Moda", Didot, "Times New Roman", serif;
+  --font-body:    "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  --radius: 2px;
+  --container: 1000px;
+}
+
+body{ background:var(--paper); color:var(--ink); }
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:500; letter-spacing:.01em; line-height:1.08; }
+h1{ font-weight:600; }
+.lead{ color:var(--ink-soft); font-size:var(--step-1); line-height:1.5; }
+a{ color:var(--accent); }
+.eyebrow{ color:var(--accent); font-family:var(--font-mono); letter-spacing:.32em; font-weight:400; font-size:var(--step--1); }
+.eyebrow::before{ background:currentColor; }
+.section--brand{ background:var(--brand); }
+.section--brand .lead{ color:#8f8a7d; }
+.rule{ border-color:var(--line); }
+.rule--brass{ border:0; border-top:1px solid var(--accent); opacity:.5; max-width:5rem; margin:2rem 0; }
+.section--paper2{ background:var(--paper-2); }
+
+.brand{ font-family:var(--font-display); font-weight:600; letter-spacing:.02em; font-size:var(--step-1); color:var(--ink); }
+.brand b{ color:var(--door); font-weight:600; }
+.nav__links a{ font-family:var(--font-mono); font-weight:400; letter-spacing:.14em; text-transform:uppercase; font-size:calc(var(--step--1) * .92); }
+.nav__links a[aria-current="page"]::after{ background:var(--accent); }
+.nav__toggle{ background:var(--paper-2); border-color:var(--line); }
+.nav__toggle span,.nav__toggle span::before,.nav__toggle span::after{ background:var(--ink); }
+@media (max-width:1040px){ .nav__links{ background:var(--brand); border-color:var(--line); } .nav__links a{ border-color:var(--line); color:var(--ink); } }
+.btn{ font-family:var(--font-mono); font-weight:500; letter-spacing:.14em; text-transform:uppercase; border-radius:var(--radius); font-size:calc(var(--step--1) * .92); }
+.btn{ --_bg:var(--accent); --_fg:var(--accent-ink); }
+.btn--accent{ --_bg:var(--accent); --_fg:var(--accent-ink); }
+.btn--ghost{ --_bg:transparent; --_fg:var(--ink); border-color:var(--line); }
+.nav__links a.btn{ color:var(--_fg); }
+.card{ background:var(--paper-2); border-color:var(--line); border-radius:var(--radius); }
+
+/* fixed low-light vignette */
+.vignette{ position:fixed; inset:0; pointer-events:none; z-index:40;
+  background:radial-gradient(ellipse at 50% 32%, transparent 30%, rgba(5,8,15,.55) 100%); }
+
+/* =============================================================
+   The door — signature
+   ============================================================= */
+.hero--door{ min-height:calc(100vh - 64px); display:grid; place-items:center; text-align:center; position:relative; padding-block:var(--space-xl); }
+.hero--door .eyebrow{ justify-content:center; }
+.hero--door h1{ font-size:clamp(2.8rem, 1.8rem + 5vw, 5.6rem); margin-top:.4rem; }
+.hero--door .lead{ max-width:40ch; margin-inline:auto; }
+.door{ width:min(220px, 46vw); aspect-ratio:5/9; margin:2.4rem auto 1.6rem; border-radius:6px 6px 2px 2px;
+  background:linear-gradient(180deg, #24497e, var(--door) 60%, #17335c);
+  border:2px solid #0c1b34; box-shadow:0 0 0 6px #0b1120, 0 30px 60px rgba(0,0,0,.6), inset 0 0 40px rgba(0,0,0,.35);
+  position:relative; cursor:pointer; transition:transform .12s ease; }
+.door::before,.door::after{ content:""; position:absolute; left:14%; right:14%; border:1px solid rgba(0,0,0,.4); border-radius:3px; box-shadow:inset 0 0 6px rgba(0,0,0,.35); }
+.door::before{ top:9%; height:34%; } .door::after{ top:50%; height:38%; }
+.door__knocker{ position:absolute; top:31%; left:50%; transform:translateX(-50%); width:26px; height:26px; border-radius:50%;
+  background:radial-gradient(circle at 35% 30%, #e6c990, var(--accent) 55%, #6f552e); box-shadow:0 2px 4px rgba(0,0,0,.5); }
+.door__plate{ position:absolute; bottom:16%; left:50%; transform:translateX(-50%); font-family:var(--font-mono); font-size:.7rem; letter-spacing:.2em; color:#0c1b34; background:var(--accent); padding:.15em .5em; border-radius:1px; }
+.door.is-knocking{ animation:knock .5s ease; }
+@keyframes knock{ 0%,100%{ transform:none; } 20%{ transform:translateX(-4px) rotate(-.4deg); } 40%{ transform:translateX(4px) rotate(.4deg); } 60%{ transform:translateX(-3px); } 80%{ transform:translateX(3px); } }
+@media (prefers-reduced-motion:reduce){ .door.is-knocking{ animation:none; } .door{ transition:none; } }
+.door:hover{ transform:translateY(-3px); }
+.knock-hint{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); }
+
+/* =============================================================
+   Cocktail list
+   ============================================================= */
+.pours{ border-top:1px solid var(--line); }
+.pour{ display:grid; grid-template-columns:1fr auto; gap:.3rem 2rem; align-items:baseline; padding:1.3rem 0; border-bottom:1px solid var(--line); }
+.pour__name{ font-family:var(--font-display); font-weight:500; font-size:var(--step-1); }
+.pour__price{ font-family:var(--font-mono); color:var(--accent); white-space:nowrap; }
+.pour__note{ grid-column:1 / -1; color:var(--ink-soft); font-size:var(--step-0); max-width:60ch; }
+.pour__spec{ grid-column:1 / -1; font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.06em; color:var(--ink-soft); text-transform:uppercase; }
+
+/* the knock steps (a real sequence) */
+.knock-steps{ display:grid; gap:1.1rem; counter-reset:k; }
+.knock-step{ display:grid; grid-template-columns:auto 1fr; gap:1.1rem; padding:1.1rem 0; border-bottom:1px solid var(--line); }
+.knock-step:last-child{ border-bottom:0; }
+.knock-step::before{ counter-increment:k; content:counter(k); font-family:var(--font-display); font-weight:600; font-size:var(--step-2); color:var(--accent); line-height:1; }
+.knock-step h3{ font-size:var(--step-1); margin:.1rem 0 .3rem; }
+.knock-step p{ margin:0; color:var(--ink-soft); }
+
+/* misc */
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-display); font-weight:500; font-style:italic; }
+.review cite{ font-family:var(--font-mono); font-style:normal; color:var(--ink-soft); }
+.stars{ color:var(--accent); }
+.stat__num{ font-family:var(--font-display); font-weight:600; color:var(--ink); }
+.chat-fab{ background:var(--accent); color:var(--accent-ink); }
+.site-footer{ background:var(--brand); }
+.foot-h{ font-family:var(--font-mono); letter-spacing:.18em; }
+.field label{ font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.12em; font-size:calc(var(--step--1) * .92); }
+.field input,.field select,.field textarea{ background:var(--paper-2); border-color:var(--line); color:var(--ink); border-radius:var(--radius); }
+.demo-flag{ border-color:var(--line); }
+.notfound{ text-align:center; padding-block:var(--space-2xl); }
