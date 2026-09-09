@@ -1,0 +1,93 @@
+/* =============================================================
+   Shoe Care — theme.css
+   Direction: "the repair ticket." A leather, shoe and bag repair
+   shop on Chino Roces since 1971. The signature is the numbered
+   carbon-copy claim slip you get when you leave a pair: it is the
+   hero device and the section marker on the services page.
+   Repair-envelope kraft, oxblood leather, a stamped-ink brand.
+   ============================================================= */
+:root{
+  --paper:      #f4efe4;
+  --paper-2:    #e9e0cd;
+  --ink:        #241f1a;
+  --ink-soft:   #5f574c;
+  --line:       #ccc0a6;
+  --accent:     #7c2b26;   /* oxblood */
+  --accent-ink: #ffffff;
+  --brand:      #1e1a16;
+  --brand-ink:  #efe7d6;
+
+  --font-display: "Petrona", Georgia, "Times New Roman", serif;
+  --font-body:    "Golos Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "Reddit Mono", ui-monospace, "Consolas", monospace;
+
+  --radius: 2px;
+  --container: 1100px;
+}
+
+body{ background:var(--paper); color:var(--ink); }
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:600; letter-spacing:-.01em; }
+.lead{ color:var(--ink-soft); }
+a{ color:var(--accent); }
+.eyebrow{ color:var(--accent); font-family:var(--font-mono); letter-spacing:.2em; }
+.section--brand{ background:var(--brand); color:var(--brand-ink); }
+.section--brand .lead{ color:#d8cdb8; opacity:1; }
+.section--brand .eyebrow{ color:#d99a4e; }
+.section--paper2{ background:var(--paper-2); }
+.rule{ border-color:var(--line); }
+
+.brand{ font-family:var(--font-display); font-weight:700; color:var(--ink); }
+.brand mark{ background:var(--accent); color:#fff; }
+.nav__links a{ letter-spacing:.04em; }
+.nav__links a[aria-current="page"]::after{ background:var(--accent); }
+.btn{ border-radius:var(--radius); font-family:var(--font-mono); letter-spacing:.08em; text-transform:uppercase; }
+.btn--accent{ --_bg:var(--accent); --_fg:#fff; }
+.nav__links a.btn{ color:var(--_fg); }
+.section--brand .btn--ghost{ --_fg:var(--brand-ink); }
+.card{ background:#fbf7ec; border-color:var(--line); border-radius:var(--radius); }
+.chat-fab{ background:var(--accent); color:#fff; }
+.site-footer{ background:var(--brand); }
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-display); }
+.stars{ color:var(--accent); }
+.stat__num{ font-family:var(--font-display); color:var(--accent); }
+.pill{ border-color:var(--line); font-family:var(--font-mono); }
+.table td.price{ color:var(--accent); }
+.field input,.field select,.field textarea{ background:#fbf7ec; border-radius:var(--radius); }
+
+/* =============================================================
+   The repair ticket — signature
+   ============================================================= */
+.ticket{
+  --perf: radial-gradient(circle at 50% 0, transparent 0 6px, var(--paper) 6px);
+  background:#fbf7ec;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:clamp(1.4rem, 1.1rem + 1.4vw, 2.2rem);
+  position:relative;
+  box-shadow:0 1px 0 rgba(0,0,0,.05), 0 14px 34px rgba(40,30,20,.10);
+  max-width:30rem;
+}
+.ticket::before{
+  content:""; position:absolute; left:0; right:0; top:-9px; height:9px;
+  background-image:var(--perf); background-size:16px 9px;
+}
+.ticket__no{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.18em; color:var(--accent); text-transform:uppercase; }
+.ticket h2{ font-size:var(--step-2); margin:.3rem 0 .8rem; }
+.ticket dl{ display:grid; grid-template-columns:auto 1fr; gap:.5rem 1rem; margin:0; font-size:var(--step--1); font-family:var(--font-mono); }
+.ticket dt{ letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); }
+.ticket dd{ margin:0; text-align:right; }
+.ticket__foot{ margin-top:1rem; border-top:1px dashed var(--line); padding-top:.8rem; font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); letter-spacing:.04em; }
+
+/* stamped section marker for the services page */
+.job{ border-top:3px double var(--accent); padding-top:1rem; margin-top:2.6rem; }
+.job h2{ font-size:var(--step-2); }
+.job__no{ font-family:var(--font-mono); color:var(--accent); letter-spacing:.14em; font-size:var(--step--1); }
+
+/* turnaround chips */
+.turn{ display:inline-flex; align-items:baseline; gap:.45rem; font-family:var(--font-mono); font-size:var(--step--1); border:1px solid var(--line); border-radius:999px; padding:.25em .8em; letter-spacing:.04em; }
+.turn b{ color:var(--accent); }
+
+@media (prefers-reduced-motion: reduce){
+  .btn:hover{ transform:none; }
+}

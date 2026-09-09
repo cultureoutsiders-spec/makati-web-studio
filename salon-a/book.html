@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book — Salon A</title>
+<meta name="description" content="Book a chair at Salon A, Makati: pick a service, a stylist and a time. First visits allow extra time for the consultation. We confirm by reply.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Wix+Madefor+Text:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" data-open="false" aria-label="Primary">
+    <a class="brand" href="index.html">Salon <mark>A</mark></a>
+    <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    <ul class="nav__links" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Menu</a></li>
+      <li><a href="stylists.html">Stylists</a></li>
+      <li><a href="the-consult.html">The consult</a></li>
+      <li><a class="btn btn--accent" href="book.html#book" aria-current="page">Book</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="section section--tight">
+    <div class="container">
+      <p class="eyebrow">Book</p>
+      <h1>Pick a service and a time</h1>
+      <p class="lead measure">Send this and we confirm the slot by reply. First visits are booked
+        with 15 minutes extra for the consultation. Colour and perm bookings include a patch test.
+        This reaches the salon.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight" style="padding-top:0">
+    <div class="container">
+      <div class="split split--top">
+        <form class="form card" id="book" data-contact data-web3key="REPLACE_WITH_WEB3FORMS_KEY" data-mailto="REPLACE_WITH_EMAIL">
+          <div class="field field--hp"><label>Leave this empty<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="n">Your name</label><input id="n" name="name" required></div>
+            <div class="field"><label for="p">Mobile number</label><input id="p" name="phone" inputmode="tel" required></div>
+          </div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="s">Service</label>
+              <select id="s" name="service">
+                <option>Women's cut &amp; style</option>
+                <option>Men's cut &amp; style</option>
+                <option>Colour (single process)</option>
+                <option>Balayage / highlights</option>
+                <option>Digital / setting perm</option>
+                <option>Magic straight / rebond</option>
+                <option>Treatment only</option>
+              </select></div>
+            <div class="field"><label for="st">Stylist</label>
+              <select id="st" name="stylist"><option>Open / first available</option><option>Director Han</option><option>Bea</option><option>Jino</option></select></div>
+          </div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="v">Visit</label>
+              <select id="v" name="visit"><option>First time here</option><option>Returning</option></select></div>
+            <div class="field"><label for="d">Preferred day</label><input id="d" name="day" type="date"></div>
+          </div>
+          <div class="field"><label for="i">Your hair &amp; what you want</label><textarea id="i" name="notes" placeholder="Length, last chemical service, what you are after, and reference photos if you have them (send on Instagram)."></textarea></div>
+          <button class="btn btn--accent btn--lg" type="submit">Request a chair</button>
+          <p class="form-status" role="status"></p>
+          <p style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); margin:0">
+            Or call <a href="tel:+639543803129">0954 380 3129</a> / <a href="https://www.instagram.com/salon_a_manila" rel="noopener">DM on Instagram</a>.</p>
+        </form>
+
+        <div class="stack">
+          <div class="card">
+            <span class="eyebrow" style="margin-top:0">The salon</span>
+            <p>106 San Agustin Street<br>Makati City</p>
+            <hr class="rule">
+            <span class="eyebrow">Hours</span>
+            <p>Every day &middot; 10am&ndash;8pm</p>
+            <hr class="rule">
+            <span class="eyebrow">Good to know</span>
+            <p style="font-family:var(--font-mono)">Consult sheet on the first visit &middot; patch test 48h before colour or perm &middot; air-cooled &middot; card or cash</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div><p class="brand" style="color:var(--brand-ink)">Salon <mark>A</mark></p><p style="opacity:.85; margin-top:1rem; max-width:34ch">A Korean-owned cut and styling salon on San Agustin Street, Makati.</p></div>
+      <div><p class="foot-h">Salon</p><p>106 San Agustin Street<br>Makati City</p></div>
+      <div><p class="foot-h">Reach us</p><p><a href="tel:+639543803129">0954 380 3129</a><br><a href="https://www.instagram.com/salon_a_manila" rel="noopener">@salon_a_manila</a></p></div>
+    </div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital &mdash; not the official website of Salon A. The form needs a free Web3Forms key (2 minutes) before it delivers to an inbox; until then it opens the visitor's email app.</div>
+    <div class="foot-note"><span>&copy; <span data-year>2026</span> Salon A. Concept site.</span><span>Built by GCCofCI Digital</span></div>
+  </div>
+</footer>
+
+<a class="chat-fab" href="https://www.instagram.com/salon_a_manila" rel="noopener" aria-label="Message us on Instagram">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4a3.5 3.5 0 0 1-1.4-.9 3.5 3.5 0 0 1-.9-1.4c-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2z"/></svg>
+  Message us
+</a>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

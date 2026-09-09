@@ -1,0 +1,92 @@
+/* =============================================================
+   Slick Barbers Co. — theme.css
+   Direction: "the standing appointment." A retro neighbourhood
+   barbershop on Yague St, booked through a scheduler. The
+   signature is a recurring-slot card: same chair, same barber,
+   same time, every few weeks, shown as a punch strip. Mid-century
+   cream and turquoise, charcoal, a diner-sign condensed display.
+   ============================================================= */
+:root{
+  --paper:      #f4f0e6;
+  --paper-2:    #e7e0cf;
+  --ink:        #20211f;
+  --ink-soft:   #57574f;
+  --line:       #cfc6b1;
+  --accent:     #157a76;   /* mid-century turquoise */
+  --accent-ink: #ffffff;
+  --brand:      #1a1c1b;
+  --brand-ink:  #efe9d9;
+
+  --font-display: "Staatliches", "Arial Narrow", system-ui, sans-serif;
+  --font-body:    "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "Ubuntu Mono", ui-monospace, "Consolas", monospace;
+
+  --radius: 3px;
+  --container: 1080px;
+}
+
+body{ background:var(--paper); color:var(--ink); }
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:400; letter-spacing:.02em; text-transform:uppercase; line-height:1; }
+.lead{ color:var(--ink-soft); }
+a{ color:var(--accent); }
+.eyebrow{ color:var(--accent); font-family:var(--font-mono); letter-spacing:.2em; }
+.section--brand{ background:var(--brand); color:var(--brand-ink); }
+.section--brand .lead{ color:#d5cfbe; opacity:1; }
+.section--brand .eyebrow{ color:#3fb3ad; }
+.section--paper2{ background:var(--paper-2); }
+.rule{ border-color:var(--line); }
+
+.brand{ font-family:var(--font-display); font-weight:400; text-transform:uppercase; letter-spacing:.04em; color:var(--ink); }
+.brand mark{ background:var(--accent); color:#fff; }
+.nav__links a{ letter-spacing:.06em; text-transform:uppercase; font-size:var(--step--1); }
+.nav__links a[aria-current="page"]::after{ background:var(--accent); }
+.btn{ border-radius:var(--radius); font-family:var(--font-display); font-weight:400; letter-spacing:.06em; text-transform:uppercase; font-size:var(--step-0); }
+.btn--accent{ --_bg:var(--accent); --_fg:#fff; }
+.nav__links a.btn{ color:var(--_fg); }
+.section--brand .btn--ghost{ --_fg:var(--brand-ink); }
+.card{ background:#fbf8ee; border-color:var(--line); border-radius:var(--radius); }
+.chat-fab{ background:var(--accent); color:#fff; }
+.site-footer{ background:var(--brand); }
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-body); font-style:italic; }
+.stars{ color:var(--accent); }
+.stat__num{ font-family:var(--font-display); color:var(--accent); }
+.pill{ border-color:var(--line); font-family:var(--font-mono); }
+.table td.price{ color:var(--accent); }
+.field input,.field select,.field textarea{ background:#fbf8ee; border-radius:var(--radius); }
+
+/* =============================================================
+   The standing appointment — signature
+   ============================================================= */
+.standing{
+  background:#fbf8ee;
+  border:2px solid var(--ink);
+  border-radius:var(--radius);
+  padding:clamp(1.3rem, 1rem + 1.4vw, 2rem);
+  max-width:27rem;
+  position:relative;
+}
+.standing__head{ display:flex; align-items:baseline; justify-content:space-between; gap:1rem; border-bottom:2px solid var(--ink); padding-bottom:.7rem; margin-bottom:.9rem; }
+.standing__head h2{ font-size:var(--step-2); }
+.standing__head .tag{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.1em; color:var(--accent); text-transform:uppercase; }
+.standing dl{ display:grid; grid-template-columns:7rem 1fr; gap:.45rem 1rem; margin:0 0 1.1rem; font-family:var(--font-mono); font-size:var(--step--1); }
+.standing dt{ letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); }
+.standing dd{ margin:0; }
+.punch{ display:flex; flex-wrap:wrap; gap:.4rem; }
+.punch span{ width:1.6rem; height:1.6rem; border:1.5px dashed var(--accent); border-radius:50%; }
+.punch span[data-done]{ background:var(--accent); border-style:solid; }
+
+/* pricing rows (shared shape) */
+.srow{ display:grid; grid-template-columns:1fr auto; gap:.15rem 1rem; align-items:baseline; padding:.85rem 0; border-bottom:1px solid var(--line); }
+.srow:last-child{ border-bottom:0; }
+.srow .n{ font-family:var(--font-display); font-weight:400; text-transform:uppercase; font-size:var(--step-1); letter-spacing:.03em; }
+.srow .p{ font-family:var(--font-mono); color:var(--accent); white-space:nowrap; }
+.srow .d{ grid-column:1/-1; font-size:var(--step--1); color:var(--ink-soft); }
+
+.barber{ border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:#fbf8ee; }
+.barber .media{ aspect-ratio:1/1; }
+.barber__body{ padding:1.1rem 1.2rem 1.3rem; }
+.barber__body h3{ font-size:var(--step-1); }
+.barber__body .role{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); }
+
+@media (prefers-reduced-motion: reduce){ .btn:hover{ transform:none; } }

@@ -38,6 +38,11 @@ and hosted anywhere.
 | The Golden Fur Makati (pet grooming / vet / boarding — "the report card" pet passport) | `golden-fur/` | https://cultureoutsiders-spec.github.io/makati-web-studio/golden-fur/ |
 | The GoodFellas Cafe (weekday office cafe — "the order ticket") | `goodfellas-cafe/` | https://cultureoutsiders-spec.github.io/makati-web-studio/goodfellas-cafe/ |
 | Hoshi House (matcha slow-bar — "the slow vertical" with a sumi brushstroke) | `hoshi-house/` | https://cultureoutsiders-spec.github.io/makati-web-studio/hoshi-house/ |
+| Shoe Care (shoe & leather repair, since 1971 — "the repair ticket" claim slip) | `shoe-care/` | https://cultureoutsiders-spec.github.io/makati-web-studio/shoe-care/ |
+| Quicker than Quick (repair / keys / locksmith / leather — "the four-counter" tab board) | `quicker-than-quick/` | https://cultureoutsiders-spec.github.io/makati-web-studio/quicker-than-quick/ |
+| Another Barbershop (neighbourhood barbershop + shelf — "the chair card") | `another-barbershop/` | https://cultureoutsiders-spec.github.io/makati-web-studio/another-barbershop/ |
+| Slick Barbers Co. (standing-appointment barbershop — "the standing slot" punch strip) | `slick-barbers/` | https://cultureoutsiders-spec.github.io/makati-web-studio/slick-barbers/ |
+| Salon A (Korean cut & styling — "the consult sheet") | `salon-a/` | https://cultureoutsiders-spec.github.io/makati-web-studio/salon-a/ |
 
 Studio landing page: repo root `index.html`.
 

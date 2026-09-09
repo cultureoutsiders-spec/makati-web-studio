@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barbers — Another Barbershop</title>
+<meta name="description" content="The bench at Another Barbershop, Poblacion: a short list of barbers, what each is known for, and how to ask for them when you book.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Outfit:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" data-open="false" aria-label="Primary">
+    <a class="brand" href="index.html">Another <mark>Barbershop</mark></a>
+    <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    <ul class="nav__links" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cuts.html">Cuts &amp; prices</a></li>
+      <li><a href="barbers.html" aria-current="page">Barbers</a></li>
+      <li><a href="shop.html">The shelf</a></li>
+      <li><a class="btn btn--accent" href="book.html#book">Book a chair</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="section section--tight">
+    <div class="container">
+      <p class="eyebrow">Barbers</p>
+      <h1>Ask for one by name</h1>
+      <p class="lead measure">A short bench. Every one of them can do every service on the list;
+        these are just what they get asked for most. Names and notes are placeholders for the
+        demo.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight" style="padding-top:0">
+    <div class="container">
+      <div class="grid grid--3">
+        <div class="barber">
+          <div class="media"><img src="assets/img/barber-1.jpg" width="500" height="500" alt="Portrait of a barber" loading="lazy"></div>
+          <div class="barber__body"><p class="role">Owner &middot; 12 yrs</p><h3>JR</h3><p>Classic scissor work and skin fades. The one to see if you want the same cut, exactly, every time.</p></div>
+        </div>
+        <div class="barber">
+          <div class="media"><img src="assets/img/barber-2.jpg" width="500" height="500" alt="Portrait of a barber" loading="lazy"></div>
+          <div class="barber__body"><p class="role">Barber &middot; 7 yrs</p><h3>Mike</h3><p>Textured crops, longer styles, and beard shaping. Good with curly and coarse hair.</p></div>
+        </div>
+        <div class="barber">
+          <div class="media"><img src="assets/img/barber-3.jpg" width="500" height="500" alt="Portrait of a barber" loading="lazy"></div>
+          <div class="barber__body"><p class="role">Barber &middot; 5 yrs</p><h3>Paolo</h3><p>Straight-razor shaves and line-ups. Steady hand, patient with first-timers.</p></div>
+        </div>
+      </div>
+      <p style="margin-top:2rem; color:var(--ink-soft)">When you book, pick a barber or leave it as "first available". If your barber is off, your chair card tells whoever takes the chair what your usual is.</p>
+    </div>
+  </section>
+
+  <section class="section section--brand center">
+    <div class="container stack">
+      <h2 class="display">Booked in?</h2>
+      <p><a class="btn btn--accent btn--lg" href="book.html#book">Book a chair</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div><p class="brand" style="color:var(--brand-ink)">Another <mark>Barbershop</mark></p><p style="opacity:.85; margin-top:1rem; max-width:34ch">A neighbourhood barbershop and grooming shelf on Enriquez Avenue, Poblacion, Makati.</p></div>
+      <div><p class="foot-h">Shop</p><p>5880 Enriquez Avenue<br>Poblacion, Makati</p></div>
+      <div><p class="foot-h">Reach us</p><p><a href="tel:+639171235880">0917 123 5880</a></p></div>
+    </div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital &mdash; not the official website of Another Barbershop. Photography is placeholder stock; the barbers and notes shown are illustrative.</div>
+    <div class="foot-note"><span>&copy; <span data-year>2026</span> Another Barbershop. Concept site.</span><span>Built by GCCofCI Digital</span></div>
+  </div>
+</footer>
+
+<a class="chat-fab" href="https://www.facebook.com/anotherbarbershop.poblacion" rel="noopener" aria-label="Message us on Facebook">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.4-2.6-2.8-5 2.8 5.5-5.9 2.7 2.8 4.9-2.8-5.5 5.9z"/></svg>
+  Message us
+</a>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

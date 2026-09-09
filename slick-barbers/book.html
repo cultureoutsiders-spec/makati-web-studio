@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book — Slick Barbers Co.</title>
+<meta name="description" content="Book a single cut or start a standing appointment at Slick Barbers Co., Makati. Pick a barber, a service and a time; we confirm by reply.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Plus+Jakarta+Sans:wght@400;500;600&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" data-open="false" aria-label="Primary">
+    <a class="brand" href="index.html">Slick <mark>Barbers</mark> Co.</a>
+    <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    <ul class="nav__links" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="the-barbers.html">The barbers</a></li>
+      <li><a href="standing.html">Standing slot</a></li>
+      <li><a class="btn btn--accent" href="book.html#book" aria-current="page">Book</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="section section--tight">
+    <div class="container">
+      <p class="eyebrow">Book</p>
+      <h1>One cut, or a standing slot</h1>
+      <p class="lead measure">Fill this in and we confirm the time by reply. For a standing
+        appointment, say the cadence you want and we set the whole run. This reaches the shop.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight" style="padding-top:0">
+    <div class="container">
+      <div class="split split--top">
+        <form class="form card" id="book" data-contact data-web3key="REPLACE_WITH_WEB3FORMS_KEY" data-mailto="REPLACE_WITH_EMAIL">
+          <div class="field field--hp"><label>Leave this empty<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="n">Your name</label><input id="n" name="name" required></div>
+            <div class="field"><label for="p">Mobile number</label><input id="p" name="phone" inputmode="tel" required></div>
+          </div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="k">Booking type</label>
+              <select id="k" name="type"><option>Single cut</option><option>Start a standing appointment</option></select></div>
+            <div class="field"><label for="c">Cadence (if standing)</label>
+              <select id="c" name="cadence"><option>N/A</option><option>Every 2 weeks</option><option>Every 3 weeks</option><option>Every 4 weeks</option></select></div>
+          </div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="s">Service</label>
+              <select id="s" name="service"><option>Haircut</option><option>Skin fade</option><option>Buzz</option><option>Kids cut</option><option>Beard trim</option><option>Straight-razor shave</option><option>Cut + shave</option><option>Colour</option></select></div>
+            <div class="field"><label for="b">Barber</label>
+              <select id="b" name="barber"><option>First available</option><option>Dennis</option><option>Rew</option><option>Cham</option></select></div>
+          </div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="d">Preferred day</label><input id="d" name="day" type="date"></div>
+            <div class="field"><label for="tm">Preferred time</label><input id="tm" name="time" placeholder="e.g. after 7pm"></div>
+          </div>
+          <div class="field"><label for="i">Your cut, or anything else</label><textarea id="i" name="notes" placeholder="Guard numbers, parting, beard notes, a photo. Helps us hold the right slot length."></textarea></div>
+          <button class="btn btn--accent btn--lg" type="submit">Request a slot</button>
+          <p class="form-status" role="status"></p>
+          <p style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); margin:0">
+            Or <a href="https://www.facebook.com/slickbarbersco" rel="noopener">message on Facebook</a>. Open 10am to 10pm every day.</p>
+        </form>
+
+        <div class="stack">
+          <div class="card">
+            <span class="eyebrow" style="margin-top:0">The shop</span>
+            <p>3919 Yague Street cor. South Avenue<br>Barangay Santa Cruz, Makati</p>
+            <hr class="rule">
+            <span class="eyebrow">Hours</span>
+            <p>Every day &middot; 10am&ndash;10pm</p>
+            <hr class="rule">
+            <span class="eyebrow">Good to know</span>
+            <p style="font-family:var(--font-mono)">No deposit &middot; move a standing slot free &middot; every 5th cut on the shop &middot; walk-ins when a chair is open</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div><p class="brand" style="color:var(--brand-ink)">Slick <mark>Barbers</mark> Co.</p><p style="opacity:.85; margin-top:1rem; max-width:34ch">A neighbourhood barbershop on Yague Street, Makati, run on standing appointments.</p></div>
+      <div><p class="foot-h">Shop</p><p>3919 Yague Street cor. South Avenue<br>Santa Cruz, Makati</p></div>
+      <div><p class="foot-h">Reach us</p><p><a href="https://www.facebook.com/slickbarbersco" rel="noopener">Message on Facebook</a></p></div>
+    </div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital &mdash; not the official website of Slick Barbers Co. The form needs a free Web3Forms key (2 minutes) before it delivers to an inbox; until then it opens the visitor's email app.</div>
+    <div class="foot-note"><span>&copy; <span data-year>2026</span> Slick Barbers Co. Concept site.</span><span>Built by GCCofCI Digital</span></div>
+  </div>
+</footer>
+
+<a class="chat-fab" href="https://www.facebook.com/slickbarbersco" rel="noopener" aria-label="Message us on Facebook">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.4-2.6-2.8-5 2.8 5.5-5.9 2.7 2.8 4.9-2.8-5.5 5.9z"/></svg>
+  Message us
+</a>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

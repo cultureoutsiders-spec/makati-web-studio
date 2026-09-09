@@ -1,0 +1,98 @@
+/* =============================================================
+   Another Barbershop — theme.css
+   Direction: "the chair card." A neighbourhood barbershop and a
+   small retail shelf on Enriquez Ave, Poblacion. The signature is
+   the tally card a barber keeps for a regular: last cut, the
+   usual, when you are next due. Hero device + pricing-page marker.
+   Warm shop cream, a barber red, deep teal-black. Condensed
+   americana display, plain body, mono for the card fields.
+   ============================================================= */
+:root{
+  --paper:      #f3efe6;
+  --paper-2:    #e8e1d3;
+  --ink:        #1c211f;
+  --ink-soft:   #55574f;
+  --line:       #cfc7b5;
+  --accent:     #b22a2a;   /* barber red */
+  --accent-ink: #ffffff;
+  --brand:      #16201d;
+  --brand-ink:  #eee7d7;
+
+  --font-display: "Big Shoulders Display", "Arial Narrow", system-ui, sans-serif;
+  --font-body:    "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "Roboto Mono", ui-monospace, "Consolas", monospace;
+
+  --radius: 2px;
+  --container: 1080px;
+}
+
+body{ background:var(--paper); color:var(--ink); }
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:700; letter-spacing:.01em; text-transform:uppercase; line-height:.95; }
+.lead{ color:var(--ink-soft); }
+a{ color:var(--accent); }
+.eyebrow{ color:var(--accent); font-family:var(--font-mono); letter-spacing:.2em; }
+.section--brand{ background:var(--brand); color:var(--brand-ink); }
+.section--brand .lead{ color:#d6cdba; opacity:1; }
+.section--brand .eyebrow{ color:#d98a5c; }
+.section--paper2{ background:var(--paper-2); }
+.rule{ border-color:var(--line); }
+
+.brand{ font-family:var(--font-display); font-weight:800; text-transform:uppercase; letter-spacing:.02em; color:var(--ink); }
+.brand mark{ background:var(--accent); color:#fff; }
+.nav__links a{ letter-spacing:.06em; text-transform:uppercase; font-size:var(--step--1); }
+.nav__links a[aria-current="page"]::after{ background:var(--accent); }
+.btn{ border-radius:var(--radius); font-family:var(--font-display); font-weight:700; letter-spacing:.06em; text-transform:uppercase; font-size:var(--step-0); }
+.btn--accent{ --_bg:var(--accent); --_fg:#fff; }
+.nav__links a.btn{ color:var(--_fg); }
+.section--brand .btn--ghost{ --_fg:var(--brand-ink); }
+.card{ background:#fbf8f0; border-color:var(--line); border-radius:var(--radius); }
+.chat-fab{ background:var(--accent); color:#fff; }
+.site-footer{ background:var(--brand); }
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-body); font-style:italic; }
+.stars{ color:var(--accent); }
+.stat__num{ font-family:var(--font-display); color:var(--accent); }
+.pill{ border-color:var(--line); font-family:var(--font-mono); }
+.table td.price{ color:var(--accent); }
+.field input,.field select,.field textarea{ background:#fbf8f0; border-radius:var(--radius); }
+
+/* =============================================================
+   The chair card — signature
+   ============================================================= */
+.chaircard{
+  background:#fbf8f0;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:clamp(1.3rem, 1rem + 1.4vw, 2rem);
+  max-width:26rem;
+  box-shadow:0 12px 30px rgba(20,30,25,.12);
+  position:relative;
+}
+.chaircard::after{
+  content:""; position:absolute; left:1.1rem; right:1.1rem; bottom:.9rem; height:1px;
+  background:repeating-linear-gradient(90deg, var(--line) 0 6px, transparent 6px 12px);
+}
+.chaircard h2{ font-size:var(--step-2); margin-bottom:.6rem; }
+.chaircard__name{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.14em; text-transform:uppercase; color:var(--accent); }
+.chaircard dl{ display:grid; grid-template-columns:9rem 1fr; gap:.5rem 1rem; margin:.6rem 0 1.4rem; font-family:var(--font-mono); font-size:var(--step--1); }
+.chaircard dt{ letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); }
+.chaircard dd{ margin:0; }
+.chaircard__stamps{ display:flex; gap:.5rem; }
+.chaircard__stamps span{ width:1.7rem; height:1.7rem; border:1.5px solid var(--accent); border-radius:50%; display:grid; place-items:center; font-family:var(--font-mono); font-size:.7rem; color:var(--accent); }
+.chaircard__stamps span[data-used]{ background:var(--accent); color:#fff; }
+
+/* pricing rows */
+.pcut{ display:grid; grid-template-columns:1fr auto; gap:.15rem 1rem; align-items:baseline; padding:.85rem 0; border-bottom:1px solid var(--line); }
+.pcut:last-child{ border-bottom:0; }
+.pcut .n{ font-family:var(--font-display); font-weight:600; text-transform:uppercase; font-size:var(--step-1); letter-spacing:.02em; }
+.pcut .p{ font-family:var(--font-mono); color:var(--accent); white-space:nowrap; }
+.pcut .d{ grid-column:1/-1; font-size:var(--step--1); color:var(--ink-soft); }
+
+/* barber tile */
+.barber{ border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:#fbf8f0; }
+.barber .media{ aspect-ratio:1/1; }
+.barber__body{ padding:1.1rem 1.2rem 1.3rem; }
+.barber__body h3{ font-size:var(--step-1); }
+.barber__body .role{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); }
+
+@media (prefers-reduced-motion: reduce){ .btn:hover{ transform:none; } }

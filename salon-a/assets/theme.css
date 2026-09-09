@@ -1,0 +1,95 @@
+/* =============================================================
+   Salon A — theme.css
+   Direction: "the Korean chair." A Korean-owned salon on San
+   Agustin St, staff trained by a Korean creative director,
+   Korean products. The signature is the consult sheet the
+   stylist fills in before a single cut: hair type, density,
+   damage, the reference, the plan. Soft warm white, a muted
+   plum, editorial fashion serif used sparingly.
+   ============================================================= */
+:root{
+  --paper:      #f8f7f6;
+  --paper-2:    #eee6e5;
+  --ink:        #201d21;
+  --ink-soft:   #5c545c;
+  --line:       #ddd2d3;
+  --accent:     #7b4f60;   /* muted plum */
+  --accent-ink: #ffffff;
+  --brand:      #211c22;
+  --brand-ink:  #f2eaec;
+
+  --font-display: "Gloock", Georgia, "Times New Roman", serif;
+  --font-body:    "Wix Madefor Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "Geist Mono", ui-monospace, "Consolas", monospace;
+
+  --radius: 12px;
+  --container: 1080px;
+}
+
+body{ background:var(--paper); color:var(--ink); }
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:400; letter-spacing:0; line-height:1.05; }
+h1{ font-weight:400; }
+.lead{ color:var(--ink-soft); }
+a{ color:var(--accent); }
+.eyebrow{ color:var(--accent); font-family:var(--font-mono); letter-spacing:.2em; text-transform:uppercase; }
+.section--brand{ background:var(--brand); color:var(--brand-ink); }
+.section--brand .lead{ color:#d8cdd0; opacity:1; }
+.section--brand .eyebrow{ color:#cf9fae; }
+.section--paper2{ background:var(--paper-2); }
+.rule{ border-color:var(--line); }
+
+.brand{ font-family:var(--font-display); font-weight:400; color:var(--ink); letter-spacing:.02em; }
+.brand mark{ background:var(--accent); color:#fff; border-radius:6px; }
+.nav__links a{ letter-spacing:.04em; font-size:var(--step--1); }
+.nav__links a[aria-current="page"]::after{ background:var(--accent); }
+.btn{ border-radius:999px; font-family:var(--font-body); font-weight:600; letter-spacing:.04em; }
+.btn--accent{ --_bg:var(--accent); --_fg:#fff; }
+.nav__links a.btn{ color:var(--_fg); }
+.section--brand .btn--ghost{ --_fg:var(--brand-ink); }
+.card{ background:#fff; border-color:var(--line); border-radius:var(--radius); }
+.chat-fab{ background:var(--accent); color:#fff; }
+.site-footer{ background:var(--brand); }
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-display); font-weight:400; font-style:normal; }
+.stars{ color:var(--accent); }
+.stat__num{ font-family:var(--font-display); color:var(--accent); }
+.pill{ border-color:var(--line); font-family:var(--font-mono); border-radius:999px; }
+.table td.price{ color:var(--accent); }
+.field input,.field select,.field textarea{ background:#fff; border-radius:10px; }
+
+/* =============================================================
+   The consult sheet — signature
+   ============================================================= */
+.consult{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:clamp(1.4rem, 1.1rem + 1.4vw, 2.2rem);
+  max-width:28rem;
+  box-shadow:0 20px 46px rgba(30,20,30,.10);
+}
+.consult__no{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.16em; text-transform:uppercase; color:var(--accent); }
+.consult h2{ font-size:var(--step-2); margin:.3rem 0 1rem; }
+.consult .row{ display:grid; grid-template-columns:8.5rem 1fr; gap:.55rem 1rem; padding:.55rem 0; border-bottom:1px solid var(--line); font-size:var(--step--1); }
+.consult .row:last-of-type{ border-bottom:0; }
+.consult .row dt{ font-family:var(--font-mono); letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); margin:0; }
+.consult .row dd{ margin:0; }
+.consult .meter{ display:flex; gap:.25rem; margin-top:.2rem; }
+.consult .meter i{ width:1.5rem; height:.4rem; border-radius:2px; background:var(--line); }
+.consult .meter i[data-on]{ background:var(--accent); }
+.consult__plan{ margin-top:1rem; padding-top:.9rem; border-top:1px dashed var(--line); font-size:var(--step--1); color:var(--ink-soft); }
+
+/* menu rows */
+.mrow{ display:grid; grid-template-columns:1fr auto; gap:.2rem 1rem; align-items:baseline; padding:.9rem 0; border-bottom:1px solid var(--line); }
+.mrow:last-child{ border-bottom:0; }
+.mrow .n{ font-family:var(--font-display); font-weight:400; font-size:var(--step-1); }
+.mrow .p{ font-family:var(--font-mono); color:var(--accent); white-space:nowrap; }
+.mrow .d{ grid-column:1/-1; font-size:var(--step--1); color:var(--ink-soft); max-width:58ch; }
+
+.stylist{ border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:#fff; }
+.stylist .media{ aspect-ratio:3/4; }
+.stylist__body{ padding:1.1rem 1.3rem 1.4rem; }
+.stylist__body h3{ font-size:var(--step-1); }
+.stylist__body .role{ font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); }
+
+@media (prefers-reduced-motion: reduce){ .btn:hover{ transform:none; } }

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get a quote — Shoe Care</title>
+<meta name="description" content="Send Shoe Care a photo of the shoe, bag or leather item and what is wrong. You get a price range and a turnaround before you travel to the shop.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Petrona:wght@400;500;600;700&family=Golos+Text:wght@400;500;600&family=Reddit+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" data-open="false" aria-label="Primary">
+    <a class="brand" href="index.html">Shoe <mark>Care</mark></a>
+    <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    <ul class="nav__links" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="leather-care.html">Bags &amp; leather</a></li>
+      <li><a href="the-workshop.html">The workshop</a></li>
+      <li><a class="btn btn--accent" href="quote.html#quote" aria-current="page">Get a quote</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="section section--tight">
+    <div class="container">
+      <p class="eyebrow">Get a quote</p>
+      <h1>Show us the damage</h1>
+      <p class="lead measure">Describe the item and what is wrong, and if you can, bring a photo when
+        you visit or send one on Facebook. We reply with a price range and a turnaround so you know
+        before you make the trip. This form reaches the shop.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight" style="padding-top:0">
+    <div class="container">
+      <div class="split split--top">
+        <form class="form card" id="quote" data-contact data-web3key="REPLACE_WITH_WEB3FORMS_KEY" data-mailto="REPLACE_WITH_EMAIL">
+          <div class="field field--hp"><label>Leave this empty<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="n">Your name</label><input id="n" name="name" required></div>
+            <div class="field"><label for="p">Mobile number</label><input id="p" name="phone" inputmode="tel" required></div>
+          </div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="t">Item</label>
+              <select id="t" name="item">
+                <option>Shoes</option>
+                <option>Bag</option>
+                <option>Luggage</option>
+                <option>Belt / wallet / small goods</option>
+                <option>Leather jacket / garment</option>
+              </select></div>
+            <div class="field"><label for="m">Material, if you know</label><input id="m" name="material" placeholder="calf, suede, canvas, exotic&hellip;"></div>
+          </div>
+          <div class="field"><label for="i">What is wrong</label><textarea id="i" name="details" placeholder="e.g. right sole worn through, both heels down to the nail, colour gone patchy on the toes. Photo to follow on Facebook."></textarea></div>
+          <button class="btn btn--accent btn--lg" type="submit">Send for a quote</button>
+          <p class="form-status" role="status"></p>
+          <p style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); margin:0">
+            Or call <a href="tel:+63288404040">840-4040</a> /
+            <a href="https://www.facebook.com/Shoe-Care-350071215023823" rel="noopener">message on Facebook</a> with a photo.</p>
+        </form>
+
+        <div class="stack">
+          <div class="card">
+            <span class="eyebrow" style="margin-top:0">The shop</span>
+            <p>2120-F Don Chino Roces Avenue<br>Makati City</p>
+            <hr class="rule">
+            <span class="eyebrow">Hours</span>
+            <p>Monday to Saturday, shop hours<br>Call ahead for rush work</p>
+            <hr class="rule">
+            <span class="eyebrow">Good to know</span>
+            <p style="font-family:var(--font-mono)">Estimates are free &middot; you get a numbered claim slip on drop-off &middot; pay on collection &middot; rush jobs settled up front</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div><p class="brand" style="color:var(--brand-ink)">Shoe <mark>Care</mark></p><p style="opacity:.85; margin-top:1rem; max-width:34ch">Shoe, bag and leather-goods repair on Don Chino Roces Avenue, Makati. Since 1971.</p></div>
+      <div><p class="foot-h">Shop</p><p>2120-F Don Chino Roces Avenue<br>Makati City</p></div>
+      <div><p class="foot-h">Reach us</p><p><a href="tel:+63288404040">840-4040</a><br><a href="tel:+639188277142">0918 827 7142</a></p></div>
+    </div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital &mdash; not the official website of Shoe Care. The form needs a free Web3Forms key (2 minutes) before it delivers to an inbox; until then it opens the visitor's email app.</div>
+    <div class="foot-note"><span>&copy; <span data-year>2026</span> Shoe Care. Concept site.</span><span>Built by GCCofCI Digital</span></div>
+  </div>
+</footer>
+
+<a class="chat-fab" href="https://www.facebook.com/Shoe-Care-350071215023823" rel="noopener" aria-label="Message us on Facebook">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.4-2.6-2.8-5 2.8 5.5-5.9 2.7 2.8 4.9-2.8-5.5 5.9z"/></svg>
+  Message us
+</a>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
