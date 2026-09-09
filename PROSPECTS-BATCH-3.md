@@ -4,18 +4,46 @@ Five more Makati businesses with no website of their own, researched 2026-09-09 
 Business Profiles, organic results, Facebook, directory listings). Same offer applies:
 PHP 25,000 one-time, no retainer (first 5 paying clients), then PHP 35,000.
 
-**STATUS: candidates only — no demo sites built yet.**
+**STATUS (updated 2026-09-10): the revised set of five below has demo sites built + live** at
+`https://cultureoutsiders-spec.github.io/makati-web-studio/<slug>/` —
+`yan-yan-soo` · `help-therapy` · `physiospace` · `koffle` · `all-stars`. Outreach drafted, see
+`emails/`.
+
+## Changes on verification (2026-09-10)
+
+When checking email addresses, **two of the original five turned out to have websites** and were
+dropped:
+
+- **Sanbry Men's Grooming House** → `sanbrymensgroominghouse.com` (multi-branch chain site).
+- **Mekeni's Kainan & Catering** → `mekeniscatering.com`.
+
+Replaced with two verified site-less businesses from the batch-3 shortlist:
+
+- **Koffle** — Ghibli-vibes specialty coffee + waffle cafe, 5861 Zobel Roxas St., Palanan.
+  Email `kofflecafeph@gmail.com`. FB `/koffle`, TikTok `@koffle.cafe`. No own domain.
+- **All Stars Cafe and Sports Bar** — sports bar, San Antonio Village. Email
+  `allstarscafeandsportsbar@gmail.com`. FB `/allstarscafeandsportsbar`, IG
+  `@allstars_sportsbar_and_cafe`. No own domain.
+
+So the **built + live batch-3 set** is: Yan yan soo (florist), HELP Therapy Center (peds
+therapy — `helptherapy@gmail.com`), PhysioSpace Poblacion (holistic PT), Koffle (cafe —
+`kofflecafeph@gmail.com`), All Stars (sports bar — `allstarscafeandsportsbar@gmail.com`).
+3 email-reachable, 2 DM-first (Yan yan soo, PhysioSpace). The **Mekeni's** and **Sanbry**
+sections below are kept as the research record only.
+
+Also confirmed to have their own sites while checking alternates: Cafe Lumin
+(`cafelumin.com`), Victorian Beauty Lounge (`victorianbeautylounge.com`).
 
 Same "web presence" test as batches 1 and 2: if every organic result is a Facebook / Instagram
 page, a GrabMart/Waze listing, or a building directory, and there's no own-domain website, it's a
 prospect. **Confirm each yourself in 2 minutes before pitching** — Google the name, look for a
-real "Website" button in the right-hand panel pointing at their own domain. Grab the email off
-the Facebook "About" tab where this list only has a phone.
+real "Website" button in the right-hand panel pointing at their own domain.
 
 Businesses that looked promising but were **disqualified on checking** (they have a real site):
 Cafe Vida Desserts (`cafevidadesserts.com`), Disciplined/OptionsStudio pilates
 (`optionsstudioph.com` — chain), most Makati barbershop chains (Pablings, TUF, Back Alley),
-SALVO tailors (`salvotailors.com`).
+SALVO tailors (`salvotailors.com`), Sanbry Men's Grooming (`sanbrymensgroominghouse.com`),
+Mekeni's Kainan &amp; Catering (`mekeniscatering.com`).
 
 ---
 

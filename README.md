@@ -18,6 +18,11 @@ and hosted anywhere.
 | Resabal Dental Clinic (family dentistry — "wayfinding dashboard") | `resabal-dental/` | https://cultureoutsiders-spec.github.io/makati-web-studio/resabal-dental/ |
 | Ambient Bar &amp; Restaurant (bar + events — "gig-listings page") | `ambient-resto/` | https://cultureoutsiders-spec.github.io/makati-web-studio/ambient-resto/ |
 | Little Gee Plants × Tiny Teapot (plant shop + cafe — "two shops, one door" split) | `little-gee/` | https://cultureoutsiders-spec.github.io/makati-web-studio/little-gee/ |
+| Yan yan soo (florist / gift delivery — "flower table" shop grid) | `yan-yan-soo/` | https://cultureoutsiders-spec.github.io/makati-web-studio/yan-yan-soo/ |
+| HELP Therapy Center (children's speech / OT / PT / SPED — "help desk" knowledge base) | `help-therapy/` | https://cultureoutsiders-spec.github.io/makati-web-studio/help-therapy/ |
+| PhysioSpace Poblacion (holistic physical therapy — calm "breathing" column) | `physiospace/` | https://cultureoutsiders-spec.github.io/makati-web-studio/physiospace/ |
+| Koffle (coffee &amp; waffle cafe — storybook hidden-cafe) | `koffle/` | https://cultureoutsiders-spec.github.io/makati-web-studio/koffle/ |
+| All Stars Cafe and Sports Bar (sports bar — fixtures scoreboard) | `all-stars/` | https://cultureoutsiders-spec.github.io/makati-web-studio/all-stars/ |
 
 Studio landing page: repo root `index.html`.
 
