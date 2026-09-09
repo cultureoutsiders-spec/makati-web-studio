@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a slot — Rapide Salon San Antonio Makati</title>
+<meta name="description" content="Request a detailing slot at Rapide Salon, San Antonio, Makati. Tell us the vehicle, the service and a preferred date — we'll confirm a time and a quote.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" data-open="false" aria-label="Primary">
+    <a class="brand" href="index.html">Rapide<b>/</b>Salon</a>
+    <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    <ul class="nav__links" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="process.html">The process</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="work.html">Our work</a></li>
+      <li><a class="btn btn--accent" href="book.html#book" aria-current="page">Book a slot</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="section section--tight">
+    <div class="container">
+      <p class="eyebrow">Book a slot</p>
+      <h1>Tell us the car and what you want done</h1>
+      <p class="lead measure">This goes to the shop. We'll reply with a time you can drop the car
+        off and a quote based on the paint and the size. No deposit to request a slot.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight" style="padding-top:0">
+    <div class="container">
+      <div class="split split--top">
+        <form class="form card" id="book" data-contact data-web3key="REPLACE_WITH_WEB3FORMS_KEY" data-mailto="REPLACE_WITH_EMAIL">
+          <div class="field field--hp"><label>Leave this empty<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="n">Your name</label><input id="n" name="name" required></div>
+            <div class="field"><label for="p">Mobile number</label><input id="p" name="phone" inputmode="tel" required></div>
+          </div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="v">Vehicle (make &amp; model)</label><input id="v" name="vehicle" placeholder="e.g. Toyota Vios 2021" required></div>
+            <div class="field"><label for="sz">Size</label>
+              <select id="sz" name="size"><option>Sedan / hatch</option><option>MPV / crossover</option><option>SUV / pickup</option><option>Van</option></select></div>
+          </div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="s">Service</label>
+              <select id="s" name="service">
+                <option>Reset wash</option>
+                <option>Ceramic 1-Year</option>
+                <option>Ceramic 3-Year</option>
+                <option>Window tint</option>
+                <option>Not sure — advise me</option>
+              </select></div>
+            <div class="field"><label for="d">Preferred date</label><input id="d" name="preferred_date" type="date"></div>
+          </div>
+          <div class="field"><label for="m">Anything we should know</label><textarea id="m" name="notes" placeholder="Paint condition, swirl marks, previous coating, add-ons…"></textarea></div>
+          <button class="btn btn--accent btn--lg" type="submit">Request a slot</button>
+          <p class="form-status" role="status"></p>
+          <p style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); margin:0">
+            Prefer to chat? Message the shop on
+            <a href="https://www.facebook.com/rapidesalon" rel="noopener">Facebook</a> or call
+            <a href="tel:+639633082127">0963 308 2127</a>.</p>
+        </form>
+
+        <div class="stack">
+          <div class="jobcard">
+            <div class="jobcard__bar"><span>The bay</span><b>Rapide / Salon</b></div>
+            <div class="jobrow"><dt>Address</dt><dd>1166 Chino Roces Ave cor. Estrella St., San Antonio, Makati</dd></div>
+            <div class="jobrow"><dt>Hours</dt><dd>Mon–Sun · 8am–5pm</dd></div>
+            <div class="jobrow"><dt>Phone</dt><dd>0963 308 2127</dd></div>
+            <div class="jobrow"><dt>Turnaround</dt><dd>Half-day (wash) to 2 days (3-yr ceramic)</dd></div>
+          </div>
+          <p style="font-size:var(--step--1); color:var(--ink-soft)">Street parking on Estrella for drop-off. If you're coming from EDSA, it's the Chino Roces corner near the Estrella flyover.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <p class="brand">Rapide<b>/</b>Salon</p>
+        <p style="opacity:.85; margin-top:1rem; max-width:36ch">Independent car detailing, ceramic coating and window tint. San Antonio, Makati.</p>
+      </div>
+      <div><p class="foot-h">Bay</p><p>1166 Chino Roces Ave<br>cor. Estrella St.<br>Barangay San Antonio, Makati<br>Mon–Sun · 8am–5pm</p></div>
+      <div><p class="foot-h">Book</p>
+        <p><a href="tel:+639633082127">0963 308 2127</a><br>
+           <a href="https://www.facebook.com/rapidesalon" rel="noopener">Message on Facebook</a><br>
+           <a href="https://www.instagram.com/rapidesalonsanantoniomakati" rel="noopener">@rapidesalonsanantoniomakati</a></p></div>
+    </div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Rapide Salon San Antonio Makati. The form needs a free Web3Forms key (2 minutes) before it delivers to an inbox; until then it opens the visitor's email app.</div>
+    <div class="foot-note"><span>© <span data-year>2026</span> Rapide Salon San Antonio Makati. Concept site.</span><span>Built by GCCofCI Digital</span></div>
+  </div>
+</footer>
+
+<a class="chat-fab" href="https://www.facebook.com/rapidesalon" rel="noopener" aria-label="Message us on Facebook">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.4-2.6-2.8-5 2.8 5.5-5.9 2.7 2.8 4.9-2.8-5.5 5.9z"/></svg>
+  Message us
+</a>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

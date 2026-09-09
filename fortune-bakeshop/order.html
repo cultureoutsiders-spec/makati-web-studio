@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order — Fortune Bakeshop</title>
+<meta name="description" content="Order breads for pickup or a cake for an occasion at Fortune Bakeshop, Dela Rosa, Makati. Tell us what, how many and when — we'll confirm and have it ready.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Work+Sans:wght@400;500;600&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" data-open="false" aria-label="Primary">
+    <a class="brand" href="index.html">Fortune <b>Bakeshop</b></a>
+    <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>
+    <ul class="nav__links" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="breads.html">Breads</a></li>
+      <li><a href="cakes.html">Cakes</a></li>
+      <li><a href="our-story.html">Our story</a></li>
+      <li><a class="btn btn--accent" href="order.html#order" aria-current="page">Order</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="section section--tight">
+    <div class="container">
+      <p class="eyebrow">Order</p>
+      <h1>Pickup orders &amp; party trays</h1>
+      <p class="lead measure">Tell us what you need and when. We'll reply to confirm the total and a
+        pickup time. Cakes and large bread orders need a day or two — see the notes.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight" style="padding-top:0">
+    <div class="container">
+      <div class="split split--top">
+        <form class="form card" id="order" data-contact data-web3key="REPLACE_WITH_WEB3FORMS_KEY" data-mailto="REPLACE_WITH_EMAIL">
+          <div class="field field--hp"><label>Leave this empty<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="n">Your name</label><input id="n" name="name" required></div>
+            <div class="field"><label for="p">Mobile number</label><input id="p" name="phone" inputmode="tel" required></div>
+          </div>
+          <div class="grid grid--2" style="gap:1.1rem">
+            <div class="field"><label for="ty">Order type</label>
+              <select id="ty" name="order_type">
+                <option>Breads for pickup</option>
+                <option>Cake — from the case</option>
+                <option>Cake — greeting (1 day)</option>
+                <option>Cake — custom (2+ days)</option>
+                <option>Party / bulk tray</option>
+              </select></div>
+            <div class="field"><label for="d">Pickup date</label><input id="d" name="pickup_date" type="date"></div>
+          </div>
+          <div class="field"><label for="i">What you'd like</label><textarea id="i" name="items" placeholder="e.g. 5 dozen pandesal + 2 boxes ensaymada; or a 9&quot; mocha cake, message: &quot;Happy 60th Lola&quot;"></textarea></div>
+          <div class="field"><label for="br">Pickup branch</label>
+            <select id="br" name="branch"><option>Dela Rosa (Prince Plaza 2)</option><option>Greenbelt area</option><option>Other — see notes</option></select></div>
+          <button class="btn btn--accent btn--lg" type="submit">Send order request</button>
+          <p class="form-status" role="status"></p>
+          <p style="font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); margin:0">
+            Or call <a href="tel:+639190721846">0919 072 1846</a> /
+            <a href="https://www.facebook.com/p/Fortune-Bakeshop-100089602185480/" rel="noopener">message on Facebook</a>.
+            This isn't a live checkout — we confirm every order by reply.</p>
+        </form>
+
+        <div class="stack">
+          <div class="receipt">
+            <div class="receipt__h"><b>Order Notes</b><span>PLEASE READ</span></div>
+            <div class="receipt__row"><span>Breads, under 5 doz</span><span class="d"></span><span class="pr">same day</span></div>
+            <div class="receipt__row"><span>Breads, 5 doz +</span><span class="d"></span><span class="pr">1 day</span></div>
+            <div class="receipt__row"><span>Case cake</span><span class="d"></span><span class="pr">same day</span></div>
+            <div class="receipt__row"><span>Greeting cake</span><span class="d"></span><span class="pr">1 day</span></div>
+            <div class="receipt__row"><span>Custom cake</span><span class="d"></span><span class="pr">2 days +</span></div>
+            <div class="receipt__row"><span>Custom deposit</span><span class="d"></span><span class="pr">50%</span></div>
+            <div class="receipt__foot">— MABUHAY —</div>
+          </div>
+          <div class="card">
+            <p class="eyebrow" style="margin-top:0">Dela Rosa branch</p>
+            <p>Unit G-7, Ground Floor, Prince Plaza 2<br>Dela Rosa St., Makati<br>Open daily · 6am–9pm</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <p class="brand">Fortune <b>Bakeshop</b></p>
+        <p style="opacity:.85; margin-top:1rem; max-width:34ch">A neighbourhood bakeshop since 1974. Everyday breads and occasion cakes. Makati.</p>
+      </div>
+      <div><p class="foot-h">Dela Rosa branch</p><p>Unit G-7, Prince Plaza 2<br>Dela Rosa St., Makati<br>Open daily · 6am–9pm</p></div>
+      <div><p class="foot-h">Order</p>
+        <p><a href="tel:+639190721846">0919 072 1846</a><br>
+           <a href="https://www.facebook.com/p/Fortune-Bakeshop-100089602185480/" rel="noopener">Message on Facebook</a></p></div>
+    </div>
+    <div class="demo-flag">Design proposal prepared by GCCofCI Digital — not the official website of Fortune Bakeshop. The form needs a free Web3Forms key (2 minutes) before it delivers to an inbox; until then it opens the visitor's email app.</div>
+    <div class="foot-note"><span>© <span data-year>2026</span> Fortune Bakeshop. Concept site.</span><span>Built by GCCofCI Digital</span></div>
+  </div>
+</footer>
+
+<a class="chat-fab" href="https://www.facebook.com/p/Fortune-Bakeshop-100089602185480/" rel="noopener" aria-label="Message us on Facebook">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.4-2.6-2.8-5 2.8 5.5-5.9 2.7 2.8 4.9-2.8-5.5 5.9z"/></svg>
+  Message us
+</a>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

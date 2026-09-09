@@ -1,0 +1,163 @@
+/* =============================================================
+   Rapide Salon San Antonio Makati — theme.css
+   Direction: "the bay sheet." A detailing bay runs on a work
+   order — vehicle in, staged process, protection out. Pearl-grey
+   shop light, graphite ink, one ceramic-blue accent, and a thin
+   "gloss bar" whose specular highlight sweeps across it. Packages
+   are build sheets with a gloss meter; the process is genuinely
+   numbered because detailing genuinely is a sequence.
+   ============================================================= */
+:root{
+  --paper:      #f4f6f8;
+  --paper-2:    #e9edf2;
+  --ink:        #1b2027;
+  --ink-soft:   #57626f;
+  --line:       #d4dae1;
+  --accent:     #1560d8;   /* ceramic blue */
+  --accent-ink: #ffffff;
+  --brand:      #12161c;   /* graphite dark block */
+  --brand-ink:  #eef2f6;
+  --coat:       #37a9e2;   /* specular highlight */
+
+  --font-display: "Saira", "Arial Narrow", system-ui, sans-serif;
+  --font-body:    "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  --radius: 3px;
+  --container: 1180px;
+}
+
+body{ background:var(--paper); color:var(--ink); }
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:700; letter-spacing:-.005em; line-height:1.02; }
+h1{ text-transform:uppercase; letter-spacing:.005em; }
+.lead{ color:var(--ink-soft); font-size:var(--step-1); line-height:1.45; }
+a{ color:var(--accent); }
+.eyebrow{ color:var(--accent); font-family:var(--font-mono); letter-spacing:.2em; font-weight:500; }
+.eyebrow::before{ background:currentColor; }
+.section--brand{ background:var(--brand); }
+.section--brand .lead{ color:#aeb9c6; }
+.section--brand .eyebrow{ color:var(--coat); }
+.rule{ border-color:var(--line); }
+.pill{ border-color:var(--line); font-family:var(--font-mono); }
+
+/* ---- nav / brand ---- */
+.brand{ font-family:var(--font-display); font-weight:700; text-transform:uppercase; letter-spacing:.08em; font-size:var(--step-1); color:var(--ink); }
+.brand b{ color:var(--accent); }
+.nav__links a{ font-family:var(--font-mono); font-weight:500; letter-spacing:.04em; text-transform:uppercase; font-size:var(--step--1); }
+.nav__links a[aria-current="page"]::after{ background:var(--accent); }
+.btn{ font-family:var(--font-display); font-weight:600; text-transform:uppercase; letter-spacing:.09em; border-radius:var(--radius); }
+.btn{ --_bg:var(--ink); --_fg:var(--paper); }
+.btn--accent{ --_bg:var(--accent); --_fg:var(--accent-ink); }
+.btn--ghost{ --_bg:transparent; --_fg:currentColor; border-color:currentColor; }
+.nav__links a.btn{ color:var(--_fg); }               /* base .nav__links a colour was winning */
+.section--brand .btn--ghost{ --_fg:var(--brand-ink); }
+.card{ background:#fff; border-color:var(--line); border-radius:var(--radius); }
+
+/* =============================================================
+   Gloss bar — the signature. A thin bar with a moving specular
+   sweep. Used under the hero and between sections.
+   ============================================================= */
+.glossbar{
+  height:10px; border-radius:999px; position:relative; overflow:hidden;
+  background:linear-gradient(90deg, #cfd7df, #eef2f6 30%, #cdd6df 55%, #e7ecf1 80%, #cfd7df);
+  border:1px solid var(--line);
+}
+.glossbar::after{
+  content:""; position:absolute; top:0; bottom:0; width:38%;
+  background:linear-gradient(90deg, transparent, rgba(255,255,255,.95), var(--coat), transparent);
+  transform:translateX(-120%);
+  animation:sheen 4.6s ease-in-out infinite;
+}
+@keyframes sheen{ 0%{ transform:translateX(-120%); } 55%{ transform:translateX(320%); } 100%{ transform:translateX(320%); } }
+@media (prefers-reduced-motion:reduce){ .glossbar::after{ animation:none; opacity:.5; transform:translateX(120%); } }
+.glossbar--divider{ max-width:var(--container); margin-inline:auto; }
+
+/* =============================================================
+   Hero + job card
+   ============================================================= */
+.hero--bay{ padding-block:clamp(2.6rem,2rem + 3vw,4.6rem); }
+.hero--bay .split{ align-items:center; gap:clamp(2rem,1rem + 4vw,4.5rem); }
+.hero--bay h1{ font-size:clamp(2.5rem,1.7rem + 4vw,4.4rem); }
+.hero--bay .lead{ max-width:42ch; }
+
+.jobcard{ background:#fff; border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; }
+.jobcard__bar{ display:flex; justify-content:space-between; align-items:center; gap:1rem;
+  background:var(--brand); color:var(--brand-ink); padding:.7rem 1rem;
+  font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.14em; text-transform:uppercase; }
+.jobcard__bar b{ color:var(--coat); font-weight:500; }
+.jobrow{ display:grid; grid-template-columns:9rem 1fr; gap:1rem; padding:.7rem 1rem; border-bottom:1px solid var(--line); font-size:var(--step--1); }
+.jobrow:last-child{ border-bottom:0; }
+.jobrow dt{ font-family:var(--font-mono); letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); }
+.jobrow dd{ margin:0; font-weight:600; }
+.jobrow dd .ok{ color:var(--accent); }
+
+/* =============================================================
+   Process — numbered stages
+   ============================================================= */
+.process{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:#fff; }
+.stage{ padding:clamp(1.2rem,1rem + 1vw,1.8rem); border-right:1px solid var(--line); position:relative; }
+.stage:last-child{ border-right:0; }
+.stage__n{ font-family:var(--font-mono); font-size:var(--step--1); color:var(--accent); letter-spacing:.1em; }
+.stage h3{ font-size:var(--step-1); margin:.4rem 0 .3rem; text-transform:uppercase; }
+.stage p{ font-size:var(--step--1); color:var(--ink-soft); margin:0; }
+@media (max-width:820px){ .process{ grid-template-columns:1fr 1fr; } .stage:nth-child(2){ border-right:0; } .stage:nth-child(1),.stage:nth-child(2){ border-bottom:1px solid var(--line); } }
+@media (max-width:520px){ .process{ grid-template-columns:1fr; } .stage{ border-right:0; border-bottom:1px solid var(--line); } .stage:last-child{ border-bottom:0; } }
+
+/* =============================================================
+   Packages — build sheets with a gloss meter
+   ============================================================= */
+.pkgs{ display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:var(--space-md); }
+.pkg{ background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:0; overflow:hidden; display:flex; flex-direction:column; }
+.pkg--feature{ border-color:var(--accent); box-shadow:0 0 0 1px var(--accent); }
+.pkg__head{ padding:1.2rem 1.4rem; border-bottom:1px solid var(--line); }
+.pkg__head h3{ font-size:var(--step-1); text-transform:uppercase; margin:0; }
+.pkg__price{ font-family:var(--font-mono); font-size:var(--step-1); margin-top:.3rem; display:block; }
+.pkg__price span{ font-size:var(--step--1); color:var(--ink-soft); }
+.pkg__spec{ margin:0; padding:1.1rem 1.4rem; display:grid; gap:.55rem; font-size:var(--step--1); flex:1; }
+.pkg__spec div{ display:grid; grid-template-columns:auto 1fr; gap:.5rem; }
+.pkg__spec dt{ font-family:var(--font-mono); color:var(--ink-soft); text-transform:uppercase; letter-spacing:.06em; }
+.pkg__spec dd{ margin:0; text-align:right; font-weight:600; }
+.gloss-meter{ padding:1rem 1.4rem 1.3rem; border-top:1px solid var(--line); }
+.gloss-meter span{ font-family:var(--font-mono); font-size:var(--step--1); text-transform:uppercase; letter-spacing:.08em; color:var(--ink-soft); }
+.gloss-meter i{ display:block; height:8px; margin-top:.5rem; border-radius:999px; background:var(--paper-2);
+  position:relative; overflow:hidden; }
+.gloss-meter i::before{ content:""; position:absolute; inset:0; width:var(--fill,60%);
+  background:linear-gradient(90deg, var(--accent), var(--coat)); border-radius:999px; }
+
+/* =============================================================
+   Before / after drag slider
+   ============================================================= */
+.ba{ position:relative; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--paper-2); touch-action:pan-y; user-select:none; }
+.ba > img{ display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:16/10; }
+.ba__after{ position:absolute; inset:0; clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0); }
+.ba__after img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.ba__wrap{ position:relative; }
+.ba__handle{ position:absolute; top:0; bottom:0; left:var(--pos,50%); width:2px; background:var(--accent);
+  transform:translateX(-1px); cursor:ew-resize; }
+.ba__handle::after{ content:""; position:absolute; top:50%; left:50%; width:38px; height:38px; transform:translate(-50%,-50%);
+  border:2px solid var(--accent); border-radius:50%; background:rgba(255,255,255,.9); }
+.ba__tag{ position:absolute; bottom:.7rem; font-family:var(--font-mono); font-size:var(--step--1); text-transform:uppercase;
+  letter-spacing:.1em; background:rgba(18,22,28,.78); color:#fff; padding:.25em .6em; border-radius:2px; }
+.ba__tag--l{ left:.7rem; } .ba__tag--r{ right:.7rem; }
+
+/* =============================================================
+   Comparison table tweaks + misc
+   ============================================================= */
+.table thead th{ font-family:var(--font-mono); }
+.table td.price{ color:var(--accent); }
+.spec-list{ list-style:none; margin:0; padding:0; display:grid; gap:.5rem; }
+.spec-list li{ display:flex; gap:.7rem; font-size:var(--step-0); }
+.spec-list li::before{ content:"+"; color:var(--accent); font-family:var(--font-mono); }
+
+.stat__num{ font-family:var(--font-display); font-weight:700; color:var(--ink); }
+.section--brand .stat__num{ color:#fff; }
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-body); font-weight:500; font-style:normal; }
+.review cite{ font-family:var(--font-mono); }
+.stars{ color:var(--accent); }
+.chat-fab{ background:var(--accent); color:#fff; }
+.site-footer{ background:var(--brand); }
+.foot-h{ font-family:var(--font-mono); letter-spacing:.16em; }
+.field label{ font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.06em; font-size:var(--step--1); }
+.field input,.field select,.field textarea{ border-radius:var(--radius); }
+.notfound{ text-align:center; padding-block:var(--space-2xl); }

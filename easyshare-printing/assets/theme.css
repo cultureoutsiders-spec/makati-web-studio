@@ -1,0 +1,139 @@
+/* =============================================================
+   Easyshare Printing Services Makati — theme.css
+   Direction: "the order desk." A print shop runs on specs — GSM,
+   ISO sizes, finishes, turnaround. So the site is built like a
+   press sheet: warm paper stock, process black, one blue-line
+   cyan (plan printing is still called "blue printing"), and a
+   CMYK colour bar with trim marks as the recurring motif.
+   ============================================================= */
+:root{
+  --paper:      #fbfbf8;
+  --paper-2:    #f0f0ea;
+  --ink:        #16161a;
+  --ink-soft:   #56565d;
+  --line:       #dcdcd4;
+  --accent:     #0092d0;   /* blue-line cyan */
+  --accent-ink: #ffffff;
+  --brand:      #101014;
+  --brand-ink:  #f2f2ee;
+  --c:#00a7e1; --m:#ec008c; --y:#ffd200; --k:#16161a;
+
+  --font-display: "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body:    "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  --radius: 2px;
+  --container: 1180px;
+}
+
+body{ background:var(--paper); color:var(--ink); }
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:600; letter-spacing:-.01em; line-height:1.05; }
+.lead{ color:var(--ink-soft); font-size:var(--step-1); line-height:1.5; }
+a{ color:var(--accent); }
+.eyebrow{ color:var(--accent); font-family:var(--font-mono); letter-spacing:.18em; font-weight:500; }
+.eyebrow::before{ background:currentColor; }
+.section--brand{ background:var(--brand); }
+.section--brand .lead{ color:#b7b7b1; }
+.section--brand .eyebrow{ color:var(--c); }
+.rule{ border-color:var(--line); }
+.section--paper2{ background:var(--paper-2); }
+
+.brand{ font-family:var(--font-display); font-weight:700; letter-spacing:-.02em; font-size:var(--step-1); color:var(--ink); }
+.brand b{ color:var(--accent); font-weight:700; }
+.nav__links a{ font-family:var(--font-mono); font-weight:500; letter-spacing:.03em; font-size:var(--step--1); }
+.nav__links a[aria-current="page"]::after{ background:var(--accent); }
+.btn{ font-family:var(--font-display); font-weight:600; letter-spacing:.02em; border-radius:var(--radius); }
+.btn{ --_bg:var(--ink); --_fg:var(--paper); }
+.btn--accent{ --_bg:var(--accent); --_fg:var(--accent-ink); }
+.btn--ghost{ --_bg:transparent; --_fg:currentColor; border-color:currentColor; }
+.nav__links a.btn{ color:var(--_fg); }
+.section--brand .btn--ghost{ --_fg:var(--brand-ink); }
+.card{ background:#fff; border-color:var(--line); border-radius:var(--radius); }
+
+/* =============================================================
+   CMYK colour bar + trim marks — the signature
+   ============================================================= */
+.cropbar{ display:flex; align-items:stretch; height:16px; max-width:var(--container); margin-inline:auto; }
+.cropbar span{ flex:1; }
+.cropbar span:nth-child(1){ background:var(--c); }
+.cropbar span:nth-child(2){ background:var(--m); }
+.cropbar span:nth-child(3){ background:var(--y); }
+.cropbar span:nth-child(4){ background:var(--k); }
+.cropbar--label{ position:relative; }
+.cropbar--label::after{ content:"C  M  Y  K"; position:absolute; right:0; top:-1.3rem; font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.4em; color:var(--ink-soft); }
+
+.cropframe{ position:relative; }
+.cropframe > .cf{ position:relative; }
+.cropframe::before,.cropframe::after,
+.cropframe > .cf::before,.cropframe > .cf::after{
+  content:""; position:absolute; width:15px; height:15px; border:0 solid var(--ink-soft); pointer-events:none;
+}
+.cropframe::before{ top:-7px; left:-7px; border-top-width:1px; border-left-width:1px; }
+.cropframe::after{ bottom:-7px; right:-7px; border-bottom-width:1px; border-right-width:1px; }
+.cropframe > .cf::before{ top:-7px; right:-7px; border-top-width:1px; border-right-width:1px; }
+.cropframe > .cf::after{ bottom:-7px; left:-7px; border-bottom-width:1px; border-left-width:1px; }
+
+/* =============================================================
+   Job spec card (hero)
+   ============================================================= */
+.hero--desk{ padding-block:clamp(2.6rem,2rem + 3vw,4.6rem); }
+.hero--desk h1{ font-size:clamp(2.4rem,1.7rem + 3.6vw,4.2rem); }
+.hero--desk .lead{ max-width:42ch; }
+.jobspec{ background:#fff; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; }
+.jobspec__h{ background:var(--brand); color:var(--brand-ink); font-family:var(--font-mono); font-size:var(--step--1);
+  letter-spacing:.16em; text-transform:uppercase; padding:.7rem 1rem; display:flex; justify-content:space-between; }
+.jobspec__h b{ color:var(--c); font-weight:500; }
+.jobspec dl{ margin:0; }
+.jr{ display:grid; grid-template-columns:8.5rem 1fr; gap:1rem; padding:.7rem 1rem; border-bottom:1px dashed var(--line); font-size:var(--step--1); }
+.jr:last-child{ border-bottom:0; }
+.jr dt{ font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); }
+.jr dd{ margin:0; font-weight:600; }
+.jr dd em{ font-style:normal; color:var(--accent); }
+
+/* =============================================================
+   Categories
+   ============================================================= */
+.cats{ display:grid; grid-template-columns:repeat(2,1fr); gap:0; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:#fff; }
+@media (max-width:720px){ .cats{ grid-template-columns:1fr; } }
+.cat{ padding:clamp(1.4rem,1.1rem + 1.4vw,2rem); border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+.cat:nth-child(2n){ border-right:0; }
+.cat:nth-last-child(-n+2){ border-bottom:0; }
+@media (max-width:720px){ .cat{ border-right:0; } .cat:last-child{ border-bottom:0; } }
+.cat span{ font-family:var(--font-mono); font-size:var(--step--1); color:var(--accent); letter-spacing:.08em; }
+.cat h3{ font-size:var(--step-1); margin:.3rem 0 .4rem; }
+.cat p{ font-size:var(--step--1); color:var(--ink-soft); margin:0; }
+.cat ul{ margin:.7rem 0 0; padding-left:1.1rem; font-size:var(--step--1); color:var(--ink-soft); }
+
+/* =============================================================
+   Spec tables
+   ============================================================= */
+.table thead th{ font-family:var(--font-mono); }
+.table td.price{ color:var(--accent); }
+.table caption{ text-align:left; font-family:var(--font-mono); font-size:var(--step--1); letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ink-soft); padding-bottom:.6rem; }
+
+/* run flow — numbered */
+.runflow{ display:grid; grid-template-columns:repeat(5,1fr); gap:0; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:#fff; counter-reset:rf; }
+.rf-step{ padding:1.2rem 1rem; border-right:1px solid var(--line); }
+.rf-step:last-child{ border-right:0; }
+.rf-step::before{ counter-increment:rf; content:"0" counter(rf); font-family:var(--font-mono); color:var(--accent); font-size:var(--step--1); }
+.rf-step h3{ font-size:var(--step-0); margin:.3rem 0 .2rem; }
+.rf-step p{ font-size:var(--step--1); color:var(--ink-soft); margin:0; }
+@media (max-width:900px){ .runflow{ grid-template-columns:1fr 1fr; } .rf-step{ border-bottom:1px solid var(--line); } .rf-step:nth-child(2n){ border-right:0; } }
+@media (max-width:520px){ .runflow{ grid-template-columns:1fr; } .rf-step{ border-right:0; } }
+
+/* misc */
+.pill{ border-color:var(--line); font-family:var(--font-mono); }
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-body); font-weight:500; font-style:normal; }
+.review cite{ font-family:var(--font-mono); }
+.stars{ color:var(--accent); }
+.stat__num{ font-family:var(--font-display); font-weight:700; color:var(--ink); }
+.section--brand .stat__num{ color:#fff; }
+.chat-fab{ background:var(--accent); color:#fff; }
+.site-footer{ background:var(--brand); }
+.foot-h{ font-family:var(--font-mono); letter-spacing:.16em; }
+.field label{ font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.05em; font-size:var(--step--1); }
+.field input,.field select,.field textarea{ border-radius:var(--radius); background:#fff; }
+.demo-flag{ border-color:rgba(255,255,255,.28); }
+.notfound{ text-align:center; padding-block:var(--space-2xl); }

@@ -5,8 +5,32 @@ from **Google Maps** (category searches around Poblacion / San Antonio Village /
 then each one **cross-checked on Facebook / Instagram** for a working website link. Researched
 2026-09-09.
 
-**STATUS: candidates only — no demo sites built yet.** Same offer applies: PHP 25,000 one-time,
-no retainer (first 5 paying clients), then PHP 35,000.
+**STATUS (updated 2026-09-10): demo sites built + live** at
+`https://cultureoutsiders-spec.github.io/makati-web-studio/<slug>/` —
+`rapide-salon` · `mooi-makati` · `easyshare-printing` · `shala-beauty` · `fortune-bakeshop`.
+Outreach drafted in `emails/` (1 email: Easyshare; 4 DM scripts: Rapide, MOOI, SHALA, Fortune).
+Same offer: PHP 25,000 one-time, no retainer (first 5 paying clients), then PHP 35,000.
+
+## Changes on verification (2026-09-10)
+
+Both flagged checks came back positive — the businesses have their own sites — so both were
+dropped, same as Sanbry / Mekeni's in batch 3:
+
+- **Insular Bakery Makati** → `insularbakery.com` (the Makati original's own site: "5051 P. Burgos
+  Street, Makati City", "baking … since 1924", PH phone 896-8222). NOT just the Canadian namesake.
+- **Cuerva Bakeshop** → `cuervabakeshop.com` (multi-branch; `info@cuervabakeshop.com`).
+
+Insular Bakery was the F&B-story slot; replaced from the alternates list by **Fortune Bakeshop**
+(Dela Rosa) — a neighbourhood bakeshop since 1974, no own website (only GrabFood / FoodPanda),
+contact 0919 072 1846. Keeps the heritage-bakery template intact.
+
+Also confirmed during research: **MOOI Makati** has no website (IG `@mooimakati` ~9.9K + FB only);
+`mooigroup.com` is an unrelated clinic in Pune, India. **SHALA's** Google "Website" link points at
+a third-party **Welns** booking widget, not an own domain — still a valid prospect.
+
+Contacts confirmed: Easyshare `easyshareprinting@gmail.com` (email-first); the other four are
+DM/call-first. Rapide Salon is the independent detailer — do NOT use `rapide.com.ph` /
+`rapidesalon@rapide.com.ph` (that's the national Rapidé chain).
 
 ## How the check was done
 

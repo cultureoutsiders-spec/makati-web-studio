@@ -1,0 +1,131 @@
+/* =============================================================
+   SHALA Beauty Lounge — theme.css
+   Direction: "the colour wall." A nail-and-lash lounge picks a
+   shade off a wall of chips. So the whole site is organised in
+   rounded colour chips — the quick-nav, the service categories,
+   the price tags, the gallery labels — over a warm off-white,
+   with one confident lilac and a butter second. Soft corners,
+   friendly grotesque, monospace prices.
+   ============================================================= */
+:root{
+  --paper:      #faf7f5;
+  --paper-2:    #f2ece9;
+  --ink:        #221a2b;
+  --ink-soft:   #5f5768;
+  --line:       #e7ddd9;
+  --accent:     #7c5cff;   /* lilac-violet */
+  --accent-ink: #ffffff;
+  --butter:     #f0e1bf;
+  --brand:      #221a2b;
+  --brand-ink:  #f4eef2;
+
+  --font-display: "Familjen Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body:    "Albert Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "DM Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  --radius: 16px;
+  --container: 1120px;
+}
+
+body{ background:var(--paper); color:var(--ink); }
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:600; letter-spacing:-.02em; line-height:1.06; }
+.lead{ color:var(--ink-soft); font-size:var(--step-1); line-height:1.5; }
+a{ color:var(--accent); }
+.eyebrow{ color:var(--accent); font-family:var(--font-mono); letter-spacing:.16em; font-weight:400; }
+.eyebrow::before{ background:currentColor; }
+.section--brand{ background:var(--brand); }
+.section--brand .lead{ color:#c8bfce; }
+.section--brand .eyebrow{ color:#c3aaff; }
+.rule{ border-color:var(--line); }
+.section--paper2{ background:var(--paper-2); }
+
+.brand{ font-family:var(--font-display); font-weight:700; letter-spacing:.06em; font-size:var(--step-1); color:var(--ink); }
+.brand b{ color:var(--accent); }
+.nav__links a{ font-family:var(--font-display); font-weight:500; letter-spacing:0; font-size:var(--step-0); }
+.nav__links a[aria-current="page"]::after{ background:var(--accent); }
+.btn{ font-family:var(--font-display); font-weight:600; letter-spacing:.01em; border-radius:999px; }
+.btn{ --_bg:var(--ink); --_fg:var(--paper); }
+.btn--accent{ --_bg:var(--accent); --_fg:var(--accent-ink); }
+.btn--ghost{ --_bg:transparent; --_fg:currentColor; border-color:var(--line); }
+.nav__links a.btn{ color:var(--_fg); }
+.section--brand .btn--ghost{ --_fg:var(--brand-ink); border-color:rgba(255,255,255,.3); }
+.card{ background:#fff; border-color:var(--line); border-radius:var(--radius); }
+
+/* =============================================================
+   Chips — the signature component
+   ============================================================= */
+.chip{ display:inline-flex; align-items:center; gap:.45rem; padding:.5em 1em; border-radius:999px;
+  font-family:var(--font-display); font-weight:600; font-size:var(--step--1); letter-spacing:.01em;
+  background:#fff; border:1px solid var(--line); color:var(--ink); text-decoration:none; cursor:pointer;
+  transition:transform .14s ease, background .14s ease, border-color .14s ease; }
+.chip:hover{ transform:translateY(-2px); }
+.chip .dot{ width:.7rem; height:.7rem; border-radius:50%; background:var(--accent); }
+.chip--lilac{ background:var(--accent); color:#fff; border-color:var(--accent); }
+.chip--lilac .dot{ background:#fff; }
+.chip--butter{ background:var(--butter); border-color:#e6d3a6; }
+.chip--butter .dot{ background:#c79a3f; }
+.chip--ink{ background:var(--ink); color:var(--paper); border-color:var(--ink); }
+.chip--ink .dot{ background:var(--butter); }
+.chip[aria-pressed="true"]{ background:var(--accent); color:#fff; border-color:var(--accent); }
+.chip[aria-pressed="true"] .dot{ background:#fff; }
+.chiprow{ display:flex; flex-wrap:wrap; gap:.6rem; }
+.chiprow--scroll{ flex-wrap:nowrap; overflow-x:auto; padding-bottom:.4rem; -webkit-overflow-scrolling:touch; }
+
+/* =============================================================
+   Hero
+   ============================================================= */
+.hero--wall{ position:relative; isolation:isolate; }
+.hero--wall .hero__bg{ }
+.hero--wall .hero__bg::after{ background:linear-gradient(180deg, rgba(34,26,43,.28), rgba(34,26,43,.58)); }
+.hero--wall .hero__panel{ background:transparent; color:#fff; padding-inline:0; }
+.hero--wall h1{ font-size:clamp(2.6rem,1.8rem + 4vw,4.8rem); }
+.hero--wall .lead{ color:#efe9f2; max-width:40ch; }
+.hero--wall .chip{ background:rgba(255,255,255,.14); border-color:rgba(255,255,255,.4); color:#fff; backdrop-filter:blur(4px); }
+.hero--wall .chip .dot{ background:#fff; }
+
+/* =============================================================
+   Service menu — chip tabs swap a price panel
+   ============================================================= */
+.svcmenu{ margin-top:1.4rem; }
+.svcpanel[hidden]{ display:none; }
+.priceline{ display:flex; align-items:baseline; gap:.7rem; padding:.75rem 0; border-bottom:1px solid var(--line); }
+.priceline:last-child{ border-bottom:0; }
+.priceline .n{ font-family:var(--font-display); font-weight:600; }
+.priceline .n small{ display:block; font-family:var(--font-body); font-weight:400; font-size:var(--step--1); color:var(--ink-soft); letter-spacing:0; }
+.priceline .lead-dots{ flex:1; border-bottom:2px dotted var(--line); transform:translateY(-.25em); }
+.priceline .p{ font-family:var(--font-mono); white-space:nowrap; }
+
+/* =============================================================
+   Swatch wall — playful gallery / polish stand-in
+   ============================================================= */
+.swatchwall{ display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:.7rem; }
+.swatch{ border-radius:14px; border:1px solid var(--line); overflow:hidden; background:#fff; }
+.swatch i{ display:block; aspect-ratio:1; }
+.swatch span{ display:block; padding:.55rem .7rem; font-family:var(--font-mono); font-size:var(--step--1); }
+.swatch--01 i{ background:linear-gradient(135deg,#f7c8d9,#e58aa9); }
+.swatch--02 i{ background:linear-gradient(135deg,#d9c9ff,#7c5cff); }
+.swatch--03 i{ background:linear-gradient(135deg,#f0e1bf,#c79a3f); }
+.swatch--04 i{ background:linear-gradient(135deg,#cfe9df,#5bbfa0); }
+.swatch--05 i{ background:linear-gradient(135deg,#ffd9c2,#e8794a); }
+.swatch--06 i{ background:linear-gradient(135deg,#e7e3ea,#221a2b); }
+.swatch--07 i{ background:linear-gradient(135deg,#fbe4ef,#d64f97); }
+.swatch--08 i{ background:linear-gradient(135deg,#dfe7ff,#5b74e8); }
+
+/* =============================================================
+   Misc
+   ============================================================= */
+.gallery img{ border-radius:14px; }
+.gallery button{ border-radius:14px; }
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-body); font-weight:500; font-style:normal; }
+.review cite{ font-family:var(--font-mono); }
+.stars{ color:var(--accent); }
+.stat__num{ font-family:var(--font-display); font-weight:700; color:var(--ink); }
+.section--brand .stat__num{ color:#fff; }
+.chat-fab{ background:var(--accent); color:#fff; }
+.site-footer{ background:var(--brand); }
+.foot-h{ font-family:var(--font-mono); letter-spacing:.14em; }
+.field label{ font-family:var(--font-display); font-weight:600; font-size:var(--step--1); }
+.field input,.field select,.field textarea{ border-radius:12px; background:#fff; }
+.demo-flag{ border-color:rgba(255,255,255,.3); }
+.notfound{ text-align:center; padding-block:var(--space-2xl); }

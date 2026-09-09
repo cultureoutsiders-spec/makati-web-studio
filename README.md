@@ -23,6 +23,11 @@ and hosted anywhere.
 | PhysioSpace Poblacion (holistic physical therapy — calm "breathing" column) | `physiospace/` | https://cultureoutsiders-spec.github.io/makati-web-studio/physiospace/ |
 | Koffle (coffee &amp; waffle cafe — storybook hidden-cafe) | `koffle/` | https://cultureoutsiders-spec.github.io/makati-web-studio/koffle/ |
 | All Stars Cafe and Sports Bar (sports bar — fixtures scoreboard) | `all-stars/` | https://cultureoutsiders-spec.github.io/makati-web-studio/all-stars/ |
+| Rapide Salon San Antonio Makati (car detailing / ceramic coating — "the bay sheet" work order) | `rapide-salon/` | https://cultureoutsiders-spec.github.io/makati-web-studio/rapide-salon/ |
+| MOOI Makati (aesthetic &amp; wellness spa — "the treatment index") | `mooi-makati/` | https://cultureoutsiders-spec.github.io/makati-web-studio/mooi-makati/ |
+| Easyshare Printing Services Makati (plan &amp; digital printing — "the order desk" press sheet) | `easyshare-printing/` | https://cultureoutsiders-spec.github.io/makati-web-studio/easyshare-printing/ |
+| SHALA Beauty Lounge (nails / lashes / brows — "the colour wall" chip menu) | `shala-beauty/` | https://cultureoutsiders-spec.github.io/makati-web-studio/shala-beauty/ |
+| Fortune Bakeshop (neighbourhood bakeshop since 1974 — "the bread board" receipt) | `fortune-bakeshop/` | https://cultureoutsiders-spec.github.io/makati-web-studio/fortune-bakeshop/ |
 
 Studio landing page: repo root `index.html`.
 

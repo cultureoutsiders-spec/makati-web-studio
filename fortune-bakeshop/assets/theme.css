@@ -1,0 +1,124 @@
+/* =============================================================
+   Fortune Bakeshop — theme.css
+   Direction: "the bread board." A neighbourhood bakeshop since
+   1974 that sells everyday bread and cakes for occasions. The
+   old-Manila panaderia has a printed price board on the wall —
+   so the site's spine is a cash-register "receipt" set in Courier
+   with a scalloped edge. Wheat paper, crust-brown ink, one
+   pandesal-gold, a sturdy slab for headings. One signature,
+   everything else plain.
+   ============================================================= */
+:root{
+  --paper:      #f5edda;
+  --paper-2:    #ece0c6;
+  --ink:        #40291a;
+  --ink-soft:   #715c46;
+  --line:       #ddccab;
+  --accent:     #bd8324;   /* pandesal gold */
+  --accent-ink: #ffffff;
+  --brick:      #a23f2b;
+  --brand:      #3a2617;
+  --brand-ink:  #f5edda;
+
+  --font-display: "Zilla Slab", Georgia, "Times New Roman", serif;
+  --font-body:    "Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "Courier Prime", "Courier New", ui-monospace, monospace;
+
+  --radius: 4px;
+  --container: 1100px;
+}
+
+body{ background:var(--paper); color:var(--ink); }
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:600; letter-spacing:.002em; line-height:1.08; }
+.lead{ color:var(--ink-soft); font-size:var(--step-1); line-height:1.5; }
+a{ color:var(--brick); }
+.eyebrow{ color:var(--brick); font-family:var(--font-mono); letter-spacing:.16em; font-weight:700; }
+.eyebrow::before{ background:currentColor; }
+.section--brand{ background:var(--brand); }
+.section--brand .lead{ color:#d8c6ac; }
+.section--brand .eyebrow{ color:#e0a94e; }
+.rule{ border-color:var(--line); }
+.section--paper2{ background:var(--paper-2); }
+
+.brand{ font-family:var(--font-display); font-weight:700; letter-spacing:.01em; font-size:var(--step-1); color:var(--ink); }
+.brand b{ color:var(--brick); font-weight:700; }
+.nav__links a{ font-family:var(--font-body); font-weight:600; letter-spacing:.02em; font-size:var(--step--1); text-transform:uppercase; }
+.nav__links a[aria-current="page"]::after{ background:var(--brick); }
+.btn{ font-family:var(--font-body); font-weight:600; letter-spacing:.04em; text-transform:uppercase; border-radius:var(--radius); }
+.btn{ --_bg:var(--ink); --_fg:var(--paper); }
+.btn--accent{ --_bg:var(--brick); --_fg:#fff; }
+.btn--ghost{ --_bg:transparent; --_fg:currentColor; border-color:currentColor; }
+.nav__links a.btn{ color:var(--_fg); }
+.section--brand .btn--ghost{ --_fg:var(--brand-ink); }
+.card{ background:#fffdf4; border-color:var(--line); border-radius:var(--radius); }
+
+/* =============================================================
+   The receipt — signature
+   ============================================================= */
+.receipt{ position:relative; background:#fffdf4; border:1px solid var(--line); border-bottom:0;
+  padding:1.4rem 1.5rem 1.7rem; font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink);
+  box-shadow:0 10px 24px rgba(64,41,26,.10); max-width:24rem; }
+.receipt::after{ content:""; position:absolute; left:-1px; right:-1px; bottom:-12px; height:13px;
+  background:radial-gradient(circle at 9px -2px, #fffdf4 7px, transparent 7.5px) repeat-x;
+  background-size:18px 13px; filter:drop-shadow(0 2px 1px rgba(64,41,26,.10)); }
+.receipt__h{ text-align:center; border-bottom:1px dashed var(--ink-soft); padding-bottom:.7rem; margin-bottom:.7rem; }
+.receipt__h b{ display:block; font-family:var(--font-display); font-weight:700; font-size:var(--step-0); letter-spacing:.04em; text-transform:uppercase; }
+.receipt__h span{ font-size:.78rem; letter-spacing:.18em; }
+.receipt__row{ display:flex; align-items:baseline; gap:.4rem; padding:.28rem 0; }
+.receipt__row .d{ flex:1; border-bottom:1px dotted var(--ink-soft); transform:translateY(-.2em); }
+.receipt__row .pr{ white-space:nowrap; }
+.receipt__foot{ border-top:1px dashed var(--ink-soft); margin-top:.7rem; padding-top:.6rem; text-align:center; letter-spacing:.14em; }
+
+/* small "fresh today" tag */
+.freshtag{ display:inline-block; background:var(--brick); color:#fff; font-family:var(--font-mono); font-weight:700;
+  font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; padding:.3em .7em; border-radius:2px; transform:rotate(-1.5deg); }
+
+/* =============================================================
+   Hero
+   ============================================================= */
+.hero--board2{ padding-block:clamp(2.4rem,1.8rem + 3vw,4.4rem); }
+.hero--board2 .split{ align-items:center; gap:clamp(2rem,1rem + 4vw,4rem); }
+.hero--board2 h1{ font-size:clamp(2.6rem,1.8rem + 4vw,4.6rem); }
+.hero--board2 .lead{ max-width:40ch; }
+
+/* =============================================================
+   Bread grid
+   ============================================================= */
+.breadgrid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:var(--gap); }
+.breaditem{ background:#fffdf4; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; }
+.breaditem .media{ border-radius:0; }
+.breaditem__b{ padding:.9rem 1rem 1.1rem; }
+.breaditem__b h3{ font-size:var(--step-0); margin:0 0 .1rem; }
+.breaditem__b .price{ font-family:var(--font-mono); font-weight:700; }
+.breaditem__b p{ margin:.3rem 0 0; font-size:var(--step--1); color:var(--ink-soft); }
+
+/* timeline */
+.timeline{ border-left:2px solid var(--accent); padding-left:1.4rem; display:grid; gap:1.4rem; }
+.tl{ position:relative; }
+.tl::before{ content:""; position:absolute; left:calc(-1.4rem - 6px); top:.35em; width:10px; height:10px; border-radius:50%; background:var(--accent); }
+.tl b{ font-family:var(--font-mono); font-weight:700; color:var(--brick); }
+.tl h3{ font-size:var(--step-1); margin:.15rem 0 .3rem; }
+.tl p{ margin:0; color:var(--ink-soft); }
+
+/* branches */
+.branches{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:var(--gap); }
+.branch{ background:#fffdf4; border:1px solid var(--line); border-radius:var(--radius); padding:1.2rem 1.3rem; }
+.branch h3{ font-size:var(--step-0); margin:0 0 .3rem; }
+.branch p{ margin:0; font-size:var(--step--1); color:var(--ink-soft); }
+.branch .hrs{ font-family:var(--font-mono); color:var(--ink); margin-top:.4rem; }
+
+/* misc */
+.pill{ border-color:var(--line); font-family:var(--font-mono); }
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-display); font-weight:500; font-style:normal; }
+.review cite{ font-family:var(--font-mono); }
+.stars{ color:var(--accent); }
+.stat__num{ font-family:var(--font-display); font-weight:700; color:var(--ink); }
+.section--brand .stat__num{ color:#fff; }
+.chat-fab{ background:var(--brick); color:#fff; }
+.site-footer{ background:var(--brand); }
+.foot-h{ font-family:var(--font-mono); letter-spacing:.14em; }
+.field label{ font-family:var(--font-body); font-weight:600; text-transform:uppercase; letter-spacing:.04em; font-size:var(--step--1); }
+.field input,.field select,.field textarea{ border-radius:var(--radius); background:#fffdf4; }
+.demo-flag{ border-color:rgba(255,255,255,.28); }
+.notfound{ text-align:center; padding-block:var(--space-2xl); }
