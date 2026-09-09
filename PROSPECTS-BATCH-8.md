@@ -8,6 +8,14 @@ Batch 8 theme: **studios & creative / leisure spaces** — places you book time 
 
 **STATUS: researched, not built.** Sites not started.
 
+> **Superseded by the 2nd-pass verification (2026-09-11).** This file is the raw first-pass
+> research. After verification, this batch's live set is: **Arté Tattoo, Ymahe Tattoo, Shū
+> Reflexology, Dream Hair Makati** (4). Cut on the 2nd pass: sóma reformer (unverifiable), Fez Spa
+> (an 1898 Hotel outlet), Studio Matisse (San Juan + has a site). Dive Buddies was added as a
+> replacement then also cut (Aquamundo Sports' dive school; `aquamundosports.com` is a live
+> store). The source of truth for what gets built is
+> `docs/superpowers/specs/2026-09-11-batches-7-9-sites-design.md`.
+
 ## How the check was done
 
 Same as batch 7: Googled by name, then likely domains requested with `curl` to tell a real own

@@ -23,6 +23,9 @@ going live on their domain.
 - Fez Spa — it is the spa inside 1898 Hotel, on `1898hotel.com/fez-spa/`; not an independent shop.
 
 **Replacements sourced + verified (4):** Salon A, Shu Reflexology, Dream Hair Makati, Dive Buddies.
+**(Dive Buddies later disqualified 2026-09-11** — it is the dive-school arm of Aquamundo Sports,
+whose site `aquamundosports.com` is a live Shopify store; the emails found for it were
+`@aquamundosports.com`. Removed. **13 planned sites → 12.)**
 A fifth replacement (a plant shop) was attempted and abandoned: Wild Plants Studio has no
 verifiable address / hours / operating evidence; Archipelago Plants the same; Nest Plant Studio is
 in Mandaluyong and has a site. **Slot 15 is left unfilled this run — build 14.**
@@ -53,7 +56,7 @@ check (a 2025-2026 directory listing, a recent review, or a dated social post).
 | 7 | Ymahe Tattoo Studio | GF Coro Hotel, 8436 Kalayaan Ave, Poblacion, Makati | IG DM `@ymahetattoostudio`; call `0977 722 9368` | "the quiet sheet" — one fine-line artist inside a boutique hotel. Restrained portfolio, a consultation form (reference images, placement, size, budget), a healing/aftercare page. Calm, precise. Sun-Thu 1-10pm, Fri-Sat 1pm-12am. |
 | 8 | Shu Reflexology | 3/F 58 Jupiter Bldg, Jupiter St, Bgy Bel-Air, Makati | **email `shu.makati.jupiter@gmail.com`**; call `0927 966 8188` | "the pressure map" — Xiamen-style Chinese foot reflexology + full body. Treatment menu with durations & prices, a foot-reflex-point diagram as the signature, a booking form. Open 1pm-1am daily. |
 | 9 | Dream Hair Makati | 303 JP Rizal St, Brgy Tejeros, Makati (GF CMC Bldg) | FB DM `/dreamhairmakati` | "the colour swatch" — fashion-colour / balayage specialist. Colour-service catalogue (basic / ombre / French / fashion balayage), a before/after-style shade wall, a consultation form. Daily 10am-9pm. Bold, colour-led. |
-| 10 | Dive Buddies | 4402-B Valdez St, Poblacion, Makati | FB DM `/DiveBuddiesPhil` | "the course log" — PADI 5-star dive centre, Course Director Ross Guzman. Course ladder (Open Water -> Advanced -> Rescue -> Divemaster) with prices & durations, a fun-dive trip calendar, equipment servicing, a sign-up form. Mon-Fri 9-6, Sat 10-3. |
+| ~~10~~ | ~~Dive Buddies~~ — **REMOVED 2026-09-11**: it is the dive-school arm of Aquamundo Sports; `aquamundosports.com` is a live Shopify store, so it has a website. B8 is now 4 sites. | | | |
 
 ### Batch 9 — food, drink & indulgence
 
