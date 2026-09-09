@@ -2,7 +2,7 @@
 
 **Channel:** Instagram / Facebook DM · WhatsApp (no public email) · **To:** IG @shalabeautylounge · facebook.com/ShalaBeautyLounge · WhatsApp +63 921 402 4688
 **Live demo:** https://cultureoutsiders-spec.github.io/makati-web-studio/shala-beauty/
-**Status:** NOT SENT — send as a DM
+**Status:** NOT SENT — script staged as a Gmail draft (`[DM SCRIPT …]`) in gccofci.digital@gmail.com 2026-09-10; Michael pastes into Messenger/IG
 
 **Offer:** PHP 25,000 one-time, introductory rate for the first 5 paying clients, then PHP 35,000.
 No monthly retainer. Price includes putting it live on their domain. Site is theirs to keep.

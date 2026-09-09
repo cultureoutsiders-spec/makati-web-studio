@@ -2,7 +2,7 @@
 
 **Channel:** Facebook / Instagram DM (no public email) · **To:** facebook.com/mooiparanaque · IG @mooimakati
 **Live demo:** https://cultureoutsiders-spec.github.io/makati-web-studio/mooi-makati/
-**Status:** NOT SENT — send as a DM
+**Status:** NOT SENT — script staged as a Gmail draft (`[DM SCRIPT …]`) in gccofci.digital@gmail.com 2026-09-10; Michael pastes into Messenger/IG
 
 **Offer:** PHP 25,000 one-time, introductory rate for the first 5 paying clients, then PHP 35,000.
 No monthly retainer. Price includes putting it live on their domain. Site is theirs to keep.
