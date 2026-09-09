@@ -1,0 +1,101 @@
+/* =============================================================
+   Hoshi House Matcha Cafe — theme.css
+   Direction: "the slow vertical." A tiny matcha slow-bar. The page
+   moves at the pace of making a bowl: a narrow single column,
+   generous whitespace, a single vertical sumi brushstroke down the
+   left as the spine. Drinks are grade cards (cultivar / grade /
+   origin / prep). Rice-paper ground, muted stone-ground green, a
+   roasted hojicha brown, a star-gold touch (hoshi = star).
+   Japanese mincho display + a calm Japanese gothic for text.
+   ============================================================= */
+:root{
+  --paper:      #f3efe4;
+  --paper-2:    #eae3d2;
+  --ink:        #20211c;
+  --ink-soft:   #5d5e52;
+  --line:       #ddd5c1;
+  --accent:     #7a8c4e;   /* stone-ground matcha */
+  --accent-ink: #ffffff;
+  --hojicha:    #9a6b45;   /* roasted tea brown */
+  --star:       #c9a24a;   /* hoshi gold */
+  --brand:      #20211c;
+  --brand-ink:  #f3efe4;
+
+  --font-display: "Shippori Mincho", Georgia, "Times New Roman", serif;
+  --font-body:    "Zen Kaku Gothic New", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "Zen Kaku Gothic New", ui-monospace, Menlo, monospace;
+
+  --radius: 4px;
+  --container: 840px;
+}
+
+body{ background:var(--paper); color:var(--ink); }
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:600; letter-spacing:.02em; line-height:1.4; }
+.lead{ color:var(--ink-soft); font-size:var(--step-1); line-height:1.9; font-family:var(--font-body); }
+a{ color:var(--accent); }
+.eyebrow{ color:var(--accent); font-family:var(--font-body); letter-spacing:.34em; font-weight:500; text-transform:uppercase; font-size:calc(var(--step--1) * .92); }
+.eyebrow::before{ background:var(--star); }
+.section--brand{ background:var(--brand); color:var(--brand-ink); }
+.section--brand .lead{ color:#c9c6b8; }
+.section--brand .eyebrow{ color:var(--star); }
+.rule{ border-color:var(--line); }
+.section--paper2{ background:var(--paper-2); }
+
+.brand{ font-family:var(--font-display); font-weight:600; letter-spacing:.1em; font-size:var(--step-1); color:var(--ink); }
+.brand b{ color:var(--star); font-weight:600; }
+.nav__links a{ font-family:var(--font-body); font-weight:500; letter-spacing:.14em; text-transform:uppercase; font-size:calc(var(--step--1) * .9); }
+.nav__links a[aria-current="page"]::after{ background:var(--accent); }
+.btn{ font-family:var(--font-body); font-weight:500; letter-spacing:.16em; text-transform:uppercase; border-radius:var(--radius); font-size:calc(var(--step--1) * .92); }
+.btn{ --_bg:var(--accent); --_fg:#fff; }
+.btn--accent{ --_bg:var(--accent); --_fg:#fff; }
+.btn--ghost{ --_bg:transparent; --_fg:currentColor; border-color:var(--line); }
+.nav__links a.btn{ color:var(--_fg); }
+.section--brand .btn--ghost{ --_fg:var(--brand-ink); border-color:rgba(255,255,255,.28); }
+.card{ background:#faf7ee; border-color:var(--line); border-radius:var(--radius); }
+
+/* the brushstroke spine */
+.brush{ position:fixed; left:clamp(.4rem, 2.5vw, 2rem); top:12vh; bottom:12vh; width:22px; z-index:5; pointer-events:none; opacity:.5; }
+.brush svg{ height:100%; width:100%; }
+@media (max-width:900px){ .brush{ display:none; } }
+
+/* =============================================================
+   Bowl — grade card. Signature.
+   ============================================================= */
+.bowls{ display:grid; gap:1.6rem; }
+.bowl{ background:#faf7ee; border:1px solid var(--line); border-radius:var(--radius); padding:1.6rem 1.7rem; }
+.bowl__top{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; }
+.bowl__name{ font-family:var(--font-display); font-weight:600; font-size:var(--step-1); }
+.bowl__name .hoshi{ color:var(--star); }
+.bowl__price{ font-family:var(--font-body); color:var(--hojicha); white-space:nowrap; }
+.bowl__spec{ margin:.9rem 0 0; display:grid; grid-template-columns:6.5rem 1fr; gap:.4rem 1rem; }
+.bowl__spec dt{ font-family:var(--font-body); font-size:calc(var(--step--1) * .88); letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); }
+.bowl__spec dd{ margin:0; font-family:var(--font-body); font-size:var(--step-0); }
+
+/* the ritual */
+.ritual{ display:grid; gap:1.6rem; counter-reset:r; }
+.rite{ display:grid; grid-template-columns:auto 1fr; gap:1.4rem; align-items:start; }
+.rite::before{ counter-increment:r; content:counter(r); font-family:var(--font-display); font-weight:600; font-size:var(--step-2); color:var(--star); line-height:1; }
+.rite h3{ font-size:var(--step-1); margin:0 0 .3rem; }
+.rite p{ margin:0; color:var(--ink-soft); }
+
+.seam{ height:1px; background:var(--line); max-width:6rem; margin:2.5rem auto; }
+
+.spec-list{ list-style:none; margin:0; padding:0; display:grid; gap:.8rem; }
+.spec-list li{ display:flex; gap:.8rem; font-family:var(--font-body); font-size:var(--step-0); line-height:1.7; }
+.spec-list li::before{ content:"\2606"; color:var(--star); }
+
+/* misc */
+.pill{ border-color:var(--line); font-family:var(--font-body); letter-spacing:.08em; }
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-display); font-weight:500; font-style:normal; }
+.review cite{ font-family:var(--font-body); letter-spacing:.06em; }
+.stars{ color:var(--star); }
+.stat__num{ font-family:var(--font-display); font-weight:600; color:var(--accent); }
+.section--brand .stat__num{ color:var(--star); }
+.chat-fab{ background:var(--accent); color:#fff; }
+.site-footer{ background:var(--brand); }
+.foot-h{ font-family:var(--font-body); letter-spacing:.2em; }
+.field label{ font-family:var(--font-body); letter-spacing:.12em; text-transform:uppercase; font-size:calc(var(--step--1) * .9); }
+.field input,.field select,.field textarea{ border-radius:var(--radius); background:#faf7ee; }
+.demo-flag{ border-color:rgba(255,255,255,.28); }
+.notfound{ text-align:center; padding-block:var(--space-2xl); }

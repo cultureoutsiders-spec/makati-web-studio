@@ -4,7 +4,7 @@ Five more Makati businesses with **no website of their own**, researched 2026-09
 batch 5). Same offer: **PHP 25,000 one-time, no retainer (first 5 paying clients), then PHP
 35,000.** Client owns the code; price includes going live on their domain.
 
-**STATUS: candidates only — no demo sites built yet.**
+**STATUS (updated 2026-09-11): demo sites BUILT + live** at `https://cultureoutsiders-spec.github.io/makati-web-studio/<slug>/`.
 
 Batch 5 holds the other five: `PROSPECTS-BATCH-5.md` (which also carries the full disqualified
 list and the shared alternates table for this research round).

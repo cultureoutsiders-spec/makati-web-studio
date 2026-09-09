@@ -1,0 +1,110 @@
+/* =============================================================
+   The Golden Fur Makati — theme.css
+   Direction: "the report card / pet passport." Grooming + vet +
+   boarding. Warm cream, a golden-retriever gold (the brand), a
+   calm sky blue for the vet/trust side, warm charcoal ink. Every
+   service is framed as a page in a pet's day — a report card with
+   stamp checkmarks and a note from the groomer. Rounded, friendly
+   but grown-up type; soft corners; typewriter mono for the stamps.
+   ============================================================= */
+:root{
+  --paper:      #faf4e8;
+  --paper-2:    #f3ead5;
+  --ink:        #3a352e;
+  --ink-soft:   #706759;
+  --line:       #e4d8be;
+  --accent:     #e0a63f;   /* golden-retriever gold */
+  --accent-ink: #3a352e;
+  --sky:        #6fa8c9;   /* vet / trust blue */
+  --brand:      #3a352e;
+  --brand-ink:  #faf4e8;
+
+  --font-display: "Fredoka", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body:    "Rubik", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "Cousine", ui-monospace, "Courier New", monospace;
+
+  --radius: 18px;
+  --container: 1080px;
+}
+
+body{ background:var(--paper); color:var(--ink); }
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:600; letter-spacing:0; line-height:1.1; }
+.lead{ color:var(--ink-soft); font-size:var(--step-1); line-height:1.55; }
+a{ color:#b57f1e; }
+.eyebrow{ color:#b57f1e; font-family:var(--font-mono); letter-spacing:.14em; font-weight:700; text-transform:uppercase; font-size:var(--step--1); }
+.eyebrow::before{ background:var(--accent); }
+.section--brand{ background:var(--brand); color:var(--brand-ink); }
+.section--brand .lead{ color:#d6cbb6; }
+.section--brand .eyebrow{ color:var(--accent); }
+.rule{ border-color:var(--line); }
+.section--paper2{ background:var(--paper-2); }
+
+.brand{ font-family:var(--font-display); font-weight:600; letter-spacing:0; font-size:var(--step-1); color:var(--ink); }
+.brand b{ color:var(--accent); }
+.nav__links a{ font-family:var(--font-body); font-weight:600; letter-spacing:.01em; font-size:var(--step--1); }
+.nav__links a[aria-current="page"]::after{ background:var(--accent); }
+.btn{ font-family:var(--font-display); font-weight:600; letter-spacing:.01em; border-radius:999px; }
+.btn{ --_bg:var(--accent); --_fg:var(--accent-ink); }
+.btn--accent{ --_bg:var(--accent); --_fg:var(--accent-ink); }
+.btn--ghost{ --_bg:transparent; --_fg:currentColor; border-color:currentColor; }
+.nav__links a.btn{ color:var(--_fg); }
+.section--brand .btn--ghost{ --_fg:var(--brand-ink); }
+.card{ background:#fffdf7; border-color:var(--line); border-radius:var(--radius); }
+
+/* paw bullets */
+.paw{ list-style:none; margin:0; padding:0; display:grid; gap:.55rem; }
+.paw li{ display:flex; gap:.7rem; font-size:var(--step-0); }
+.paw li::before{ content:""; width:1.1rem; height:1.1rem; flex:none; margin-top:.15rem;
+  background:radial-gradient(circle at 30% 65%, var(--accent) 0 26%, transparent 27%),
+             radial-gradient(circle at 70% 65%, var(--accent) 0 26%, transparent 27%),
+             radial-gradient(circle at 38% 30%, var(--accent) 0 18%, transparent 19%),
+             radial-gradient(circle at 62% 30%, var(--accent) 0 18%, transparent 19%),
+             radial-gradient(ellipse 55% 42% at 50% 78%, var(--accent) 0 60%, transparent 61%); }
+
+/* =============================================================
+   Report card — signature
+   ============================================================= */
+.reportcard{ background:#fffdf7; border:2px solid var(--line); border-radius:var(--radius); overflow:hidden; box-shadow:0 12px 30px rgba(58,53,46,.10); }
+.reportcard__h{ background:var(--accent); color:var(--accent-ink); padding:.9rem 1.3rem; font-family:var(--font-mono); font-weight:700; letter-spacing:.06em; display:flex; justify-content:space-between; flex-wrap:wrap; gap:.4rem; }
+.reportcard__b{ padding:1.3rem 1.4rem 1.5rem; }
+.rc-step{ display:flex; align-items:center; gap:.8rem; padding:.55rem 0; border-bottom:1px dashed var(--line); font-family:var(--font-body); }
+.rc-step:last-of-type{ border-bottom:0; }
+.rc-step .stamp{ width:1.7rem; height:1.7rem; flex:none; border:2px solid var(--sky); border-radius:50%; display:grid; place-items:center;
+  font-family:var(--font-mono); font-weight:700; color:var(--sky); transform:rotate(-8deg); font-size:.9rem; }
+.rc-note{ margin-top:1rem; font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink-soft); border-top:1px solid var(--line); padding-top:.8rem; }
+
+/* passport pages (services) */
+.passport{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:var(--gap); }
+.pp{ background:#fffdf7; border:1px solid var(--line); border-radius:var(--radius); padding:1.4rem 1.5rem; }
+.pp span{ font-family:var(--font-mono); font-weight:700; font-size:var(--step--1); color:var(--sky); letter-spacing:.06em; }
+.pp h3{ font-size:var(--step-1); margin:.3rem 0 .4rem; }
+.pp .price{ font-family:var(--font-mono); font-weight:700; color:#b57f1e; }
+.pp p{ font-size:var(--step--1); color:var(--ink-soft); margin:.3rem 0 0; }
+
+/* day timeline */
+.dayline{ border-left:3px solid var(--sky); padding-left:1.4rem; display:grid; gap:1.3rem; }
+.dl{ position:relative; }
+.dl::before{ content:""; position:absolute; left:calc(-1.4rem - 7px); top:.35em; width:12px; height:12px; border-radius:50%; background:var(--sky); }
+.dl b{ font-family:var(--font-mono); font-weight:700; color:var(--sky); }
+.dl h3{ font-size:var(--step-0); margin:.15rem 0 .25rem; }
+.dl p{ margin:0; color:var(--ink-soft); font-size:var(--step--1); }
+
+.spec-list{ list-style:none; margin:0; padding:0; display:grid; gap:.5rem; }
+.spec-list li{ display:flex; gap:.7rem; font-size:var(--step-0); }
+.spec-list li::before{ content:"\2022"; color:var(--accent); font-weight:700; }
+
+/* misc */
+.pill{ border-color:var(--line); font-family:var(--font-body); font-weight:600; }
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-body); font-weight:500; font-style:normal; }
+.review cite{ font-family:var(--font-mono); }
+.stars{ color:var(--accent); }
+.stat__num{ font-family:var(--font-display); font-weight:600; color:#b57f1e; }
+.section--brand .stat__num{ color:var(--accent); }
+.chat-fab{ background:var(--accent); color:var(--accent-ink); }
+.site-footer{ background:var(--brand); }
+.foot-h{ font-family:var(--font-mono); font-weight:700; letter-spacing:.12em; }
+.field label{ font-family:var(--font-body); font-weight:600; font-size:var(--step--1); }
+.field input,.field select,.field textarea{ border-radius:12px; background:#fffdf7; }
+.demo-flag{ border-color:rgba(255,255,255,.3); }
+.notfound{ text-align:center; padding-block:var(--space-2xl); }

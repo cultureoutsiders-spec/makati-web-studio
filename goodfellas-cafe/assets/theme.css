@@ -1,0 +1,104 @@
+/* =============================================================
+   The GoodFellas Cafe — theme.css
+   Direction: "the order ticket." A weekday cafe in a BPO tower,
+   Mon-Fri 9-6, built for the coffee run and the lunch break.
+   Espresso brown-black, warm cream, a Formica-diner red, a chrome
+   grey neutral. The signature is a kitchen order chit: PT Mono,
+   ">> ORDER", tick boxes, a FLOOR/TABLE line. A light Scorsese wink
+   in the display face, nothing kitsch. Brisk and functional.
+   ============================================================= */
+:root{
+  --paper:      #f4ece0;
+  --paper-2:    #ebe0cc;
+  --ink:        #241a15;
+  --ink-soft:   #6b5c4e;
+  --line:       #dccdb1;
+  --accent:     #c0392b;   /* Formica red */
+  --accent-ink: #ffffff;
+  --steel:      #b7b5b0;
+  --brand:      #241a15;
+  --brand-ink:  #f4ece0;
+
+  --font-display: "Chonburi", Georgia, "Times New Roman", serif;
+  --font-body:    "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "PT Mono", ui-monospace, "Courier New", monospace;
+
+  --radius: 3px;
+  --container: 1060px;
+}
+
+body{ background:var(--paper); color:var(--ink); }
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:400; letter-spacing:.005em; line-height:1.12; }
+.lead{ color:var(--ink-soft); font-size:var(--step-1); line-height:1.55; font-family:var(--font-body); }
+a{ color:var(--accent); }
+.eyebrow{ color:var(--accent); font-family:var(--font-mono); letter-spacing:.16em; font-weight:700; text-transform:uppercase; font-size:var(--step--1); }
+.eyebrow::before{ background:currentColor; }
+.section--brand{ background:var(--brand); color:var(--brand-ink); }
+.section--brand .lead{ color:#cdbfa9; }
+.section--brand .eyebrow{ color:#e07a6d; }
+.rule{ border-color:var(--line); }
+.section--paper2{ background:var(--paper-2); }
+
+.brand{ font-family:var(--font-display); font-weight:400; letter-spacing:.01em; font-size:var(--step-1); color:var(--ink); }
+.brand b{ color:var(--accent); }
+.nav__links a{ font-family:var(--font-mono); font-weight:700; letter-spacing:.06em; text-transform:uppercase; font-size:var(--step--1); }
+.nav__links a[aria-current="page"]::after{ background:var(--accent); }
+.btn{ font-family:var(--font-mono); font-weight:700; letter-spacing:.08em; text-transform:uppercase; border-radius:var(--radius); font-size:var(--step--1); }
+.btn{ --_bg:var(--ink); --_fg:var(--paper); }
+.btn--accent{ --_bg:var(--accent); --_fg:#fff; }
+.btn--ghost{ --_bg:transparent; --_fg:currentColor; border-color:currentColor; }
+.nav__links a.btn{ color:var(--_fg); }
+.section--brand .btn--ghost{ --_fg:var(--brand-ink); }
+.card{ background:#fdf7ec; border-color:var(--line); border-radius:var(--radius); }
+
+/* =============================================================
+   Order ticket — signature
+   ============================================================= */
+.ticket{ background:#fdf9f0; border:1px solid var(--line); border-radius:2px; max-width:22rem;
+  padding:1.2rem 1.3rem 1.4rem; font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink);
+  box-shadow:0 10px 24px rgba(36,26,21,.12); position:relative; }
+.ticket::before{ content:""; position:absolute; left:0; right:0; top:-1px; height:6px;
+  background:repeating-linear-gradient(90deg, var(--line) 0 6px, transparent 6px 12px); }
+.ticket__h{ font-weight:700; letter-spacing:.12em; border-bottom:1px dashed var(--ink-soft); padding-bottom:.6rem; margin-bottom:.6rem; }
+.ticket__h b{ color:var(--accent); }
+.ticket__row{ display:flex; align-items:center; gap:.5rem; padding:.32rem 0; }
+.ticket__row .box{ width:1rem; height:1rem; border:1px solid var(--ink-soft); flex:none; display:grid; place-items:center; font-size:.8rem; }
+.ticket__row .box.x::after{ content:"x"; color:var(--accent); }
+.ticket__foot{ border-top:1px dashed var(--ink-soft); margin-top:.6rem; padding-top:.6rem; display:flex; justify-content:space-between; letter-spacing:.06em; }
+
+/* the usual — quick tiles */
+.usual{ display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:.7rem; }
+.usual button, .usual a{ display:block; text-align:left; text-decoration:none; background:#fdf7ec; border:1px solid var(--line); border-radius:var(--radius);
+  padding:.9rem 1rem; color:var(--ink); font-family:var(--font-body); cursor:pointer; transition:border-color .14s ease, transform .14s ease; }
+.usual button:hover, .usual a:hover{ border-color:var(--accent); transform:translateY(-2px); }
+.usual b{ display:block; font-family:var(--font-mono); font-weight:700; }
+.usual span{ font-size:var(--step--1); color:var(--ink-soft); }
+
+/* menu board */
+.board{ display:grid; gap:0; }
+.board-cat{ font-family:var(--font-display); font-size:var(--step-2); color:var(--accent); border-bottom:2px solid var(--accent); padding-bottom:.3rem; margin:2rem 0 .8rem; }
+.mrow{ display:flex; align-items:baseline; gap:.6rem; padding:.55rem 0; border-bottom:1px solid var(--line); }
+.mrow .n{ font-family:var(--font-body); font-weight:600; }
+.mrow .n small{ display:block; font-weight:400; font-size:var(--step--1); color:var(--ink-soft); }
+.mrow .dots{ flex:1; border-bottom:1px dotted var(--line); transform:translateY(-.3em); }
+.mrow .p{ font-family:var(--font-mono); font-weight:700; white-space:nowrap; }
+
+.spec-list{ list-style:none; margin:0; padding:0; display:grid; gap:.5rem; }
+.spec-list li{ display:flex; gap:.7rem; font-family:var(--font-body); font-size:var(--step-0); }
+.spec-list li::before{ content:">>"; color:var(--accent); font-family:var(--font-mono); }
+
+/* misc */
+.pill{ border-color:var(--line); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.05em; }
+.review{ border-left-color:var(--accent); }
+.review p{ font-family:var(--font-body); font-weight:500; font-style:normal; }
+.review cite{ font-family:var(--font-mono); }
+.stars{ color:var(--accent); }
+.stat__num{ font-family:var(--font-display); font-weight:400; color:var(--accent); }
+.section--brand .stat__num{ color:#e07a6d; }
+.chat-fab{ background:var(--accent); color:#fff; }
+.site-footer{ background:var(--brand); }
+.foot-h{ font-family:var(--font-mono); font-weight:700; letter-spacing:.12em; }
+.field label{ font-family:var(--font-mono); font-weight:700; text-transform:uppercase; letter-spacing:.05em; font-size:var(--step--1); }
+.field input,.field select,.field textarea{ border-radius:var(--radius); background:#fdf7ec; }
+.demo-flag{ border-color:rgba(255,255,255,.28); }
+.notfound{ text-align:center; padding-block:var(--space-2xl); }

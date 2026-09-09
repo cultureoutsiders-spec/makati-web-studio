@@ -5,7 +5,7 @@ results, Facebook/Instagram, directory listings, local press). Same offer: **PHP
 no retainer (first 5 paying clients), then PHP 35,000.** Client owns the code; price includes
 going live on their domain.
 
-**STATUS: candidates only — no demo sites built yet.**
+**STATUS (updated 2026-09-11): demo sites BUILT + live** at `https://cultureoutsiders-spec.github.io/makati-web-studio/<slug>/`.
 
 Batch 6 holds the other five: `PROSPECTS-BATCH-6.md`.
 

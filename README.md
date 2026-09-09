@@ -28,6 +28,16 @@ and hosted anywhere.
 | Easyshare Printing Services Makati (plan &amp; digital printing — "the order desk" press sheet) | `easyshare-printing/` | https://cultureoutsiders-spec.github.io/makati-web-studio/easyshare-printing/ |
 | SHALA Beauty Lounge (nails / lashes / brows — "the colour wall" chip menu) | `shala-beauty/` | https://cultureoutsiders-spec.github.io/makati-web-studio/shala-beauty/ |
 | Fortune Bakeshop (neighbourhood bakeshop since 1974 — "the bread board" receipt) | `fortune-bakeshop/` | https://cultureoutsiders-spec.github.io/makati-web-studio/fortune-bakeshop/ |
+| Blue Door 304 (hidden speakeasy bar — "the door" you knock to enter) | `blue-door-304/` | https://cultureoutsiders-spec.github.io/makati-web-studio/blue-door-304/ |
+| MSM Wells Photo (analog film lab — "the contact sheet" of film frames) | `msm-wells-photo/` | https://cultureoutsiders-spec.github.io/makati-web-studio/msm-wells-photo/ |
+| One World Butchers (butcher / deli / charcuterie — "the counter board" cut-chart) | `one-world-butchers/` | https://cultureoutsiders-spec.github.io/makati-web-studio/one-world-butchers/ |
+| Gray Matter Showroom (archive / grail fashion — "the archive index" object-label grid) | `gray-matter/` | https://cultureoutsiders-spec.github.io/makati-web-studio/gray-matter/ |
+| Kombat Sports Kalayaan (martial-arts academy — "the round timer" + fight card) | `kombat-sports/` | https://cultureoutsiders-spec.github.io/makati-web-studio/kombat-sports/ |
+| Bibio (natural wine bar — "the list" of hand-annotated wine labels) | `bibio/` | https://cultureoutsiders-spec.github.io/makati-web-studio/bibio/ |
+| Dan's Bike Shop (road &amp; MTB shop + workshop — "the build sheet" + service board) | `dans-bike-shop/` | https://cultureoutsiders-spec.github.io/makati-web-studio/dans-bike-shop/ |
+| The Golden Fur Makati (pet grooming / vet / boarding — "the report card" pet passport) | `golden-fur/` | https://cultureoutsiders-spec.github.io/makati-web-studio/golden-fur/ |
+| The GoodFellas Cafe (weekday office cafe — "the order ticket") | `goodfellas-cafe/` | https://cultureoutsiders-spec.github.io/makati-web-studio/goodfellas-cafe/ |
+| Hoshi House (matcha slow-bar — "the slow vertical" with a sumi brushstroke) | `hoshi-house/` | https://cultureoutsiders-spec.github.io/makati-web-studio/hoshi-house/ |
 
 Studio landing page: repo root `index.html`.
 
